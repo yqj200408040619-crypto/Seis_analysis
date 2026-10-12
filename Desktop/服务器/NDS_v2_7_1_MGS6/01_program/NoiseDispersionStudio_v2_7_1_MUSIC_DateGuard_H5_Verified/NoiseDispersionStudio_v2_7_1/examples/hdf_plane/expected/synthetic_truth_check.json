@@ -1,0 +1,7 @@
+{
+  "checks_passed": true,
+  "matched_pairs": 6,
+  "best_median_fraction": 0.00010121488606940066,
+  "truth_used_only_for_testing": true,
+  "no_layered_earth_or_unique_cycle_inference": true
+}

@@ -1,0 +1,16 @@
+{
+  "curves": 41,
+  "points": 644,
+  "phase_equivalence_groups": 7,
+  "screening_priors_only": true,
+  "tolerance_deg": 15.0,
+  "range_source": "fixed",
+  "max_reconstruction_error_rad": 1.3322676295501878e-14,
+  "source_files": {
+    "conditional_dispersion.csv": "ae3c5eb633d1d47b30cc1be99b64b984ad0674188acb6172437114d5d7971d93",
+    "pairs.csv": "70759d040876229d4c092663ed3cf9c5965b9149f077a875244d6b7d273cb4da",
+    "measured_phase_segments.csv": "ab3099a12def3352db4247db14ce3201e9a2eb8b5fff183b43d740f375920fad",
+    "music_front/dispersion.csv": "5253d6c8f9e149d08162507c80669ceac8d35d6c0662226af0eb93efc1daae75"
+  },
+  "interpretation": "Conditional source phase retained; negative lag branch conjugated to raw cross-spectrum. Cycle aliases cannot be resolved on the originating pair."
+}

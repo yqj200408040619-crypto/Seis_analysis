@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "input_folder": "",
+  "excluded_stations": [],
+  "name": "DARE主段周期备选条件反演",
+  "automatic_geometry": true,
+  "analysis_mode": "curves_only",
+  "external_curves_file": "external_curves.csv",
+  "external_curve_sha256": "9303b0692d6f72574b981340ccbbe0b9cb377c5ea4c04742b7db9b2447b95851"
+}

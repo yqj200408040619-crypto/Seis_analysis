@@ -1,0 +1,24 @@
+{
+  "curve_ids": [
+    "P00001_b1_S0_N3",
+    "P00006_b1_S0_N3",
+    "P00008_b1_S0_N2",
+    "P00010_b1_S0_N3",
+    "P00017_b1_S0_N6",
+    "P00020_b1_S0_N3",
+    "P00001_b1_S0_N4"
+  ],
+  "start": null,
+  "end": null,
+  "repeat_cycles": 20,
+  "slide_cycles": 1,
+  "tolerance_deg": 0,
+  "range_source": "measured",
+  "taper": "none",
+  "time_mode": "full",
+  "stabilization_s": 600.0,
+  "frequency_method": "matlab_bin",
+  "amplitude_rejection": true,
+  "split_branches": true,
+  "screening_mode": "curve"
+}

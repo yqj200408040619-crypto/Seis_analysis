@@ -1,0 +1,17 @@
+{
+  "conditional_curves": 41,
+  "observed_curve_points": 644,
+  "compatible_cross_pair_links": 3,
+  "selected_unique_physical_curve": false,
+  "cycle_search_range": [
+    0,
+    200
+  ],
+  "source_phase_hypotheses_rad": [
+    0.7853981633974483
+  ],
+  "response_corrected": true,
+  "source_phase_verified": false,
+  "absolute_cycles_or_modes_verified": false,
+  "gap_predictions_mixed_into_observations": false
+}

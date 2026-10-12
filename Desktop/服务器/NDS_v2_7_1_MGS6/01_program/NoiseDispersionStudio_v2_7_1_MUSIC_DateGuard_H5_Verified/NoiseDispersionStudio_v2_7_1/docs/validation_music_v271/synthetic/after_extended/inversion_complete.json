@@ -1,0 +1,14 @@
+{
+  "cases": 1,
+  "compatible_models": 5,
+  "independent_solver_available": true,
+  "unique_structure_identified": false,
+  "observed_and_predicted_points_separate": true,
+  "missing_roots_not_filled": true,
+  "frequency_samples_not_treated_as_independent": true,
+  "selection_sha256": "c4cc8f748d72c955c7fe2fe90010d0cb3cb0f60cf8ccb15d0e961afbcee45b5c",
+  "studio_code_sha256": "b1fe008624a891efa8fc1947063b53af525f230b71d79b9d70bc6b76f7a68fb0",
+  "input_curves_sha256": "55f9b6aed3e62e33ba9c1e898e54a8ac88f6e2bbb5abcddce63d17aca9aa2b62",
+  "minimum_points": 3,
+  "minimum_band_hz": 0.25
+}

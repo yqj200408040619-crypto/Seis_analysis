@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "input_folder": "",
+  "excluded_stations": [
+    "Y7_C03",
+    "Y7_D01",
+    "Y7_E01",
+    "Y7_E02"
+  ],
+  "name": "DARE phase offline replay (aligned H5 supplied separately)",
+  "automatic_geometry": true
+}

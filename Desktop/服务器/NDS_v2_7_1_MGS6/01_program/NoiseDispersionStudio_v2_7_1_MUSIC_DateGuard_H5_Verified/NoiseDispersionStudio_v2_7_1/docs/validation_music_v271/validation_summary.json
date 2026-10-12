@@ -1,0 +1,87 @@
+{
+  "program_version": "2.7.1",
+  "direction_method": "music",
+  "regression": {
+    "passed": 206,
+    "skipped": 8
+  },
+  "real": {
+    "stations": [
+      "BW.MGS01",
+      "BW.MGS02",
+      "BW.MGS03",
+      "BW.MGS04",
+      "BW.MGS05",
+      "BW.MGSBH"
+    ],
+    "requested_utc": [
+      "2022-11-01",
+      "2022-11-05"
+    ],
+    "archived_h5_files": 94,
+    "no_data_chunks_mgs03": 2,
+    "scan_segments": 7,
+    "ccf_observed_points": 106,
+    "conditional_ccf_curves": 41,
+    "music_front_frequencies": 54,
+    "music_front_quality_windows": 241,
+    "front_qualified_continuous_points": 0,
+    "goertzel_frequencies": 61,
+    "goertzel_frequency_range_hz": [
+      0.08,
+      0.505
+    ],
+    "goertzel_gates": 122,
+    "valid_window_evaluations": 53902,
+    "accepted_window_evaluations": 142,
+    "qualified_inversion_points": 0,
+    "audit": {
+      "pass_audit": true,
+      "gates_checked": 122,
+      "waveform_cross_recomputed": 366,
+      "accepted_window_evaluations": 142,
+      "valid_window_evaluations": 53902,
+      "max_recomputed_phase_error_rad": 0.0,
+      "module_sha256": "0ab1550cd1494ead9e04c1877341eb6db5dfed0c0cc3f339ec8793d5ad28846c",
+      "aligned_h5_sha256": "50a807cd0871b3da93c7530d235e93f59b80e57f6a96ead3faa9699223a0f9ee"
+    },
+    "physical_dispersion_and_structure_obtained": false,
+    "inversion_skipped": true
+  },
+  "synthetic": {
+    "measured_frequency_hz": [
+      0.8,
+      1.8
+    ],
+    "measured_points": 11,
+    "new_low_frequency_points": 5,
+    "known_azimuth_deg": 30.0,
+    "estimated_azimuth_range_deg": [
+      29.953989660058397,
+      30.078990829709024
+    ],
+    "maximum_speed_error_fraction": 0.005665504412938042,
+    "compatible_models": {
+      "before_common": 4,
+      "after_common": 4,
+      "after_extended": 5
+    },
+    "known_vs_structure_not_supplied": true
+  },
+  "runtime": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.8",
+    "Pillow": "12.3.0",
+    "obspy": "1.5.0",
+    "pyproj": "3.8.0",
+    "h5py": "3.16.0",
+    "PySide6": "6.12.0",
+    "numba": "0.63.1",
+    "disba": "0.7.0",
+    "pysurf96": "1.0.1"
+  },
+  "windows_native_validation": false,
+  "persistent_raw_waveforms_included": false
+}

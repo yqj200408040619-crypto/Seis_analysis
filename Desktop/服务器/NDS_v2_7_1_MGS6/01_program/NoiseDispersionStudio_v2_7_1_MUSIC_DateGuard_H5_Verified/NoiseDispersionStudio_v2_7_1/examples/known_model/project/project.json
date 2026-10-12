@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "input_folder": "",
+  "excluded_stations": [],
+  "name": "已知35米层状模型合成反演",
+  "automatic_geometry": true,
+  "analysis_mode": "curves_only",
+  "external_curves_file": "external_curves.csv",
+  "external_curve_sha256": "a971d0902c3cdc92577be3255e7d662611bf9a1c96bb3bb34278005d8c01d8bf"
+}

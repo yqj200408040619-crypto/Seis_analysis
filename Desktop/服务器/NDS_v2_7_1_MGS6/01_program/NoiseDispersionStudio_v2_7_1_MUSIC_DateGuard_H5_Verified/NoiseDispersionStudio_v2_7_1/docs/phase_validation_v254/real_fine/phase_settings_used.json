@@ -1,0 +1,48 @@
+{
+  "run_id": "20261011T090801_aa600438",
+  "settings": {
+    "project": "examples/dare_phase_guided/project",
+    "output": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine",
+    "curve_ids": [
+      "P00008_b1_S0_N2"
+    ],
+    "start": null,
+    "end": null,
+    "repeat_cycles": 20,
+    "slide_cycles": 1,
+    "tolerance_deg": 0,
+    "range_source": "measured",
+    "taper": "none",
+    "aligned_h5": "examples/dare_phase_guided/aligned_waveforms.h5",
+    "time_mode": "full",
+    "stabilization_s": 600.0,
+    "frequency_method": "matlab_bin",
+    "amplitude_rejection": true,
+    "split_branches": true,
+    "screening_mode": "curve",
+    "direction": {
+      "mode": "filter",
+      "max_pair_angle_deg": 45.0,
+      "direction_step_deg": 1.0,
+      "velocity_min_m_s": 1500.0,
+      "velocity_max_m_s": 3500.0,
+      "velocity_points": 64,
+      "min_stations": 3,
+      "min_geometry_ratio": 0.05,
+      "min_coherence": 0.7,
+      "envelope_fraction": 0.95,
+      "max_direction_uncertainty_deg": 20.0,
+      "max_secondary_peak_ratio": 0.95,
+      "direction_group_width_deg": 15.0,
+      "conservative_angle": true,
+      "max_angle_velocity_error_fraction": 0.15,
+      "frequency_half_width_hz": 0.0,
+      "frequency_bins": 3,
+      "phase_rms_max_deg": 25.0,
+      "minimum_independent_windows": 3,
+      "minimum_accepted_windows": 3
+    },
+    "project_config_sha256": "d33e23907639d11896b58a442f2cc872a2fdfe1b1f3c897785cdd0742fe8e109",
+    "module_sha256": "3ff58df4f419117818d531fbd3cef811831c230978ee3220f801fcf648b3b7ed"
+  }
+}

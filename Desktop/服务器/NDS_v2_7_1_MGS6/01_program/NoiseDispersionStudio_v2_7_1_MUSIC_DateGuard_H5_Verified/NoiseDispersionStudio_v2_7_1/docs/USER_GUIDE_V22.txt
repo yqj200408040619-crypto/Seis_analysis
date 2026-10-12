@@ -1,0 +1,621 @@
+Noise Dispersion Studio 2.2.0 最新版逐步操作手册NOISE DISPERSION STUDIO · 2.2.0
+通用频散与条件结构反演最新版逐步操作手册
+
+从安装、阵列预览、完整 H5 到频散、深度/Vs 和离线复现。更新：2026-10-09。
+操作目录（点击跳转）
+先选一种使用方式
+
+第 1 步：下载、解压和摆放目录
+
+第 2 步：Windows 安装与启动
+
+第 3 步：下载前预览阵列与平均台站间距
+
+第 4 步：开始下载、保存完整 H5 并进入分析
+
+第 5 步：新建项目、扫描 H5、补齐映射
+
+第 6 步：设置频段、时间窗和质量门限
+
+第 7 步：按按钮逐阶段处理，或一键分析
+
+第 8 步：查看频散候选并选择反演组
+
+第 9 步：设置和运行条件结构反演
+
+第 10 步：生成报告，读取深度和 Vs
+
+第 11 步：打开本次结果包，先看已有成果
+
+第 12 步：用程序本体完整复现真实阵列
+
+修改设置后，从哪一步重新跑
+
+常见情况：检查位置与具体处理
+
+最后核对：什么时候可以说“全流程完成”
+
+先选一种使用方式
+
+
+本手册对应 Noise Dispersion Studio 2.2.0，按本包实际按钮和命令编写。软件包包括下载器、频散与条件结构反演 GUI、命令行、源码及复现驱动。界面窗口标题仍保留“2.1”文字；包内 ndstudio.__version__ 为 2.2.0，以下按钮名称与现有程序一致。
+
+
+建议第一次先看已有结果，再安装程序并处理自己的数据。想精确复现两次真实测试，使用“真实阵列复现驱动”；想人工选台站和逐阶段检查，使用 GUI。
+
+
+ | 你的目的 | 起点 | 是否要原始 H5 / 安装 Python
+
+ | 只看两轮频散与深度结果 | 解压 Studio_v2_2_Results.zip，直接打开对应项目 output/studio_report.html | 不需要 Python；不需要另外下载 H5
+
+ | 下载自己的宽频带阵列并计算 | 先安装 → 打开下载器 → 选站并下载 H5 → 打开分析 GUI | 需要 Python 和依赖；需要真实波形
+
+ | 精确离线复现 DARE / 都柏林 | 下载对应四个原始 H5 日包 → 合并到一个工作目录 → 运行内置复现驱动 | 需要原始 H5、Python 和 pysurf96
+
+ | 已有自己的 HDF5 | 安装 → 新建项目 → 选择 H5 文件夹 → 扫描映射 → 导入 | 需要数据元信息；counts 还需匹配的完整响应
+
+ | 只有本程序导出的候选 CSV | 新建项目 → 从已有候选CSV开始 → 选组反演 | 不能借此声称重做了原波形验证
+
+第 1 步：下载、解压和摆放目录
+
+
+下载 Studio_v2_2_Program.zip，先右键“全部解压”。不要直接在压缩包内双击 BAT。
+
+
+建议将解压出的 NoiseDispersionStudio_v2_2 放在 C:\Seismic\，确认该目录同时包含 run.py、ndstudio、core、三个 h5data 脚本及安装/启动 BAT。
+
+
+将 Studio_v2_2_Results.zip 解压到另一个目录，如 C:\Seismic\saved_results。其中的 DARE_真实端到端 和 Dublin_真实端到端 是两个独立项目。
+
+
+新计算建议单独建 C:\Seismic\runs\。项目目录、原始 H5 目录和程序目录分开，便于保留原始数据与既有结果。
+
+
+重新整理的程序包保留全部程序源码、GUI、模板、测试与示例生成器。为减小下载体积，不重复携带旧的合成 H5 和旧示例计算输出；需要演示数据时可由程序自己生成。真实 H5 因体积较大，仍单独按 UTC 日提供。
+
+下载大小不是解压大小。结果包完整保留 CSV、JSON、图件、配置、审计、筛选和失败尝试；解压时留足空间。SHA256 校验和文件大小随下载包提供。
+
+C:\Seismic\NoiseDispersionStudio_v2_2\run.py
+C:\Seismic\NoiseDispersionStudio_v2_2\ndstudio\
+C:\Seismic\NoiseDispersionStudio_v2_2\core\
+C:\Seismic\saved_results\DARE_真实端到端\project\output\studio_report.html
+C:\Seismic\saved_results\Dublin_真实端到端\project\output\structure_layers.csv
+C:\Seismic\runs\my_array\download\
+C:\Seismic\runs\my_array\project\
+
+第 2 步：Windows 安装与启动
+
+
+安装 64 位 Python 3.12，安装时包含 Python Launcher（py）。
+
+
+双击程序目录中的 install_windows.bat。它会建立该目录的 .venv 并安装 requirements.txt。首次安装需要联网，等到显示 Installation complete。
+
+
+做与本次真实测试相同的独立正演核对，还需安装 requirements-optional.txt。在程序目录空白处右键“在终端中打开”，执行下面的可选依赖命令。
+
+
+执行 doctor 检查依赖。全部主要包应显示版本号；若勾选“要求pysurf96独立求解器通过”，pysurf96 必须存在。
+
+
+双击 run_download_windows.bat 打开下载器；双击 run_windows.bat 打开分析 GUI。
+
+
+本手册的 Windows 命令都在程序目录运行，并明确使用 .\.venv\Scripts\python.exe。这样无需激活 PowerShell 脚本，也不会误用另一套 Python 环境。doctor 只检查包能否导入；它显示 NOT INSTALLED 时要看缺少的具体包，不能仅凭命令退出就判断环境完整。
+
+
+.\.venv\Scripts\python.exe -m pip install -r requirements-optional.txt
+.\.venv\Scripts\python.exe run.py doctor
+.\.venv\Scripts\python.exe -c "import ndstudio; print(ndstudio.__version__)"
+.\.venv\Scripts\python.exe run.py download
+.\.venv\Scripts\python.exe run.py gui
+
+
+pysurf96==1.0.1 包含编译扩展，部分平台安装会要求编译环境。安装失败时保留终端错误，先解决该依赖后再要求独立核对；不安装它可运行波形和频散流程，普通 GUI 中未要求独立核对时只能形成相应标注的探索性结构。真实阵列复现驱动始终要求独立核对。
+
+
+Linux / macOS在程序目录建立环境后使用下面命令。GUI 需要可用的桌面显示环境。
+python3.12 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m pip install -r requirements-optional.txt
+.venv/bin/python run.py doctor
+.venv/bin/python run.py gui
+
+
+第 3 步：下载前预览阵列与平均台站间距
+
+
+以下为下载器的 Arrays 页。也可从分析 GUI 顶部点击“下载数据 / 阵列预览”进入。
+
+
+Provider：选择数据所在服务；本次两轮用 GFZ。切换 Provider 后必须重新查询。
+
+
+在 Network / array 填台网代码，如都柏林 1V 或 DARE Y7。Stations (sub-array) 填 * 查询全部，或输入已确定的台站过滤条件。
+
+
+点击 List arrays，再单击返回的阵列行，等待下方台站表和阵列图出现。仅选中上方阵列还没有开始下载。
+
+
+查看下方每台站的坐标、Rate (Hz)、Sensor 和历元，确认是目标宽频带仪器和垂直通道。Channels 建议先选 HHZ；若数据服务实际提供 BHZ，就选 BHZ。
+
+
+在下方 Time window 选 Custom，填写 Start (UTC) 和 End (UTC)。这是 UTC，不是电脑本地时间。都柏林例子为 2019-04-01T00:00:00 至 2019-04-05T00:00:00。
+
+
+Chunk size 选 1 day。Output folder 选准备保存原始 H5 的目录。
+
+
+检查图下蓝色 Mean station spacing 与台站数量。平均间距为每台到最近另一台的 WGS84 地表距离平均值，单位 m；All-pair mean 是全部台对平均距离，二者不同。
+
+Arrays 页面列出的是当前过滤后的阵列。点击“Download entire array”会下载当前阵列过滤条件所含的全部通道，并不是只下载台站表中高亮的一行。如果只取任意几台，请改用下面的 Channels 页逐行选择。
+
+Channels 页：手动选择一个子阵列
+
+
+切到 Channels；填 Network、Station、Location、Channel。
+
+点击 Browse 查询。使用 Ctrl 单击多选，或 Shift 选择连续行；同一台站不要选多个重叠历元当作不同台站。
+
+观察选中通道对应的阵列图、数量和平均间距；再点击 Download selected。
+
+
+台数限制与几何自动筛选属于命令行选站器。GUI 预览会显示几何，但不会自动强制“5–100 台且每台最近邻 200–2000 m”。需要严格约束自动选站时，请用本手册“完整复现 / 内置选站命令”部分。
+
+
+实际都柏林六台子阵列下载预览：最近邻平均间距 1777.19 m，100 Hz 宽频带 HHZ。
+第 4 步：开始下载、保存完整 H5 并进入分析
+
+
+保持 H5 + full metadata 勾选。保留 Resume: skip files already downloaded 勾选，以便中断后继续。
+
+
+根据上一步的选择方式点击 Download entire array 或 Download selected。
+
+
+确认对话框中的台站/通道数、日期、分块和输出位置，再开始。等待 Status 和日志结束；若有 skipped / errors，逐项看原因。
+
+
+在输出目录确认已经出现 .h5。H5 保存原生 counts、实际样点 UTC、采样率、NSLC、坐标、历元、完整 StationXML 和原服务器 MiniSEED 字节。文件名请求日期不一定等于第一实际样点，程序使用 H5 内 UTC。
+
+
+点击 Open H5 in dispersion，进入已指向该 H5 文件夹的分析项目。下载器自动在输入目录旁创建或复用 <输入目录名>_dispersion_project；例如输入为 my_array/download，项目为 my_array/download_dispersion_project。如果已经由此打开项目，下一步直接从“扫描与识别”继续，无需重复新建。若你自己启动了分析 GUI，再按下一步另建项目并选择同一输入目录。
+
+
+网络失败时保留原输出目录，重新用相同参数和 Resume 重试。服务器明确“no data”与网络错误是两类情况：前者没有对应 H5，应检查日期/历元并记录缺失；后者需重试。不要把“任务结束”解释为“全部请求都有波形”。都柏林原始下载的 G012、G020 返回无数据，已经在清单中记录。
+
+
+内置下载后的 H5 自带完整响应，通常无需再点“统一设置StationXML”。如果改用你自己的旧 HDF5，响应是否完整必须逐条核对。
+
+
+.\.venv\Scripts\python.exe run.py acquisition-audit --folder "C:\Seismic\runs\my_array\download"
+
+
+以上可选审计命令只针对本程序下载格式，核对 H5 中样值、实际 UTC、采样率、原始 MiniSEED 和 StationXML。一般自定义 HDF5 请先走映射与导入，不应把 acquisition-audit 当作所有 HDF5 的通用识别器。
+
+
+第 5 步：新建项目、扫描 H5、补齐映射
+
+
+打开分析 GUI，点击顶部 新建项目，选择一个新项目目录，如 C:\Seismic\runs\my_array\project。新建项目会生成 project.json、config.json 和 mapping.json。
+
+
+在 1 输入与映射 页，点击 选择文件夹，选原始 H5 的父目录。程序递归扫描子目录，不必逐台选择。
+
+
+点击 扫描与识别。等下方任务结束，查看数据集表“状态”列与底部字段完整提示。
+
+
+若有待补字段，单击对应行，再点 编辑所选映射；也可双击该行。填完按 Save，程序重新扫描。
+
+
+确认保留的数据集“使用”列被勾选。确实不用的整条记录可取消勾选；长期异常台站可在“排除台站”中填项目标签。
+
+
+点击 仅导入与核查，等待完成。这一步必须先于“仅预处理”；扫描只识别格式，不会生成可处理的 canonical 数据。
+
+
+点击 查看输入质量表，结合仪器记录查看近常数或大直流提示。GUI 的质量表给出提示，不会自动替你排除所有异常站。
+
+
+ | 映射字段 | 应该填什么 | 常见错误
+
+ | station / station_label / seed_id | 原始台站代码；跨台网项目标签；完整 NSLC，如 1V.G003..HHZ | 无 Location 时 NSLC 仍有两个相邻点
+
+ | sampling_rate_hz | 原生采样率，如 100；不是第 2 页的分析采样率 | 不要把原生 100 Hz 写成处理后的 20 Hz
+
+ | start_utc / time_format | 第一实际样点 UTC；数值时间明确 unix_s/ms/us/ns | 不能使用文件修改时间，也不能让多个文件共用猜测 UTC
+
+ | units | counts / m/s / m/s^2 / m，必须与真实数据一致 | 不能把 counts 直接标成已校正 m/s
+
+ | 坐标 | 所有台站统一用经纬度，或同一参考系的 x_m/y_m | 不要混用度和米或混用多个本地原点
+
+ | response_xml | counts 必须匹配真实 NSLC 和记录历元；本版内嵌响应自动读 | 不同传感器不能随意套同一个响应
+
+ | sample_axis / component_index | 二维矩阵需确认采样轴和垂直分量索引，索引从 0 起 | 三分量不是三台站；不能猜矩阵方向
+
+ | clock_offset_s / polarity_verified | 有独立依据才填授时改正、勾选现场极性已核实 | 默认 0 或 +1 是假设，不等于现场已校准
+
+
+“排除台站”填写导入质量表 station 列中的完整项目标签，如 1V_G011,1V_G015，不要仅凭文件名猜代码。修改映射、取消记录或改变排除列表后，重新“仅导入与核查”，再从预处理开始重跑。
+
+
+导入完成后检查项目根目录的 stations.csv、input_station_qc.csv 和 hdf_import_audit.json。原始 H5 只读；仅数值和 UTC 网格完全相同的重叠才去重，冲突重叠会明确拒绝。
+
+
+输入与映射页面实际窗口：本版保留这些按钮；示例截图的数据集数不代表你的阵列台数。
+第 6 步：设置频段、时间窗和质量门限
+
+
+切到 2 分析设置。先新建/打开项目，再看控件值；下表是新建 Studio 项目及两次真实测试采用的常用值，不是适用于所有地质条件的自动答案。
+
+
+ | 界面控件 / 配置 | 这两轮采用的值 | 操作含义
+
+ | 频率下限 / 上限 / 扫描步长 | 1.5 / 5.0 / 0.01 Hz | 控制相位扫描频率；不是带通滤波的两个边界
+
+ | 分析采样率 | 20 Hz | 原生 100 Hz 记录在处理阶段重采样，原始 H5 不改写
+
+ | 共同去前 | 600 s | 相同时间轴起点后舍弃 600 s，不是每个文件各删 600 s
+
+ | 分析窗 / 连续干净片段 | 1200 s / 600 s | 20 min 窗；须有足够共同连续有效样点
+
+ | 共同干净比例 | 0.7 | 多台站共同有效比例；台站越多，交集可能越小
+
+ | 开发/验证 SNR 门槛 | 10 | 不能因结果少就把检验门限降下来
+
+ | 尖峰 MAD / 最大修复时长 | 18 / 0.04 s | 只修复允许时长的局部尖峰，其他异常通过局部掩码处理
+
+ | bandpass_hz（高级 JSON） | [0.1, 7.142857142857] Hz | 处理带通，需包围扫描频带
+
+ | response（高级 JSON） | output=VEL；pre_filt_hz=[0.03,0.075,7.5,9.0] | counts 经匹配响应校正为速度；预滤波需满足采样限制
+
+ | cohorts / phase（高级 JSON） | states=0；cycle_min=0，cycle_max=200；源相位 π/4 | 不分 PCA 状态；逐段枚举固定周期，源相位是明确假设
+
+ | 验证时间块（高级 JSON） | 21600 s；至少 4 个 eligible blocks，每块至少 6 窗 | 还需训练/验证各至少 12 窗；只看总窗数不够
+
+
+常用控件改完点 保存常用参数。
+
+要修改带通、响应预滤波、验证块或周期上限，编辑右侧 JSON，再点击 保存高级JSON并同步常用参数。仅在文本框里改字但未保存，不会成为下一次实际配置。
+
+保持 导入后自动核对几何并调整到时/噪声区 勾选。它会按台数和距离调整到时搜索、噪声区与连续窗，不会自动替你确认物理频散或降低质量门限。
+
+
+导入后几何适配可能改变最大时延或窗参数；以落盘 config.json 为准。本次 DARE 最大时延为 62 s、都柏林为 61 s。到时超过自动适配支持范围会报错，此时要重新核对阵列尺度或明确调整高级配置。
+
+
+频率必须满足 0 < 带通下限 < 扫描下限 < 扫描上限 < 带通上限 < 分析采样率/2。响应预滤波四角还必须包围带通并低于 Nyquist。若想分析更低频，不能只改一个扫描下限；必须协调带通、响应、窗长和相应验证尺度。
+
+
+第 7 步：按按钮逐阶段处理，或一键分析
+
+
+首次处理建议按下面顺序逐步执行。运行时页面暂时禁用，进度条可能表示正在忙；不要把暂时没有新曲线理解成程序卡死。看底部阶段名、日志和完成状态。
+
+
+ | 顺序 | 页面与按钮 | 主要工作 | 完成后检查
+
+ | ① | 1 输入与映射 → 仅导入与核查 | 读取元信息、响应、原生记录，建立 canonical | stations.csv / hdf_import_audit.json；GUI 显示完成
+
+ | ② | 2 分析设置 → 仅预处理 | UTC 对齐、响应校正、带通、局部异常处理、窗质量、训练验证分组 | output/prepare_complete.json、window_quality.csv、record_audit.csv
+
+ | ③ | 2 分析设置 → 仅扫描 | 互相关/FTAN、群到时、跨路线和时间块稳健相位段 | scan_complete.json、measured_phase_segments.csv
+
+ | ④ | 2 分析设置 → 错时对照 | 默认 40 次错时背景试验与实测区分 | controls_complete.json、timeshift_trials.csv、timeshift_summary.csv
+
+ | ⑤ | 2 分析设置 → 候选枚举 | 逐段固定源相位和周期，保留条件相速度族 | families_complete.json、conditional_dispersion.csv、candidate_review.csv
+
+ | ⑥ | 5 图件与报告 → 计算自洽检查 | 核对阶段指纹、样点与候选关系 | verification.json 中 checks_passed=true
+
+ | ⑦ | 3 候选曲线 → 刷新结果 | 查看候选，决定自动组或人工组 | 下一步选择用于反演的条件组
+
+ | ⑧ | 4 条件反演 → 自动组合 / 运行选定组反演 | 按明确模态、周期和源相位拟合结构 | inversion_complete.json 与 structure_layers.csv
+
+ | ⑨ | 5 图件与报告 → 生成/刷新报告 | 汇总图件、频散和条件结构 | studio_report.html、studio_summary.json
+
+
+“一键分析”怎样用
+
+先选好 H5 文件夹、映射、排除台站和参数。下载不是“一键分析”的一部分。
+
+在第 4 页设置自动组数上限及模态；首次可用 12，检验更多候选可用 1000。
+
+需要自动反演时，保留下方 分析完成后自动组合并反演（条件假设） 勾选，再点 一键分析。未勾选时只完成波形/候选/报告等分析。
+
+完成后看各阶段状态及实际模型数量。没有可用自动组时，程序可记录跳过反演并生成报告；没有通过结构时也可正常完成拒绝记录。
+
+GUI 一键分析 ≠ 真实测试复现驱动。GUI 按你选好的台站运行处理；本版 GUI 没有独立的 array-select、screen-array 或 screen-prepared 按钮，不会在失败后自动实施复现驱动的时域子阵列筛选。需要这套自动筛选流程请看第 12 步。
+
+点击 停止 会终止当前阶段。中间文件/模型检查点不等于完整完成结果。重新计算必须沿依赖顺序推进，不能跳过失败阶段直接跑反演。
+
+
+第 8 步：查看频散候选并选择反演组
+
+
+切到 3 候选曲线，点 刷新结果。
+
+表格默认最多显示 300 行；想看都柏林 301 条就把 最多显示 调到至少 301。DARE 有 1470 条，默认只显示前 300，并不是其余候选丢失。
+
+在搜索框输入 curve_id、台对或时间组；点击一行看右侧曲线，Ctrl/Shift 多选比较。图通常最多同时画 30 条；完整 CSV 始终保留全部曲线。
+
+读清 cohort（all / day / night）、branch、constant_cycle 和频段。点一条时虚线群速度用于对照。
+
+选定假设 Rayleigh 模态，0 为基阶。若每条是相互竞争的解释，点 所选各自建组；要检验共同 1D 结构才点 所选联合建组，并核对是否同一时间组、不同台对和相同源相位假设。
+
+
+conditional_dispersion.csv 不是唯一物理频散曲线。每个连续相位段采用一个固定整数周期及源相位假设；排序和跨台对兼容数不等于概率。两种全天/夜间结果可能共享原观测，不能当作完全独立观测重复计权。不同候选速度不能仅凭更接近期待值就认定周期。
+
+
+候选曲线页：表格显示数量可调，选择各自建组或联合建组；截图为程序附带的已验证界面示例。
+第 9 步：设置和运行条件结构反演
+
+
+切到 4 条件反演。上方 自动组数上限 控制要检验多少个自动组，不是每组频点数或输出模型数。默认 12。
+
+自动假设模态，如0,1 中填 0 可只检验基阶假设。多模态增加的是待检验假设，不意味着模态已由数据证明。
+
+有限层数（另加半空间） 填 1,2，表示分别检验 1 个有限层和 2 个有限层，两者都另加下方半空间。
+
+设置起点数、最大评价次数、Vp/Vs、密度及三个误差门限。复现本次测试采用下表值。
+
+要独立核对时勾选 要求pysurf96独立求解器通过，并确认安装了可选依赖。
+
+自动组路线：先点 自动组合，核对右侧组 JSON；人工组路线：保留第 3 页生成的各组，别再点“自动组合”覆盖它。
+
+需要手动改组 JSON 时，改完点 保存反演设置与组JSON。反演时左侧常用控件会写入 settings，同名参数请在左侧改；层厚/速度上下界等未显示控件的高级字段可在 settings 中改。
+
+点击 运行选定组反演，等待该阶段结束。下方表格显示通过条件的模型；完整拒绝尝试也会保存。
+
+
+ | 参数 | 本次值 | 解释
+
+ | layers / starts / max_evaluations | [1,2] / 8 / 180 | 每组每种层数 8 个起点；评价次数限制的是每个起点
+
+ | vp_vs_ratio / density_g_cm3 | 2.0 / 2.0 | 固定假设，不是从当前候选唯一反推得来的独立测量
+
+ | thickness_bounds_m / vs_bounds_m_s | [2,1500] / [120,3500] | 搜索范围；不是已验证的探测深度或可信区间
+
+ | phase_rms_max_fraction | 0.03 | 相速度相对 RMS ≤3%；填 0.03 而不是 3
+
+ | phase_point_max_fraction | 0.05 | 全部所选实测点的最大相对误差 ≤5%
+
+ | group_median_max_fraction | 0.15 | 每条所选带的群速度误差中位数 ≤15%
+
+ | independent_max_difference_m_s | 0.5 | 两求解器相速度最大差异 ≤0.5 m/s
+
+ | source phase / modes | π/4 / 0 | 本次作为条件假设，未独立证明源相位和绝对模态
+
+
+本次都柏林前 12 个自动组没有通过结构；保持先验与门限不变，将上限设为 1000 后，实际生成并检验了 219 组，得到 45 个条件模型。自动组数 1000 不是强行要求生成 1000 个模型。DARE 检验了 12 组，得到 19 个模型。
+
+
+某组可能有多个通过结构，也可能全部拒绝。inversion_complete.json 表示已完成所有请求组；compatible_models 才是通过模型数。独立求解器一致性是数值实现核对，并不独立证明地质解释。
+
+
+条件反演页实际布局：组上限、假设模态、有限层数、误差比例及右侧组 JSON。
+第 10 步：生成报告，读取深度和 Vs
+
+
+切到 5 图件与报告，点 计算自洽检查，确认没有阶段指纹或输入变化报错。
+
+点 生成/刷新报告，完成后点 打开离线报告。
+
+左侧选择图件文件名，查看几何/质量、时窗、实测覆盖、条件频散和结构模型。
+
+顶部 打开输出目录 打开该项目的 output；从下表找到对应数据。
+
+
+ | 文件（output/ 内，除特别说明） | 用途 | 该怎么看
+
+ | studio_report.html / studio_summary.json | 离线总报告与汇总 | 区分有效窗、条件曲线、通过模型和完成标志
+
+ | conditional_dispersion.csv / curve_catalog.csv / candidate_review.csv | 全部条件频散与候选目录 | curve_id 对应 cohort、台对、频段、固定周期和源相位
+
+ | measured_phase_segments.csv / measured_segment_catalog.csv | 实际经过检验的相位段 | 先看实测覆盖，不能把模型插值当作新增观测
+
+ | conditional_models.json | 全部通过结构及条件假设 | model_id、case、层数、厚度、Vs、误差及独立核对
+
+ | structure_layers.csv | 逐模型逐层的深度/Vs 表 | top_depth_m、bottom_depth_m、thickness_m、vs_m_s；半空间无底深
+
+ | selected_observed_dispersion.csv | 被通过模型使用的实际条件观测点 | 保留观测点与对应该模型的预测；is_observation=true
+
+ | model_predictions.csv | 用于作图的前向模型曲线 | is_observation=false，缺根处不补作观测
+
+ | inversion_attempts.csv | 全部接受和拒绝起点 | accepted、reason、误差和失败信息；最初 12 组单独存档
+
+ | window_quality.csv / cohort_counts.csv | 窗质量与验证块覆盖 | accepted 窗数只是第一关，eligible_blocks 也必须足够
+
+ | record_audit.csv / local_quality_events.csv | UTC、响应和局部处理审计 | 原始与校正起点、掩码/修复、响应和历元
+
+ | verification.json / *_complete.json | 自洽验证与阶段标志 | 缺少完成标志时，不把检查点当作已完成阶段
+
+ | 项目根目录 logs/、last_run.json | GUI 运行日志与最近一次命令状态 | 命令行复现还有工作目录 e2e_steps.json；最近一次状态不是完整历史
+
+
+逐层深度表：一个模型一组行
+
+用 model_id 筛出同一个模型。第一有限层 top_depth_m=0；下一层的顶部为上层底部；bottom_depth_m = top_depth_m + thickness_m。layer_type=halfspace 的 thickness_m 与 bottom_depth_m 留空，表示延伸半空间，不是零厚度。
+
+
+Vs 和 Vp 的单位为 m/s，深度和厚度为 m，密度为 g/cm³。本次设置 Vp=2×Vs。表内 unique_structure_identified=false 和 depth_resolution_established=false 表示未证明唯一结构或深度分辨率；图画到 1500 m / 2000 m 不等于已经证实能探到该深度。
+
+
+第 11 步：打开本次结果包，先看已有成果
+
+
+结果包不是包含一切临时数组的可直接续算工程。它完整保留观测/条件曲线、反演结果、配置、筛选、审计、原始元数据和日志；原始 H5 单独提供，canonical 与 cache 可由程序从 H5 重建。
+
+
+解压 Studio_v2_2_Results.zip。下载较困难时，可分别取 Studio_v2_2_DARE_Results.zip 和 Studio_v2_2_Dublin_Results.zip，内容为对应阵列的完整结果。
+
+直接双击 DARE_真实端到端/project/output/studio_report.html 或都柏林对应文件，不用重新生成。
+
+查看 project/output/structure_layers.csv、conditional_dispersion.csv 和 inversion_attempts.csv。
+
+如果在 GUI 中点“打开项目”，应选到包含 project.json 的 project 目录。可查看候选和结构表；要继续计算，先按第 12 步补齐原始 H5 并重建中间数组。
+
+
+归档审计表中的绝对路径记录本次试验的真实来源，在你电脑上不一定存在。新结果包的项目 input_folder 已设成 ../download；运行导入后会生成你的本地路径清单。不要直接拿存档的旧绝对路径去找文件。
+
+
+ | 阵列 | 日期 UTC（起点包含，终点截止） | 最终分析台站 | 有效窗 / 条件曲线 / 通过结构
+
+ | DARE / Y7 | 2020-10-12 00:00 至 2020-10-16 00:00 | A00, B02, C00, C01, C02, D02；平均最近邻 1427.27 m | 45 / 1470 / 19（12 组）
+
+ | 都柏林 Geo_URBAN / 1V | 2019-04-01 00:00 至 2019-04-05 00:00 | G003, G007, G010, G016, G018, G019；1777.19 m | 73 / 301 / 45（219 组）
+
+第 12 步：用程序本体完整复现真实阵列
+
+
+复现驱动是 examples/real_dare_e2e/run_e2e.py。虽然文件夹名带 DARE，它也支持 1V 都柏林。该驱动调用本程序模块完成选站、下载、H5 审计、原始时域/时间覆盖筛选、处理、频散、反演和报告。
+
+
+A. 离线复现：使用已经保存的原始 H5
+
+
+先保留原结果另作存档。选一个新目录，例如 C:\Seismic\runs\offline_dublin。
+
+下载都柏林四个原始 H5 日包（20190401–20190404），全部解压到同一临时父目录。它们会合并成一个 Dublin_真实端到端/download，不是四个分别计算的阵列。
+
+将这个完整的 download 文件夹复制到 C:\Seismic\runs\offline_dublin\download。里面应有 32 个 H5 和原选站/审计/元数据清单。不要只复制最终 6 台，否则就不能重演原始 10 台选站与排除的审计。
+
+先安装 pysurf96 可选依赖，再从程序目录执行下面的离线命令。--offline 不发起数据下载。
+
+等待各阶段完成，查看工作目录 e2e_steps.json 的 complete，以及 project/output/studio_report.html。structure_accepted 单独表示是否获得条件结构。
+
+
+.\.venv\Scripts\python.exe examples/real_dare_e2e/run_e2e.py --offline --workdir "C:\Seismic\runs\offline_dublin" --network 1V --max-cases 1000
+
+
+DARE 同理：复制四个 DARE 日包合并后的 download 至新的工作目录，该目录应有 40 个 H5，然后执行：
+
+
+.\.venv\Scripts\python.exe examples/real_dare_e2e/run_e2e.py --offline --workdir "C:\Seismic\runs\offline_dare" --network Y7 --max-cases 12
+
+
+B. 在线复现：由程序重新向服务请求
+
+日期、通道和返回内容依赖数据服务；在线重新请求不保证永远返回与已保存日包逐字节相同的文件。下面命令均使用本程序的内置下载接口。
+
+
+.\.venv\Scripts\python.exe examples/real_dare_e2e/run_e2e.py --workdir "C:\Seismic\runs\online_dare" --network Y7 --start 2020-10-12 --end 2020-10-16 --size 10 --max-cases 12
+.\.venv\Scripts\python.exe examples/real_dare_e2e/run_e2e.py --workdir "C:\Seismic\runs\online_dublin" --network 1V --start 2019-04-01 --end 2019-04-05 --size 10 --max-cases 1000
+
+
+C. 逐阶段命令：适用于已经选好台站的项目
+
+以下命令按依赖顺序执行；路径固定为你的项目。它们不是上面的自动选站/筛选驱动，不会因窗口不足自动换阵列。
+
+
+.\.venv\Scripts\python.exe run.py init --project "C:\Seismic\runs\my_array\project" --folder "C:\Seismic\runs\my_array\download"
+.\.venv\Scripts\python.exe run.py import --project "C:\Seismic\runs\my_array\project"
+.\.venv\Scripts\python.exe run.py prepare --project "C:\Seismic\runs\my_array\project"
+.\.venv\Scripts\python.exe run.py scan --project "C:\Seismic\runs\my_array\project"
+.\.venv\Scripts\python.exe run.py controls --project "C:\Seismic\runs\my_array\project"
+.\.venv\Scripts\python.exe run.py families --project "C:\Seismic\runs\my_array\project"
+.\.venv\Scripts\python.exe run.py review --project "C:\Seismic\runs\my_array\project"
+.\.venv\Scripts\python.exe run.py verify --project "C:\Seismic\runs\my_array\project"
+.\.venv\Scripts\python.exe run.py autoselect --project "C:\Seismic\runs\my_array\project" --max-cases 1000 --modes 0
+.\.venv\Scripts\python.exe run.py invert --project "C:\Seismic\runs\my_array\project"
+.\.venv\Scripts\python.exe run.py report --project "C:\Seismic\runs\my_array\project"
+
+
+想用 GUI 打开已建立项目：
+
+
+.\.venv\Scripts\python.exe run.py gui --project "C:\Seismic\runs\my_array\project"
+
+
+D. 高级：程序内置几何选站 / 下载 / 审计 / 时域筛选
+
+--size 为初始下载台数；--min-stations / --max-stations 为允许台数范围。严格逐台最近邻范围 200–2000 m，孔径最大 6000 m；不能用平均间距替代逐台核对。以下只是操作示例，先核对数据所在网络和日期。
+
+
+.\.venv\Scripts\python.exe run.py array-select --provider GFZ --network 1V --start 2019-04-01 --end 2019-04-05 --size 10 --min-stations 5 --max-stations 100 --min-spacing-m 200 --max-spacing-m 2000 --max-aperture-m 6000 --channel HHZ --output "C:\Seismic\runs\my_array\array_selection.json"
+.\.venv\Scripts\python.exe run.py fetch --selection "C:\Seismic\runs\my_array\array_selection.json" --output "C:\Seismic\runs\my_array\download" --chunk-seconds 86400 --workers 1 --allow-missing-data
+.\.venv\Scripts\python.exe run.py acquisition-audit --folder "C:\Seismic\runs\my_array\download"
+.\.venv\Scripts\python.exe run.py init --project "C:\Seismic\runs\my_array\project" --folder "C:\Seismic\runs\my_array\download"
+.\.venv\Scripts\python.exe run.py screen-array --selection "C:\Seismic\runs\my_array\array_selection.json" --folder "C:\Seismic\runs\my_array\download" --project "C:\Seismic\runs\my_array\project"
+
+
+prepare 已运行并生成 aligned_valid.npy 后，可诊断共同时间覆盖；这不是对任意未预处理的目录直接执行的筛选。
+
+
+.\.venv\Scripts\python.exe run.py diagnose-prepare --project "C:\Seismic\runs\my_array\project"
+.\.venv\Scripts\python.exe run.py screen-prepared --project "C:\Seismic\runs\my_array\project" --folder "C:\Seismic\runs\my_array\download" --size 6
+
+
+screen-prepared --size 6 表示按固定时域可用性策略保留至最多 6 台，并检查几何与台数范围。它可能拒绝筛选（例如无站满足规则或间距被破坏），不是保证总能得到六台。修改排除后必须重跑 import → prepare → scan → controls → families，不能复用旧台阵结果。筛选不使用频散拟合结果，原始 H5 不删除。
+
+
+修改设置后，从哪一步重新跑
+
+
+ | 修改内容 | 必须从哪里重新开始 | 原因
+
+ | 原始 H5、映射、响应、台站排除、坐标/授时 | import → prepare → scan → controls → families → 重新选组 → invert → report | 原输入与台阵改变，旧结果对应旧输入
+
+ | 窗长、带通、响应预滤波、采样率、局部异常/验证参数 | 至少重新 prepare，随后全部下游；若几何/来源也改先 import | 窗和波形处理缓存必须重建
+
+ | 扫描频带/到时/扫描阈值等 config.json 内容 | 为稳妥重跑 prepare 及下游，遵从程序指纹检查 | 不要跳过程序要求的阶段依赖
+
+ | 候选周期/源相位范围 | 程序可能要求重建上游配置指纹；按日志重跑处理及候选 | 不得强行使用过期完成标志
+
+ | 反演组、模态、层数、结构先验/误差门限 | 重新选定/保存组 → invert → report | 改组后旧模型不是当前选择的完成结果
+
+ | 只想看已生成 HTML / CSV | 直接打开存档文件即可 | 不需要启动计算或重新生成报告
+
+
+程序检查原输入、配置、阶段标志和代码摘要。出现“已改变/缓存过期”时按提示重跑，不要手动改完成标志或删掉校验来继续。
+
+
+常见情况：检查位置与具体处理
+
+ | 看到的情况 | 先检查 | 正确下一步
+
+ | ZIP 不能下载 / 下载后打不开 | 是否下载结束、文件大小是否匹配；用系统“全部解压” | 使用新文件名；综合结果包仍不便下载时改取两个按阵列包。若文件尺寸不符，重新下载而不是在半个文件上修复
+
+ | 双击 BAT 没打开 GUI | 是否已解压、Python 3.12 Launcher 和 .venv 是否存在 | 先运行 install_windows.bat；在终端执行明确的 .venv Python 命令保留报错
+
+ | ModuleNotFoundError / doctor NOT INSTALLED | 包名与是否误用了系统 Python | 用 .\.venv\Scripts\python.exe 安装 requirements.txt；pysurf96 安装 requirements-optional.txt
+
+ | 扫描显示待补字段 | 数据集状态、NSLC、实际 UTC、原生采样率、坐标、单位/响应 | 编辑所选映射并重新扫描，再导入；H5 是容器，不保证外部 H5 自带所需字段
+
+ | Too few usable windows | window_quality.csv、record_audit.csv、局部质量事件和时间覆盖 | 核对真缺测/尖峰/平直段；运行 diagnose-prepare，按记录决定时域子阵列或补充数据，然后从导入重跑
+
+ | 有效窗不少，但 scan 没有稳健段 | cohort_counts.csv 的 train/validation/eligible_blocks 与 phase 诊断 | 总窗数不能替代分组有效验证块。优先改善覆盖；若未通过，就保留零候选结论
+
+ | 错时背景区分未通过 | timeshift_summary.csv、timeshift_trials.csv | 该段不得进入要求背景验证的结构反演；不把诊断排序当成统计显著性
+
+ | 前 12 组反演得到 0 个模型 | inversion_attempts.csv 的 reason，是否只检验默认前 12 组 | 可保持科学门限，扩大自动组上限重新自动组合并反演；不因想要结果而放宽门限
+
+ | missing_modal_root / independent_solver_mismatch_or_missing_root | 起点诊断与独立求解器失败信息 | 程序拒绝该尝试并继续其他起点；不插值补根、不给缺根模型标通过
+
+ | Require…Nyquist / pre-filter / arrival…报错 | 扫描频段、带通、响应四角、fs/2 和到时/噪声区次序 | 协调高级配置后保存，按依赖重跑；不能只改一个频率字段
+
+ | 打开存档项目后找不到原始绝对路径 / canonical | 是否只下载了结果包，是否尚未合并 H5 日包 | 先直接看已有报告；要计算则补齐 download，用复现驱动重新建立 canonical/cache
+
+ | 模型显示历史/中间结果 | inversion_complete.json、选择/曲线/配置和代码摘要 | 重新保存当前组并完成 invert；停止时留下模型不代表该阶段完成
+
+ | 网络 502/403/超时 | 下载日志中服务、请求日期、已完成文件和错误 | 保留已完成 H5，用相同程序参数 Resume 重试；明确 no data 另记录为缺失
+
+最后核对：什么时候可以说“全流程完成”
+
+
+输入字段完整，counts 与真实响应匹配，原始 H5 保持不变。
+
+import 和 prepare 完成；质量掩码和选站决定有记录。
+
+scan、controls、families 的当前完成标志存在；零候选也是明确记录的结果。
+
+verification.json 中 checks_passed=true。
+
+若要求反演，inversion_complete.json 存在，并分别记录请求组数及 compatible_models；没有模型也不补造结构。
+
+报告、条件观测、模型预测、深度/Vs 表与拒绝尝试全部可打开。
+
+
+本次真实测试：DARE 19 个、都柏林 45 个条件结构均通过独立求解器核对。上轮程序完整回归 80 项通过。本次重新交付保留原有科学分析代码及实测结果，重点更新下载包组织和这份操作手册。
+
+依据本次交付的 run.py、h5data_gui.py、ndstudio/gui.py、project.py、pipeline.py、diagnostics.py 及真实测试归档逐项核对。所有截图来自程序已保存的实际窗口。

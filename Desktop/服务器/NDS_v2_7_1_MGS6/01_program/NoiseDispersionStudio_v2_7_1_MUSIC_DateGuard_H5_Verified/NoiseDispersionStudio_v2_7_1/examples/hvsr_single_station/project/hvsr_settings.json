@@ -1,0 +1,33 @@
+{
+  "folder": "../raw",
+  "instrument_id": "XX.DEMO..HH",
+  "settings": {
+    "fmin_hz": 0.3,
+    "fmax_hz": 15.0,
+    "window_s": 60.0,
+    "overlap": 0.0,
+    "ko_bandwidth": 40.0,
+    "frequency_points": 240,
+    "horizontal": "rms",
+    "start": "",
+    "end": "",
+    "max_crest": 12.0,
+    "max_block_rms_ratio": 4.0,
+    "reject_transients": true,
+    "water_level": null,
+    "response_padding_cycles": 3.0,
+    "vs_min_m_s": 200.0,
+    "vs_max_m_s": 300.0,
+    "bedrock_vs_m_s": 1000.0,
+    "peak_frequency_hz": null,
+    "rayleigh_assumption": false,
+    "ellipticity_trials": 160,
+    "ellipticity_seed": 42,
+    "thickness_min_m": 1.0,
+    "thickness_max_m": 300.0,
+    "vp_vs": 1.9,
+    "bedrock_vp_vs": 1.8,
+    "density_g_cm3": 1.8,
+    "bedrock_density_g_cm3": 2.2
+  }
+}

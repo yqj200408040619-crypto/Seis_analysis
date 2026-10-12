@@ -1,0 +1,9 @@
+{
+  "actual_tk_widgets": true,
+  "array_spacing_text": "Mean station spacing: 75156.86 m (nearest neighbour)\nAll-pair mean: 115038.13 m; range: 50649.24-170293.07 m; 3 unique stations",
+  "channel_spacing_text": "Mean station spacing: 50649.24 m (nearest neighbour)\nAll-pair mean: 50649.24 m; range: 50649.24-50649.24 m; 2 unique stations",
+  "screenshot_files": [
+    "v21_download_array.png",
+    "v21_download_channels.png"
+  ]
+}

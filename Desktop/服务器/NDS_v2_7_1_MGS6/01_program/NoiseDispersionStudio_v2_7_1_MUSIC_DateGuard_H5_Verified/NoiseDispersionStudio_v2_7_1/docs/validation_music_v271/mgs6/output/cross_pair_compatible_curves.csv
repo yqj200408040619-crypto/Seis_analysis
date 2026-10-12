@@ -1,0 +1,4 @@
+curve_a,curve_b,segment_a,segment_b,cohort,branch,overlap_min_hz,overlap_max_hz,common_points,phase_velocity_median_fraction,phase_velocity_max_fraction,group_velocity_median_fraction,same_rayleigh_mode_verified
+P00003_b1_S0_N2,P00013_b1_S0_N2,P00003_b1,P00013_b1,all,positive,0.15,0.2,11,0.01760020581088495,0.04159520899591829,0.12128771320195646,False
+P00003_b1_S0_N3,P00013_b1_S0_N3,P00003_b1,P00013_b1,all,positive,0.15,0.2,11,0.010072394510711968,0.01711280612720224,0.12128771320195646,False
+P00003_b1_S0_N4,P00013_b1_S0_N4,P00003_b1,P00013_b1,all,positive,0.15,0.2,11,0.009047275099562045,0.021825635181958958,0.12128771320195646,False

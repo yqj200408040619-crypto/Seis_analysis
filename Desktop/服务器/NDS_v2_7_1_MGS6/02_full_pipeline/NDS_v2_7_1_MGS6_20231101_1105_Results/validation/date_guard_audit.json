@@ -1,0 +1,395 @@
+{
+  "requested_utc": [
+    "2023-11-01T00:00:00+00:00",
+    "2023-11-05T00:00:00+00:00"
+  ],
+  "h5_files": 96,
+  "records": [
+    {
+      "file": "BW/MGS01/BW_MGS01_--_HHZ_20231101T000000_20231101T060000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS01/BW_MGS01_--_HHZ_20231101T060000_20231101T120000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS01/BW_MGS01_--_HHZ_20231101T120000_20231101T180000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS01/BW_MGS01_--_HHZ_20231101T180000_20231102T000000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS01/BW_MGS01_--_HHZ_20231102T000000_20231102T060000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS01/BW_MGS01_--_HHZ_20231102T060000_20231102T120000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS01/BW_MGS01_--_HHZ_20231102T120000_20231102T180000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS01/BW_MGS01_--_HHZ_20231102T180000_20231103T000000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS01/BW_MGS01_--_HHZ_20231103T000000_20231103T060000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS01/BW_MGS01_--_HHZ_20231103T060000_20231103T120000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS01/BW_MGS01_--_HHZ_20231103T120000_20231103T180000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS01/BW_MGS01_--_HHZ_20231103T180000_20231104T000000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS01/BW_MGS01_--_HHZ_20231104T000000_20231104T060000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS01/BW_MGS01_--_HHZ_20231104T060000_20231104T120000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS01/BW_MGS01_--_HHZ_20231104T120000_20231104T180000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS01/BW_MGS01_--_HHZ_20231104T180000_20231105T000000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS02/BW_MGS02_--_HHZ_20231101T000000_20231101T060000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS02/BW_MGS02_--_HHZ_20231101T060000_20231101T120000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS02/BW_MGS02_--_HHZ_20231101T120000_20231101T180000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS02/BW_MGS02_--_HHZ_20231101T180000_20231102T000000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS02/BW_MGS02_--_HHZ_20231102T000000_20231102T060000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS02/BW_MGS02_--_HHZ_20231102T060000_20231102T120000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS02/BW_MGS02_--_HHZ_20231102T120000_20231102T180000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS02/BW_MGS02_--_HHZ_20231102T180000_20231103T000000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS02/BW_MGS02_--_HHZ_20231103T000000_20231103T060000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS02/BW_MGS02_--_HHZ_20231103T060000_20231103T120000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS02/BW_MGS02_--_HHZ_20231103T120000_20231103T180000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS02/BW_MGS02_--_HHZ_20231103T180000_20231104T000000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS02/BW_MGS02_--_HHZ_20231104T000000_20231104T060000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS02/BW_MGS02_--_HHZ_20231104T060000_20231104T120000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS02/BW_MGS02_--_HHZ_20231104T120000_20231104T180000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS02/BW_MGS02_--_HHZ_20231104T180000_20231105T000000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS03/BW_MGS03_--_HHZ_20231101T000000_20231101T060000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS03/BW_MGS03_--_HHZ_20231101T060000_20231101T120000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS03/BW_MGS03_--_HHZ_20231101T120000_20231101T180000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS03/BW_MGS03_--_HHZ_20231101T180000_20231102T000000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS03/BW_MGS03_--_HHZ_20231102T000000_20231102T060000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS03/BW_MGS03_--_HHZ_20231102T060000_20231102T120000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS03/BW_MGS03_--_HHZ_20231102T120000_20231102T180000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS03/BW_MGS03_--_HHZ_20231102T180000_20231103T000000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS03/BW_MGS03_--_HHZ_20231103T000000_20231103T060000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS03/BW_MGS03_--_HHZ_20231103T060000_20231103T120000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS03/BW_MGS03_--_HHZ_20231103T120000_20231103T180000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS03/BW_MGS03_--_HHZ_20231103T180000_20231104T000000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS03/BW_MGS03_--_HHZ_20231104T000000_20231104T060000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS03/BW_MGS03_--_HHZ_20231104T060000_20231104T120000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS03/BW_MGS03_--_HHZ_20231104T120000_20231104T180000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS03/BW_MGS03_--_HHZ_20231104T180000_20231105T000000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS04/BW_MGS04_--_HHZ_20231101T000000_20231101T060000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS04/BW_MGS04_--_HHZ_20231101T060000_20231101T120000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS04/BW_MGS04_--_HHZ_20231101T120000_20231101T180000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS04/BW_MGS04_--_HHZ_20231101T180000_20231102T000000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS04/BW_MGS04_--_HHZ_20231102T000000_20231102T060000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS04/BW_MGS04_--_HHZ_20231102T060000_20231102T120000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS04/BW_MGS04_--_HHZ_20231102T120000_20231102T180000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS04/BW_MGS04_--_HHZ_20231102T180000_20231103T000000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS04/BW_MGS04_--_HHZ_20231103T000000_20231103T060000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS04/BW_MGS04_--_HHZ_20231103T060000_20231103T120000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS04/BW_MGS04_--_HHZ_20231103T120000_20231103T180000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS04/BW_MGS04_--_HHZ_20231103T180000_20231104T000000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS04/BW_MGS04_--_HHZ_20231104T000000_20231104T060000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS04/BW_MGS04_--_HHZ_20231104T060000_20231104T120000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS04/BW_MGS04_--_HHZ_20231104T120000_20231104T180000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS04/BW_MGS04_--_HHZ_20231104T180000_20231105T000000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS05/BW_MGS05_--_HHZ_20231101T000000_20231101T060000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS05/BW_MGS05_--_HHZ_20231101T060000_20231101T120000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS05/BW_MGS05_--_HHZ_20231101T120000_20231101T180000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS05/BW_MGS05_--_HHZ_20231101T180000_20231102T000000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS05/BW_MGS05_--_HHZ_20231102T000000_20231102T060000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS05/BW_MGS05_--_HHZ_20231102T060000_20231102T120000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS05/BW_MGS05_--_HHZ_20231102T120000_20231102T180000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS05/BW_MGS05_--_HHZ_20231102T180000_20231103T000000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS05/BW_MGS05_--_HHZ_20231103T000000_20231103T060000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS05/BW_MGS05_--_HHZ_20231103T060000_20231103T120000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS05/BW_MGS05_--_HHZ_20231103T120000_20231103T180000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS05/BW_MGS05_--_HHZ_20231103T180000_20231104T000000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS05/BW_MGS05_--_HHZ_20231104T000000_20231104T060000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS05/BW_MGS05_--_HHZ_20231104T060000_20231104T120000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS05/BW_MGS05_--_HHZ_20231104T120000_20231104T180000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGS05/BW_MGS05_--_HHZ_20231104T180000_20231105T000000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGSBH/BW_MGSBH_--_HHZ_20231101T000000_20231101T060000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGSBH/BW_MGSBH_--_HHZ_20231101T060000_20231101T120000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGSBH/BW_MGSBH_--_HHZ_20231101T120000_20231101T180000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGSBH/BW_MGSBH_--_HHZ_20231101T180000_20231102T000000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGSBH/BW_MGSBH_--_HHZ_20231102T000000_20231102T060000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGSBH/BW_MGSBH_--_HHZ_20231102T060000_20231102T120000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGSBH/BW_MGSBH_--_HHZ_20231102T120000_20231102T180000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGSBH/BW_MGSBH_--_HHZ_20231102T180000_20231103T000000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGSBH/BW_MGSBH_--_HHZ_20231103T000000_20231103T060000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGSBH/BW_MGSBH_--_HHZ_20231103T060000_20231103T120000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGSBH/BW_MGSBH_--_HHZ_20231103T120000_20231103T180000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGSBH/BW_MGSBH_--_HHZ_20231103T180000_20231104T000000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGSBH/BW_MGSBH_--_HHZ_20231104T000000_20231104T060000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGSBH/BW_MGSBH_--_HHZ_20231104T060000_20231104T120000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGSBH/BW_MGSBH_--_HHZ_20231104T120000_20231104T180000.h5",
+      "traces": 1
+    },
+    {
+      "file": "BW/MGSBH/BW_MGSBH_--_HHZ_20231104T180000_20231105T000000.h5",
+      "traces": 1
+    }
+  ],
+  "requests_and_actual_epochs_checked": true,
+  "fdsn_boundary_padding_limit_s": 60
+}

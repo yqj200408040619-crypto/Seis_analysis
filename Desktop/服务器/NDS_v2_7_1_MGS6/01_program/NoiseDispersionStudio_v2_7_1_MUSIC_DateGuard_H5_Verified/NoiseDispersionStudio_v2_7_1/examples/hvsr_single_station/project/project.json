@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "input_folder": "../raw",
+  "excluded_stations": [],
+  "name": "project",
+  "automatic_geometry": true
+}

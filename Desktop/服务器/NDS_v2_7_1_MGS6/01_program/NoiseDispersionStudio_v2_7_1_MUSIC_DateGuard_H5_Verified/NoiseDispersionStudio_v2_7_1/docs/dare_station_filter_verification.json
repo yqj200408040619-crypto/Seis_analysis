@@ -1,0 +1,31 @@
+{
+  "source": "existing DARE StationXML (offline)",
+  "before_station_codes": [
+    "A00",
+    "B02",
+    "C00",
+    "C01",
+    "C02",
+    "C03",
+    "D01",
+    "D02",
+    "E01",
+    "E02"
+  ],
+  "filter": {
+    "station_prefix": "C",
+    "latitude": [
+      44.28,
+      44.32
+    ],
+    "longitude": [
+      4.66,
+      4.68
+    ]
+  },
+  "matched_station_codes": [
+    "C00",
+    "C01",
+    "C02"
+  ]
+}

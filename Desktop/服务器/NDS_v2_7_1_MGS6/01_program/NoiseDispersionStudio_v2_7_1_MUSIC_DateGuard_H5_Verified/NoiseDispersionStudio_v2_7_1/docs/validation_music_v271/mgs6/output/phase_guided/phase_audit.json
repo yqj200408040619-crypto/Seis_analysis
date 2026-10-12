@@ -1,0 +1,10 @@
+{
+  "pass_audit": true,
+  "gates_checked": 122,
+  "waveform_cross_recomputed": 366,
+  "accepted_window_evaluations": 142,
+  "valid_window_evaluations": 53902,
+  "max_recomputed_phase_error_rad": 0.0,
+  "module_sha256": "0ab1550cd1494ead9e04c1877341eb6db5dfed0c0cc3f339ec8793d5ad28846c",
+  "aligned_h5_sha256": "50a807cd0871b3da93c7530d235e93f59b80e57f6a96ead3faa9699223a0f9ee"
+}

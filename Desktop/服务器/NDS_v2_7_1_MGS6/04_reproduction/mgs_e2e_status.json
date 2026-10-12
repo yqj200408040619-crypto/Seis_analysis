@@ -1,0 +1,25 @@
+{
+  "program_version": "2.7.1",
+  "requested_utc": [
+    "2023-11-01T00:00:00.000000Z",
+    "2023-11-05T00:00:00.000000Z"
+  ],
+  "complete": true,
+  "stages": [
+    "date-guard",
+    "preprocess and scan",
+    "front MUSIC direction and velocity",
+    "review",
+    "verify",
+    "select before",
+    "select screening priors only",
+    "Goertzel low-frequency reconstruction",
+    "phase-audit",
+    "select after",
+    "report"
+  ],
+  "scientific_outcome": "no_qualified_corrected_bands",
+  "inversion_skipped": true,
+  "physical_dispersion_and_structure_obtained": false,
+  "report": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/output/phase_guided/phase_report.html"
+}

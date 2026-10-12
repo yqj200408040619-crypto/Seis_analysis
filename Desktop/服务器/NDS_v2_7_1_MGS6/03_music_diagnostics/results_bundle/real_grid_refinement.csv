@@ -1,0 +1,3 @@
+frequency_hz,windows,coarse_step_deg,coarse_velocity_points,fine_step_deg,fine_velocity_points,coarse_accepted,fine_accepted,paired_q1_windows,paired_median_azimuth_difference_deg,paired_median_velocity_change_fraction
+0.1,12,2.0,128,1.0,256,4,4,5,1.918863290484296e-09,-2.731148640577885e-14
+0.45,12,2.0,128,1.0,256,0,0,0,,

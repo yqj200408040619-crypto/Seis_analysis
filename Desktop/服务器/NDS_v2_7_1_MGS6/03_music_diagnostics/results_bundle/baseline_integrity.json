@@ -1,0 +1,10 @@
+{
+  "baseline_music_current": true,
+  "baseline_music_marker_sha256": "51c4c6f867a500c06efeb307276be4ee20f4d04bb57edb61badc1e4a889c9434",
+  "baseline_phase_marker_sha256": "108b2f69b6da02756ad274e97afb9fd55b23a49789758643eb2b80869dac1f89",
+  "aligned_waveform_sha256": "d7059754225a4f114ded140cf096e8a78d6597b9c569dc74bcee6ad6ae723ec5",
+  "music_settings_sha256": "8a5b566cc256927a8137c382032ff3c21ea1610e27aa94aa764a3e10db1019d3",
+  "phase_inversion_handoff_points": 0,
+  "phase_accepted_window_evaluations": 150,
+  "phase_valid_window_evaluations": 120927
+}

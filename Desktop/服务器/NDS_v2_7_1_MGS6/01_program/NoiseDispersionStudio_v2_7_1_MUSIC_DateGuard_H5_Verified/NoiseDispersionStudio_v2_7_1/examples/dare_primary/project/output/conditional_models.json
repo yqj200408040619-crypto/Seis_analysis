@@ -1,0 +1,446 @@
+{
+  "settings": {
+    "layers": [
+      1,
+      2
+    ],
+    "starts": 4,
+    "max_evaluations": 120,
+    "vp_vs_ratio": 2.0,
+    "density_g_cm3": 2.0,
+    "thickness_bounds_m": [
+      5.0,
+      500.0
+    ],
+    "vs_bounds_m_s": [
+      150.0,
+      2200.0
+    ],
+    "phase_rms_max_fraction": 0.03,
+    "phase_point_max_fraction": 0.05,
+    "group_median_max_fraction": 0.15,
+    "group_fit_weight": 0.25,
+    "max_fit_points_per_band": 24,
+    "finite_difference_log_step": 0.003,
+    "require_independent_solver": false,
+    "independent_max_difference_m_s": 0.5,
+    "allow_background_unverified": false,
+    "seed": 9075
+  },
+  "models": [
+    {
+      "model_id": "M00001",
+      "case": "DARE_N3_M0",
+      "finite_layers": 1,
+      "parameters": [
+        16.818093845376662,
+        254.43936845647312,
+        719.2970019704503
+      ],
+      "thickness_m": [
+        16.818093845376662
+      ],
+      "vs_m_s": [
+        254.43936845647315,
+        719.2970019704503
+      ],
+      "vp_vs_ratio": 2.0,
+      "density_g_cm3": 2.0,
+      "phase_weighted_rms_fraction": 0.008123083864220197,
+      "phase_max_fraction": 0.013693677921960301,
+      "maximum_group_median_fraction": 0.03985637758644045,
+      "independent_solver_available": true,
+      "independent_solver_pass": true,
+      "independent_max_difference_m_s": 0.000990360765740661,
+      "parameters_near_search_bound": false,
+      "optimizer_converged": true,
+      "curve_ids": [
+        "P00156_b1_S0_N3"
+      ],
+      "assumed_modes": [
+        0
+      ],
+      "assumptions": {
+        "common_1d_structure": true,
+        "source_phase_pi_over_4_assumed": true,
+        "cycle_and_fundamental_mode_assumed": true,
+        "actual_observation_from_previous_DARE_trial": true
+      },
+      "source_phase_verified": false,
+      "absolute_cycles_or_modes_verified": false,
+      "unique_structure_identified": false,
+      "posterior_probability_calibrated": false
+    },
+    {
+      "model_id": "M00002",
+      "case": "DARE_N3_M0",
+      "finite_layers": 1,
+      "parameters": [
+        58.07224515181512,
+        537.3531079282666,
+        726.6900855262894
+      ],
+      "thickness_m": [
+        58.07224515181512
+      ],
+      "vs_m_s": [
+        537.3531079282666,
+        726.6900855262894
+      ],
+      "vp_vs_ratio": 2.0,
+      "density_g_cm3": 2.0,
+      "phase_weighted_rms_fraction": 0.005663104358121225,
+      "phase_max_fraction": 0.016148396786952013,
+      "maximum_group_median_fraction": 0.008176125493051356,
+      "independent_solver_available": true,
+      "independent_solver_pass": true,
+      "independent_max_difference_m_s": 0.0010112542373690303,
+      "parameters_near_search_bound": false,
+      "optimizer_converged": true,
+      "curve_ids": [
+        "P00156_b1_S0_N3"
+      ],
+      "assumed_modes": [
+        0
+      ],
+      "assumptions": {
+        "common_1d_structure": true,
+        "source_phase_pi_over_4_assumed": true,
+        "cycle_and_fundamental_mode_assumed": true,
+        "actual_observation_from_previous_DARE_trial": true
+      },
+      "source_phase_verified": false,
+      "absolute_cycles_or_modes_verified": false,
+      "unique_structure_identified": false,
+      "posterior_probability_calibrated": false
+    },
+    {
+      "model_id": "M00003",
+      "case": "DARE_N3_M0",
+      "finite_layers": 2,
+      "parameters": [
+        13.876965209054882,
+        30.960112116204424,
+        863.1732533943367,
+        444.6727170336718,
+        701.5374858407037
+      ],
+      "thickness_m": [
+        13.876965209054882,
+        30.960112116204424
+      ],
+      "vs_m_s": [
+        863.1732533943367,
+        444.6727170336718,
+        701.5374858407037
+      ],
+      "vp_vs_ratio": 2.0,
+      "density_g_cm3": 2.0,
+      "phase_weighted_rms_fraction": 0.0047398452622826074,
+      "phase_max_fraction": 0.014623072944742965,
+      "maximum_group_median_fraction": 0.010216601992292296,
+      "independent_solver_available": true,
+      "independent_solver_pass": true,
+      "independent_max_difference_m_s": 0.0009881669477636024,
+      "parameters_near_search_bound": false,
+      "optimizer_converged": true,
+      "curve_ids": [
+        "P00156_b1_S0_N3"
+      ],
+      "assumed_modes": [
+        0
+      ],
+      "assumptions": {
+        "common_1d_structure": true,
+        "source_phase_pi_over_4_assumed": true,
+        "cycle_and_fundamental_mode_assumed": true,
+        "actual_observation_from_previous_DARE_trial": true
+      },
+      "source_phase_verified": false,
+      "absolute_cycles_or_modes_verified": false,
+      "unique_structure_identified": false,
+      "posterior_probability_calibrated": false
+    },
+    {
+      "model_id": "M00004",
+      "case": "DARE_N3_M0",
+      "finite_layers": 2,
+      "parameters": [
+        67.53300503629184,
+        106.3375174084888,
+        547.952260715306,
+        771.2600478251878,
+        619.5322156338262
+      ],
+      "thickness_m": [
+        67.53300503629184,
+        106.3375174084888
+      ],
+      "vs_m_s": [
+        547.952260715306,
+        771.2600478251878,
+        619.5322156338262
+      ],
+      "vp_vs_ratio": 2.0,
+      "density_g_cm3": 2.0,
+      "phase_weighted_rms_fraction": 0.004001495751572292,
+      "phase_max_fraction": 0.006437477289506832,
+      "maximum_group_median_fraction": 0.00990843351381776,
+      "independent_solver_available": true,
+      "independent_solver_pass": true,
+      "independent_max_difference_m_s": 0.001008955611609963,
+      "parameters_near_search_bound": false,
+      "optimizer_converged": true,
+      "curve_ids": [
+        "P00156_b1_S0_N3"
+      ],
+      "assumed_modes": [
+        0
+      ],
+      "assumptions": {
+        "common_1d_structure": true,
+        "source_phase_pi_over_4_assumed": true,
+        "cycle_and_fundamental_mode_assumed": true,
+        "actual_observation_from_previous_DARE_trial": true
+      },
+      "source_phase_verified": false,
+      "absolute_cycles_or_modes_verified": false,
+      "unique_structure_identified": false,
+      "posterior_probability_calibrated": false
+    },
+    {
+      "model_id": "M00005",
+      "case": "DARE_N3_M0",
+      "finite_layers": 2,
+      "parameters": [
+        13.317902541311078,
+        31.40164463300455,
+        892.5519617777651,
+        443.9367740017317,
+        700.6349932907012
+      ],
+      "thickness_m": [
+        13.317902541311078,
+        31.40164463300455
+      ],
+      "vs_m_s": [
+        892.5519617777651,
+        443.9367740017317,
+        700.6349932907012
+      ],
+      "vp_vs_ratio": 2.0,
+      "density_g_cm3": 2.0,
+      "phase_weighted_rms_fraction": 0.0047327122646408926,
+      "phase_max_fraction": 0.014614382199559683,
+      "maximum_group_median_fraction": 0.010151623709631963,
+      "independent_solver_available": true,
+      "independent_solver_pass": true,
+      "independent_max_difference_m_s": 0.001020434862766706,
+      "parameters_near_search_bound": false,
+      "optimizer_converged": true,
+      "curve_ids": [
+        "P00156_b1_S0_N3"
+      ],
+      "assumed_modes": [
+        0
+      ],
+      "assumptions": {
+        "common_1d_structure": true,
+        "source_phase_pi_over_4_assumed": true,
+        "cycle_and_fundamental_mode_assumed": true,
+        "actual_observation_from_previous_DARE_trial": true
+      },
+      "source_phase_verified": false,
+      "absolute_cycles_or_modes_verified": false,
+      "unique_structure_identified": false,
+      "posterior_probability_calibrated": false
+    },
+    {
+      "model_id": "M00006",
+      "case": "DARE_N4_M0",
+      "finite_layers": 1,
+      "parameters": [
+        29.2676177130445,
+        475.67511201641423,
+        543.234061933783
+      ],
+      "thickness_m": [
+        29.2676177130445
+      ],
+      "vs_m_s": [
+        475.67511201641423,
+        543.234061933783
+      ],
+      "vp_vs_ratio": 2.0,
+      "density_g_cm3": 2.0,
+      "phase_weighted_rms_fraction": 0.010100604034879217,
+      "phase_max_fraction": 0.035268050825871144,
+      "maximum_group_median_fraction": 0.032389263218460584,
+      "independent_solver_available": true,
+      "independent_solver_pass": true,
+      "independent_max_difference_m_s": 0.0007756841461628028,
+      "parameters_near_search_bound": false,
+      "optimizer_converged": true,
+      "curve_ids": [
+        "P00156_b1_S0_N4"
+      ],
+      "assumed_modes": [
+        0
+      ],
+      "assumptions": {
+        "common_1d_structure": true,
+        "source_phase_pi_over_4_assumed": true,
+        "cycle_and_fundamental_mode_assumed": true,
+        "actual_observation_from_previous_DARE_trial": true
+      },
+      "source_phase_verified": false,
+      "absolute_cycles_or_modes_verified": false,
+      "unique_structure_identified": false,
+      "posterior_probability_calibrated": false
+    },
+    {
+      "model_id": "M00007",
+      "case": "DARE_N4_M0",
+      "finite_layers": 2,
+      "parameters": [
+        6.503056735531316,
+        17.53444824539313,
+        748.1271593545854,
+        416.71724782620703,
+        529.7897232105855
+      ],
+      "thickness_m": [
+        6.503056735531316,
+        17.53444824539313
+      ],
+      "vs_m_s": [
+        748.1271593545854,
+        416.71724782620703,
+        529.7897232105855
+      ],
+      "vp_vs_ratio": 2.0,
+      "density_g_cm3": 2.0,
+      "phase_weighted_rms_fraction": 0.009780627962828643,
+      "phase_max_fraction": 0.033533246131048244,
+      "maximum_group_median_fraction": 0.032724422142460186,
+      "independent_solver_available": true,
+      "independent_solver_pass": true,
+      "independent_max_difference_m_s": 0.000788055287273437,
+      "parameters_near_search_bound": false,
+      "optimizer_converged": true,
+      "curve_ids": [
+        "P00156_b1_S0_N4"
+      ],
+      "assumed_modes": [
+        0
+      ],
+      "assumptions": {
+        "common_1d_structure": true,
+        "source_phase_pi_over_4_assumed": true,
+        "cycle_and_fundamental_mode_assumed": true,
+        "actual_observation_from_previous_DARE_trial": true
+      },
+      "source_phase_verified": false,
+      "absolute_cycles_or_modes_verified": false,
+      "unique_structure_identified": false,
+      "posterior_probability_calibrated": false
+    },
+    {
+      "model_id": "M00008",
+      "case": "DARE_N4_M0",
+      "finite_layers": 2,
+      "parameters": [
+        45.656849883499184,
+        69.09144438405191,
+        488.90345663633093,
+        571.8810669091328,
+        495.0875517002792
+      ],
+      "thickness_m": [
+        45.656849883499184,
+        69.09144438405191
+      ],
+      "vs_m_s": [
+        488.90345663633093,
+        571.8810669091328,
+        495.0875517002792
+      ],
+      "vp_vs_ratio": 2.0,
+      "density_g_cm3": 2.0,
+      "phase_weighted_rms_fraction": 0.007811705501473403,
+      "phase_max_fraction": 0.022818320390100233,
+      "maximum_group_median_fraction": 0.031117797652581713,
+      "independent_solver_available": true,
+      "independent_solver_pass": true,
+      "independent_max_difference_m_s": 0.0009051932657939687,
+      "parameters_near_search_bound": false,
+      "optimizer_converged": true,
+      "curve_ids": [
+        "P00156_b1_S0_N4"
+      ],
+      "assumed_modes": [
+        0
+      ],
+      "assumptions": {
+        "common_1d_structure": true,
+        "source_phase_pi_over_4_assumed": true,
+        "cycle_and_fundamental_mode_assumed": true,
+        "actual_observation_from_previous_DARE_trial": true
+      },
+      "source_phase_verified": false,
+      "absolute_cycles_or_modes_verified": false,
+      "unique_structure_identified": false,
+      "posterior_probability_calibrated": false
+    },
+    {
+      "model_id": "M00009",
+      "case": "DARE_N4_M0",
+      "finite_layers": 2,
+      "parameters": [
+        16.247315024100256,
+        256.32405532472063,
+        396.3529995917757,
+        550.1757388678692,
+        497.79759204440785
+      ],
+      "thickness_m": [
+        16.247315024100256,
+        256.32405532472063
+      ],
+      "vs_m_s": [
+        396.3529995917757,
+        550.1757388678692,
+        497.79759204440785
+      ],
+      "vp_vs_ratio": 2.0,
+      "density_g_cm3": 2.0,
+      "phase_weighted_rms_fraction": 0.01039944441476959,
+      "phase_max_fraction": 0.03489341750961783,
+      "maximum_group_median_fraction": 0.03479384931049101,
+      "independent_solver_available": true,
+      "independent_solver_pass": true,
+      "independent_max_difference_m_s": 0.0007707082511956287,
+      "parameters_near_search_bound": false,
+      "optimizer_converged": true,
+      "curve_ids": [
+        "P00156_b1_S0_N4"
+      ],
+      "assumed_modes": [
+        0
+      ],
+      "assumptions": {
+        "common_1d_structure": true,
+        "source_phase_pi_over_4_assumed": true,
+        "cycle_and_fundamental_mode_assumed": true,
+        "actual_observation_from_previous_DARE_trial": true
+      },
+      "source_phase_verified": false,
+      "absolute_cycles_or_modes_verified": false,
+      "unique_structure_identified": false,
+      "posterior_probability_calibrated": false
+    }
+  ],
+  "independent_solver_available": true,
+  "unique_structure_identified": false,
+  "posterior_probabilities_calibrated": false
+}

@@ -1,0 +1,16 @@
+{
+  "stabilization_s": 0.0,
+  "repeat_cycles": 40.0,
+  "slide_cycles": 2.0,
+  "taper": "hann",
+  "frequency_method": "exact",
+  "time_mode": "full",
+  "amplitude_rejection": false,
+  "tolerance_deg": 20.0,
+  "direction": {
+    "mode": "filter",
+    "velocity_min_m_s": 200.0,
+    "velocity_max_m_s": 1000.0,
+    "velocity_points": 41
+  }
+}

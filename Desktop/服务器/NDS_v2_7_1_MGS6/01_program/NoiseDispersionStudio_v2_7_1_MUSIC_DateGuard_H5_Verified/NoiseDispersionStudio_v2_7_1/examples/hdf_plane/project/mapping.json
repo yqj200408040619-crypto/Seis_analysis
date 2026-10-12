@@ -1,0 +1,8 @@
+{
+  "dataset_pattern": "",
+  "defaults": {
+    "valid_dataset": "/valid"
+  },
+  "rules": [],
+  "overrides": {}
+}

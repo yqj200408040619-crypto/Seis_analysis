@@ -1,0 +1,5 @@
+segment_id,observed_median_snr,null_q95,valid_trials,plus_one_exceedance_rank,calibrated_p_value,minimum_valid_trials,background_threshold_exceeded,classifier_reapplied_without_refitting,station_delay_closure_preserved
+P00023_b1,20.166694046976975,2.076049499209717,40,0.024390243902439025,False,20,True,True,True
+P00033_b1,23.393074442782105,1.9929349504964664,40,0.024390243902439025,False,20,True,True,True
+P00038_b1,18.53307201829781,2.1960357459392186,40,0.024390243902439025,False,20,True,True,True
+P00050_b1,14.897559775600929,2.3076747292056026,40,0.024390243902439025,False,20,True,True,True

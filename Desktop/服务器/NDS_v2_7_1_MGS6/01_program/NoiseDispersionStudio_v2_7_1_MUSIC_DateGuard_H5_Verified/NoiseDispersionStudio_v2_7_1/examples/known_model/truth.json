@@ -1,0 +1,13 @@
+{
+  "finite_layer_thickness_m": [
+    35.0
+  ],
+  "vs_m_s": [
+    350.0,
+    800.0
+  ],
+  "vp_vs_ratio": 2.0,
+  "density_g_cm3": 2.0,
+  "is_real_earth_observation": false,
+  "generated_by": "disba; independent solver validates forward values when available"
+}

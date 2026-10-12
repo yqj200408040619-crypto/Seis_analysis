@@ -1,0 +1,1606 @@
+【流程开始】workflow · run=20261011T091423_6effbdb8
+【实际参数】{"analysis": {"stations_csv": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/stations.csv", "data_root": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/canonical", "output": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/output", "start_utc": null, "end_utc": null, "sample_rate_hz": 20.0, "discard_first_s": 600.0, "filter_guard_s": 6.0, "bandpass_hz": [0.5, 7.0], "window_s": 240.0, "max_lag_s": 12.0, "min_clean_fraction": 0.7, "min_clean_segment_s": 40.0, "minimum_windows": 24, "response": {"required": true, "output": "ACC", "pre_filt_hz": [0.1, 0.3, 7.5, 9.0], "table_step_hz": 0.005, "interpolation_phase_tolerance_rad": 0.001}, "spikes": {"enabled": true, "threshold_mad": 18.0, "scale_window_s": 0.0, "max_repair_s": 0.04, "mask_pad_s": 0.1, "flatline_min_s": 1.0}, "routes": [{"name": "ram5", "ram_s": 5.0, "whiten_hz": 0.05, "required": true}, {"name": "ram20", "ram_s": 20.0, "whiten_hz": 0.05, "required": true}, {"name": "white025", "ram_s": 5.0, "whiten_hz": 0.025, "required": true}, {"name": "white100", "ram_s": 5.0, "whiten_hz": 0.1, "required": true}, {"name": "onebit", "normalization": "onebit", "whiten_hz": 0.05, "required": false}], "scan": {"min_hz": 2.0, "max_hz": 5.0, "step_hz": 0.05, "ftan_width": 0.15, "narrow_width": 0.08, "minimum_sigma_hz": 0.04, "group_velocity_bounds_m_s": [200.0, 5000.0], "arrival_min_s": 0.2, "arrival_max_s": 8.0, "noise_lag_s": [9.0, 11.0], "min_band_hz": 0.25, "min_points": 8, "max_peaks": 8, "max_tracks": 12, "gate_margin_s": 0.9, "gate_change_s": [0.3, 0.2]}, "cohorts": {"clock_groups": false, "night_hours_utc": [18, 6], "states": 0, "pca_components": 6, "feature_band_hz": [2.65, 4.8], "feature_max_lag_s": 10.0}, "validation": {"block_s": 1800.0, "train_fraction": 0.5, "split_utc": null, "status": "internal_chronological", "min_windows_each_split": 12, "min_windows_per_block": 2, "min_eligible_blocks": 4, "snr_min": 10.0, "phase_route_max_rad": 0.2, "phase_split_max_rad": 0.35, "arrival_fraction_max": 0.1, "phase_delay_fraction_max": 0.2, "gate_phase_max_rad": 0.35, "block_snr_min": 5.0, "block_phase_max_rad": 0.5, "block_arrival_fraction_max": 0.15, "block_fraction_min": 0.75, "leaveout_phase_max_rad": 0.2, "leaveout_arrival_fraction_max": 0.1, "bootstrap_draws": 99}, "controls": {"trials": 20, "seed": 9074}, "phase": {"source_phase_rad": [0.0], "source_phase_verified": true, "cycle_min": 0, "cycle_max": 80, "velocity_bounds_m_s": [150.0, 3000.0], "link_median_fraction": 0.03, "link_max_fraction": 0.05, "link_group_median_fraction": 0.15, "max_direction_difference_deg": 45.0}, "seed": 9072}, "phase": {"direction": {"mode": "diagnostic"}, "stabilization_s": 600.0, "repeat_cycles": 20.0, "slide_cycles": 2.0, "taper": "hann", "frequency_method": "exact", "amplitude_rejection": true, "split_branches": true, "screening_mode": "curve"}, "requested_stage": "all", "auto_invert": true, "minimum_wavelengths": 3.0, "max_cases": 1, "modes": [0]}
+【阶段开始】import · {"input_folder": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/h5", "excluded_stations": [], "automatic_geometry": false}
+@@EVENT {"stage": "import", "status": "running"}
+import: D01 /waveform samples 576000 duplicate overlap 0
+import: D02 /waveform samples 576000 duplicate overlap 0
+import: D03 /waveform samples 576000 duplicate overlap 0
+import: D04 /waveform samples 576000 duplicate overlap 0
+【阶段结果】import · 耗时 0.33 s · {"完成标记": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/hdf_import_audit.json", "摘要": {"source_files_opened_read_only": true, "unknown_clock_offsets_not_estimated": true}, "input_station_qc.csv": {"行数": 4, "文件": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/input_station_qc.csv", "station_数量": 4}}
+@@EVENT {"stage": "import", "status": "complete"}
+【阶段开始】prepare · {"sample_rate_hz": 20.0, "bandpass_hz": [0.5, 7.0], "filter_guard_s": 6.0, "window_s": 240.0, "discard_first_s": 600.0, "minimum_windows": 24, "response": {"required": true, "output": "ACC", "pre_filt_hz": [0.1, 0.3, 7.5, 9.0], "table_step_hz": 0.005, "interpolation_phase_tolerance_rad": 0.001}}
+@@EVENT {"stage": "prepare", "status": "running"}
+prepare: D01 repaired 0 masked 0
+prepare: D02 repaired 1 masked 96
+prepare: D03 repaired 0 masked 96
+prepare: D04 repaired 0 masked 0
+prepare: CCF windows 1 / 52
+prepare: CCF windows 31 / 52
+【阶段结果】prepare · 耗时 1.68 s · {"完成标记": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/output/prepare_complete.json", "摘要": {"scheduled_windows": 52, "accepted_windows": 52, "discarded_common_first_s": 600.0, "filter_guard_s": 6.0, "common_utc_aligned": true}, "pairs.csv": {"行数": 6, "文件": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/output/pairs.csv", "pair_数量": 6}, "window_quality.csv": {"行数": 52, "文件": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/output/window_quality.csv"}}
+@@EVENT {"stage": "prepare", "status": "complete"}
+【阶段开始】scan · {"scan": {"min_hz": 2.0, "max_hz": 5.0, "step_hz": 0.05, "ftan_width": 0.15, "narrow_width": 0.08, "minimum_sigma_hz": 0.04, "group_velocity_bounds_m_s": [200.0, 5000.0], "arrival_min_s": 0.2, "arrival_max_s": 8.0, "noise_lag_s": [9.0, 11.0], "min_band_hz": 0.25, "min_points": 8, "max_peaks": 8, "max_tracks": 12, "gate_margin_s": 0.9, "gate_change_s": [0.3, 0.2]}, "validation": {"block_s": 1800.0, "train_fraction": 0.5, "split_utc": null, "status": "internal_chronological", "min_windows_each_split": 12, "min_windows_per_block": 2, "min_eligible_blocks": 4, "snr_min": 10.0, "phase_route_max_rad": 0.2, "phase_split_max_rad": 0.35, "arrival_fraction_max": 0.1, "phase_delay_fraction_max": 0.2, "gate_phase_max_rad": 0.35, "block_snr_min": 5.0, "block_phase_max_rad": 0.5, "block_arrival_fraction_max": 0.15, "block_fraction_min": 0.75, "leaveout_phase_max_rad": 0.2, "leaveout_arrival_fraction_max": 0.1, "bootstrap_draws": 99}}
+@@EVENT {"stage": "scan", "status": "running"}
+本次扫描参数：最小连续带宽 0.25 Hz；最少连续频点 8；扫描步长 0.05 Hz
+scan: all 0 positive development tracks 1
+scan: all 0 negative development tracks 0
+scan: all 1 positive development tracks 1
+scan: all 1 negative development tracks 0
+scan: all 2 positive development tracks 1
+scan: all 2 negative development tracks 0
+scan: all 3 positive development tracks 1
+scan: all 3 negative development tracks 0
+scan: all 4 positive development tracks 1
+scan: all 4 negative development tracks 0
+scan: all 5 positive development tracks 1
+scan: all 5 negative development tracks 0
+scan: cohort complete all accepted segments 6
+scan diagnostics: 连续稳健区间6个，通过频段条件6个；要求≥8点、≥0.250 Hz
+  P00001 | D01--D02 all positive | 2.000–5.000 Hz | 61点，带宽3.000 Hz | 通过连续频段条件
+  P00002 | D01--D03 all positive | 2.000–5.000 Hz | 61点，带宽3.000 Hz | 通过连续频段条件
+  P00003 | D01--D04 all positive | 2.000–5.000 Hz | 61点，带宽3.000 Hz | 通过连续频段条件
+  P00004 | D02--D03 all positive | 2.000–5.000 Hz | 61点，带宽3.000 Hz | 通过连续频段条件
+  P00005 | D02--D04 all positive | 2.000–5.000 Hz | 61点，带宽3.000 Hz | 通过连续频段条件
+  P00006 | D03--D04 all positive | 2.000–5.000 Hz | 61点，带宽3.000 Hz | 通过连续频段条件
+scan diagnostics: 较好的候选门窗与主要限制（失败计数可重叠）：
+  P00001 | D01--D02 all positive | 2.000–5.000 Hz | 稳健61/61点；最长连续61点、3.000 Hz | 无逐点失败项
+  P00002 | D01--D03 all positive | 2.000–5.000 Hz | 稳健61/61点；最长连续61点、3.000 Hz | 无逐点失败项
+  P00003 | D01--D04 all positive | 2.000–5.000 Hz | 稳健61/61点；最长连续61点、3.000 Hz | 无逐点失败项
+  P00004 | D02--D03 all positive | 2.000–5.000 Hz | 稳健61/61点；最长连续61点、3.000 Hz | 无逐点失败项
+  P00005 | D02--D04 all positive | 2.000–5.000 Hz | 稳健61/61点；最长连续61点、3.000 Hz | 无逐点失败项
+  P00006 | D03--D04 all positive | 2.000–5.000 Hz | 稳健61/61点；最长连续61点、3.000 Hz | 无逐点失败项
+scan diagnostics: 完整表见 /workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/output/scan_band_diagnostics.csv 和 /workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/output/scan_candidate_diagnostics.csv
+【阶段结果】scan · 耗时 3.31 s · {"完成标记": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/output/scan_complete.json", "摘要": {"point_diagnostics_sha256": "d666424f71997ca7dacc80902f13ed7ae9ae295f3d4a4fec95aa66f0337e564f", "candidate_gates_sha256": "60e604cd9174a3cfa30a2e7d5f86fbfbcdebfbc9de19483edfca2007e41b9582", "segments": 6, "measured_points": 366, "gates": 6, "window_sets_fixed_across_frequency": true, "selection_uses_structural_model": false, "validation_status": "internal_chronological", "frequency_step_hz": 0.05, "frequency_step_is_not_physical_resolution": true, "bootstrap_is_calibrated_confidence_interval": false}, "measured_phase_segments.csv": {"行数": 366, "文件": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/output/measured_phase_segments.csv", "pair_数量": 6, "frequency_hz_数量": 61, "频率范围_Hz": [2.0, 5.0]}}
+@@EVENT {"stage": "scan", "status": "complete"}
+【阶段开始】controls · {"trials": 20, "seed": 9074}
+@@EVENT {"stage": "controls", "status": "running"}
+controls: wrong-time trial 1 / 20
+controls: wrong-time trial 2 / 20
+controls: wrong-time trial 3 / 20
+controls: wrong-time trial 4 / 20
+controls: wrong-time trial 5 / 20
+controls: wrong-time trial 6 / 20
+controls: wrong-time trial 7 / 20
+controls: wrong-time trial 8 / 20
+controls: wrong-time trial 9 / 20
+controls: wrong-time trial 10 / 20
+controls: wrong-time trial 11 / 20
+controls: wrong-time trial 12 / 20
+controls: wrong-time trial 13 / 20
+controls: wrong-time trial 14 / 20
+controls: wrong-time trial 15 / 20
+controls: wrong-time trial 16 / 20
+controls: wrong-time trial 17 / 20
+controls: wrong-time trial 18 / 20
+controls: wrong-time trial 19 / 20
+controls: wrong-time trial 20 / 20
+【阶段结果】controls · 耗时 4.31 s · {"完成标记": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/output/controls_complete.json", "摘要": {"trials": 20, "segments": 6, "maximum_baseline_reproduction_error": 0.0, "infeasible_segment_trials": 0, "calibrated_p_values": false, "missing_controls_stored_as_nan": true}, "timeshift_summary.csv": {"行数": 6, "文件": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/output/timeshift_summary.csv"}}
+@@EVENT {"stage": "controls", "status": "complete"}
+【阶段开始】families · {"source_phase_rad": [0.0], "source_phase_verified": true, "cycle_min": 0, "cycle_max": 80, "velocity_bounds_m_s": [150.0, 3000.0], "link_median_fraction": 0.03, "link_max_fraction": 0.05, "link_group_median_fraction": 0.15, "max_direction_difference_deg": 45.0}
+@@EVENT {"stage": "families", "status": "running"}
+【阶段结果】families · 耗时 0.55 s · {"完成标记": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/output/families_complete.json", "摘要": {"conditional_curves": 124, "observed_curve_points": 7564, "compatible_cross_pair_links": 283, "selected_unique_physical_curve": false, "response_corrected": true, "source_phase_verified": true, "absolute_cycles_or_modes_verified": false, "gap_predictions_mixed_into_observations": false}, "conditional_dispersion.csv": {"行数": 7564, "文件": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/output/conditional_dispersion.csv", "pair_数量": 6, "curve_id_数量": 124, "frequency_hz_数量": 61, "频率范围_Hz": [2.0, 5.0]}, "curve_catalog.csv": {"行数": 124, "文件": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/output/curve_catalog.csv", "curve_id_数量": 124}}
+@@EVENT {"stage": "families", "status": "complete"}
+【阶段开始】phase-stack · {"direction": {"mode": "diagnostic"}, "stabilization_s": 600.0, "repeat_cycles": 20.0, "slide_cycles": 2.0, "taper": "hann", "frequency_method": "exact", "amplitude_rejection": true, "split_branches": true, "screening_mode": "curve"}
+@@EVENT {"stage": "phase-stack", "status": "running"}
+【流程开始】phase · run=20261011T091433_fadc1015
+【实际参数】{"project": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project", "output": null, "curve_ids": null, "start": null, "end": null, "repeat_cycles": 20.0, "slide_cycles": 2.0, "tolerance_deg": 15.0, "range_source": "fixed", "taper": "hann", "aligned_h5": null, "time_mode": null, "stabilization_s": 600.0, "frequency_method": "exact", "amplitude_rejection": true, "split_branches": true, "screening_mode": "curve", "direction": {"mode": "diagnostic", "max_pair_angle_deg": 45.0, "direction_step_deg": 5.0, "velocity_min_m_s": 150.0, "velocity_max_m_s": 3500.0, "velocity_points": 32, "min_stations": 3, "min_geometry_ratio": 0.05, "min_coherence": 0.7, "envelope_fraction": 0.95, "max_direction_uncertainty_deg": 20.0, "max_secondary_peak_ratio": 0.95, "direction_group_width_deg": 15.0, "conservative_angle": true, "max_angle_velocity_error_fraction": 0.15, "frequency_half_width_hz": 0.0, "frequency_bins": 3, "phase_rms_max_deg": 25.0, "minimum_independent_windows": 3, "minimum_accepted_windows": 3}, "project_config_sha256": "697109b7f31ce6fe4646e0445e78434e23b5f5d522e4140ee5977360d2b0b0dd", "module_sha256": "3ff58df4f419117818d531fbd3cef811831c230978ee3220f801fcf648b3b7ed"}
+【阶段开始】候选曲线与相位门限 · {"tolerance_deg": 15.0, "range_source": "fixed"}
+@@EVENT {"stage": "候选曲线与相位门限", "status": "running"}
+【阶段结果】候选曲线与相位门限 · 耗时 0.22 s · {"curves": 124, "frequency_points": 7564, "output": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/output/phase_guided/curve_velocity_phase_table.csv"}
+@@EVENT {"stage": "候选曲线与相位门限", "status": "complete"}
+【阵列几何】4台；近直线阵列=True；传播方向：北0°、顺时针；最大台对夹角=45°
+【波形校正与UTC对齐】输入：全部原始记录；采样率=20 Hz；滤波=[0.5, 7.0]；响应输出=ACC
+phase align D01
+phase align D01: 288000/288000 samples
+phase align D02
+phase align D02: 288000/288000 samples
+phase align D03
+phase align D03: 288000/288000 samples
+phase align D04
+phase align D04: 288000/288000 samples
+相位处理范围：full · 2026-01-01T00:00:00.000000000Z 至 2026-01-01T04:00:00.021000000Z（结束不含）；逐频窗长 T=N/f
+【波形校正结果】4台；288,000样本/台；UTC 2026-01-01T00:00:00.000000000Z → 2026-01-01T04:00:00.021000000Z
+phase D01--D02 2 Hz: Goertzel=2 Hz, window=10 s, hop=1 s, windows=13790
+【阶段开始】方向估计 2 Hz · {"actual_frequency_hz": 2.0, "windows": 13791, "stations": ["D01", "D02", "D03", "D04"], "window_s": 10.0, "hop_s": 1.0, "frequency_bins_hz": [2.0], "cache_reused": false}
+@@EVENT {"stage": "方向估计 2 Hz", "status": "running"}
+【阶段结果】方向估计 2 Hz · 耗时 0.34 s · {"frequency_hz": 2.0, "actual_frequency_hz": 2.0, "total_windows": 13791, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 63, "子阵列近直线，二维方向不可辨": 13728}}
+@@EVENT {"stage": "方向估计 2 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 2 Hz · 13790窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 2 Hz · 有效13593 → 幅值/方向合格13127 → 接受4021；正4021/负0；最终相位=154.9152605218598
+phase D01--D02 2.05 Hz: Goertzel=2.05 Hz, window=9.75 s, hop=1 s, windows=13791
+【阶段开始】方向估计 2.05 Hz · {"actual_frequency_hz": 2.05, "windows": 13791, "stations": ["D01", "D02", "D03", "D04"], "window_s": 9.75, "hop_s": 1.0, "frequency_bins_hz": [2.05], "cache_reused": false}
+@@EVENT {"stage": "方向估计 2.05 Hz", "status": "running"}
+【阶段结果】方向估计 2.05 Hz · 耗时 0.11 s · {"frequency_hz": 2.05, "actual_frequency_hz": 2.05, "total_windows": 13791, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 63, "子阵列近直线，二维方向不可辨": 13728}}
+@@EVENT {"stage": "方向估计 2.05 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 2.05 Hz · 13790窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 2.05 Hz · 有效13593 → 幅值/方向合格13057 → 接受3993；正3993/负0；最终相位=120.43144219193128
+phase D01--D02 2.1 Hz: Goertzel=2.1 Hz, window=9.5 s, hop=0.95 s, windows=14517
+【阶段开始】方向估计 2.1 Hz · {"actual_frequency_hz": 2.1, "windows": 14517, "stations": ["D01", "D02", "D03", "D04"], "window_s": 9.5, "hop_s": 0.95, "frequency_bins_hz": [2.1], "cache_reused": false}
+@@EVENT {"stage": "方向估计 2.1 Hz", "status": "running"}
+【阶段结果】方向估计 2.1 Hz · 耗时 0.11 s · {"frequency_hz": 2.1, "actual_frequency_hz": 2.1, "total_windows": 14517, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 66, "子阵列近直线，二维方向不可辨": 14451}}
+@@EVENT {"stage": "方向估计 2.1 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 2.1 Hz · 14516窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 2.1 Hz · 有效14309 → 幅值/方向合格13772 → 接受4042；正4042/负0；最终相位=86.1183882023467
+phase D01--D02 2.15 Hz: Goertzel=2.15 Hz, window=9.3 s, hop=0.95 s, windows=14517
+【阶段开始】方向估计 2.15 Hz · {"actual_frequency_hz": 2.15, "windows": 14517, "stations": ["D01", "D02", "D03", "D04"], "window_s": 9.3, "hop_s": 0.95, "frequency_bins_hz": [2.15], "cache_reused": false}
+@@EVENT {"stage": "方向估计 2.15 Hz", "status": "running"}
+【阶段结果】方向估计 2.15 Hz · 耗时 0.10 s · {"frequency_hz": 2.15, "actual_frequency_hz": 2.15, "total_windows": 14517, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 66, "子阵列近直线，二维方向不可辨": 14451}}
+@@EVENT {"stage": "方向估计 2.15 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 2.15 Hz · 14516窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 2.15 Hz · 有效14310 → 幅值/方向合格13795 → 接受3948；正3948/负0；最终相位=51.05442840637818
+phase D01--D02 2.2 Hz: Goertzel=2.2 Hz, window=9.1 s, hop=0.9 s, windows=15324
+【阶段开始】方向估计 2.2 Hz · {"actual_frequency_hz": 2.2, "windows": 15324, "stations": ["D01", "D02", "D03", "D04"], "window_s": 9.1, "hop_s": 0.9, "frequency_bins_hz": [2.2], "cache_reused": false}
+@@EVENT {"stage": "方向估计 2.2 Hz", "status": "running"}
+【阶段结果】方向估计 2.2 Hz · 耗时 0.11 s · {"frequency_hz": 2.2, "actual_frequency_hz": 2.2, "total_windows": 15324, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 70, "子阵列近直线，二维方向不可辨": 15254}}
+@@EVENT {"stage": "方向估计 2.2 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 2.2 Hz · 15323窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 2.2 Hz · 有效15105 → 幅值/方向合格14503 → 接受3977；正3977/负0；最终相位=16.356223643170086
+phase D01--D02 2.25 Hz: Goertzel=2.25 Hz, window=8.9 s, hop=0.9 s, windows=15324
+【阶段开始】方向估计 2.25 Hz · {"actual_frequency_hz": 2.25, "windows": 15324, "stations": ["D01", "D02", "D03", "D04"], "window_s": 8.9, "hop_s": 0.9, "frequency_bins_hz": [2.25], "cache_reused": false}
+@@EVENT {"stage": "方向估计 2.25 Hz", "status": "running"}
+【阶段结果】方向估计 2.25 Hz · 耗时 0.11 s · {"frequency_hz": 2.25, "actual_frequency_hz": 2.25, "total_windows": 15324, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 69, "子阵列近直线，二维方向不可辨": 15255}}
+@@EVENT {"stage": "方向估计 2.25 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 2.25 Hz · 15323窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 2.25 Hz · 有效15105 → 幅值/方向合格14491 → 接受3702；正0/负3702；最终相位=-18.629682305564764
+phase D01--D02 2.3 Hz: Goertzel=2.3 Hz, window=8.7 s, hop=0.85 s, windows=16226
+【阶段开始】方向估计 2.3 Hz · {"actual_frequency_hz": 2.3, "windows": 16226, "stations": ["D01", "D02", "D03", "D04"], "window_s": 8.7, "hop_s": 0.85, "frequency_bins_hz": [2.3], "cache_reused": false}
+@@EVENT {"stage": "方向估计 2.3 Hz", "status": "running"}
+【阶段结果】方向估计 2.3 Hz · 耗时 0.12 s · {"frequency_hz": 2.3, "actual_frequency_hz": 2.3, "total_windows": 16226, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 74, "子阵列近直线，二维方向不可辨": 16152}}
+@@EVENT {"stage": "方向估计 2.3 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 2.3 Hz · 16225窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 2.3 Hz · 有效15994 → 幅值/方向合格15362 → 接受3934；正0/负3934；最终相位=-54.06585050525836
+phase D01--D02 2.35 Hz: Goertzel=2.35 Hz, window=8.5 s, hop=0.85 s, windows=16226
+【阶段开始】方向估计 2.35 Hz · {"actual_frequency_hz": 2.35, "windows": 16226, "stations": ["D01", "D02", "D03", "D04"], "window_s": 8.5, "hop_s": 0.85, "frequency_bins_hz": [2.35], "cache_reused": false}
+@@EVENT {"stage": "方向估计 2.35 Hz", "status": "running"}
+【阶段结果】方向估计 2.35 Hz · 耗时 0.12 s · {"frequency_hz": 2.35, "actual_frequency_hz": 2.35, "total_windows": 16226, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 74, "子阵列近直线，二维方向不可辨": 16152}}
+@@EVENT {"stage": "方向估计 2.35 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 2.35 Hz · 16225窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 2.35 Hz · 有效15995 → 幅值/方向合格15332 → 接受3783；正0/负3783；最终相位=-89.89827797685557
+phase D01--D02 2.4 Hz: Goertzel=2.4 Hz, window=8.35 s, hop=0.85 s, windows=16226
+【阶段开始】方向估计 2.4 Hz · {"actual_frequency_hz": 2.4, "windows": 16226, "stations": ["D01", "D02", "D03", "D04"], "window_s": 8.35, "hop_s": 0.85, "frequency_bins_hz": [2.4], "cache_reused": false}
+@@EVENT {"stage": "方向估计 2.4 Hz", "status": "running"}
+【阶段结果】方向估计 2.4 Hz · 耗时 0.12 s · {"frequency_hz": 2.4, "actual_frequency_hz": 2.4, "total_windows": 16226, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 73, "子阵列近直线，二维方向不可辨": 16153}}
+@@EVENT {"stage": "方向估计 2.4 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 2.4 Hz · 16225窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 2.4 Hz · 有效15995 → 幅值/方向合格15395 → 接受3806；正0/负3806；最终相位=-124.97691134058078
+phase D01--D02 2.45 Hz: Goertzel=2.45 Hz, window=8.15 s, hop=0.8 s, windows=17240
+【阶段开始】方向估计 2.45 Hz · {"actual_frequency_hz": 2.45, "windows": 17240, "stations": ["D01", "D02", "D03", "D04"], "window_s": 8.15, "hop_s": 0.8, "frequency_bins_hz": [2.45], "cache_reused": false}
+@@EVENT {"stage": "方向估计 2.45 Hz", "status": "running"}
+【阶段结果】方向估计 2.45 Hz · 耗时 0.15 s · {"frequency_hz": 2.45, "actual_frequency_hz": 2.45, "total_windows": 17240, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 78, "子阵列近直线，二维方向不可辨": 17162}}
+@@EVENT {"stage": "方向估计 2.45 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 2.45 Hz · 17239窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 2.45 Hz · 有效16995 → 幅值/方向合格16344 → 接受3895；正0/负3895；最终相位=-160.4007839569527
+phase D01--D02 2.5 Hz: Goertzel=2.5 Hz, window=8 s, hop=0.8 s, windows=17240
+【阶段开始】方向估计 2.5 Hz · {"actual_frequency_hz": 2.5, "windows": 17241, "stations": ["D01", "D02", "D03", "D04"], "window_s": 8.0, "hop_s": 0.8, "frequency_bins_hz": [2.5], "cache_reused": false}
+@@EVENT {"stage": "方向估计 2.5 Hz", "status": "running"}
+【阶段结果】方向估计 2.5 Hz · 耗时 0.12 s · {"frequency_hz": 2.5, "actual_frequency_hz": 2.5, "total_windows": 17241, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 78, "子阵列近直线，二维方向不可辨": 17163}}
+@@EVENT {"stage": "方向估计 2.5 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 2.5 Hz · 17240窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 2.5 Hz · 有效16996 → 幅值/方向合格16263 → 接受3749；正3749/负0；最终相位=163.61199377236517
+phase D01--D02 2.55 Hz: Goertzel=2.55 Hz, window=7.85 s, hop=0.8 s, windows=17241
+【阶段开始】方向估计 2.55 Hz · {"actual_frequency_hz": 2.55, "windows": 17241, "stations": ["D01", "D02", "D03", "D04"], "window_s": 7.85, "hop_s": 0.8, "frequency_bins_hz": [2.55], "cache_reused": false}
+@@EVENT {"stage": "方向估计 2.55 Hz", "status": "running"}
+【阶段结果】方向估计 2.55 Hz · 耗时 0.12 s · {"frequency_hz": 2.55, "actual_frequency_hz": 2.55, "total_windows": 17241, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 78, "子阵列近直线，二维方向不可辨": 17163}}
+@@EVENT {"stage": "方向估计 2.55 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 2.55 Hz · 17240窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 2.55 Hz · 有效16997 → 幅值/方向合格16295 → 接受3687；正3687/负0；最终相位=127.97946455303729
+phase D01--D02 2.6 Hz: Goertzel=2.6 Hz, window=7.7 s, hop=0.75 s, windows=18390
+【阶段开始】方向估计 2.6 Hz · {"actual_frequency_hz": 2.6, "windows": 18390, "stations": ["D01", "D02", "D03", "D04"], "window_s": 7.7, "hop_s": 0.75, "frequency_bins_hz": [2.6], "cache_reused": false}
+@@EVENT {"stage": "方向估计 2.6 Hz", "status": "running"}
+【阶段结果】方向估计 2.6 Hz · 耗时 0.12 s · {"frequency_hz": 2.6, "actual_frequency_hz": 2.6, "total_windows": 18390, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 83, "子阵列近直线，二维方向不可辨": 18307}}
+@@EVENT {"stage": "方向估计 2.6 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 2.6 Hz · 18389窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 2.6 Hz · 有效18130 → 幅值/方向合格17488 → 接受3847；正3847/负0；最终相位=92.03908886374582
+phase D01--D02 2.65 Hz: Goertzel=2.65 Hz, window=7.55 s, hop=0.75 s, windows=18390
+【阶段开始】方向估计 2.65 Hz · {"actual_frequency_hz": 2.65, "windows": 18390, "stations": ["D01", "D02", "D03", "D04"], "window_s": 7.55, "hop_s": 0.75, "frequency_bins_hz": [2.65], "cache_reused": false}
+@@EVENT {"stage": "方向估计 2.65 Hz", "status": "running"}
+【阶段结果】方向估计 2.65 Hz · 耗时 0.12 s · {"frequency_hz": 2.65, "actual_frequency_hz": 2.65, "total_windows": 18390, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 83, "子阵列近直线，二维方向不可辨": 18307}}
+@@EVENT {"stage": "方向估计 2.65 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 2.65 Hz · 18389窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 2.65 Hz · 有效18130 → 幅值/方向合格17484 → 接受3833；正3833/负0；最终相位=55.55855898027452
+phase D01--D02 2.7 Hz: Goertzel=2.7 Hz, window=7.4 s, hop=0.75 s, windows=18391
+【阶段开始】方向估计 2.7 Hz · {"actual_frequency_hz": 2.7, "windows": 18391, "stations": ["D01", "D02", "D03", "D04"], "window_s": 7.4, "hop_s": 0.75, "frequency_bins_hz": [2.7], "cache_reused": false}
+@@EVENT {"stage": "方向估计 2.7 Hz", "status": "running"}
+【阶段结果】方向估计 2.7 Hz · 耗时 0.12 s · {"frequency_hz": 2.7, "actual_frequency_hz": 2.7, "total_windows": 18391, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 83, "子阵列近直线，二维方向不可辨": 18308}}
+@@EVENT {"stage": "方向估计 2.7 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 2.7 Hz · 18390窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 2.7 Hz · 有效18131 → 幅值/方向合格17524 → 接受3781；正3781/负0；最终相位=19.733749869643855
+phase D01--D02 2.75 Hz: Goertzel=2.75 Hz, window=7.25 s, hop=0.75 s, windows=18391
+【阶段开始】方向估计 2.75 Hz · {"actual_frequency_hz": 2.75, "windows": 18391, "stations": ["D01", "D02", "D03", "D04"], "window_s": 7.25, "hop_s": 0.75, "frequency_bins_hz": [2.75], "cache_reused": false}
+@@EVENT {"stage": "方向估计 2.75 Hz", "status": "running"}
+【阶段结果】方向估计 2.75 Hz · 耗时 0.12 s · {"frequency_hz": 2.75, "actual_frequency_hz": 2.75, "total_windows": 18391, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 83, "子阵列近直线，二维方向不可辨": 18308}}
+@@EVENT {"stage": "方向估计 2.75 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 2.75 Hz · 18390窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 2.75 Hz · 有效18132 → 幅值/方向合格17537 → 接受3496；正0/负3496；最终相位=-16.788653699183552
+phase D01--D02 2.8 Hz: Goertzel=2.8 Hz, window=7.15 s, hop=0.7 s, windows=19705
+【阶段开始】方向估计 2.8 Hz · {"actual_frequency_hz": 2.8, "windows": 19705, "stations": ["D01", "D02", "D03", "D04"], "window_s": 7.15, "hop_s": 0.7, "frequency_bins_hz": [2.8], "cache_reused": false}
+@@EVENT {"stage": "方向估计 2.8 Hz", "status": "running"}
+【阶段结果】方向估计 2.8 Hz · 耗时 0.14 s · {"frequency_hz": 2.8, "actual_frequency_hz": 2.8, "total_windows": 19705, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 89, "子阵列近直线，二维方向不可辨": 19616}}
+@@EVENT {"stage": "方向估计 2.8 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 2.8 Hz · 19704窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 2.8 Hz · 有效19427 → 幅值/方向合格18792 → 接受3725；正0/负3725；最终相位=-53.1012711966525
+phase D01--D02 2.85 Hz: Goertzel=2.85 Hz, window=7 s, hop=0.7 s, windows=19705
+【阶段开始】方向估计 2.85 Hz · {"actual_frequency_hz": 2.85, "windows": 19705, "stations": ["D01", "D02", "D03", "D04"], "window_s": 7.0, "hop_s": 0.7, "frequency_bins_hz": [2.85], "cache_reused": false}
+@@EVENT {"stage": "方向估计 2.85 Hz", "status": "running"}
+【阶段结果】方向估计 2.85 Hz · 耗时 0.14 s · {"frequency_hz": 2.85, "actual_frequency_hz": 2.85, "total_windows": 19705, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 89, "子阵列近直线，二维方向不可辨": 19616}}
+@@EVENT {"stage": "方向估计 2.85 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 2.85 Hz · 19704窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 2.85 Hz · 有效19427 → 幅值/方向合格18850 → 接受3572；正0/负3572；最终相位=-90.01747698940791
+phase D01--D02 2.9 Hz: Goertzel=2.9 Hz, window=6.9 s, hop=0.7 s, windows=19705
+【阶段开始】方向估计 2.9 Hz · {"actual_frequency_hz": 2.9, "windows": 19705, "stations": ["D01", "D02", "D03", "D04"], "window_s": 6.9, "hop_s": 0.7, "frequency_bins_hz": [2.9], "cache_reused": false}
+@@EVENT {"stage": "方向估计 2.9 Hz", "status": "running"}
+【阶段结果】方向估计 2.9 Hz · 耗时 0.13 s · {"frequency_hz": 2.9, "actual_frequency_hz": 2.9, "total_windows": 19705, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 89, "子阵列近直线，二维方向不可辨": 19616}}
+@@EVENT {"stage": "方向估计 2.9 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 2.9 Hz · 19704窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 2.9 Hz · 有效19427 → 幅值/方向合格18812 → 接受3420；正0/负3420；最终相位=-126.57511489479785
+phase D01--D02 2.95 Hz: Goertzel=2.95 Hz, window=6.8 s, hop=0.7 s, windows=19705
+【阶段开始】方向估计 2.95 Hz · {"actual_frequency_hz": 2.95, "windows": 19705, "stations": ["D01", "D02", "D03", "D04"], "window_s": 6.8, "hop_s": 0.7, "frequency_bins_hz": [2.95], "cache_reused": false}
+@@EVENT {"stage": "方向估计 2.95 Hz", "status": "running"}
+【阶段结果】方向估计 2.95 Hz · 耗时 0.13 s · {"frequency_hz": 2.95, "actual_frequency_hz": 2.95, "total_windows": 19705, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 89, "子阵列近直线，二维方向不可辨": 19616}}
+@@EVENT {"stage": "方向估计 2.95 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 2.95 Hz · 19704窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 2.95 Hz · 有效19427 → 幅值/方向合格18833 → 接受3516；正0/负3516；最终相位=-163.7524603025043
+phase D01--D02 3 Hz: Goertzel=3 Hz, window=6.65 s, hop=0.65 s, windows=21221
+【阶段开始】方向估计 3 Hz · {"actual_frequency_hz": 3.0, "windows": 21221, "stations": ["D01", "D02", "D03", "D04"], "window_s": 6.65, "hop_s": 0.65, "frequency_bins_hz": [3.0], "cache_reused": false}
+@@EVENT {"stage": "方向估计 3 Hz", "status": "running"}
+【阶段结果】方向估计 3 Hz · 耗时 0.13 s · {"frequency_hz": 3.0, "actual_frequency_hz": 3.0, "total_windows": 21221, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 96, "子阵列近直线，二维方向不可辨": 21125}}
+@@EVENT {"stage": "方向估计 3 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 3 Hz · 21220窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 3 Hz · 有效20922 → 幅值/方向合格20310 → 接受3709；正3709/负0；最终相位=159.8501883966118
+phase D01--D02 3.05 Hz: Goertzel=3.05 Hz, window=6.55 s, hop=0.65 s, windows=21221
+【阶段开始】方向估计 3.05 Hz · {"actual_frequency_hz": 3.05, "windows": 21221, "stations": ["D01", "D02", "D03", "D04"], "window_s": 6.55, "hop_s": 0.65, "frequency_bins_hz": [3.05], "cache_reused": false}
+@@EVENT {"stage": "方向估计 3.05 Hz", "status": "running"}
+【阶段结果】方向估计 3.05 Hz · 耗时 0.24 s · {"frequency_hz": 3.05, "actual_frequency_hz": 3.05, "total_windows": 21221, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 96, "子阵列近直线，二维方向不可辨": 21125}}
+@@EVENT {"stage": "方向估计 3.05 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 3.05 Hz · 21220窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 3.05 Hz · 有效20922 → 幅值/方向合格20357 → 接受3697；正3697/负0；最终相位=122.48839106521471
+phase D01--D02 3.1 Hz: Goertzel=3.1 Hz, window=6.45 s, hop=0.65 s, windows=21221
+【阶段开始】方向估计 3.1 Hz · {"actual_frequency_hz": 3.1, "windows": 21221, "stations": ["D01", "D02", "D03", "D04"], "window_s": 6.45, "hop_s": 0.65, "frequency_bins_hz": [3.1], "cache_reused": false}
+@@EVENT {"stage": "方向估计 3.1 Hz", "status": "running"}
+【阶段结果】方向估计 3.1 Hz · 耗时 0.13 s · {"frequency_hz": 3.1, "actual_frequency_hz": 3.1, "total_windows": 21221, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 95, "子阵列近直线，二维方向不可辨": 21126}}
+@@EVENT {"stage": "方向估计 3.1 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 3.1 Hz · 21220窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 3.1 Hz · 有效20923 → 幅值/方向合格20321 → 接受3566；正3566/负0；最终相位=85.91645283156991
+phase D01--D02 3.15 Hz: Goertzel=3.15 Hz, window=6.35 s, hop=0.65 s, windows=21221
+【阶段开始】方向估计 3.15 Hz · {"actual_frequency_hz": 3.15, "windows": 21222, "stations": ["D01", "D02", "D03", "D04"], "window_s": 6.35, "hop_s": 0.65, "frequency_bins_hz": [3.15], "cache_reused": false}
+@@EVENT {"stage": "方向估计 3.15 Hz", "status": "running"}
+【阶段结果】方向估计 3.15 Hz · 耗时 0.14 s · {"frequency_hz": 3.15, "actual_frequency_hz": 3.15, "total_windows": 21222, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 96, "子阵列近直线，二维方向不可辨": 21126}}
+@@EVENT {"stage": "方向估计 3.15 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 3.15 Hz · 21221窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 3.15 Hz · 有效20923 → 幅值/方向合格20346 → 接受3511；正3511/负0；最终相位=48.27608287389476
+phase D01--D02 3.2 Hz: Goertzel=3.2 Hz, window=6.25 s, hop=0.65 s, windows=21222
+【阶段开始】方向估计 3.2 Hz · {"actual_frequency_hz": 3.2, "windows": 21222, "stations": ["D01", "D02", "D03", "D04"], "window_s": 6.25, "hop_s": 0.65, "frequency_bins_hz": [3.2], "cache_reused": false}
+@@EVENT {"stage": "方向估计 3.2 Hz", "status": "running"}
+【阶段结果】方向估计 3.2 Hz · 耗时 0.13 s · {"frequency_hz": 3.2, "actual_frequency_hz": 3.2, "total_windows": 21222, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 96, "子阵列近直线，二维方向不可辨": 21126}}
+@@EVENT {"stage": "方向估计 3.2 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 3.2 Hz · 21221窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 3.2 Hz · 有效20923 → 幅值/方向合格20376 → 接受2892；正2892/负425；最终相位=13.082481935335318
+phase D01--D02 3.25 Hz: Goertzel=3.25 Hz, window=6.15 s, hop=0.6 s, windows=22990
+【阶段开始】方向估计 3.25 Hz · {"actual_frequency_hz": 3.25, "windows": 22990, "stations": ["D01", "D02", "D03", "D04"], "window_s": 6.15, "hop_s": 0.6, "frequency_bins_hz": [3.25], "cache_reused": false}
+@@EVENT {"stage": "方向估计 3.25 Hz", "status": "running"}
+【阶段结果】方向估计 3.25 Hz · 耗时 0.25 s · {"frequency_hz": 3.25, "actual_frequency_hz": 3.25, "total_windows": 22990, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 103, "子阵列近直线，二维方向不可辨": 22887}}
+@@EVENT {"stage": "方向估计 3.25 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 3.25 Hz · 22989窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 3.25 Hz · 有效22668 → 幅值/方向合格22087 → 接受3547；正0/负3547；最终相位=-27.198849447364985
+phase D01--D02 3.3 Hz: Goertzel=3.3 Hz, window=6.05 s, hop=0.6 s, windows=22990
+【阶段开始】方向估计 3.3 Hz · {"actual_frequency_hz": 3.3, "windows": 22990, "stations": ["D01", "D02", "D03", "D04"], "window_s": 6.05, "hop_s": 0.6, "frequency_bins_hz": [3.3], "cache_reused": false}
+@@EVENT {"stage": "方向估计 3.3 Hz", "status": "running"}
+【阶段结果】方向估计 3.3 Hz · 耗时 0.14 s · {"frequency_hz": 3.3, "actual_frequency_hz": 3.3, "total_windows": 22990, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 103, "子阵列近直线，二维方向不可辨": 22887}}
+@@EVENT {"stage": "方向估计 3.3 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 3.3 Hz · 22989窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 3.3 Hz · 有效22668 → 幅值/方向合格22062 → 接受3443；正0/负3443；最终相位=-64.48883920948806
+phase D01--D02 3.35 Hz: Goertzel=3.35 Hz, window=5.95 s, hop=0.6 s, windows=22991
+【阶段开始】方向估计 3.35 Hz · {"actual_frequency_hz": 3.35, "windows": 22991, "stations": ["D01", "D02", "D03", "D04"], "window_s": 5.95, "hop_s": 0.6, "frequency_bins_hz": [3.35], "cache_reused": false}
+@@EVENT {"stage": "方向估计 3.35 Hz", "status": "running"}
+【阶段结果】方向估计 3.35 Hz · 耗时 0.14 s · {"frequency_hz": 3.35, "actual_frequency_hz": 3.35, "total_windows": 22991, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 104, "子阵列近直线，二维方向不可辨": 22887}}
+@@EVENT {"stage": "方向估计 3.35 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 3.35 Hz · 22990窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 3.35 Hz · 有效22668 → 幅值/方向合格22132 → 接受3288；正0/负3288；最终相位=-102.60698930974152
+phase D01--D02 3.4 Hz: Goertzel=3.4 Hz, window=5.9 s, hop=0.6 s, windows=22991
+【阶段开始】方向估计 3.4 Hz · {"actual_frequency_hz": 3.4, "windows": 22991, "stations": ["D01", "D02", "D03", "D04"], "window_s": 5.9, "hop_s": 0.6, "frequency_bins_hz": [3.4], "cache_reused": false}
+@@EVENT {"stage": "方向估计 3.4 Hz", "status": "running"}
+【阶段结果】方向估计 3.4 Hz · 耗时 0.14 s · {"frequency_hz": 3.4, "actual_frequency_hz": 3.4, "total_windows": 22991, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 104, "子阵列近直线，二维方向不可辨": 22887}}
+@@EVENT {"stage": "方向估计 3.4 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 3.4 Hz · 22990窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 3.4 Hz · 有效22668 → 幅值/方向合格22076 → 接受3401；正0/负3401；最终相位=-140.98242381993222
+phase D01--D02 3.45 Hz: Goertzel=3.45 Hz, window=5.8 s, hop=0.6 s, windows=22991
+【阶段开始】方向估计 3.45 Hz · {"actual_frequency_hz": 3.45, "windows": 22991, "stations": ["D01", "D02", "D03", "D04"], "window_s": 5.8, "hop_s": 0.6, "frequency_bins_hz": [3.45], "cache_reused": false}
+@@EVENT {"stage": "方向估计 3.45 Hz", "status": "running"}
+【阶段结果】方向估计 3.45 Hz · 耗时 0.14 s · {"frequency_hz": 3.45, "actual_frequency_hz": 3.45, "total_windows": 22991, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 104, "子阵列近直线，二维方向不可辨": 22887}}
+@@EVENT {"stage": "方向估计 3.45 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 3.45 Hz · 22990窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 3.45 Hz · 有效22668 → 幅值/方向合格22114 → 接受1815；正1522/负1815；最终相位=-172.00201486052876
+phase D01--D02 3.5 Hz: Goertzel=3.5 Hz, window=5.7 s, hop=0.55 s, windows=25081
+【阶段开始】方向估计 3.5 Hz · {"actual_frequency_hz": 3.5, "windows": 25081, "stations": ["D01", "D02", "D03", "D04"], "window_s": 5.7, "hop_s": 0.55, "frequency_bins_hz": [3.5], "cache_reused": false}
+@@EVENT {"stage": "方向估计 3.5 Hz", "status": "running"}
+【阶段结果】方向估计 3.5 Hz · 耗时 0.15 s · {"frequency_hz": 3.5, "actual_frequency_hz": 3.5, "total_windows": 25081, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 113, "子阵列近直线，二维方向不可辨": 24968}}
+@@EVENT {"stage": "方向估计 3.5 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 3.5 Hz · 25080窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 3.5 Hz · 有效24730 → 幅值/方向合格24159 → 接受3529；正3529/负0；最终相位=142.88432134943105
+phase D01--D02 3.55 Hz: Goertzel=3.55 Hz, window=5.65 s, hop=0.55 s, windows=25081
+【阶段开始】方向估计 3.55 Hz · {"actual_frequency_hz": 3.55, "windows": 25081, "stations": ["D01", "D02", "D03", "D04"], "window_s": 5.65, "hop_s": 0.55, "frequency_bins_hz": [3.55], "cache_reused": false}
+@@EVENT {"stage": "方向估计 3.55 Hz", "status": "running"}
+【阶段结果】方向估计 3.55 Hz · 耗时 0.16 s · {"frequency_hz": 3.55, "actual_frequency_hz": 3.55, "total_windows": 25081, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 113, "子阵列近直线，二维方向不可辨": 24968}}
+@@EVENT {"stage": "方向估计 3.55 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 3.55 Hz · 25080窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 3.55 Hz · 有效24730 → 幅值/方向合格24138 → 接受3428；正3428/负0；最终相位=104.07239390262967
+phase D01--D02 3.6 Hz: Goertzel=3.6 Hz, window=5.55 s, hop=0.55 s, windows=25081
+【阶段开始】方向估计 3.6 Hz · {"actual_frequency_hz": 3.6, "windows": 25081, "stations": ["D01", "D02", "D03", "D04"], "window_s": 5.55, "hop_s": 0.55, "frequency_bins_hz": [3.6], "cache_reused": false}
+@@EVENT {"stage": "方向估计 3.6 Hz", "status": "running"}
+【阶段结果】方向估计 3.6 Hz · 耗时 0.15 s · {"frequency_hz": 3.6, "actual_frequency_hz": 3.6, "total_windows": 25081, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 113, "子阵列近直线，二维方向不可辨": 24968}}
+@@EVENT {"stage": "方向估计 3.6 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 3.6 Hz · 25080窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 3.6 Hz · 有效24730 → 幅值/方向合格24151 → 接受3310；正3310/负0；最终相位=65.16565919579146
+phase D01--D02 3.65 Hz: Goertzel=3.65 Hz, window=5.5 s, hop=0.55 s, windows=25081
+【阶段开始】方向估计 3.65 Hz · {"actual_frequency_hz": 3.65, "windows": 25081, "stations": ["D01", "D02", "D03", "D04"], "window_s": 5.5, "hop_s": 0.55, "frequency_bins_hz": [3.65], "cache_reused": false}
+@@EVENT {"stage": "方向估计 3.65 Hz", "status": "running"}
+【阶段结果】方向估计 3.65 Hz · 耗时 0.15 s · {"frequency_hz": 3.65, "actual_frequency_hz": 3.65, "total_windows": 25081, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 113, "子阵列近直线，二维方向不可辨": 24968}}
+@@EVENT {"stage": "方向估计 3.65 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 3.65 Hz · 25080窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 3.65 Hz · 有效24730 → 幅值/方向合格24170 → 接受3285；正3285/负0；最终相位=26.899747194025664
+phase D01--D02 3.7 Hz: Goertzel=3.7 Hz, window=5.4 s, hop=0.55 s, windows=25082
+【阶段开始】方向估计 3.7 Hz · {"actual_frequency_hz": 3.7, "windows": 25082, "stations": ["D01", "D02", "D03", "D04"], "window_s": 5.4, "hop_s": 0.55, "frequency_bins_hz": [3.7], "cache_reused": false}
+@@EVENT {"stage": "方向估计 3.7 Hz", "status": "running"}
+【阶段结果】方向估计 3.7 Hz · 耗时 0.15 s · {"frequency_hz": 3.7, "actual_frequency_hz": 3.7, "total_windows": 25082, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 113, "子阵列近直线，二维方向不可辨": 24969}}
+@@EVENT {"stage": "方向估计 3.7 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 3.7 Hz · 25081窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 3.7 Hz · 有效24731 → 幅值/方向合格24211 → 接受2875；正297/负2875；最终相位=-13.417131367227842
+phase D01--D02 3.75 Hz: Goertzel=3.75 Hz, window=5.35 s, hop=0.55 s, windows=25082
+【阶段开始】方向估计 3.75 Hz · {"actual_frequency_hz": 3.75, "windows": 25082, "stations": ["D01", "D02", "D03", "D04"], "window_s": 5.35, "hop_s": 0.55, "frequency_bins_hz": [3.75], "cache_reused": false}
+@@EVENT {"stage": "方向估计 3.75 Hz", "status": "running"}
+【阶段结果】方向估计 3.75 Hz · 耗时 0.15 s · {"frequency_hz": 3.75, "actual_frequency_hz": 3.75, "total_windows": 25082, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 113, "子阵列近直线，二维方向不可辨": 24969}}
+@@EVENT {"stage": "方向估计 3.75 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 3.75 Hz · 25081窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 3.75 Hz · 有效24732 → 幅值/方向合格24217 → 接受3133；正0/负3133；最终相位=-51.817609791106925
+phase D01--D02 3.8 Hz: Goertzel=3.8 Hz, window=5.25 s, hop=0.55 s, windows=25082
+【阶段开始】方向估计 3.8 Hz · {"actual_frequency_hz": 3.8, "windows": 25082, "stations": ["D01", "D02", "D03", "D04"], "window_s": 5.25, "hop_s": 0.55, "frequency_bins_hz": [3.8], "cache_reused": false}
+@@EVENT {"stage": "方向估计 3.8 Hz", "status": "running"}
+【阶段结果】方向估计 3.8 Hz · 耗时 0.15 s · {"frequency_hz": 3.8, "actual_frequency_hz": 3.8, "total_windows": 25082, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 113, "子阵列近直线，二维方向不可辨": 24969}}
+@@EVENT {"stage": "方向估计 3.8 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 3.8 Hz · 25081窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 3.8 Hz · 有效24732 → 幅值/方向合格24191 → 接受3116；正0/负3116；最终相位=-90.52297609275972
+phase D01--D02 3.85 Hz: Goertzel=3.85 Hz, window=5.2 s, hop=0.5 s, windows=27590
+【阶段开始】方向估计 3.85 Hz · {"actual_frequency_hz": 3.85, "windows": 27590, "stations": ["D01", "D02", "D03", "D04"], "window_s": 5.2, "hop_s": 0.5, "frequency_bins_hz": [3.85], "cache_reused": false}
+@@EVENT {"stage": "方向估计 3.85 Hz", "status": "running"}
+【阶段结果】方向估计 3.85 Hz · 耗时 0.16 s · {"frequency_hz": 3.85, "actual_frequency_hz": 3.85, "total_windows": 27590, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 124, "子阵列近直线，二维方向不可辨": 27466}}
+@@EVENT {"stage": "方向估计 3.85 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 3.85 Hz · 27589窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 3.85 Hz · 有效27205 → 幅值/方向合格26682 → 接受3475；正0/负3475；最终相位=-129.72826283631363
+phase D01--D02 3.9 Hz: Goertzel=3.9 Hz, window=5.15 s, hop=0.5 s, windows=27590
+【阶段开始】方向估计 3.9 Hz · {"actual_frequency_hz": 3.9, "windows": 27590, "stations": ["D01", "D02", "D03", "D04"], "window_s": 5.15, "hop_s": 0.5, "frequency_bins_hz": [3.9], "cache_reused": false}
+@@EVENT {"stage": "方向估计 3.9 Hz", "status": "running"}
+【阶段结果】方向估计 3.9 Hz · 耗时 0.16 s · {"frequency_hz": 3.9, "actual_frequency_hz": 3.9, "total_windows": 27590, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 124, "子阵列近直线，二维方向不可辨": 27466}}
+@@EVENT {"stage": "方向估计 3.9 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 3.9 Hz · 27589窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 3.9 Hz · 有效27205 → 幅值/方向合格26728 → 接受2734；正473/负2734；最终相位=-167.44333775622226
+phase D01--D02 3.95 Hz: Goertzel=3.95 Hz, window=5.05 s, hop=0.5 s, windows=27590
+【阶段开始】方向估计 3.95 Hz · {"actual_frequency_hz": 3.95, "windows": 27590, "stations": ["D01", "D02", "D03", "D04"], "window_s": 5.05, "hop_s": 0.5, "frequency_bins_hz": [3.95], "cache_reused": false}
+@@EVENT {"stage": "方向估计 3.95 Hz", "status": "running"}
+【阶段结果】方向估计 3.95 Hz · 耗时 0.16 s · {"frequency_hz": 3.95, "actual_frequency_hz": 3.95, "total_windows": 27590, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 124, "子阵列近直线，二维方向不可辨": 27466}}
+@@EVENT {"stage": "方向估计 3.95 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 3.95 Hz · 27589窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 3.95 Hz · 有效27205 → 幅值/方向合格26741 → 接受3146；正3146/负0；最终相位=150.63906518919424
+phase D01--D02 4 Hz: Goertzel=4 Hz, window=5 s, hop=0.5 s, windows=27590
+【阶段开始】方向估计 4 Hz · {"actual_frequency_hz": 4.0, "windows": 27591, "stations": ["D01", "D02", "D03", "D04"], "window_s": 5.0, "hop_s": 0.5, "frequency_bins_hz": [4.0], "cache_reused": false}
+@@EVENT {"stage": "方向估计 4 Hz", "status": "running"}
+【阶段结果】方向估计 4 Hz · 耗时 0.16 s · {"frequency_hz": 4.0, "actual_frequency_hz": 4.0, "total_windows": 27591, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 125, "子阵列近直线，二维方向不可辨": 27466}}
+@@EVENT {"stage": "方向估计 4 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 4 Hz · 27590窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 4 Hz · 有效27205 → 幅值/方向合格26716 → 接受3038；正3038/负0；最终相位=111.17455443282785
+phase D01--D02 4.05 Hz: Goertzel=4.05 Hz, window=4.95 s, hop=0.5 s, windows=27591
+【阶段开始】方向估计 4.05 Hz · {"actual_frequency_hz": 4.05, "windows": 27591, "stations": ["D01", "D02", "D03", "D04"], "window_s": 4.95, "hop_s": 0.5, "frequency_bins_hz": [4.05], "cache_reused": false}
+@@EVENT {"stage": "方向估计 4.05 Hz", "status": "running"}
+【阶段结果】方向估计 4.05 Hz · 耗时 0.16 s · {"frequency_hz": 4.05, "actual_frequency_hz": 4.05, "total_windows": 27591, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 125, "子阵列近直线，二维方向不可辨": 27466}}
+@@EVENT {"stage": "方向估计 4.05 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 4.05 Hz · 27590窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 4.05 Hz · 有效27205 → 幅值/方向合格26698 → 接受2959；正2959/负0；最终相位=70.39931786207362
+phase D01--D02 4.1 Hz: Goertzel=4.1 Hz, window=4.9 s, hop=0.5 s, windows=27591
+【阶段开始】方向估计 4.1 Hz · {"actual_frequency_hz": 4.1, "windows": 27591, "stations": ["D01", "D02", "D03", "D04"], "window_s": 4.9, "hop_s": 0.5, "frequency_bins_hz": [4.1], "cache_reused": false}
+@@EVENT {"stage": "方向估计 4.1 Hz", "status": "running"}
+【阶段结果】方向估计 4.1 Hz · 耗时 0.16 s · {"frequency_hz": 4.1, "actual_frequency_hz": 4.1, "total_windows": 27591, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 124, "子阵列近直线，二维方向不可辨": 27467}}
+@@EVENT {"stage": "方向估计 4.1 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 4.1 Hz · 27590窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 4.1 Hz · 有效27206 → 幅值/方向合格26726 → 接受3084；正3084/负0；最终相位=30.241093235561056
+phase D01--D02 4.15 Hz: Goertzel=4.15 Hz, window=4.8 s, hop=0.5 s, windows=27591
+【阶段开始】方向估计 4.15 Hz · {"actual_frequency_hz": 4.15, "windows": 27591, "stations": ["D01", "D02", "D03", "D04"], "window_s": 4.8, "hop_s": 0.5, "frequency_bins_hz": [4.15], "cache_reused": false}
+@@EVENT {"stage": "方向估计 4.15 Hz", "status": "running"}
+【阶段结果】方向估计 4.15 Hz · 耗时 0.16 s · {"frequency_hz": 4.15, "actual_frequency_hz": 4.15, "total_windows": 27591, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 124, "子阵列近直线，二维方向不可辨": 27467}}
+@@EVENT {"stage": "方向估计 4.15 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 4.15 Hz · 27590窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 4.15 Hz · 有效27207 → 幅值/方向合格26738 → 接受2544；正516/负2544；最终相位=-12.293351199686736
+phase D01--D02 4.2 Hz: Goertzel=4.2 Hz, window=4.75 s, hop=0.5 s, windows=27591
+【阶段开始】方向估计 4.2 Hz · {"actual_frequency_hz": 4.2, "windows": 27591, "stations": ["D01", "D02", "D03", "D04"], "window_s": 4.75, "hop_s": 0.5, "frequency_bins_hz": [4.2], "cache_reused": false}
+@@EVENT {"stage": "方向估计 4.2 Hz", "status": "running"}
+【阶段结果】方向估计 4.2 Hz · 耗时 0.18 s · {"frequency_hz": 4.2, "actual_frequency_hz": 4.2, "total_windows": 27591, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 124, "子阵列近直线，二维方向不可辨": 27467}}
+@@EVENT {"stage": "方向估计 4.2 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 4.2 Hz · 27590窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 4.2 Hz · 有效27207 → 幅值/方向合格26713 → 接受3112；正0/负3112；最终相位=-50.43408904166577
+phase D01--D02 4.25 Hz: Goertzel=4.25 Hz, window=4.7 s, hop=0.45 s, windows=30657
+【阶段开始】方向估计 4.25 Hz · {"actual_frequency_hz": 4.25, "windows": 30657, "stations": ["D01", "D02", "D03", "D04"], "window_s": 4.7, "hop_s": 0.45, "frequency_bins_hz": [4.25], "cache_reused": false}
+@@EVENT {"stage": "方向估计 4.25 Hz", "status": "running"}
+【阶段结果】方向估计 4.25 Hz · 耗时 0.18 s · {"frequency_hz": 4.25, "actual_frequency_hz": 4.25, "total_windows": 30657, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 138, "子阵列近直线，二维方向不可辨": 30519}}
+@@EVENT {"stage": "方向估计 4.25 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 4.25 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 4.25 Hz · 有效30230 → 幅值/方向合格29719 → 接受3247；正0/负3247；最终相位=-90.85696073841203
+phase D01--D02 4.3 Hz: Goertzel=4.3 Hz, window=4.65 s, hop=0.45 s, windows=30657
+【阶段开始】方向估计 4.3 Hz · {"actual_frequency_hz": 4.3, "windows": 30657, "stations": ["D01", "D02", "D03", "D04"], "window_s": 4.65, "hop_s": 0.45, "frequency_bins_hz": [4.3], "cache_reused": false}
+@@EVENT {"stage": "方向估计 4.3 Hz", "status": "running"}
+【阶段结果】方向估计 4.3 Hz · 耗时 0.18 s · {"frequency_hz": 4.3, "actual_frequency_hz": 4.3, "total_windows": 30657, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 138, "子阵列近直线，二维方向不可辨": 30519}}
+@@EVENT {"stage": "方向估计 4.3 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 4.3 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 4.3 Hz · 有效30230 → 幅值/方向合格29775 → 接受3167；正0/负3167；最终相位=-132.25874949393514
+phase D01--D02 4.35 Hz: Goertzel=4.35 Hz, window=4.6 s, hop=0.45 s, windows=30657
+【阶段开始】方向估计 4.35 Hz · {"actual_frequency_hz": 4.35, "windows": 30657, "stations": ["D01", "D02", "D03", "D04"], "window_s": 4.6, "hop_s": 0.45, "frequency_bins_hz": [4.35], "cache_reused": false}
+@@EVENT {"stage": "方向估计 4.35 Hz", "status": "running"}
+【阶段结果】方向估计 4.35 Hz · 耗时 0.19 s · {"frequency_hz": 4.35, "actual_frequency_hz": 4.35, "total_windows": 30657, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 138, "子阵列近直线，二维方向不可辨": 30519}}
+@@EVENT {"stage": "方向估计 4.35 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 4.35 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 4.35 Hz · 有效30230 → 幅值/方向合格29761 → 接受2306；正818/负2306；最终相位=-169.02161913516474
+phase D01--D02 4.4 Hz: Goertzel=4.4 Hz, window=4.55 s, hop=0.45 s, windows=30657
+【阶段开始】方向估计 4.4 Hz · {"actual_frequency_hz": 4.4, "windows": 30657, "stations": ["D01", "D02", "D03", "D04"], "window_s": 4.55, "hop_s": 0.45, "frequency_bins_hz": [4.4], "cache_reused": false}
+@@EVENT {"stage": "方向估计 4.4 Hz", "status": "running"}
+【阶段结果】方向估计 4.4 Hz · 耗时 0.18 s · {"frequency_hz": 4.4, "actual_frequency_hz": 4.4, "total_windows": 30657, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 138, "子阵列近直线，二维方向不可辨": 30519}}
+@@EVENT {"stage": "方向估计 4.4 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 4.4 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 4.4 Hz · 有效30231 → 幅值/方向合格29803 → 接受3213；正3213/负0；最终相位=145.87415309996655
+phase D01--D02 4.45 Hz: Goertzel=4.45 Hz, window=4.5 s, hop=0.45 s, windows=30657
+【阶段开始】方向估计 4.45 Hz · {"actual_frequency_hz": 4.45, "windows": 30657, "stations": ["D01", "D02", "D03", "D04"], "window_s": 4.5, "hop_s": 0.45, "frequency_bins_hz": [4.45], "cache_reused": false}
+@@EVENT {"stage": "方向估计 4.45 Hz", "status": "running"}
+【阶段结果】方向估计 4.45 Hz · 耗时 0.17 s · {"frequency_hz": 4.45, "actual_frequency_hz": 4.45, "total_windows": 30657, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 138, "子阵列近直线，二维方向不可辨": 30519}}
+@@EVENT {"stage": "方向估计 4.45 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 4.45 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 4.45 Hz · 有效30231 → 幅值/方向合格29805 → 接受3084；正3084/负0；最终相位=104.12185788515072
+phase D01--D02 4.5 Hz: Goertzel=4.5 Hz, window=4.45 s, hop=0.45 s, windows=30657
+【阶段开始】方向估计 4.5 Hz · {"actual_frequency_hz": 4.5, "windows": 30657, "stations": ["D01", "D02", "D03", "D04"], "window_s": 4.45, "hop_s": 0.45, "frequency_bins_hz": [4.5], "cache_reused": false}
+@@EVENT {"stage": "方向估计 4.5 Hz", "status": "running"}
+【阶段结果】方向估计 4.5 Hz · 耗时 0.17 s · {"frequency_hz": 4.5, "actual_frequency_hz": 4.5, "total_windows": 30657, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 138, "子阵列近直线，二维方向不可辨": 30519}}
+@@EVENT {"stage": "方向估计 4.5 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 4.5 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 4.5 Hz · 有效30231 → 幅值/方向合格29771 → 接受3168；正3168/负0；最终相位=62.94588148061395
+phase D01--D02 4.55 Hz: Goertzel=4.55 Hz, window=4.4 s, hop=0.45 s, windows=30657
+【阶段开始】方向估计 4.55 Hz · {"actual_frequency_hz": 4.55, "windows": 30657, "stations": ["D01", "D02", "D03", "D04"], "window_s": 4.4, "hop_s": 0.45, "frequency_bins_hz": [4.55], "cache_reused": false}
+@@EVENT {"stage": "方向估计 4.55 Hz", "status": "running"}
+【阶段结果】方向估计 4.55 Hz · 耗时 0.17 s · {"frequency_hz": 4.55, "actual_frequency_hz": 4.55, "total_windows": 30657, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 137, "子阵列近直线，二维方向不可辨": 30520}}
+@@EVENT {"stage": "方向估计 4.55 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 4.55 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 4.55 Hz · 有效30231 → 幅值/方向合格29771 → 接受2995；正2995/负0；最终相位=21.494635923721976
+phase D01--D02 4.6 Hz: Goertzel=4.6 Hz, window=4.35 s, hop=0.45 s, windows=30657
+【阶段开始】方向估计 4.6 Hz · {"actual_frequency_hz": 4.6, "windows": 30658, "stations": ["D01", "D02", "D03", "D04"], "window_s": 4.35, "hop_s": 0.45, "frequency_bins_hz": [4.6], "cache_reused": false}
+@@EVENT {"stage": "方向估计 4.6 Hz", "status": "running"}
+【阶段结果】方向估计 4.6 Hz · 耗时 0.18 s · {"frequency_hz": 4.6, "actual_frequency_hz": 4.6, "total_windows": 30658, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 138, "子阵列近直线，二维方向不可辨": 30520}}
+@@EVENT {"stage": "方向估计 4.6 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 4.6 Hz · 30657窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 4.6 Hz · 有效30232 → 幅值/方向合格29744 → 接受2900；正0/负2900；最终相位=-20.296622558165048
+phase D01--D02 4.65 Hz: Goertzel=4.65 Hz, window=4.3 s, hop=0.45 s, windows=30658
+【阶段开始】方向估计 4.65 Hz · {"actual_frequency_hz": 4.65, "windows": 30658, "stations": ["D01", "D02", "D03", "D04"], "window_s": 4.3, "hop_s": 0.45, "frequency_bins_hz": [4.65], "cache_reused": false}
+@@EVENT {"stage": "方向估计 4.65 Hz", "status": "running"}
+【阶段结果】方向估计 4.65 Hz · 耗时 0.17 s · {"frequency_hz": 4.65, "actual_frequency_hz": 4.65, "total_windows": 30658, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 138, "子阵列近直线，二维方向不可辨": 30520}}
+@@EVENT {"stage": "方向估计 4.65 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 4.65 Hz · 30657窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 4.65 Hz · 有效30232 → 幅值/方向合格29765 → 接受2818；正0/负2818；最终相位=-61.96340980675489
+phase D01--D02 4.7 Hz: Goertzel=4.7 Hz, window=4.25 s, hop=0.45 s, windows=30658
+【阶段开始】方向估计 4.7 Hz · {"actual_frequency_hz": 4.7, "windows": 30658, "stations": ["D01", "D02", "D03", "D04"], "window_s": 4.25, "hop_s": 0.45, "frequency_bins_hz": [4.7], "cache_reused": false}
+@@EVENT {"stage": "方向估计 4.7 Hz", "status": "running"}
+【阶段结果】方向估计 4.7 Hz · 耗时 0.17 s · {"frequency_hz": 4.7, "actual_frequency_hz": 4.7, "total_windows": 30658, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 138, "子阵列近直线，二维方向不可辨": 30520}}
+@@EVENT {"stage": "方向估计 4.7 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 4.7 Hz · 30657窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 4.7 Hz · 有效30232 → 幅值/方向合格29745 → 接受2867；正0/负2867；最终相位=-104.01473761075991
+phase D01--D02 4.75 Hz: Goertzel=4.75 Hz, window=4.2 s, hop=0.4 s, windows=34490
+【阶段开始】方向估计 4.75 Hz · {"actual_frequency_hz": 4.75, "windows": 34490, "stations": ["D01", "D02", "D03", "D04"], "window_s": 4.2, "hop_s": 0.4, "frequency_bins_hz": [4.75], "cache_reused": false}
+@@EVENT {"stage": "方向估计 4.75 Hz", "status": "running"}
+【阶段结果】方向估计 4.75 Hz · 耗时 0.19 s · {"frequency_hz": 4.75, "actual_frequency_hz": 4.75, "total_windows": 34490, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 155, "子阵列近直线，二维方向不可辨": 34335}}
+@@EVENT {"stage": "方向估计 4.75 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 4.75 Hz · 34489窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 4.75 Hz · 有效34011 → 幅值/方向合格33449 → 接受3244；正0/负3244；最终相位=-145.59728403389562
+phase D01--D02 4.8 Hz: Goertzel=4.8 Hz, window=4.15 s, hop=0.4 s, windows=34490
+【阶段开始】方向估计 4.8 Hz · {"actual_frequency_hz": 4.8, "windows": 34490, "stations": ["D01", "D02", "D03", "D04"], "window_s": 4.15, "hop_s": 0.4, "frequency_bins_hz": [4.8], "cache_reused": false}
+@@EVENT {"stage": "方向估计 4.8 Hz", "status": "running"}
+【阶段结果】方向估计 4.8 Hz · 耗时 0.20 s · {"frequency_hz": 4.8, "actual_frequency_hz": 4.8, "total_windows": 34490, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 155, "子阵列近直线，二维方向不可辨": 34335}}
+@@EVENT {"stage": "方向估计 4.8 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 4.8 Hz · 34489窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 4.8 Hz · 有效34011 → 幅值/方向合格33473 → 接受2382；正2382/负746；最终相位=168.31115079937368
+phase D01--D02 4.85 Hz: Goertzel=4.85 Hz, window=4.1 s, hop=0.4 s, windows=34490
+【阶段开始】方向估计 4.85 Hz · {"actual_frequency_hz": 4.85, "windows": 34490, "stations": ["D01", "D02", "D03", "D04"], "window_s": 4.1, "hop_s": 0.4, "frequency_bins_hz": [4.85], "cache_reused": false}
+@@EVENT {"stage": "方向估计 4.85 Hz", "status": "running"}
+【阶段结果】方向估计 4.85 Hz · 耗时 0.19 s · {"frequency_hz": 4.85, "actual_frequency_hz": 4.85, "total_windows": 34490, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 155, "子阵列近直线，二维方向不可辨": 34335}}
+@@EVENT {"stage": "方向估计 4.85 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 4.85 Hz · 34489窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 4.85 Hz · 有效34011 → 幅值/方向合格33466 → 接受3183；正3183/负0；最终相位=129.5711223710027
+phase D01--D02 4.9 Hz: Goertzel=4.9 Hz, window=4.1 s, hop=0.4 s, windows=34490
+【阶段开始】方向估计 4.9 Hz · {"actual_frequency_hz": 4.9, "windows": 34490, "stations": ["D01", "D02", "D03", "D04"], "window_s": 4.1, "hop_s": 0.4, "frequency_bins_hz": [4.9], "cache_reused": false}
+@@EVENT {"stage": "方向估计 4.9 Hz", "status": "running"}
+【阶段结果】方向估计 4.9 Hz · 耗时 0.21 s · {"frequency_hz": 4.9, "actual_frequency_hz": 4.9, "total_windows": 34490, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 155, "子阵列近直线，二维方向不可辨": 34335}}
+@@EVENT {"stage": "方向估计 4.9 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 4.9 Hz · 34489窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 4.9 Hz · 有效34011 → 幅值/方向合格33479 → 接受3241；正3241/负0；最终相位=86.88640895435465
+phase D01--D02 4.95 Hz: Goertzel=4.95 Hz, window=4.05 s, hop=0.4 s, windows=34490
+【阶段开始】方向估计 4.95 Hz · {"actual_frequency_hz": 4.95, "windows": 34490, "stations": ["D01", "D02", "D03", "D04"], "window_s": 4.05, "hop_s": 0.4, "frequency_bins_hz": [4.95], "cache_reused": false}
+@@EVENT {"stage": "方向估计 4.95 Hz", "status": "running"}
+【阶段结果】方向估计 4.95 Hz · 耗时 0.19 s · {"frequency_hz": 4.95, "actual_frequency_hz": 4.95, "total_windows": 34490, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 155, "子阵列近直线，二维方向不可辨": 34335}}
+@@EVENT {"stage": "方向估计 4.95 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 4.95 Hz · 34489窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 4.95 Hz · 有效34011 → 幅值/方向合格33509 → 接受3089；正3089/负0；最终相位=44.41797283818984
+phase D01--D02 5 Hz: Goertzel=5 Hz, window=4 s, hop=0.4 s, windows=34490
+【阶段开始】方向估计 5 Hz · {"actual_frequency_hz": 5.0, "windows": 34491, "stations": ["D01", "D02", "D03", "D04"], "window_s": 4.0, "hop_s": 0.4, "frequency_bins_hz": [5.0], "cache_reused": false}
+@@EVENT {"stage": "方向估计 5 Hz", "status": "running"}
+【阶段结果】方向估计 5 Hz · 耗时 0.19 s · {"frequency_hz": 5.0, "actual_frequency_hz": 5.0, "total_windows": 34491, "quality_windows": 0, "cache_reused": false, "median_velocity_m_s": null, "reasons": {"有效台站不足": 155, "子阵列近直线，二维方向不可辨": 34336}}
+@@EVENT {"stage": "方向估计 5 Hz", "status": "complete"}
+【台对角度筛选】D01--D02 · 5 Hz · 34490窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00001_b1 · 5 Hz · 有效34012 → 幅值/方向合格33556 → 接受1637；正1637/负1356；最终相位=8.318981698144585
+phase D01--D03 2 Hz: Goertzel=2 Hz, window=10 s, hop=1 s, windows=13790
+【台对角度筛选】D01--D03 · 2 Hz · 13790窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 2 Hz · 有效13593 → 幅值/方向合格13281 → 接受1818；正0/负1818；最终相位=-50.909992450171416
+phase D01--D03 2.05 Hz: Goertzel=2.05 Hz, window=9.75 s, hop=1 s, windows=13791
+【台对角度筛选】D01--D03 · 2.05 Hz · 13790窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 2.05 Hz · 有效13593 → 幅值/方向合格13244 → 接受1819；正0/负1819；最终相位=-119.60461508427731
+phase D01--D03 2.1 Hz: Goertzel=2.1 Hz, window=9.5 s, hop=0.95 s, windows=14517
+【台对角度筛选】D01--D03 · 2.1 Hz · 14516窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 2.1 Hz · 有效14310 → 幅值/方向合格14028 → 接受1416；正1416/负401；最终相位=168.08862145833075
+phase D01--D03 2.15 Hz: Goertzel=2.15 Hz, window=9.3 s, hop=0.95 s, windows=14517
+【台对角度筛选】D01--D03 · 2.15 Hz · 14516窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 2.15 Hz · 有效14310 → 幅值/方向合格14046 → 接受1811；正1811/负0；最终相位=101.5790842958476
+phase D01--D03 2.2 Hz: Goertzel=2.2 Hz, window=9.1 s, hop=0.9 s, windows=15324
+【台对角度筛选】D01--D03 · 2.2 Hz · 15323窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 2.2 Hz · 有效15104 → 幅值/方向合格14795 → 接受1841；正1841/负0；最终相位=32.3070452295856
+phase D01--D03 2.25 Hz: Goertzel=2.25 Hz, window=8.9 s, hop=0.9 s, windows=15324
+【台对角度筛选】D01--D03 · 2.25 Hz · 15323窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 2.25 Hz · 有效15105 → 幅值/方向合格14838 → 接受1721；正0/负1721；最终相位=-37.88167880589788
+phase D01--D03 2.3 Hz: Goertzel=2.3 Hz, window=8.7 s, hop=0.85 s, windows=16226
+【台对角度筛选】D01--D03 · 2.3 Hz · 16225窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 2.3 Hz · 有效15994 → 幅值/方向合格15717 → 接受1907；正0/负1907；最终相位=-108.02392641727026
+phase D01--D03 2.35 Hz: Goertzel=2.35 Hz, window=8.5 s, hop=0.85 s, windows=16226
+【台对角度筛选】D01--D03 · 2.35 Hz · 16225窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 2.35 Hz · 有效15994 → 幅值/方向合格15694 → 接受951；正794/负951；最终相位=-171.7049146353945
+phase D01--D03 2.4 Hz: Goertzel=2.4 Hz, window=8.35 s, hop=0.85 s, windows=16226
+【台对角度筛选】D01--D03 · 2.4 Hz · 16225窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 2.4 Hz · 有效15995 → 幅值/方向合格15727 → 接受1845；正1845/负0；最终相位=110.48131041943192
+phase D01--D03 2.45 Hz: Goertzel=2.45 Hz, window=8.15 s, hop=0.8 s, windows=17240
+【台对角度筛选】D01--D03 · 2.45 Hz · 17239窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 2.45 Hz · 有效16995 → 幅值/方向合格16702 → 接受1879；正1879/负0；最终相位=39.49895349237971
+phase D01--D03 2.5 Hz: Goertzel=2.5 Hz, window=8 s, hop=0.8 s, windows=17240
+【台对角度筛选】D01--D03 · 2.5 Hz · 17240窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 2.5 Hz · 有效16996 → 幅值/方向合格16656 → 接受1736；正0/负1736；最终相位=-32.30384142919115
+phase D01--D03 2.55 Hz: Goertzel=2.55 Hz, window=7.85 s, hop=0.8 s, windows=17241
+【台对角度筛选】D01--D03 · 2.55 Hz · 17240窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 2.55 Hz · 有效16997 → 幅值/方向合格16706 → 接受1705；正0/负1705；最终相位=-103.8185959478701
+phase D01--D03 2.6 Hz: Goertzel=2.6 Hz, window=7.7 s, hop=0.75 s, windows=18390
+【台对角度筛选】D01--D03 · 2.6 Hz · 18389窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 2.6 Hz · 有效18130 → 幅值/方向合格17855 → 接受1212；正656/负1212；最终相位=-170.6331963304612
+phase D01--D03 2.65 Hz: Goertzel=2.65 Hz, window=7.55 s, hop=0.75 s, windows=18390
+【台对角度筛选】D01--D03 · 2.65 Hz · 18389窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 2.65 Hz · 有效18130 → 幅值/方向合格17865 → 接受1870；正1870/负0；最终相位=111.4341974408535
+phase D01--D03 2.7 Hz: Goertzel=2.7 Hz, window=7.4 s, hop=0.75 s, windows=18391
+【台对角度筛选】D01--D03 · 2.7 Hz · 18390窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 2.7 Hz · 有效18131 → 幅值/方向合格17844 → 接受1809；正1809/负0；最终相位=38.88677073847879
+phase D01--D03 2.75 Hz: Goertzel=2.75 Hz, window=7.25 s, hop=0.75 s, windows=18391
+【台对角度筛选】D01--D03 · 2.75 Hz · 18390窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 2.75 Hz · 有效18132 → 幅值/方向合格17883 → 接受1757；正0/负1757；最终相位=-33.57009392357556
+phase D01--D03 2.8 Hz: Goertzel=2.8 Hz, window=7.15 s, hop=0.7 s, windows=19705
+【台对角度筛选】D01--D03 · 2.8 Hz · 19704窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 2.8 Hz · 有效19427 → 幅值/方向合格19124 → 接受1815；正0/负1815；最终相位=-107.09778004252554
+phase D01--D03 2.85 Hz: Goertzel=2.85 Hz, window=7 s, hop=0.7 s, windows=19705
+【台对角度筛选】D01--D03 · 2.85 Hz · 19704窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 2.85 Hz · 有效19427 → 幅值/方向合格19138 → 接受879；正856/负879；最终相位=-172.29655942982512
+phase D01--D03 2.9 Hz: Goertzel=2.9 Hz, window=6.9 s, hop=0.7 s, windows=19705
+【台对角度筛选】D01--D03 · 2.9 Hz · 19704窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 2.9 Hz · 有效19427 → 幅值/方向合格19150 → 接受1720；正1720/负0；最终相位=106.87036821023699
+phase D01--D03 2.95 Hz: Goertzel=2.95 Hz, window=6.8 s, hop=0.7 s, windows=19705
+【台对角度筛选】D01--D03 · 2.95 Hz · 19704窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 2.95 Hz · 有效19428 → 幅值/方向合格19152 → 接受1727；正1727/负0；最终相位=33.486065262504226
+phase D01--D03 3 Hz: Goertzel=3 Hz, window=6.65 s, hop=0.65 s, windows=21221
+【台对角度筛选】D01--D03 · 3 Hz · 21220窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 3 Hz · 有效20922 → 幅值/方向合格20655 → 接受1828；正0/负1828；最终相位=-40.451632987123524
+phase D01--D03 3.05 Hz: Goertzel=3.05 Hz, window=6.55 s, hop=0.65 s, windows=21221
+【台对角度筛选】D01--D03 · 3.05 Hz · 21220窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 3.05 Hz · 有效20922 → 幅值/方向合格20662 → 接受1966；正0/负1966；最终相位=-115.07570574280291
+phase D01--D03 3.1 Hz: Goertzel=3.1 Hz, window=6.45 s, hop=0.65 s, windows=21221
+【台对角度筛选】D01--D03 · 3.1 Hz · 21220窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 3.1 Hz · 有效20923 → 幅值/方向合格20650 → 接受1427；正1427/负408；最终相位=167.8880917492076
+phase D01--D03 3.15 Hz: Goertzel=3.15 Hz, window=6.35 s, hop=0.65 s, windows=21221
+【台对角度筛选】D01--D03 · 3.15 Hz · 21221窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 3.15 Hz · 有效20923 → 幅值/方向合格20649 → 接受1847；正1847/负0；最终相位=96.210001287557
+phase D01--D03 3.2 Hz: Goertzel=3.2 Hz, window=6.25 s, hop=0.65 s, windows=21222
+【台对角度筛选】D01--D03 · 3.2 Hz · 21221窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 3.2 Hz · 有效20924 → 幅值/方向合格20686 → 接受1704；正1704/负0；最终相位=22.191235856030406
+phase D01--D03 3.25 Hz: Goertzel=3.25 Hz, window=6.15 s, hop=0.6 s, windows=22990
+【台对角度筛选】D01--D03 · 3.25 Hz · 22989窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 3.25 Hz · 有效22668 → 幅值/方向合格22378 → 接受1961；正0/负1961；最终相位=-53.65070324278868
+phase D01--D03 3.3 Hz: Goertzel=3.3 Hz, window=6.05 s, hop=0.6 s, windows=22990
+【台对角度筛选】D01--D03 · 3.3 Hz · 22989窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 3.3 Hz · 有效22668 → 幅值/方向合格22365 → 接受1905；正0/负1905；最终相位=-128.85493080440244
+phase D01--D03 3.35 Hz: Goertzel=3.35 Hz, window=5.95 s, hop=0.6 s, windows=22991
+【台对角度筛选】D01--D03 · 3.35 Hz · 22990窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 3.35 Hz · 有效22668 → 幅值/方向合格22418 → 接受1837；正1837/负0；最终相位=155.07628727064508
+phase D01--D03 3.4 Hz: Goertzel=3.4 Hz, window=5.9 s, hop=0.6 s, windows=22991
+【台对角度筛选】D01--D03 · 3.4 Hz · 22990窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 3.4 Hz · 有效22668 → 幅值/方向合格22418 → 接受1958；正1958/负0；最终相位=78.45525609738472
+phase D01--D03 3.45 Hz: Goertzel=3.45 Hz, window=5.8 s, hop=0.6 s, windows=22991
+【台对角度筛选】D01--D03 · 3.45 Hz · 22990窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 3.45 Hz · 有效22668 → 幅值/方向合格22380 → 接受1051；正1051/负699；最终相位=8.93333733137938
+phase D01--D03 3.5 Hz: Goertzel=3.5 Hz, window=5.7 s, hop=0.55 s, windows=25081
+【台对角度筛选】D01--D03 · 3.5 Hz · 25080窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 3.5 Hz · 有效24730 → 幅值/方向合格24442 → 接受2024；正0/负2024；最终相位=-74.74183883729482
+phase D01--D03 3.55 Hz: Goertzel=3.55 Hz, window=5.65 s, hop=0.55 s, windows=25081
+【台对角度筛选】D01--D03 · 3.55 Hz · 25080窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 3.55 Hz · 有效24730 → 幅值/方向合格24445 → 接受2059；正0/负2059；最终相位=-151.29496566675377
+phase D01--D03 3.6 Hz: Goertzel=3.6 Hz, window=5.55 s, hop=0.55 s, windows=25081
+【台对角度筛选】D01--D03 · 3.6 Hz · 25080窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 3.6 Hz · 有效24730 → 幅值/方向合格24448 → 接受2123；正2123/负0；最终相位=131.16459439139908
+phase D01--D03 3.65 Hz: Goertzel=3.65 Hz, window=5.5 s, hop=0.55 s, windows=25081
+【台对角度筛选】D01--D03 · 3.65 Hz · 25080窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 3.65 Hz · 有效24730 → 幅值/方向合格24452 → 接受1948；正1948/负0；最终相位=53.881392072191254
+phase D01--D03 3.7 Hz: Goertzel=3.7 Hz, window=5.4 s, hop=0.55 s, windows=25082
+【台对角度筛选】D01--D03 · 3.7 Hz · 25081窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 3.7 Hz · 有效24731 → 幅值/方向合格24457 → 接受2032；正0/负2032；最终相位=-24.557597988056152
+phase D01--D03 3.75 Hz: Goertzel=3.75 Hz, window=5.35 s, hop=0.55 s, windows=25082
+【台对角度筛选】D01--D03 · 3.75 Hz · 25081窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 3.75 Hz · 有效24731 → 幅值/方向合格24449 → 接受2086；正0/负2086；最终相位=-102.77274665333582
+phase D01--D03 3.8 Hz: Goertzel=3.8 Hz, window=5.25 s, hop=0.55 s, windows=25082
+【台对角度筛选】D01--D03 · 3.8 Hz · 25081窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 3.8 Hz · 有效24732 → 幅值/方向合格24429 → 接受1115；正1115/负975；最终相位=172.0934480085209
+phase D01--D03 3.85 Hz: Goertzel=3.85 Hz, window=5.2 s, hop=0.5 s, windows=27590
+【台对角度筛选】D01--D03 · 3.85 Hz · 27589窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 3.85 Hz · 有效27205 → 幅值/方向合格26872 → 接受2300；正2300/负0；最终相位=99.60460645931195
+phase D01--D03 3.9 Hz: Goertzel=3.9 Hz, window=5.15 s, hop=0.5 s, windows=27590
+【台对角度筛选】D01--D03 · 3.9 Hz · 27589窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 3.9 Hz · 有效27205 → 幅值/方向合格26904 → 接受2263；正2263/负0；最终相位=20.195530811151425
+phase D01--D03 3.95 Hz: Goertzel=3.95 Hz, window=5.05 s, hop=0.5 s, windows=27590
+【台对角度筛选】D01--D03 · 3.95 Hz · 27589窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 3.95 Hz · 有效27205 → 幅值/方向合格26905 → 接受2334；正0/负2334；最终相位=-59.48173029206878
+phase D01--D03 4 Hz: Goertzel=4 Hz, window=5 s, hop=0.5 s, windows=27590
+【台对角度筛选】D01--D03 · 4 Hz · 27590窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 4 Hz · 有效27205 → 幅值/方向合格26857 → 接受2174；正0/负2174；最终相位=-138.90886118946722
+phase D01--D03 4.05 Hz: Goertzel=4.05 Hz, window=4.95 s, hop=0.5 s, windows=27591
+【台对角度筛选】D01--D03 · 4.05 Hz · 27590窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 4.05 Hz · 有效27205 → 幅值/方向合格26838 → 接受2088；正2088/负0；最终相位=140.34349844624617
+phase D01--D03 4.1 Hz: Goertzel=4.1 Hz, window=4.9 s, hop=0.5 s, windows=27591
+【台对角度筛选】D01--D03 · 4.1 Hz · 27590窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 4.1 Hz · 有效27206 → 幅值/方向合格26889 → 接受2334；正2334/负0；最终相位=60.02146619698314
+phase D01--D03 4.15 Hz: Goertzel=4.15 Hz, window=4.8 s, hop=0.5 s, windows=27591
+【台对角度筛选】D01--D03 · 4.15 Hz · 27590窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 4.15 Hz · 有效27207 → 幅值/方向合格26905 → 接受2288；正0/负2288；最终相位=-20.429189664549607
+phase D01--D03 4.2 Hz: Goertzel=4.2 Hz, window=4.75 s, hop=0.5 s, windows=27591
+【台对角度筛选】D01--D03 · 4.2 Hz · 27590窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 4.2 Hz · 有效27207 → 幅值/方向合格26902 → 接受2340；正0/负2340；最终相位=-101.29022630617955
+phase D01--D03 4.25 Hz: Goertzel=4.25 Hz, window=4.7 s, hop=0.45 s, windows=30657
+【台对角度筛选】D01--D03 · 4.25 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 4.25 Hz · 有效30230 → 幅值/方向合格29849 → 接受1414；正1414/负1023；最终相位=171.21555544125522
+phase D01--D03 4.3 Hz: Goertzel=4.3 Hz, window=4.65 s, hop=0.45 s, windows=30657
+【台对角度筛选】D01--D03 · 4.3 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 4.3 Hz · 有效30230 → 幅值/方向合格29816 → 接受2411；正2411/负0；最终相位=96.24281688299557
+phase D01--D03 4.35 Hz: Goertzel=4.35 Hz, window=4.6 s, hop=0.45 s, windows=30657
+【台对角度筛选】D01--D03 · 4.35 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 4.35 Hz · 有效30230 → 幅值/方向合格29838 → 接受2384；正2384/负75；最终相位=14.726448942523435
+phase D01--D03 4.4 Hz: Goertzel=4.4 Hz, window=4.55 s, hop=0.45 s, windows=30657
+【台对角度筛选】D01--D03 · 4.4 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 4.4 Hz · 有效30230 → 幅值/方向合格29885 → 接受2526；正0/负2526；最终相位=-67.4026781927534
+phase D01--D03 4.45 Hz: Goertzel=4.45 Hz, window=4.5 s, hop=0.45 s, windows=30657
+【台对角度筛选】D01--D03 · 4.45 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 4.45 Hz · 有效30230 → 幅值/方向合格29914 → 接受2474；正0/负2474；最终相位=-150.0236526549264
+phase D01--D03 4.5 Hz: Goertzel=4.5 Hz, window=4.45 s, hop=0.45 s, windows=30657
+【台对角度筛选】D01--D03 · 4.5 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 4.5 Hz · 有效30230 → 幅值/方向合格29893 → 接受2593；正2593/负0；最终相位=127.92520768655719
+phase D01--D03 4.55 Hz: Goertzel=4.55 Hz, window=4.4 s, hop=0.45 s, windows=30657
+【台对角度筛选】D01--D03 · 4.55 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 4.55 Hz · 有效30231 → 幅值/方向合格29854 → 接受2355；正2355/负0；最终相位=44.75464953793298
+phase D01--D03 4.6 Hz: Goertzel=4.6 Hz, window=4.35 s, hop=0.45 s, windows=30657
+【台对角度筛选】D01--D03 · 4.6 Hz · 30657窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 4.6 Hz · 有效30232 → 幅值/方向合格29838 → 接受2551；正0/负2551；最终相位=-38.209903619183464
+phase D01--D03 4.65 Hz: Goertzel=4.65 Hz, window=4.3 s, hop=0.45 s, windows=30658
+【台对角度筛选】D01--D03 · 4.65 Hz · 30657窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 4.65 Hz · 有效30232 → 幅值/方向合格29844 → 接受2513；正0/负2513；最终相位=-121.4868046046459
+phase D01--D03 4.7 Hz: Goertzel=4.7 Hz, window=4.25 s, hop=0.45 s, windows=30658
+【台对角度筛选】D01--D03 · 4.7 Hz · 30657窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 4.7 Hz · 有效30232 → 幅值/方向合格29824 → 接受2417；正2417/负0；最终相位=154.59420342688085
+phase D01--D03 4.75 Hz: Goertzel=4.75 Hz, window=4.2 s, hop=0.4 s, windows=34490
+【台对角度筛选】D01--D03 · 4.75 Hz · 34489窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 4.75 Hz · 有效34011 → 幅值/方向合格33568 → 接受2798；正2798/负0；最终相位=70.67797667787046
+phase D01--D03 4.8 Hz: Goertzel=4.8 Hz, window=4.15 s, hop=0.4 s, windows=34490
+【台对角度筛选】D01--D03 · 4.8 Hz · 34489窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 4.8 Hz · 有效34011 → 幅值/方向合格33571 → 接受2679；正64/负2679；最终相位=-15.075903397509775
+phase D01--D03 4.85 Hz: Goertzel=4.85 Hz, window=4.1 s, hop=0.4 s, windows=34490
+【台对角度筛选】D01--D03 · 4.85 Hz · 34489窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 4.85 Hz · 有效34011 → 幅值/方向合格33594 → 接受2847；正0/负2847；最终相位=-99.37218408902524
+phase D01--D03 4.9 Hz: Goertzel=4.9 Hz, window=4.1 s, hop=0.4 s, windows=34490
+【台对角度筛选】D01--D03 · 4.9 Hz · 34489窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 4.9 Hz · 有效34011 → 幅值/方向合格33594 → 接受1892；正1892/负948；最终相位=169.62177574733536
+phase D01--D03 4.95 Hz: Goertzel=4.95 Hz, window=4.05 s, hop=0.4 s, windows=34490
+【台对角度筛选】D01--D03 · 4.95 Hz · 34489窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 4.95 Hz · 有效34011 → 幅值/方向合格33628 → 接受2798；正2798/负0；最终相位=88.70219378582361
+phase D01--D03 5 Hz: Goertzel=5 Hz, window=4 s, hop=0.4 s, windows=34490
+【台对角度筛选】D01--D03 · 5 Hz · 34490窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00002_b1 · 5 Hz · 有效34012 → 幅值/方向合格33638 → 接受1574；正1574/负1169；最终相位=8.310402935236459
+phase D01--D04 2 Hz: Goertzel=2 Hz, window=10 s, hop=1 s, windows=13790
+【台对角度筛选】D01--D04 · 2 Hz · 13790窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 2 Hz · 有效13728 → 幅值/方向合格13481 → 接受1253；正1253/负0；最终相位=103.58384508034113
+phase D01--D04 2.05 Hz: Goertzel=2.05 Hz, window=9.75 s, hop=1 s, windows=13791
+【台对角度筛选】D01--D04 · 2.05 Hz · 13790窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 2.05 Hz · 有效13728 → 幅值/方向合格13496 → 接受620；正620/负615；最终相位=7.7442134770745135
+phase D01--D04 2.1 Hz: Goertzel=2.1 Hz, window=9.5 s, hop=0.95 s, windows=14517
+【台对角度筛选】D01--D04 · 2.1 Hz · 14516窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 2.1 Hz · 有效14451 → 幅值/方向合格14258 → 接受1327；正0/负1327；最终相位=-102.84729810053831
+phase D01--D04 2.15 Hz: Goertzel=2.15 Hz, window=9.3 s, hop=0.95 s, windows=14517
+【台对角度筛选】D01--D04 · 2.15 Hz · 14516窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 2.15 Hz · 有效14451 → 幅值/方向合格14256 → 接受1271；正1271/负0；最终相位=153.00425086696262
+phase D01--D04 2.2 Hz: Goertzel=2.2 Hz, window=9.1 s, hop=0.9 s, windows=15324
+【台对角度筛选】D01--D04 · 2.2 Hz · 15323窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 2.2 Hz · 有效15254 → 幅值/方向合格15064 → 接受1329；正1329/负0；最终相位=48.67582493981376
+phase D01--D04 2.25 Hz: Goertzel=2.25 Hz, window=8.9 s, hop=0.9 s, windows=15324
+【台对角度筛选】D01--D04 · 2.25 Hz · 15323窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 2.25 Hz · 有效15254 → 幅值/方向合格15068 → 接受1268；正0/负1268；最终相位=-56.50146373909461
+phase D01--D04 2.3 Hz: Goertzel=2.3 Hz, window=8.7 s, hop=0.85 s, windows=16226
+【台对角度筛选】D01--D04 · 2.3 Hz · 16225窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 2.3 Hz · 有效16152 → 幅值/方向合格15944 → 接受1408；正0/负1408；最终相位=-161.12977653989026
+phase D01--D04 2.35 Hz: Goertzel=2.35 Hz, window=8.5 s, hop=0.85 s, windows=16226
+【台对角度筛选】D01--D04 · 2.35 Hz · 16225窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 2.35 Hz · 有效16152 → 幅值/方向合格15924 → 接受1356；正1356/负0；最终相位=93.30148836763938
+phase D01--D04 2.4 Hz: Goertzel=2.4 Hz, window=8.35 s, hop=0.85 s, windows=16226
+【台对角度筛选】D01--D04 · 2.4 Hz · 16225窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 2.4 Hz · 有效16152 → 幅值/方向合格15962 → 接受1372；正82/负1372；最终相位=-14.325194515643465
+phase D01--D04 2.45 Hz: Goertzel=2.45 Hz, window=8.15 s, hop=0.8 s, windows=17240
+【台对角度筛选】D01--D04 · 2.45 Hz · 17239窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 2.45 Hz · 有效17162 → 幅值/方向合格16946 → 接受1436；正0/负1436；最终相位=-120.23829482812837
+phase D01--D04 2.5 Hz: Goertzel=2.5 Hz, window=8 s, hop=0.8 s, windows=17240
+【台对角度筛选】D01--D04 · 2.5 Hz · 17240窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 2.5 Hz · 有效17162 → 幅值/方向合格16902 → 接受1386；正1386/负0；最终相位=132.60235270561697
+phase D01--D04 2.55 Hz: Goertzel=2.55 Hz, window=7.85 s, hop=0.8 s, windows=17241
+【台对角度筛选】D01--D04 · 2.55 Hz · 17240窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 2.55 Hz · 有效17163 → 幅值/方向合格16932 → 接受1446；正1446/负0；最终相位=24.25996177129705
+phase D01--D04 2.6 Hz: Goertzel=2.6 Hz, window=7.7 s, hop=0.75 s, windows=18390
+【台对角度筛选】D01--D04 · 2.6 Hz · 18389窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 2.6 Hz · 有效18307 → 幅值/方向合格18094 → 接受1520；正0/负1520；最终相位=-83.91249643453513
+phase D01--D04 2.65 Hz: Goertzel=2.65 Hz, window=7.55 s, hop=0.75 s, windows=18390
+【台对角度筛选】D01--D04 · 2.65 Hz · 18389窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 2.65 Hz · 有效18307 → 幅值/方向合格18099 → 接受1314；正1314/负128；最终相位=166.14096012093236
+phase D01--D04 2.7 Hz: Goertzel=2.7 Hz, window=7.4 s, hop=0.75 s, windows=18391
+【台对角度筛选】D01--D04 · 2.7 Hz · 18390窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 2.7 Hz · 有效18307 → 幅值/方向合格18103 → 接受1553；正1553/负0；最终相位=59.052453623016426
+phase D01--D04 2.75 Hz: Goertzel=2.75 Hz, window=7.25 s, hop=0.75 s, windows=18391
+【台对角度筛选】D01--D04 · 2.75 Hz · 18390窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 2.75 Hz · 有效18308 → 幅值/方向合格18071 → 接受1533；正0/负1533；最终相位=-50.659228723051655
+phase D01--D04 2.8 Hz: Goertzel=2.8 Hz, window=7.15 s, hop=0.7 s, windows=19705
+【台对角度筛选】D01--D04 · 2.8 Hz · 19704窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 2.8 Hz · 有效19616 → 幅值/方向合格19347 → 接受1596；正0/负1596；最终相位=-160.0340762720114
+phase D01--D04 2.85 Hz: Goertzel=2.85 Hz, window=7 s, hop=0.7 s, windows=19705
+【台对角度筛选】D01--D04 · 2.85 Hz · 19704窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 2.85 Hz · 有效19616 → 幅值/方向合格19352 → 接受1630；正1630/负0；最终相位=89.70734992575139
+phase D01--D04 2.9 Hz: Goertzel=2.9 Hz, window=6.9 s, hop=0.7 s, windows=19705
+【台对角度筛选】D01--D04 · 2.9 Hz · 19704窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 2.9 Hz · 有效19616 → 幅值/方向合格19343 → 接受1578；正0/负1578；最终相位=-20.224899859957905
+phase D01--D04 2.95 Hz: Goertzel=2.95 Hz, window=6.8 s, hop=0.7 s, windows=19705
+【台对角度筛选】D01--D04 · 2.95 Hz · 19704窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 2.95 Hz · 有效19616 → 幅值/方向合格19323 → 接受1688；正0/负1688；最终相位=-130.73311338953926
+phase D01--D04 3 Hz: Goertzel=3 Hz, window=6.65 s, hop=0.65 s, windows=21221
+【台对角度筛选】D01--D04 · 3 Hz · 21220窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 3 Hz · 有效21125 → 幅值/方向合格20844 → 接受1703；正1703/负0；最终相位=118.76930465771927
+phase D01--D04 3.05 Hz: Goertzel=3.05 Hz, window=6.55 s, hop=0.65 s, windows=21221
+【台对角度筛选】D01--D04 · 3.05 Hz · 21220窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 3.05 Hz · 有效21125 → 幅值/方向合格20878 → 接受1375；正1375/负446；最终相位=11.619492061788312
+phase D01--D04 3.1 Hz: Goertzel=3.1 Hz, window=6.45 s, hop=0.65 s, windows=21221
+【台对角度筛选】D01--D04 · 3.1 Hz · 21220窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 3.1 Hz · 有效21126 → 幅值/方向合格20893 → 接受1756；正0/负1756；最终相位=-103.58608313446051
+phase D01--D04 3.15 Hz: Goertzel=3.15 Hz, window=6.35 s, hop=0.65 s, windows=21221
+【台对角度筛选】D01--D04 · 3.15 Hz · 21221窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 3.15 Hz · 有效21126 → 幅值/方向合格20883 → 接受1760；正1760/负0；最终相位=144.41925006224818
+phase D01--D04 3.2 Hz: Goertzel=3.2 Hz, window=6.25 s, hop=0.65 s, windows=21222
+【台对角度筛选】D01--D04 · 3.2 Hz · 21221窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 3.2 Hz · 有效21126 → 幅值/方向合格20909 → 接受1748；正1748/负0；最终相位=32.35264003895453
+phase D01--D04 3.25 Hz: Goertzel=3.25 Hz, window=6.15 s, hop=0.6 s, windows=22990
+【台对角度筛选】D01--D04 · 3.25 Hz · 22989窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 3.25 Hz · 有效22887 → 幅值/方向合格22634 → 接受1822；正0/负1822；最终相位=-80.42605894219005
+phase D01--D04 3.3 Hz: Goertzel=3.3 Hz, window=6.05 s, hop=0.6 s, windows=22990
+【台对角度筛选】D01--D04 · 3.3 Hz · 22989窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 3.3 Hz · 有效22887 → 幅值/方向合格22649 → 接受1835；正1835/负88；最终相位=165.62744657436141
+phase D01--D04 3.35 Hz: Goertzel=3.35 Hz, window=5.95 s, hop=0.6 s, windows=22991
+【台对角度筛选】D01--D04 · 3.35 Hz · 22990窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 3.35 Hz · 有效22887 → 幅值/方向合格22654 → 接受1968；正1968/负0；最终相位=52.64466275697719
+phase D01--D04 3.4 Hz: Goertzel=3.4 Hz, window=5.9 s, hop=0.6 s, windows=22991
+【台对角度筛选】D01--D04 · 3.4 Hz · 22990窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 3.4 Hz · 有效22887 → 幅值/方向合格22641 → 接受1958；正0/负1958；最终相位=-61.15801009879413
+phase D01--D04 3.45 Hz: Goertzel=3.45 Hz, window=5.8 s, hop=0.6 s, windows=22991
+【台对角度筛选】D01--D04 · 3.45 Hz · 22990窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 3.45 Hz · 有效22887 → 幅值/方向合格22657 → 接受1238；正693/负1238；最终相位=-170.50684546193466
+phase D01--D04 3.5 Hz: Goertzel=3.5 Hz, window=5.7 s, hop=0.55 s, windows=25081
+【台对角度筛选】D01--D04 · 3.5 Hz · 25080窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 3.5 Hz · 有效24968 → 幅值/方向合格24727 → 接受1940；正1940/负0；最终相位=68.7565800818478
+phase D01--D04 3.55 Hz: Goertzel=3.55 Hz, window=5.65 s, hop=0.55 s, windows=25081
+【台对角度筛选】D01--D04 · 3.55 Hz · 25080窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 3.55 Hz · 有效24968 → 幅值/方向合格24728 → 接受2083；正0/负2083；最终相位=-46.797980473430826
+phase D01--D04 3.6 Hz: Goertzel=3.6 Hz, window=5.55 s, hop=0.55 s, windows=25081
+【台对角度筛选】D01--D04 · 3.6 Hz · 25080窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 3.6 Hz · 有效24968 → 幅值/方向合格24697 → 接受2100；正0/负2100；最终相位=-162.71319892635472
+phase D01--D04 3.65 Hz: Goertzel=3.65 Hz, window=5.5 s, hop=0.55 s, windows=25081
+【台对角度筛选】D01--D04 · 3.65 Hz · 25080窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 3.65 Hz · 有效24968 → 幅值/方向合格24697 → 接受1948；正1948/负0；最终相位=80.05008908129173
+phase D01--D04 3.7 Hz: Goertzel=3.7 Hz, window=5.4 s, hop=0.55 s, windows=25082
+【台对角度筛选】D01--D04 · 3.7 Hz · 25081窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 3.7 Hz · 有效24969 → 幅值/方向合格24707 → 接受2014；正0/负2014；最终相位=-37.375306442346975
+phase D01--D04 3.75 Hz: Goertzel=3.75 Hz, window=5.35 s, hop=0.55 s, windows=25082
+【台对角度筛选】D01--D04 · 3.75 Hz · 25081窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 3.75 Hz · 有效24969 → 幅值/方向合格24684 → 接受2126；正0/负2126；最终相位=-155.06925959517278
+phase D01--D04 3.8 Hz: Goertzel=3.8 Hz, window=5.25 s, hop=0.55 s, windows=25082
+【台对角度筛选】D01--D04 · 3.8 Hz · 25081窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 3.8 Hz · 有效24969 → 幅值/方向合格24689 → 接受2064；正2064/负0；最终相位=86.55927863715257
+phase D01--D04 3.85 Hz: Goertzel=3.85 Hz, window=5.2 s, hop=0.5 s, windows=27590
+【台对角度筛选】D01--D04 · 3.85 Hz · 27589窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 3.85 Hz · 有效27466 → 幅值/方向合格27170 → 接受2231；正0/负2231；最终相位=-32.42389044916622
+phase D01--D04 3.9 Hz: Goertzel=3.9 Hz, window=5.15 s, hop=0.5 s, windows=27590
+【台对角度筛选】D01--D04 · 3.9 Hz · 27589窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 3.9 Hz · 有效27466 → 幅值/方向合格27183 → 接受2248；正0/负2248；最终相位=-150.9757053161451
+phase D01--D04 3.95 Hz: Goertzel=3.95 Hz, window=5.05 s, hop=0.5 s, windows=27590
+【台对角度筛选】D01--D04 · 3.95 Hz · 27589窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 3.95 Hz · 有效27466 → 幅值/方向合格27167 → 接受2328；正2328/负0；最终相位=89.88490480304553
+phase D01--D04 4 Hz: Goertzel=4 Hz, window=5 s, hop=0.5 s, windows=27590
+【台对角度筛选】D01--D04 · 4 Hz · 27590窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 4 Hz · 有效27466 → 幅值/方向合格27167 → 接受2246；正0/负2246；最终相位=-29.73908461861489
+phase D01--D04 4.05 Hz: Goertzel=4.05 Hz, window=4.95 s, hop=0.5 s, windows=27591
+【台对角度筛选】D01--D04 · 4.05 Hz · 27590窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 4.05 Hz · 有效27466 → 幅值/方向合格27158 → 接受2191；正0/负2191；最终相位=-148.85540680508447
+phase D01--D04 4.1 Hz: Goertzel=4.1 Hz, window=4.9 s, hop=0.5 s, windows=27591
+【台对角度筛选】D01--D04 · 4.1 Hz · 27590窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 4.1 Hz · 有效27466 → 幅值/方向合格27132 → 接受2359；正2359/负0；最终相位=90.74851090712828
+phase D01--D04 4.15 Hz: Goertzel=4.15 Hz, window=4.8 s, hop=0.5 s, windows=27591
+【台对角度筛选】D01--D04 · 4.15 Hz · 27590窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 4.15 Hz · 有效27467 → 幅值/方向合格27142 → 接受2278；正0/负2278；最终相位=-29.247024184267218
+phase D01--D04 4.2 Hz: Goertzel=4.2 Hz, window=4.75 s, hop=0.5 s, windows=27591
+【台对角度筛选】D01--D04 · 4.2 Hz · 27590窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 4.2 Hz · 有效27467 → 幅值/方向合格27118 → 接受2204；正0/负2204；最终相位=-149.89513557772008
+phase D01--D04 4.25 Hz: Goertzel=4.25 Hz, window=4.7 s, hop=0.45 s, windows=30657
+【台对角度筛选】D01--D04 · 4.25 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 4.25 Hz · 有效30519 → 幅值/方向合格30176 → 接受2546；正2546/负0；最终相位=89.30885829099832
+phase D01--D04 4.3 Hz: Goertzel=4.3 Hz, window=4.65 s, hop=0.45 s, windows=30657
+【台对角度筛选】D01--D04 · 4.3 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 4.3 Hz · 有效30519 → 幅值/方向合格30117 → 接受2453；正0/负2453；最终相位=-31.986258482730896
+phase D01--D04 4.35 Hz: Goertzel=4.35 Hz, window=4.6 s, hop=0.45 s, windows=30657
+【台对角度筛选】D01--D04 · 4.35 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 4.35 Hz · 有效30519 → 幅值/方向合格30101 → 接受2599；正0/负2599；最终相位=-154.4640030831303
+phase D01--D04 4.4 Hz: Goertzel=4.4 Hz, window=4.55 s, hop=0.45 s, windows=30657
+【台对角度筛选】D01--D04 · 4.4 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 4.4 Hz · 有效30519 → 幅值/方向合格30152 → 接受2578；正2578/负0；最终相位=82.58444567311383
+phase D01--D04 4.45 Hz: Goertzel=4.45 Hz, window=4.5 s, hop=0.45 s, windows=30657
+【台对角度筛选】D01--D04 · 4.45 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 4.45 Hz · 有效30519 → 幅值/方向合格30149 → 接受2431；正0/负2431；最终相位=-41.10232643305664
+phase D01--D04 4.5 Hz: Goertzel=4.5 Hz, window=4.45 s, hop=0.45 s, windows=30657
+【台对角度筛选】D01--D04 · 4.5 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 4.5 Hz · 有效30519 → 幅值/方向合格30141 → 接受2492；正42/负2492；最终相位=-164.98089047400987
+phase D01--D04 4.55 Hz: Goertzel=4.55 Hz, window=4.4 s, hop=0.45 s, windows=30657
+【台对角度筛选】D01--D04 · 4.55 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 4.55 Hz · 有效30519 → 幅值/方向合格30120 → 接受2516；正2516/负0；最终相位=69.29372117245117
+phase D01--D04 4.6 Hz: Goertzel=4.6 Hz, window=4.35 s, hop=0.45 s, windows=30657
+【台对角度筛选】D01--D04 · 4.6 Hz · 30657窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 4.6 Hz · 有效30520 → 幅值/方向合格30121 → 接受2464；正0/负2464；最终相位=-56.979687517030676
+phase D01--D04 4.65 Hz: Goertzel=4.65 Hz, window=4.3 s, hop=0.45 s, windows=30658
+【台对角度筛选】D01--D04 · 4.65 Hz · 30657窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 4.65 Hz · 有效30520 → 幅值/方向合格30146 → 接受1520；正1520/负1020；最终相位=170.96227300897903
+phase D01--D04 4.7 Hz: Goertzel=4.7 Hz, window=4.25 s, hop=0.45 s, windows=30658
+【台对角度筛选】D01--D04 · 4.7 Hz · 30657窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 4.7 Hz · 有效30520 → 幅值/方向合格30139 → 接受2500；正2500/负0；最终相位=49.59960352825457
+phase D01--D04 4.75 Hz: Goertzel=4.75 Hz, window=4.2 s, hop=0.4 s, windows=34490
+【台对角度筛选】D01--D04 · 4.75 Hz · 34489窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 4.75 Hz · 有效34335 → 幅值/方向合格33912 → 接受2821；正0/负2821；最终相位=-78.33264740382599
+phase D01--D04 4.8 Hz: Goertzel=4.8 Hz, window=4.15 s, hop=0.4 s, windows=34490
+【台对角度筛选】D01--D04 · 4.8 Hz · 34489窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 4.8 Hz · 有效34335 → 幅值/方向合格33883 → 接受2909；正2909/负0；最终相位=153.4090329231824
+phase D01--D04 4.85 Hz: Goertzel=4.85 Hz, window=4.1 s, hop=0.4 s, windows=34490
+【台对角度筛选】D01--D04 · 4.85 Hz · 34489窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 4.85 Hz · 有效34335 → 幅值/方向合格33889 → 接受2748；正2748/负0；最终相位=24.256499487588812
+phase D01--D04 4.9 Hz: Goertzel=4.9 Hz, window=4.1 s, hop=0.4 s, windows=34490
+【台对角度筛选】D01--D04 · 4.9 Hz · 34489窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 4.9 Hz · 有效34335 → 幅值/方向合格33864 → 接受2857；正0/负2857；最终相位=-105.66473782487441
+phase D01--D04 4.95 Hz: Goertzel=4.95 Hz, window=4.05 s, hop=0.4 s, windows=34490
+【台对角度筛选】D01--D04 · 4.95 Hz · 34489窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 4.95 Hz · 有效34335 → 幅值/方向合格33849 → 接受2777；正2777/负0；最终相位=124.24674465862891
+phase D01--D04 5 Hz: Goertzel=5 Hz, window=4 s, hop=0.4 s, windows=34490
+【台对角度筛选】D01--D04 · 5 Hz · 34490窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00003_b1 · 5 Hz · 有效34335 → 幅值/方向合格33893 → 接受2038；正699/负2038；最终相位=-11.028335787338651
+phase D02--D03 2 Hz: Goertzel=2 Hz, window=10 s, hop=1 s, windows=13790
+【台对角度筛选】D02--D03 · 2 Hz · 13790窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 2 Hz · 有效13458 → 幅值/方向合格13001 → 接受3998；正3998/负0；最终相位=154.8201287199834
+phase D02--D03 2.05 Hz: Goertzel=2.05 Hz, window=9.75 s, hop=1 s, windows=13791
+【台对角度筛选】D02--D03 · 2.05 Hz · 13790窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 2.05 Hz · 有效13458 → 幅值/方向合格12916 → 接受3931；正3931/负0；最终相位=120.50483358753571
+phase D02--D03 2.1 Hz: Goertzel=2.1 Hz, window=9.5 s, hop=0.95 s, windows=14517
+【台对角度筛选】D02--D03 · 2.1 Hz · 14516窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 2.1 Hz · 有效14168 → 幅值/方向合格13614 → 接受3995；正3995/负0；最终相位=86.24077341118789
+phase D02--D03 2.15 Hz: Goertzel=2.15 Hz, window=9.3 s, hop=0.95 s, windows=14517
+【台对角度筛选】D02--D03 · 2.15 Hz · 14516窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 2.15 Hz · 有效14169 → 幅值/方向合格13645 → 接受3849；正3849/负0；最终相位=51.07008801637972
+phase D02--D03 2.2 Hz: Goertzel=2.2 Hz, window=9.1 s, hop=0.9 s, windows=15324
+【台对角度筛选】D02--D03 · 2.2 Hz · 15323窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 2.2 Hz · 有效14955 → 幅值/方向合格14366 → 接受3948；正3948/负0；最终相位=16.352080948806005
+phase D02--D03 2.25 Hz: Goertzel=2.25 Hz, window=8.9 s, hop=0.9 s, windows=15324
+【台对角度筛选】D02--D03 · 2.25 Hz · 15323窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 2.25 Hz · 有效14957 → 幅值/方向合格14358 → 接受3714；正0/负3714；最终相位=-18.764793641024706
+phase D02--D03 2.3 Hz: Goertzel=2.3 Hz, window=8.7 s, hop=0.85 s, windows=16226
+【台对角度筛选】D02--D03 · 2.3 Hz · 16225窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 2.3 Hz · 有效15836 → 幅值/方向合格15230 → 接受3946；正0/负3946；最终相位=-54.1041858873184
+phase D02--D03 2.35 Hz: Goertzel=2.35 Hz, window=8.5 s, hop=0.85 s, windows=16226
+【台对角度筛选】D02--D03 · 2.35 Hz · 16225窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 2.35 Hz · 有效15837 → 幅值/方向合格15198 → 接受3829；正0/负3829；最终相位=-89.63030175604003
+phase D02--D03 2.4 Hz: Goertzel=2.4 Hz, window=8.35 s, hop=0.85 s, windows=16226
+【台对角度筛选】D02--D03 · 2.4 Hz · 16225窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 2.4 Hz · 有效15839 → 幅值/方向合格15260 → 接受3755；正0/负3755；最终相位=-124.91019477637637
+phase D02--D03 2.45 Hz: Goertzel=2.45 Hz, window=8.15 s, hop=0.8 s, windows=17240
+【台对角度筛选】D02--D03 · 2.45 Hz · 17239窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 2.45 Hz · 有效16828 → 幅值/方向合格16207 → 接受3856；正0/负3856；最终相位=-160.17583899660173
+phase D02--D03 2.5 Hz: Goertzel=2.5 Hz, window=8 s, hop=0.8 s, windows=17240
+【台对角度筛选】D02--D03 · 2.5 Hz · 17240窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 2.5 Hz · 有效16831 → 幅值/方向合格16098 → 接受3707；正3707/负0；最终相位=163.67444632716527
+phase D02--D03 2.55 Hz: Goertzel=2.55 Hz, window=7.85 s, hop=0.8 s, windows=17241
+【台对角度筛选】D02--D03 · 2.55 Hz · 17240窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 2.55 Hz · 有效16831 → 幅值/方向合格16143 → 接受3608；正3608/负0；最终相位=127.99930334031731
+phase D02--D03 2.6 Hz: Goertzel=2.6 Hz, window=7.7 s, hop=0.75 s, windows=18390
+【台对角度筛选】D02--D03 · 2.6 Hz · 18389窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 2.6 Hz · 有效17953 → 幅值/方向合格17302 → 接受3801；正3801/负0；最终相位=91.89007254030966
+phase D02--D03 2.65 Hz: Goertzel=2.65 Hz, window=7.55 s, hop=0.75 s, windows=18390
+【台对角度筛选】D02--D03 · 2.65 Hz · 18389窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 2.65 Hz · 有效17953 → 幅值/方向合格17324 → 接受3796；正3796/负0；最终相位=55.573971830649675
+phase D02--D03 2.7 Hz: Goertzel=2.7 Hz, window=7.4 s, hop=0.75 s, windows=18391
+【台对角度筛选】D02--D03 · 2.7 Hz · 18390窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 2.7 Hz · 有效17956 → 幅值/方向合格17353 → 接受3711；正3711/负0；最终相位=19.58334678875082
+phase D02--D03 2.75 Hz: Goertzel=2.75 Hz, window=7.25 s, hop=0.75 s, windows=18391
+【台对角度筛选】D02--D03 · 2.75 Hz · 18390窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 2.75 Hz · 有效17956 → 幅值/方向合格17368 → 接受3466；正0/负3466；最终相位=-16.934523528964377
+phase D02--D03 2.8 Hz: Goertzel=2.8 Hz, window=7.15 s, hop=0.7 s, windows=19705
+【台对角度筛选】D02--D03 · 2.8 Hz · 19704窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 2.8 Hz · 有效19238 → 幅值/方向合格18637 → 接受3627；正0/负3627；最终相位=-53.36167160534469
+phase D02--D03 2.85 Hz: Goertzel=2.85 Hz, window=7 s, hop=0.7 s, windows=19705
+【台对角度筛选】D02--D03 · 2.85 Hz · 19704窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 2.85 Hz · 有效19238 → 幅值/方向合格18681 → 接受3534；正0/负3534；最终相位=-90.02438372250688
+phase D02--D03 2.9 Hz: Goertzel=2.9 Hz, window=6.9 s, hop=0.7 s, windows=19705
+【台对角度筛选】D02--D03 · 2.9 Hz · 19704窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 2.9 Hz · 有效19238 → 幅值/方向合格18639 → 接受3396；正0/负3396；最终相位=-126.83896083028786
+phase D02--D03 2.95 Hz: Goertzel=2.95 Hz, window=6.8 s, hop=0.7 s, windows=19705
+【台对角度筛选】D02--D03 · 2.95 Hz · 19704窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 2.95 Hz · 有效19239 → 幅值/方向合格18661 → 接受3516；正0/负3516；最终相位=-163.45578443407874
+phase D02--D03 3 Hz: Goertzel=3 Hz, window=6.65 s, hop=0.65 s, windows=21221
+【台对角度筛选】D02--D03 · 3 Hz · 21220窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 3 Hz · 有效20719 → 幅值/方向合格20089 → 接受3635；正3635/负0；最终相位=159.9718616648315
+phase D02--D03 3.05 Hz: Goertzel=3.05 Hz, window=6.55 s, hop=0.65 s, windows=21221
+【台对角度筛选】D02--D03 · 3.05 Hz · 21220窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 3.05 Hz · 有效20719 → 幅值/方向合格20142 → 接受3666；正3666/负0；最终相位=122.574416921925
+phase D02--D03 3.1 Hz: Goertzel=3.1 Hz, window=6.45 s, hop=0.65 s, windows=21221
+【台对角度筛选】D02--D03 · 3.1 Hz · 21220窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 3.1 Hz · 有效20720 → 幅值/方向合格20103 → 接受3548；正3548/负0；最终相位=85.90633141559275
+phase D02--D03 3.15 Hz: Goertzel=3.15 Hz, window=6.35 s, hop=0.65 s, windows=21221
+【台对角度筛选】D02--D03 · 3.15 Hz · 21221窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 3.15 Hz · 有效20720 → 幅值/方向合格20113 → 接受3426；正3426/负0；最终相位=48.44716722549321
+phase D02--D03 3.2 Hz: Goertzel=3.2 Hz, window=6.25 s, hop=0.65 s, windows=21222
+【台对角度筛选】D02--D03 · 3.2 Hz · 21221窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 3.2 Hz · 有效20721 → 幅值/方向合格20134 → 接受2818；正2818/负452；最终相位=13.051337960892534
+phase D02--D03 3.25 Hz: Goertzel=3.25 Hz, window=6.15 s, hop=0.6 s, windows=22990
+【台对角度筛选】D02--D03 · 3.25 Hz · 22989窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 3.25 Hz · 有效22449 → 幅值/方向合格21840 → 接受3543；正0/负3543；最终相位=-27.008151934016713
+phase D02--D03 3.3 Hz: Goertzel=3.3 Hz, window=6.05 s, hop=0.6 s, windows=22990
+【台对角度筛选】D02--D03 · 3.3 Hz · 22989窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 3.3 Hz · 有效22449 → 幅值/方向合格21841 → 接受3358；正0/负3358；最终相位=-64.40099732022247
+phase D02--D03 3.35 Hz: Goertzel=3.35 Hz, window=5.95 s, hop=0.6 s, windows=22991
+【台对角度筛选】D02--D03 · 3.35 Hz · 22990窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 3.35 Hz · 有效22449 → 幅值/方向合格21884 → 接受3259；正0/负3259；最终相位=-102.63531530048871
+phase D02--D03 3.4 Hz: Goertzel=3.4 Hz, window=5.9 s, hop=0.6 s, windows=22991
+【台对角度筛选】D02--D03 · 3.4 Hz · 22990窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 3.4 Hz · 有效22449 → 幅值/方向合格21893 → 接受3526；正0/负3526；最终相位=-140.53316985724592
+phase D02--D03 3.45 Hz: Goertzel=3.45 Hz, window=5.8 s, hop=0.6 s, windows=22991
+【台对角度筛选】D02--D03 · 3.45 Hz · 22990窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 3.45 Hz · 有效22449 → 幅值/方向合格21931 → 接受1845；正1439/负1845；最终相位=-172.0822456900209
+phase D02--D03 3.5 Hz: Goertzel=3.5 Hz, window=5.7 s, hop=0.55 s, windows=25081
+【台对角度筛选】D02--D03 · 3.5 Hz · 25080窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 3.5 Hz · 有效24492 → 幅值/方向合格23932 → 接受3397；正3397/负0；最终相位=143.02293112795863
+phase D02--D03 3.55 Hz: Goertzel=3.55 Hz, window=5.65 s, hop=0.55 s, windows=25081
+【台对角度筛选】D02--D03 · 3.55 Hz · 25080窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 3.55 Hz · 有效24492 → 幅值/方向合格23890 → 接受3428；正3428/负0；最终相位=104.34420502506347
+phase D02--D03 3.6 Hz: Goertzel=3.6 Hz, window=5.55 s, hop=0.55 s, windows=25081
+【台对角度筛选】D02--D03 · 3.6 Hz · 25080窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 3.6 Hz · 有效24492 → 幅值/方向合格23930 → 接受3258；正3258/负0；最终相位=65.14287992931351
+phase D02--D03 3.65 Hz: Goertzel=3.65 Hz, window=5.5 s, hop=0.55 s, windows=25081
+【台对角度筛选】D02--D03 · 3.65 Hz · 25080窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 3.65 Hz · 有效24492 → 幅值/方向合格23945 → 接受3254；正3254/负0；最终相位=27.134271210133303
+phase D02--D03 3.7 Hz: Goertzel=3.7 Hz, window=5.4 s, hop=0.55 s, windows=25082
+【台对角度筛选】D02--D03 · 3.7 Hz · 25081窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 3.7 Hz · 有效24493 → 幅值/方向合格23967 → 接受2894；正280/负2894；最终相位=-13.50760071017493
+phase D02--D03 3.75 Hz: Goertzel=3.75 Hz, window=5.35 s, hop=0.55 s, windows=25082
+【台对角度筛选】D02--D03 · 3.75 Hz · 25081窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 3.75 Hz · 有效24494 → 幅值/方向合格23980 → 接受3109；正0/负3109；最终相位=-51.90390024583975
+phase D02--D03 3.8 Hz: Goertzel=3.8 Hz, window=5.25 s, hop=0.55 s, windows=25082
+【台对角度筛选】D02--D03 · 3.8 Hz · 25081窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 3.8 Hz · 有效24495 → 幅值/方向合格23965 → 接受3118；正0/负3118；最终相位=-90.70539212735682
+phase D02--D03 3.85 Hz: Goertzel=3.85 Hz, window=5.2 s, hop=0.5 s, windows=27590
+【台对角度筛选】D02--D03 · 3.85 Hz · 27589窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 3.85 Hz · 有效26944 → 幅值/方向合格26424 → 接受3403；正0/负3403；最终相位=-129.5160333840928
+phase D02--D03 3.9 Hz: Goertzel=3.9 Hz, window=5.15 s, hop=0.5 s, windows=27590
+【台对角度筛选】D02--D03 · 3.9 Hz · 27589窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 3.9 Hz · 有效26944 → 幅值/方向合格26475 → 接受2699；正527/负2699；最终相位=-167.17163800992734
+phase D02--D03 3.95 Hz: Goertzel=3.95 Hz, window=5.05 s, hop=0.5 s, windows=27590
+【台对角度筛选】D02--D03 · 3.95 Hz · 27589窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 3.95 Hz · 有效26944 → 幅值/方向合格26522 → 接受3165；正3165/负0；最终相位=150.713256759144
+phase D02--D03 4 Hz: Goertzel=4 Hz, window=5 s, hop=0.5 s, windows=27590
+【台对角度筛选】D02--D03 · 4 Hz · 27590窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 4 Hz · 有效26944 → 幅值/方向合格26476 → 接受3037；正3037/负0；最终相位=110.93998466941301
+phase D02--D03 4.05 Hz: Goertzel=4.05 Hz, window=4.95 s, hop=0.5 s, windows=27591
+【台对角度筛选】D02--D03 · 4.05 Hz · 27590窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 4.05 Hz · 有效26944 → 幅值/方向合格26439 → 接受2940；正2940/负0；最终相位=70.45780909594191
+phase D02--D03 4.1 Hz: Goertzel=4.1 Hz, window=4.9 s, hop=0.5 s, windows=27591
+【台对角度筛选】D02--D03 · 4.1 Hz · 27590窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 4.1 Hz · 有效26947 → 幅值/方向合格26459 → 接受3090；正3090/负0；最终相位=30.335981127978695
+phase D02--D03 4.15 Hz: Goertzel=4.15 Hz, window=4.8 s, hop=0.5 s, windows=27591
+【台对角度筛选】D02--D03 · 4.15 Hz · 27590窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 4.15 Hz · 有效26947 → 幅值/方向合格26493 → 接受2526；正533/负2526；最终相位=-12.785839029799694
+phase D02--D03 4.2 Hz: Goertzel=4.2 Hz, window=4.75 s, hop=0.5 s, windows=27591
+【台对角度筛选】D02--D03 · 4.2 Hz · 27590窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 4.2 Hz · 有效26947 → 幅值/方向合格26466 → 接受3078；正0/负3078；最终相位=-50.328828781026225
+phase D02--D03 4.25 Hz: Goertzel=4.25 Hz, window=4.7 s, hop=0.45 s, windows=30657
+【台对角度筛选】D02--D03 · 4.25 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 4.25 Hz · 有效29941 → 幅值/方向合格29442 → 接受3257；正0/负3257；最终相位=-91.2517751708733
+phase D02--D03 4.3 Hz: Goertzel=4.3 Hz, window=4.65 s, hop=0.45 s, windows=30657
+【台对角度筛选】D02--D03 · 4.3 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 4.3 Hz · 有效29941 → 幅值/方向合格29481 → 接受3126；正0/负3126；最终相位=-132.53235194233284
+phase D02--D03 4.35 Hz: Goertzel=4.35 Hz, window=4.6 s, hop=0.45 s, windows=30657
+【台对角度筛选】D02--D03 · 4.35 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 4.35 Hz · 有效29941 → 幅值/方向合格29482 → 接受2240；正857/负2240；最终相位=-168.9138359303917
+phase D02--D03 4.4 Hz: Goertzel=4.4 Hz, window=4.55 s, hop=0.45 s, windows=30657
+【台对角度筛选】D02--D03 · 4.4 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 4.4 Hz · 有效29942 → 幅值/方向合格29492 → 接受3185；正3185/负0；最终相位=145.72600168129026
+phase D02--D03 4.45 Hz: Goertzel=4.45 Hz, window=4.5 s, hop=0.45 s, windows=30657
+【台对角度筛选】D02--D03 · 4.45 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 4.45 Hz · 有效29942 → 幅值/方向合格29514 → 接受3046；正3046/负0；最终相位=104.32829910913566
+phase D02--D03 4.5 Hz: Goertzel=4.5 Hz, window=4.45 s, hop=0.45 s, windows=30657
+【台对角度筛选】D02--D03 · 4.5 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 4.5 Hz · 有效29942 → 幅值/方向合格29502 → 接受3161；正3161/负0；最终相位=63.128408610470956
+phase D02--D03 4.55 Hz: Goertzel=4.55 Hz, window=4.4 s, hop=0.45 s, windows=30657
+【台对角度筛选】D02--D03 · 4.55 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 4.55 Hz · 有效29944 → 幅值/方向合格29506 → 接受2987；正2987/负0；最终相位=21.665052731489734
+phase D02--D03 4.6 Hz: Goertzel=4.6 Hz, window=4.35 s, hop=0.45 s, windows=30657
+【台对角度筛选】D02--D03 · 4.6 Hz · 30657窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 4.6 Hz · 有效29944 → 幅值/方向合格29475 → 接受2887；正0/负2887；最终相位=-20.088807255011233
+phase D02--D03 4.65 Hz: Goertzel=4.65 Hz, window=4.3 s, hop=0.45 s, windows=30658
+【台对角度筛选】D02--D03 · 4.65 Hz · 30657窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 4.65 Hz · 有效29944 → 幅值/方向合格29472 → 接受2793；正0/负2793；最终相位=-61.86743314590238
+phase D02--D03 4.7 Hz: Goertzel=4.7 Hz, window=4.25 s, hop=0.45 s, windows=30658
+【台对角度筛选】D02--D03 · 4.7 Hz · 30657窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 4.7 Hz · 有效29944 → 幅值/方向合格29468 → 接受2878；正0/负2878；最终相位=-103.70696454522894
+phase D02--D03 4.75 Hz: Goertzel=4.75 Hz, window=4.2 s, hop=0.4 s, windows=34490
+【台对角度筛选】D02--D03 · 4.75 Hz · 34489窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 4.75 Hz · 有效33687 → 幅值/方向合格33128 → 接受3285；正0/负3285；最终相位=-145.72946894625684
+phase D02--D03 4.8 Hz: Goertzel=4.8 Hz, window=4.15 s, hop=0.4 s, windows=34490
+【台对角度筛选】D02--D03 · 4.8 Hz · 34489窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 4.8 Hz · 有效33687 → 幅值/方向合格33167 → 接受2386；正2386/负725；最终相位=168.19530766920687
+phase D02--D03 4.85 Hz: Goertzel=4.85 Hz, window=4.1 s, hop=0.4 s, windows=34490
+【台对角度筛选】D02--D03 · 4.85 Hz · 34489窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 4.85 Hz · 有效33687 → 幅值/方向合格33123 → 接受3125；正3125/负0；最终相位=129.43047416691334
+phase D02--D03 4.9 Hz: Goertzel=4.9 Hz, window=4.1 s, hop=0.4 s, windows=34490
+【台对角度筛选】D02--D03 · 4.9 Hz · 34489窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 4.9 Hz · 有效33687 → 幅值/方向合格33178 → 接受3290；正3290/负0；最终相位=87.11442935301848
+phase D02--D03 4.95 Hz: Goertzel=4.95 Hz, window=4.05 s, hop=0.4 s, windows=34490
+【台对角度筛选】D02--D03 · 4.95 Hz · 34489窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 4.95 Hz · 有效33687 → 幅值/方向合格33207 → 接受3049；正3049/负0；最终相位=44.55356689722419
+phase D02--D03 5 Hz: Goertzel=5 Hz, window=4 s, hop=0.4 s, windows=34490
+【台对角度筛选】D02--D03 · 5 Hz · 34490窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00004_b1 · 5 Hz · 有效33690 → 幅值/方向合格33248 → 接受1654；正1654/负1350；最终相位=8.28492855668123
+phase D02--D04 2 Hz: Goertzel=2 Hz, window=10 s, hop=1 s, windows=13790
+【台对角度筛选】D02--D04 · 2 Hz · 13790窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 2 Hz · 有效13593 → 幅值/方向合格13278 → 接受1807；正0/负1807；最终相位=-50.94049333789328
+phase D02--D04 2.05 Hz: Goertzel=2.05 Hz, window=9.75 s, hop=1 s, windows=13791
+【台对角度筛选】D02--D04 · 2.05 Hz · 13790窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 2.05 Hz · 有效13593 → 幅值/方向合格13248 → 接受1783；正0/负1783；最终相位=-119.44061017033987
+phase D02--D04 2.1 Hz: Goertzel=2.1 Hz, window=9.5 s, hop=0.95 s, windows=14517
+【台对角度筛选】D02--D04 · 2.1 Hz · 14516窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 2.1 Hz · 有效14309 → 幅值/方向合格14039 → 接受1474；正1474/负383；最终相位=168.34164773113082
+phase D02--D04 2.15 Hz: Goertzel=2.15 Hz, window=9.3 s, hop=0.95 s, windows=14517
+【台对角度筛选】D02--D04 · 2.15 Hz · 14516窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 2.15 Hz · 有效14310 → 幅值/方向合格14045 → 接受1813；正1813/负0；最终相位=101.82018756032562
+phase D02--D04 2.2 Hz: Goertzel=2.2 Hz, window=9.1 s, hop=0.9 s, windows=15324
+【台对角度筛选】D02--D04 · 2.2 Hz · 15323窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 2.2 Hz · 有效15105 → 幅值/方向合格14803 → 接受1881；正1881/负0；最终相位=32.288101316242475
+phase D02--D04 2.25 Hz: Goertzel=2.25 Hz, window=8.9 s, hop=0.9 s, windows=15324
+【台对角度筛选】D02--D04 · 2.25 Hz · 15323窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 2.25 Hz · 有效15106 → 幅值/方向合格14823 → 接受1749；正0/负1749；最终相位=-38.001064192923124
+phase D02--D04 2.3 Hz: Goertzel=2.3 Hz, window=8.7 s, hop=0.85 s, windows=16226
+【台对角度筛选】D02--D04 · 2.3 Hz · 16225窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 2.3 Hz · 有效15994 → 幅值/方向合格15686 → 接受1840；正0/负1840；最终相位=-107.93816442162918
+phase D02--D04 2.35 Hz: Goertzel=2.35 Hz, window=8.5 s, hop=0.85 s, windows=16226
+【台对角度筛选】D02--D04 · 2.35 Hz · 16225窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 2.35 Hz · 有效15995 → 幅值/方向合格15709 → 接受996；正787/负996；最终相位=-171.7644301353408
+phase D02--D04 2.4 Hz: Goertzel=2.4 Hz, window=8.35 s, hop=0.85 s, windows=16226
+【台对角度筛选】D02--D04 · 2.4 Hz · 16225窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 2.4 Hz · 有效15996 → 幅值/方向合格15720 → 接受1858；正1858/负0；最终相位=110.20157068168845
+phase D02--D04 2.45 Hz: Goertzel=2.45 Hz, window=8.15 s, hop=0.8 s, windows=17240
+【台对角度筛选】D02--D04 · 2.45 Hz · 17239窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 2.45 Hz · 有效16995 → 幅值/方向合格16701 → 接受1863；正1863/负0；最终相位=39.50728632453259
+phase D02--D04 2.5 Hz: Goertzel=2.5 Hz, window=8 s, hop=0.8 s, windows=17240
+【台对角度筛选】D02--D04 · 2.5 Hz · 17240窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 2.5 Hz · 有效16997 → 幅值/方向合格16659 → 接受1720；正0/负1720；最终相位=-32.41921543978469
+phase D02--D04 2.55 Hz: Goertzel=2.55 Hz, window=7.85 s, hop=0.8 s, windows=17241
+【台对角度筛选】D02--D04 · 2.55 Hz · 17240窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 2.55 Hz · 有效16997 → 幅值/方向合格16685 → 接受1719；正0/负1719；最终相位=-104.00648146032627
+phase D02--D04 2.6 Hz: Goertzel=2.6 Hz, window=7.7 s, hop=0.75 s, windows=18390
+【台对角度筛选】D02--D04 · 2.6 Hz · 18389窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 2.6 Hz · 有效18130 → 幅值/方向合格17859 → 接受1164；正705/负1164；最终相位=-170.36097189897336
+phase D02--D04 2.65 Hz: Goertzel=2.65 Hz, window=7.55 s, hop=0.75 s, windows=18390
+【台对角度筛选】D02--D04 · 2.65 Hz · 18389窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 2.65 Hz · 有效18130 → 幅值/方向合格17832 → 接受1807；正1807/负0；最终相位=111.68142936140589
+phase D02--D04 2.7 Hz: Goertzel=2.7 Hz, window=7.4 s, hop=0.75 s, windows=18391
+【台对角度筛选】D02--D04 · 2.7 Hz · 18390窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 2.7 Hz · 有效18132 → 幅值/方向合格17834 → 接受1816；正1816/负0；最终相位=38.808813686392526
+phase D02--D04 2.75 Hz: Goertzel=2.75 Hz, window=7.25 s, hop=0.75 s, windows=18391
+【台对角度筛选】D02--D04 · 2.75 Hz · 18390窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 2.75 Hz · 有效18132 → 幅值/方向合格17872 → 接受1771；正0/负1771；最终相位=-33.28050082074409
+phase D02--D04 2.8 Hz: Goertzel=2.8 Hz, window=7.15 s, hop=0.7 s, windows=19705
+【台对角度筛选】D02--D04 · 2.8 Hz · 19704窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 2.8 Hz · 有效19427 → 幅值/方向合格19131 → 接受1840；正0/负1840；最终相位=-107.00535157473142
+phase D02--D04 2.85 Hz: Goertzel=2.85 Hz, window=7 s, hop=0.7 s, windows=19705
+【台对角度筛选】D02--D04 · 2.85 Hz · 19704窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 2.85 Hz · 有效19427 → 幅值/方向合格19136 → 接受873；正879/负873；最终相位=-172.37716422632008
+phase D02--D04 2.9 Hz: Goertzel=2.9 Hz, window=6.9 s, hop=0.7 s, windows=19705
+【台对角度筛选】D02--D04 · 2.9 Hz · 19704窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 2.9 Hz · 有效19427 → 幅值/方向合格19147 → 接受1722；正1722/负0；最终相位=107.19091094695723
+phase D02--D04 2.95 Hz: Goertzel=2.95 Hz, window=6.8 s, hop=0.7 s, windows=19705
+【台对角度筛选】D02--D04 · 2.95 Hz · 19704窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 2.95 Hz · 有效19427 → 幅值/方向合格19151 → 接受1781；正1781/负0；最终相位=33.52218673687405
+phase D02--D04 3 Hz: Goertzel=3 Hz, window=6.65 s, hop=0.65 s, windows=21221
+【台对角度筛选】D02--D04 · 3 Hz · 21220窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 3 Hz · 有效20922 → 幅值/方向合格20642 → 接受1827；正0/负1827；最终相位=-40.7089321891565
+phase D02--D04 3.05 Hz: Goertzel=3.05 Hz, window=6.55 s, hop=0.65 s, windows=21221
+【台对角度筛选】D02--D04 · 3.05 Hz · 21220窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 3.05 Hz · 有效20922 → 幅值/方向合格20650 → 接受1907；正0/负1907；最终相位=-115.07289017677385
+phase D02--D04 3.1 Hz: Goertzel=3.1 Hz, window=6.45 s, hop=0.65 s, windows=21221
+【台对角度筛选】D02--D04 · 3.1 Hz · 21220窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 3.1 Hz · 有效20923 → 幅值/方向合格20631 → 接受1453；正1453/负366；最终相位=168.13058933182126
+phase D02--D04 3.15 Hz: Goertzel=3.15 Hz, window=6.35 s, hop=0.65 s, windows=21221
+【台对角度筛选】D02--D04 · 3.15 Hz · 21221窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 3.15 Hz · 有效20923 → 幅值/方向合格20635 → 接受1845；正1845/负0；最终相位=96.26448418441102
+phase D02--D04 3.2 Hz: Goertzel=3.2 Hz, window=6.25 s, hop=0.65 s, windows=21222
+【台对角度筛选】D02--D04 · 3.2 Hz · 21221窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 3.2 Hz · 有效20923 → 幅值/方向合格20676 → 接受1744；正1744/负0；最终相位=22.099472820771066
+phase D02--D04 3.25 Hz: Goertzel=3.25 Hz, window=6.15 s, hop=0.6 s, windows=22990
+【台对角度筛选】D02--D04 · 3.25 Hz · 22989窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 3.25 Hz · 有效22668 → 幅值/方向合格22378 → 接受1935；正0/负1935；最终相位=-53.434685824856324
+phase D02--D04 3.3 Hz: Goertzel=3.3 Hz, window=6.05 s, hop=0.6 s, windows=22990
+【台对角度筛选】D02--D04 · 3.3 Hz · 22989窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 3.3 Hz · 有效22668 → 幅值/方向合格22357 → 接受1939；正0/负1939；最终相位=-128.7086396529626
+phase D02--D04 3.35 Hz: Goertzel=3.35 Hz, window=5.95 s, hop=0.6 s, windows=22991
+【台对角度筛选】D02--D04 · 3.35 Hz · 22990窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 3.35 Hz · 有效22668 → 幅值/方向合格22387 → 接受1857；正1857/负0；最终相位=155.16371608360038
+phase D02--D04 3.4 Hz: Goertzel=3.4 Hz, window=5.9 s, hop=0.6 s, windows=22991
+【台对角度筛选】D02--D04 · 3.4 Hz · 22990窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 3.4 Hz · 有效22668 → 幅值/方向合格22391 → 接受1969；正1969/负0；最终相位=78.18791107142872
+phase D02--D04 3.45 Hz: Goertzel=3.45 Hz, window=5.8 s, hop=0.6 s, windows=22991
+【台对角度筛选】D02--D04 · 3.45 Hz · 22990窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 3.45 Hz · 有效22668 → 幅值/方向合格22383 → 接受1073；正1073/负771；最终相位=8.708563416999208
+phase D02--D04 3.5 Hz: Goertzel=3.5 Hz, window=5.7 s, hop=0.55 s, windows=25081
+【台对角度筛选】D02--D04 · 3.5 Hz · 25080窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 3.5 Hz · 有效24730 → 幅值/方向合格24429 → 接受2060；正0/负2060；最终相位=-74.5118676804284
+phase D02--D04 3.55 Hz: Goertzel=3.55 Hz, window=5.65 s, hop=0.55 s, windows=25081
+【台对角度筛选】D02--D04 · 3.55 Hz · 25080窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 3.55 Hz · 有效24730 → 幅值/方向合格24442 → 接受2069；正0/负2069；最终相位=-151.1179941016498
+phase D02--D04 3.6 Hz: Goertzel=3.6 Hz, window=5.55 s, hop=0.55 s, windows=25081
+【台对角度筛选】D02--D04 · 3.6 Hz · 25080窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 3.6 Hz · 有效24730 → 幅值/方向合格24428 → 接受2088；正2088/负0；最终相位=130.99203158793424
+phase D02--D04 3.65 Hz: Goertzel=3.65 Hz, window=5.5 s, hop=0.55 s, windows=25081
+【台对角度筛选】D02--D04 · 3.65 Hz · 25080窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 3.65 Hz · 有效24730 → 幅值/方向合格24445 → 接受1974；正1974/负0；最终相位=54.05067716828203
+phase D02--D04 3.7 Hz: Goertzel=3.7 Hz, window=5.4 s, hop=0.55 s, windows=25082
+【台对角度筛选】D02--D04 · 3.7 Hz · 25081窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 3.7 Hz · 有效24731 → 幅值/方向合格24438 → 接受2030；正0/负2030；最终相位=-24.71236301386606
+phase D02--D04 3.75 Hz: Goertzel=3.75 Hz, window=5.35 s, hop=0.55 s, windows=25082
+【台对角度筛选】D02--D04 · 3.75 Hz · 25081窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 3.75 Hz · 有效24732 → 幅值/方向合格24433 → 接受2047；正0/负2047；最终相位=-102.8502883180724
+phase D02--D04 3.8 Hz: Goertzel=3.8 Hz, window=5.25 s, hop=0.55 s, windows=25082
+【台对角度筛选】D02--D04 · 3.8 Hz · 25081窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 3.8 Hz · 有效24732 → 幅值/方向合格24439 → 接受1122；正1122/负947；最终相位=171.7974606062339
+phase D02--D04 3.85 Hz: Goertzel=3.85 Hz, window=5.2 s, hop=0.5 s, windows=27590
+【台对角度筛选】D02--D04 · 3.85 Hz · 27589窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 3.85 Hz · 有效27205 → 幅值/方向合格26874 → 接受2295；正2295/负0；最终相位=99.65492381198906
+phase D02--D04 3.9 Hz: Goertzel=3.9 Hz, window=5.15 s, hop=0.5 s, windows=27590
+【台对角度筛选】D02--D04 · 3.9 Hz · 27589窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 3.9 Hz · 有效27205 → 幅值/方向合格26880 → 接受2263；正2263/负0；最终相位=20.403553549371836
+phase D02--D04 3.95 Hz: Goertzel=3.95 Hz, window=5.05 s, hop=0.5 s, windows=27590
+【台对角度筛选】D02--D04 · 3.95 Hz · 27589窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 3.95 Hz · 有效27205 → 幅值/方向合格26886 → 接受2285；正0/负2285；最终相位=-59.66307047609389
+phase D02--D04 4 Hz: Goertzel=4 Hz, window=5 s, hop=0.5 s, windows=27590
+【台对角度筛选】D02--D04 · 4 Hz · 27590窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 4 Hz · 有效27205 → 幅值/方向合格26848 → 接受2185；正0/负2185；最终相位=-139.6448071190068
+phase D02--D04 4.05 Hz: Goertzel=4.05 Hz, window=4.95 s, hop=0.5 s, windows=27591
+【台对角度筛选】D02--D04 · 4.05 Hz · 27590窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 4.05 Hz · 有效27205 → 幅值/方向合格26846 → 接受2113；正2113/负0；最终相位=140.73885303447366
+phase D02--D04 4.1 Hz: Goertzel=4.1 Hz, window=4.9 s, hop=0.5 s, windows=27591
+【台对角度筛选】D02--D04 · 4.1 Hz · 27590窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 4.1 Hz · 有效27207 → 幅值/方向合格26879 → 接受2319；正2319/负0；最终相位=59.78859708643138
+phase D02--D04 4.15 Hz: Goertzel=4.15 Hz, window=4.8 s, hop=0.5 s, windows=27591
+【台对角度筛选】D02--D04 · 4.15 Hz · 27590窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 4.15 Hz · 有效27207 → 幅值/方向合格26895 → 接受2300；正0/负2300；最终相位=-20.75176619832012
+phase D02--D04 4.2 Hz: Goertzel=4.2 Hz, window=4.75 s, hop=0.5 s, windows=27591
+【台对角度筛选】D02--D04 · 4.2 Hz · 27590窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 4.2 Hz · 有效27207 → 幅值/方向合格26900 → 接受2372；正0/负2372；最终相位=-101.49958273309463
+phase D02--D04 4.25 Hz: Goertzel=4.25 Hz, window=4.7 s, hop=0.45 s, windows=30657
+【台对角度筛选】D02--D04 · 4.25 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 4.25 Hz · 有效30230 → 幅值/方向合格29849 → 接受1445；正1445/负998；最终相位=171.16340053486985
+phase D02--D04 4.3 Hz: Goertzel=4.3 Hz, window=4.65 s, hop=0.45 s, windows=30657
+【台对角度筛选】D02--D04 · 4.3 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 4.3 Hz · 有效30230 → 幅值/方向合格29817 → 接受2329；正2329/负0；最终相位=95.83887667281331
+phase D02--D04 4.35 Hz: Goertzel=4.35 Hz, window=4.6 s, hop=0.45 s, windows=30657
+【台对角度筛选】D02--D04 · 4.35 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 4.35 Hz · 有效30230 → 幅值/方向合格29854 → 接受2411；正2411/负50；最终相位=14.70412728885056
+phase D02--D04 4.4 Hz: Goertzel=4.4 Hz, window=4.55 s, hop=0.45 s, windows=30657
+【台对角度筛选】D02--D04 · 4.4 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 4.4 Hz · 有效30231 → 幅值/方向合格29890 → 接受2535；正0/负2535；最终相位=-67.32494820531464
+phase D02--D04 4.45 Hz: Goertzel=4.45 Hz, window=4.5 s, hop=0.45 s, windows=30657
+【台对角度筛选】D02--D04 · 4.45 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 4.45 Hz · 有效30231 → 幅值/方向合格29918 → 接受2426；正0/负2426；最终相位=-150.18656516341514
+phase D02--D04 4.5 Hz: Goertzel=4.5 Hz, window=4.45 s, hop=0.45 s, windows=30657
+【台对角度筛选】D02--D04 · 4.5 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 4.5 Hz · 有效30231 → 幅值/方向合格29900 → 接受2592；正2592/负0；最终相位=127.97352988316028
+phase D02--D04 4.55 Hz: Goertzel=4.55 Hz, window=4.4 s, hop=0.45 s, windows=30657
+【台对角度筛选】D02--D04 · 4.55 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 4.55 Hz · 有效30232 → 幅值/方向合格29861 → 接受2344；正2344/负0；最终相位=44.907662628576524
+phase D02--D04 4.6 Hz: Goertzel=4.6 Hz, window=4.35 s, hop=0.45 s, windows=30657
+【台对角度筛选】D02--D04 · 4.6 Hz · 30657窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 4.6 Hz · 有效30232 → 幅值/方向合格29853 → 接受2570；正0/负2570；最终相位=-38.07561472390849
+phase D02--D04 4.65 Hz: Goertzel=4.65 Hz, window=4.3 s, hop=0.45 s, windows=30658
+【台对角度筛选】D02--D04 · 4.65 Hz · 30657窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 4.65 Hz · 有效30232 → 幅值/方向合格29864 → 接受2482；正0/负2482；最终相位=-121.37883646586094
+phase D02--D04 4.7 Hz: Goertzel=4.7 Hz, window=4.25 s, hop=0.45 s, windows=30658
+【台对角度筛选】D02--D04 · 4.7 Hz · 30657窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 4.7 Hz · 有效30232 → 幅值/方向合格29839 → 接受2393；正2393/负0；最终相位=154.63430831241166
+phase D02--D04 4.75 Hz: Goertzel=4.75 Hz, window=4.2 s, hop=0.4 s, windows=34490
+【台对角度筛选】D02--D04 · 4.75 Hz · 34489窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 4.75 Hz · 有效34011 → 幅值/方向合格33565 → 接受2845；正2845/负0；最终相位=70.68329153823709
+phase D02--D04 4.8 Hz: Goertzel=4.8 Hz, window=4.15 s, hop=0.4 s, windows=34490
+【台对角度筛选】D02--D04 · 4.8 Hz · 34489窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 4.8 Hz · 有效34011 → 幅值/方向合格33586 → 接受2751；正41/负2751；最终相位=-14.877341529171838
+phase D02--D04 4.85 Hz: Goertzel=4.85 Hz, window=4.1 s, hop=0.4 s, windows=34490
+【台对角度筛选】D02--D04 · 4.85 Hz · 34489窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 4.85 Hz · 有效34011 → 幅值/方向合格33590 → 接受2826；正0/负2826；最终相位=-99.58405164328977
+phase D02--D04 4.9 Hz: Goertzel=4.9 Hz, window=4.1 s, hop=0.4 s, windows=34490
+【台对角度筛选】D02--D04 · 4.9 Hz · 34489窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 4.9 Hz · 有效34011 → 幅值/方向合格33591 → 接受1934；正1934/负890；最终相位=169.68255343004228
+phase D02--D04 4.95 Hz: Goertzel=4.95 Hz, window=4.05 s, hop=0.4 s, windows=34490
+【台对角度筛选】D02--D04 · 4.95 Hz · 34489窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 4.95 Hz · 有效34011 → 幅值/方向合格33638 → 接受2758；正2758/负0；最终相位=88.77461623614133
+phase D02--D04 5 Hz: Goertzel=5 Hz, window=4 s, hop=0.4 s, windows=34490
+【台对角度筛选】D02--D04 · 5 Hz · 34490窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00005_b1 · 5 Hz · 有效34013 → 幅值/方向合格33652 → 接受1577；正1577/负1226；最终相位=8.696252490404426
+phase D03--D04 2 Hz: Goertzel=2 Hz, window=10 s, hop=1 s, windows=13790
+【台对角度筛选】D03--D04 · 2 Hz · 13790窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 2 Hz · 有效13593 → 幅值/方向合格13116 → 接受4062；正4062/负0；最终相位=154.98656593112904
+phase D03--D04 2.05 Hz: Goertzel=2.05 Hz, window=9.75 s, hop=1 s, windows=13791
+【台对角度筛选】D03--D04 · 2.05 Hz · 13790窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 2.05 Hz · 有效13593 → 幅值/方向合格13034 → 接受3996；正3996/负0；最终相位=120.4591009859851
+phase D03--D04 2.1 Hz: Goertzel=2.1 Hz, window=9.5 s, hop=0.95 s, windows=14517
+【台对角度筛选】D03--D04 · 2.1 Hz · 14516窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 2.1 Hz · 有效14310 → 幅值/方向合格13769 → 接受3998；正3998/负0；最终相位=86.20247841617582
+phase D03--D04 2.15 Hz: Goertzel=2.15 Hz, window=9.3 s, hop=0.95 s, windows=14517
+【台对角度筛选】D03--D04 · 2.15 Hz · 14516窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 2.15 Hz · 有效14310 → 幅值/方向合格13781 → 接受3847；正3847/负0；最终相位=51.09299674466231
+phase D03--D04 2.2 Hz: Goertzel=2.2 Hz, window=9.1 s, hop=0.9 s, windows=15324
+【台对角度筛选】D03--D04 · 2.2 Hz · 15323窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 2.2 Hz · 有效15104 → 幅值/方向合格14533 → 接受4119；正4119/负0；最终相位=16.32109781255305
+phase D03--D04 2.25 Hz: Goertzel=2.25 Hz, window=8.9 s, hop=0.9 s, windows=15324
+【台对角度筛选】D03--D04 · 2.25 Hz · 15323窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 2.25 Hz · 有效15106 → 幅值/方向合格14519 → 接受3740；正0/负3740；最终相位=-18.805733787091402
+phase D03--D04 2.3 Hz: Goertzel=2.3 Hz, window=8.7 s, hop=0.85 s, windows=16226
+【台对角度筛选】D03--D04 · 2.3 Hz · 16225窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 2.3 Hz · 有效15994 → 幅值/方向合格15379 → 接受3967；正0/负3967；最终相位=-53.73935603962891
+phase D03--D04 2.35 Hz: Goertzel=2.35 Hz, window=8.5 s, hop=0.85 s, windows=16226
+【台对角度筛选】D03--D04 · 2.35 Hz · 16225窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 2.35 Hz · 有效15994 → 幅值/方向合格15306 → 接受3821；正0/负3821；最终相位=-89.58602059652772
+phase D03--D04 2.4 Hz: Goertzel=2.4 Hz, window=8.35 s, hop=0.85 s, windows=16226
+【台对角度筛选】D03--D04 · 2.4 Hz · 16225窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 2.4 Hz · 有效15996 → 幅值/方向合格15417 → 接受3783；正0/负3783；最终相位=-124.9716823823893
+phase D03--D04 2.45 Hz: Goertzel=2.45 Hz, window=8.15 s, hop=0.8 s, windows=17240
+【台对角度筛选】D03--D04 · 2.45 Hz · 17239窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 2.45 Hz · 有效16995 → 幅值/方向合格16338 → 接受3912；正0/负3912；最终相位=-160.42037414991682
+phase D03--D04 2.5 Hz: Goertzel=2.5 Hz, window=8 s, hop=0.8 s, windows=17240
+【台对角度筛选】D03--D04 · 2.5 Hz · 17240窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 2.5 Hz · 有效16997 → 幅值/方向合格16250 → 接受3703；正3703/负0；最终相位=163.77926128097673
+phase D03--D04 2.55 Hz: Goertzel=2.55 Hz, window=7.85 s, hop=0.8 s, windows=17241
+【台对角度筛选】D03--D04 · 2.55 Hz · 17240窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 2.55 Hz · 有效16997 → 幅值/方向合格16275 → 接受3673；正3673/负0；最终相位=127.790750694567
+phase D03--D04 2.6 Hz: Goertzel=2.6 Hz, window=7.7 s, hop=0.75 s, windows=18390
+【台对角度筛选】D03--D04 · 2.6 Hz · 18389窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 2.6 Hz · 有效18130 → 幅值/方向合格17459 → 接受3861；正3861/负0；最终相位=91.87586199434026
+phase D03--D04 2.65 Hz: Goertzel=2.65 Hz, window=7.55 s, hop=0.75 s, windows=18390
+【台对角度筛选】D03--D04 · 2.65 Hz · 18389窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 2.65 Hz · 有效18130 → 幅值/方向合格17495 → 接受3829；正3829/负0；最终相位=55.56051904981657
+phase D03--D04 2.7 Hz: Goertzel=2.7 Hz, window=7.4 s, hop=0.75 s, windows=18391
+【台对角度筛选】D03--D04 · 2.7 Hz · 18390窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 2.7 Hz · 有效18132 → 幅值/方向合格17542 → 接受3748；正3748/负0；最终相位=19.83207812782712
+phase D03--D04 2.75 Hz: Goertzel=2.75 Hz, window=7.25 s, hop=0.75 s, windows=18391
+【台对角度筛选】D03--D04 · 2.75 Hz · 18390窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 2.75 Hz · 有效18132 → 幅值/方向合格17556 → 接受3584；正0/负3584；最终相位=-16.83740548822205
+phase D03--D04 2.8 Hz: Goertzel=2.8 Hz, window=7.15 s, hop=0.7 s, windows=19705
+【台对角度筛选】D03--D04 · 2.8 Hz · 19704窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 2.8 Hz · 有效19427 → 幅值/方向合格18818 → 接受3637；正0/负3637；最终相位=-53.282173474761805
+phase D03--D04 2.85 Hz: Goertzel=2.85 Hz, window=7 s, hop=0.7 s, windows=19705
+【台对角度筛选】D03--D04 · 2.85 Hz · 19704窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 2.85 Hz · 有效19427 → 幅值/方向合格18845 → 接受3512；正0/负3512；最终相位=-90.05188743345744
+phase D03--D04 2.9 Hz: Goertzel=2.9 Hz, window=6.9 s, hop=0.7 s, windows=19705
+【台对角度筛选】D03--D04 · 2.9 Hz · 19704窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 2.9 Hz · 有效19427 → 幅值/方向合格18804 → 接受3418；正0/负3418；最终相位=-126.77095850313887
+phase D03--D04 2.95 Hz: Goertzel=2.95 Hz, window=6.8 s, hop=0.7 s, windows=19705
+【台对角度筛选】D03--D04 · 2.95 Hz · 19704窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 2.95 Hz · 有效19428 → 幅值/方向合格18871 → 接受3513；正0/负3513；最终相位=-163.62950346247942
+phase D03--D04 3 Hz: Goertzel=3 Hz, window=6.65 s, hop=0.65 s, windows=21221
+【台对角度筛选】D03--D04 · 3 Hz · 21220窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 3 Hz · 有效20922 → 幅值/方向合格20314 → 接受3690；正3690/负0；最终相位=159.6260842021855
+phase D03--D04 3.05 Hz: Goertzel=3.05 Hz, window=6.55 s, hop=0.65 s, windows=21221
+【台对角度筛选】D03--D04 · 3.05 Hz · 21220窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 3.05 Hz · 有效20922 → 幅值/方向合格20358 → 接受3685；正3685/负0；最终相位=122.35868372655095
+phase D03--D04 3.1 Hz: Goertzel=3.1 Hz, window=6.45 s, hop=0.65 s, windows=21221
+【台对角度筛选】D03--D04 · 3.1 Hz · 21220窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 3.1 Hz · 有效20923 → 幅值/方向合格20319 → 接受3557；正3557/负0；最终相位=85.74348090671153
+phase D03--D04 3.15 Hz: Goertzel=3.15 Hz, window=6.35 s, hop=0.65 s, windows=21221
+【台对角度筛选】D03--D04 · 3.15 Hz · 21221窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 3.15 Hz · 有效20923 → 幅值/方向合格20319 → 接受3456；正3456/负0；最终相位=48.26762910340473
+phase D03--D04 3.2 Hz: Goertzel=3.2 Hz, window=6.25 s, hop=0.65 s, windows=21222
+【台对角度筛选】D03--D04 · 3.2 Hz · 21221窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 3.2 Hz · 有效20924 → 幅值/方向合格20364 → 接受2869；正2869/负414；最终相位=12.975471412524362
+phase D03--D04 3.25 Hz: Goertzel=3.25 Hz, window=6.15 s, hop=0.6 s, windows=22990
+【台对角度筛选】D03--D04 · 3.25 Hz · 22989窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 3.25 Hz · 有效22668 → 幅值/方向合格22070 → 接受3526；正0/负3526；最终相位=-27.020734244425874
+phase D03--D04 3.3 Hz: Goertzel=3.3 Hz, window=6.05 s, hop=0.6 s, windows=22990
+【台对角度筛选】D03--D04 · 3.3 Hz · 22989窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 3.3 Hz · 有效22668 → 幅值/方向合格22056 → 接受3432；正0/负3432；最终相位=-64.35163734451001
+phase D03--D04 3.35 Hz: Goertzel=3.35 Hz, window=5.95 s, hop=0.6 s, windows=22991
+【台对角度筛选】D03--D04 · 3.35 Hz · 22990窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 3.35 Hz · 有效22668 → 幅值/方向合格22127 → 接受3314；正0/负3314；最终相位=-102.64179784117779
+phase D03--D04 3.4 Hz: Goertzel=3.4 Hz, window=5.9 s, hop=0.6 s, windows=22991
+【台对角度筛选】D03--D04 · 3.4 Hz · 22990窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 3.4 Hz · 有效22668 → 幅值/方向合格22069 → 接受3454；正0/负3454；最终相位=-140.95558570842746
+phase D03--D04 3.45 Hz: Goertzel=3.45 Hz, window=5.8 s, hop=0.6 s, windows=22991
+【台对角度筛选】D03--D04 · 3.45 Hz · 22990窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 3.45 Hz · 有效22668 → 幅值/方向合格22139 → 接受1816；正1485/负1816；最终相位=-171.93731454722328
+phase D03--D04 3.5 Hz: Goertzel=3.5 Hz, window=5.7 s, hop=0.55 s, windows=25081
+【台对角度筛选】D03--D04 · 3.5 Hz · 25080窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 3.5 Hz · 有效24730 → 幅值/方向合格24159 → 接受3472；正3472/负0；最终相位=142.6470485681791
+phase D03--D04 3.55 Hz: Goertzel=3.55 Hz, window=5.65 s, hop=0.55 s, windows=25081
+【台对角度筛选】D03--D04 · 3.55 Hz · 25080窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 3.55 Hz · 有效24730 → 幅值/方向合格24157 → 接受3418；正3418/负0；最终相位=104.42686443673391
+phase D03--D04 3.6 Hz: Goertzel=3.6 Hz, window=5.55 s, hop=0.55 s, windows=25081
+【台对角度筛选】D03--D04 · 3.6 Hz · 25080窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 3.6 Hz · 有效24730 → 幅值/方向合格24154 → 接受3303；正3303/负0；最终相位=65.20671531078037
+phase D03--D04 3.65 Hz: Goertzel=3.65 Hz, window=5.5 s, hop=0.55 s, windows=25081
+【台对角度筛选】D03--D04 · 3.65 Hz · 25080窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 3.65 Hz · 有效24730 → 幅值/方向合格24189 → 接受3283；正3283/负0；最终相位=27.093410169098686
+phase D03--D04 3.7 Hz: Goertzel=3.7 Hz, window=5.4 s, hop=0.55 s, windows=25082
+【台对角度筛选】D03--D04 · 3.7 Hz · 25081窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 3.7 Hz · 有效24731 → 幅值/方向合格24219 → 接受2847；正307/负2847；最终相位=-13.654409029543501
+phase D03--D04 3.75 Hz: Goertzel=3.75 Hz, window=5.35 s, hop=0.55 s, windows=25082
+【台对角度筛选】D03--D04 · 3.75 Hz · 25081窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 3.75 Hz · 有效24731 → 幅值/方向合格24203 → 接受3099；正0/负3099；最终相位=-51.6595564913083
+phase D03--D04 3.8 Hz: Goertzel=3.8 Hz, window=5.25 s, hop=0.55 s, windows=25082
+【台对角度筛选】D03--D04 · 3.8 Hz · 25081窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 3.8 Hz · 有效24732 → 幅值/方向合格24187 → 接受3175；正0/负3175；最终相位=-90.61815427420476
+phase D03--D04 3.85 Hz: Goertzel=3.85 Hz, window=5.2 s, hop=0.5 s, windows=27590
+【台对角度筛选】D03--D04 · 3.85 Hz · 27589窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 3.85 Hz · 有效27205 → 幅值/方向合格26713 → 接受3437；正0/负3437；最终相位=-129.83081089449703
+phase D03--D04 3.9 Hz: Goertzel=3.9 Hz, window=5.15 s, hop=0.5 s, windows=27590
+【台对角度筛选】D03--D04 · 3.9 Hz · 27589窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 3.9 Hz · 有效27205 → 幅值/方向合格26760 → 接受2753；正495/负2753；最终相位=-167.2132912494464
+phase D03--D04 3.95 Hz: Goertzel=3.95 Hz, window=5.05 s, hop=0.5 s, windows=27590
+【台对角度筛选】D03--D04 · 3.95 Hz · 27589窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 3.95 Hz · 有效27205 → 幅值/方向合格26733 → 接受3151；正3151/负0；最终相位=150.40253611668777
+phase D03--D04 4 Hz: Goertzel=4 Hz, window=5 s, hop=0.5 s, windows=27590
+【台对角度筛选】D03--D04 · 4 Hz · 27590窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 4 Hz · 有效27205 → 幅值/方向合格26705 → 接受2994；正2994/负0；最终相位=111.24390386648301
+phase D03--D04 4.05 Hz: Goertzel=4.05 Hz, window=4.95 s, hop=0.5 s, windows=27591
+【台对角度筛选】D03--D04 · 4.05 Hz · 27590窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 4.05 Hz · 有效27205 → 幅值/方向合格26693 → 接受2963；正2963/负0；最终相位=70.30821173058061
+phase D03--D04 4.1 Hz: Goertzel=4.1 Hz, window=4.9 s, hop=0.5 s, windows=27591
+【台对角度筛选】D03--D04 · 4.1 Hz · 27590窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 4.1 Hz · 有效27207 → 幅值/方向合格26725 → 接受3100；正3100/负0；最终相位=30.270431854058096
+phase D03--D04 4.15 Hz: Goertzel=4.15 Hz, window=4.8 s, hop=0.5 s, windows=27591
+【台对角度筛选】D03--D04 · 4.15 Hz · 27590窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 4.15 Hz · 有效27207 → 幅值/方向合格26730 → 接受2557；正484/负2557；最终相位=-12.38639443607123
+phase D03--D04 4.2 Hz: Goertzel=4.2 Hz, window=4.75 s, hop=0.5 s, windows=27591
+【台对角度筛选】D03--D04 · 4.2 Hz · 27590窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 4.2 Hz · 有效27207 → 幅值/方向合格26732 → 接受3126；正0/负3126；最终相位=-50.48704466163869
+phase D03--D04 4.25 Hz: Goertzel=4.25 Hz, window=4.7 s, hop=0.45 s, windows=30657
+【台对角度筛选】D03--D04 · 4.25 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 4.25 Hz · 有效30230 → 幅值/方向合格29719 → 接受3304；正0/负3304；最终相位=-91.16022419823516
+phase D03--D04 4.3 Hz: Goertzel=4.3 Hz, window=4.65 s, hop=0.45 s, windows=30657
+【台对角度筛选】D03--D04 · 4.3 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 4.3 Hz · 有效30230 → 幅值/方向合格29775 → 接受3151；正0/负3151；最终相位=-132.52703944300765
+phase D03--D04 4.35 Hz: Goertzel=4.35 Hz, window=4.6 s, hop=0.45 s, windows=30657
+【台对角度筛选】D03--D04 · 4.35 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 4.35 Hz · 有效30230 → 幅值/方向合格29787 → 接受2319；正781/负2319；最终相位=-168.99736308121854
+phase D03--D04 4.4 Hz: Goertzel=4.4 Hz, window=4.55 s, hop=0.45 s, windows=30657
+【台对角度筛选】D03--D04 · 4.4 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 4.4 Hz · 有效30230 → 幅值/方向合格29789 → 接受3254；正3254/负0；最终相位=145.637732401693
+phase D03--D04 4.45 Hz: Goertzel=4.45 Hz, window=4.5 s, hop=0.45 s, windows=30657
+【台对角度筛选】D03--D04 · 4.45 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 4.45 Hz · 有效30230 → 幅值/方向合格29799 → 接受3140；正3140/负0；最终相位=104.20807850267732
+phase D03--D04 4.5 Hz: Goertzel=4.5 Hz, window=4.45 s, hop=0.45 s, windows=30657
+【台对角度筛选】D03--D04 · 4.5 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 4.5 Hz · 有效30230 → 幅值/方向合格29812 → 接受3090；正3090/负0；最终相位=63.184093828355174
+phase D03--D04 4.55 Hz: Goertzel=4.55 Hz, window=4.4 s, hop=0.45 s, windows=30657
+【台对角度筛选】D03--D04 · 4.55 Hz · 30656窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 4.55 Hz · 有效30232 → 幅值/方向合格29812 → 接受3079；正3079/负0；最终相位=21.564947088253117
+phase D03--D04 4.6 Hz: Goertzel=4.6 Hz, window=4.35 s, hop=0.45 s, windows=30657
+【台对角度筛选】D03--D04 · 4.6 Hz · 30657窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 4.6 Hz · 有效30232 → 幅值/方向合格29784 → 接受2886；正0/负2886；最终相位=-20.01965048059151
+phase D03--D04 4.65 Hz: Goertzel=4.65 Hz, window=4.3 s, hop=0.45 s, windows=30658
+【台对角度筛选】D03--D04 · 4.65 Hz · 30657窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 4.65 Hz · 有效30232 → 幅值/方向合格29781 → 接受2826；正0/负2826；最终相位=-61.95825390646506
+phase D03--D04 4.7 Hz: Goertzel=4.7 Hz, window=4.25 s, hop=0.45 s, windows=30658
+【台对角度筛选】D03--D04 · 4.7 Hz · 30657窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 4.7 Hz · 有效30232 → 幅值/方向合格29777 → 接受2858；正0/负2858；最终相位=-103.95458164846976
+phase D03--D04 4.75 Hz: Goertzel=4.75 Hz, window=4.2 s, hop=0.4 s, windows=34490
+【台对角度筛选】D03--D04 · 4.75 Hz · 34489窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 4.75 Hz · 有效34011 → 幅值/方向合格33460 → 接受3302；正0/负3302；最终相位=-145.7342816829575
+phase D03--D04 4.8 Hz: Goertzel=4.8 Hz, window=4.15 s, hop=0.4 s, windows=34490
+【台对角度筛选】D03--D04 · 4.8 Hz · 34489窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 4.8 Hz · 有效34011 → 幅值/方向合格33465 → 接受2373；正2373/负753；最终相位=168.21680960085288
+phase D03--D04 4.85 Hz: Goertzel=4.85 Hz, window=4.1 s, hop=0.4 s, windows=34490
+【台对角度筛选】D03--D04 · 4.85 Hz · 34489窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 4.85 Hz · 有效34011 → 幅值/方向合格33461 → 接受3147；正3147/负0；最终相位=129.48088523151227
+phase D03--D04 4.9 Hz: Goertzel=4.9 Hz, window=4.1 s, hop=0.4 s, windows=34490
+【台对角度筛选】D03--D04 · 4.9 Hz · 34489窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 4.9 Hz · 有效34011 → 幅值/方向合格33482 → 接受3357；正3357/负0；最终相位=87.1625862298758
+phase D03--D04 4.95 Hz: Goertzel=4.95 Hz, window=4.05 s, hop=0.4 s, windows=34490
+【台对角度筛选】D03--D04 · 4.95 Hz · 34489窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 4.95 Hz · 有效34011 → 幅值/方向合格33520 → 接受3113；正3113/负0；最终相位=44.492054135848775
+phase D03--D04 5 Hz: Goertzel=5 Hz, window=4 s, hop=0.4 s, windows=34490
+【台对角度筛选】D03--D04 · 5 Hz · 34490窗 → 几何合格0 → 主方向组-1保留0
+【相位筛选与叠加】P00006_b1 · 5 Hz · 有效34013 → 幅值/方向合格33560 → 接受1641；正1641/负1370；最终相位=8.191052735361513
+【方向汇总】61个频率；联合原始点 0；连续频带保留点 0
+【连续频带】P00001_b1_S0_N2__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00001_b1_S0_N3__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00001_b1_S0_N4__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00001_b1_S0_N5__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00001_b1_S0_N6__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00001_b1_S0_N7__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00001_b1_S0_N8__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00001_b1_S0_N9__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00001_b1_S0_N10__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00001_b1_S0_N11__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00001_b1_S0_N12__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00001_b1_S0_N13__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00002_b1_S0_N2__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00002_b1_S0_N3__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00002_b1_S0_N4__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00002_b1_S0_N5__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00002_b1_S0_N6__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00002_b1_S0_N7__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00002_b1_S0_N8__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00002_b1_S0_N9__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00002_b1_S0_N10__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00002_b1_S0_N11__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00002_b1_S0_N12__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00002_b1_S0_N13__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00002_b1_S0_N14__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00002_b1_S0_N15__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00002_b1_S0_N16__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00002_b1_S0_N17__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00002_b1_S0_N18__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00002_b1_S0_N19__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00002_b1_S0_N20__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00002_b1_S0_N21__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00002_b1_S0_N22__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00002_b1_S0_N23__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00002_b1_S0_N24__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00002_b1_S0_N25__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00002_b1_S0_N26__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N3__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N4__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N5__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N6__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N7__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N8__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N9__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N10__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N11__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N12__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N13__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N14__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N15__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N16__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N17__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N18__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N19__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N20__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N21__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N22__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N23__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N24__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N25__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N26__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N27__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N28__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N29__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N30__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N31__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N32__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N33__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N34__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N35__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N36__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N37__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N38__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N39__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00003_b1_S0_N40__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00004_b1_S0_N2__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00004_b1_S0_N3__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00004_b1_S0_N4__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00004_b1_S0_N5__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00004_b1_S0_N6__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00004_b1_S0_N7__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00004_b1_S0_N8__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00004_b1_S0_N9__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00004_b1_S0_N10__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00004_b1_S0_N11__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00004_b1_S0_N12__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00004_b1_S0_N13__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00005_b1_S0_N2__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00005_b1_S0_N3__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00005_b1_S0_N4__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00005_b1_S0_N5__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00005_b1_S0_N6__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00005_b1_S0_N7__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00005_b1_S0_N8__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00005_b1_S0_N9__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00005_b1_S0_N10__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00005_b1_S0_N11__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00005_b1_S0_N12__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00005_b1_S0_N13__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00005_b1_S0_N14__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00005_b1_S0_N15__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00005_b1_S0_N16__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00005_b1_S0_N17__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00005_b1_S0_N18__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00005_b1_S0_N19__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00005_b1_S0_N20__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00005_b1_S0_N21__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00005_b1_S0_N22__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00005_b1_S0_N23__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00005_b1_S0_N24__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00005_b1_S0_N25__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00005_b1_S0_N26__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00006_b1_S0_N2__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00006_b1_S0_N3__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00006_b1_S0_N4__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00006_b1_S0_N5__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00006_b1_S0_N6__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00006_b1_S0_N7__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00006_b1_S0_N8__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00006_b1_S0_N9__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00006_b1_S0_N10__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00006_b1_S0_N11__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00006_b1_S0_N12__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带】P00006_b1_S0_N13__B1 · 2–5 Hz · 61点 · 带宽3 Hz · accepted
+【连续频带参数】min_band_hz=0.25；min_points=8；合格曲线频点=7564
+【反演交接】124条合格连续曲线；7564个频点。沿用原始源相位、周期及背景检验状态。
+【阶段开始】叠加后频散与原曲线对比 · {}
+@@EVENT {"stage": "叠加后频散与原曲线对比", "status": "running"}
+【阶段结果】叠加后频散与原曲线对比 · 耗时 23.62 s · {"output": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/output/phase_guided/velocity_comparison/report.html"}
+@@EVENT {"stage": "叠加后频散与原曲线对比", "status": "complete"}
+【结果索引】/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/output/phase_guided/phase_report.html
+【流程结束】完成 · 追溯文件：/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/output/phase_guided/phase_trace.json
+【阶段结果】phase-stack · 耗时 80.68 s · {"accepted_window_evaluations": 962975, "handoff_points": 7564, "trace": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/output/phase_guided/phase_trace.json"}
+@@EVENT {"stage": "phase-stack", "status": "complete"}
+【阶段开始】review · {"config_sha256": "697109b7f31ce6fe4646e0445e78434e23b5f5d522e4140ee5977360d2b0b0dd"}
+@@EVENT {"stage": "review", "status": "running"}
+【阶段结果】review · 耗时 0.03 s · {"candidate_review.csv": {"行数": 124, "文件": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/output/candidate_review.csv", "pair_数量": 6, "curve_id_数量": 124}}
+@@EVENT {"stage": "review", "status": "complete"}
+【阶段开始】report · {"config_sha256": "697109b7f31ce6fe4646e0445e78434e23b5f5d522e4140ee5977360d2b0b0dd"}
+@@EVENT {"stage": "report", "status": "running"}
+【阶段结果】report · 耗时 0.84 s · {"报告文件": ["/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/output/studio_report.html", "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/output/report.html", "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/output/studio_summary.json"]}
+@@EVENT {"stage": "report", "status": "complete"}
+【阶段开始】verify · {"config_sha256": "697109b7f31ce6fe4646e0445e78434e23b5f5d522e4140ee5977360d2b0b0dd"}
+@@EVENT {"stage": "verify", "status": "running"}
+verify: {"checks_passed": true, "windows": 52, "pairs": 6, "measured_segments": 6, "conditional_curves": 124, "empty_curves_are_valid_outcome": true, "verified_unique_physical_dispersion": false, "raw_files_unchanged_and_fingerprint_checked": true}
+【阶段结果】verify · 耗时 0.11 s · {"完成标记": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/output/verification.json", "摘要": {"checks_passed": true, "windows": 52, "pairs": 6, "measured_segments": 6, "conditional_curves": 124, "empty_curves_are_valid_outcome": true, "verified_unique_physical_dispersion": false, "raw_files_unchanged_and_fingerprint_checked": true}}
+@@EVENT {"stage": "verify", "status": "complete"}
+【阶段开始】autoselect · {"config_sha256": "697109b7f31ce6fe4646e0445e78434e23b5f5d522e4140ee5977360d2b0b0dd"}
+@@EVENT {"stage": "autoselect", "status": "running"}
+【阶段结果】autoselect · 耗时 0.06 s · {"假设组数": 1, "文件": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/selection.json"}
+@@EVENT {"stage": "autoselect", "status": "complete"}
+【阶段开始】invert · {"settings": {"layers": [1, 2], "starts": 8, "max_evaluations": 180, "vp_vs_ratio": 2.0, "density_g_cm3": 2.0, "thickness_bounds_m": [2.0, 1500.0], "vs_bounds_m_s": [120.0, 3500.0], "phase_rms_max_fraction": 0.03, "phase_point_max_fraction": 0.05, "group_median_max_fraction": 0.15, "group_fit_weight": 0.25, "max_fit_points_per_band": 32, "finite_difference_log_step": 0.003, "require_independent_solver": false, "independent_max_difference_m_s": 0.5, "allow_background_unverified": false, "seed": 9075}, "cases": 1, "selection_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/selection.json"}
+@@EVENT {"stage": "invert", "status": "running"}
+invert: AUTO_001_M0 finite layers 1 conditional models 0
+invert: AUTO_001_M0 finite layers 2 conditional models 0
+【阶段结果】invert · 耗时 2.44 s · {"完成标记": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/output/inversion_complete.json", "摘要": {"cases": 1, "compatible_models": 0, "independent_solver_available": false, "unique_structure_identified": false, "observed_and_predicted_points_separate": true, "missing_roots_not_filled": true, "frequency_samples_not_treated_as_independent": true, "selection_sha256": "644719e50c6099e10e2db3b27e8e228537caa27d1a41df823e19f0af9511c8f5", "studio_code_sha256": "871b2d3216997f9de7cb4750bceea50822edd2bc3fc3d13d883cd37801c5e1f5", "input_curve_file": "output/conditional_dispersion.csv", "input_curve_sha256": "82931ff4890d6dce17cc0ad08d5302206a393b22fab295f006a7c35a3065fb75", "project_config_sha256": "697109b7f31ce6fe4646e0445e78434e23b5f5d522e4140ee5977360d2b0b0dd"}, "structure_layers.csv": {"行数": 0, "文件": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/output/structure_layers.csv"}, "inversion_attempts.csv": {"行数": 16, "文件": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/output/inversion_attempts.csv"}}
+@@EVENT {"stage": "invert", "status": "complete"}
+【阶段开始】report · {"config_sha256": "697109b7f31ce6fe4646e0445e78434e23b5f5d522e4140ee5977360d2b0b0dd"}
+@@EVENT {"stage": "report", "status": "running"}
+【阶段结果】report · 耗时 1.06 s · {"报告文件": ["/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/output/studio_report.html", "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/output/report.html", "/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/output/studio_summary.json"]}
+@@EVENT {"stage": "report", "status": "complete"}
+【流程结束】完成 · 追溯文件：/workspace/scratch/fc99dc820d4e/phase_validation_v254/full_pipeline/project/output/workflow_trace.json

@@ -1,0 +1,66 @@
+[
+  {
+    "array": "DARE",
+    "utc_day": "20201012",
+    "filename": "DARE_原始H5_20201012.zip",
+    "h5_files": 10,
+    "size_bytes": 261255674,
+    "sha256": "135606844c1d2070967e9999dc8c70c2e51f5da38d87fc59dc61bcc69c75aacd"
+  },
+  {
+    "array": "DARE",
+    "utc_day": "20201013",
+    "filename": "DARE_原始H5_20201013.zip",
+    "h5_files": 10,
+    "size_bytes": 245279087,
+    "sha256": "8181c4c51b66122830e101ea6adcc4827aad11565bd1e148b582cca2354a05ec"
+  },
+  {
+    "array": "DARE",
+    "utc_day": "20201014",
+    "filename": "DARE_原始H5_20201014.zip",
+    "h5_files": 10,
+    "size_bytes": 245467277,
+    "sha256": "edad0ce77e21698a63005648f7afc32f3d37a9c40655532ad168e1bf21269953"
+  },
+  {
+    "array": "DARE",
+    "utc_day": "20201015",
+    "filename": "DARE_原始H5_20201015.zip",
+    "h5_files": 10,
+    "size_bytes": 254885376,
+    "sha256": "2c0cae5aa49d25ba37f7109badf17816cf96c66b90677c475fc67358ee24bdf3"
+  },
+  {
+    "array": "Dublin",
+    "utc_day": "20190401",
+    "filename": "Dublin_原始H5_20190401.zip",
+    "h5_files": 8,
+    "size_bytes": 244846817,
+    "sha256": "6fdea1d52efe8982b6b972fe716dedf68ded944860dc21b6cfed8b8612312d59"
+  },
+  {
+    "array": "Dublin",
+    "utc_day": "20190402",
+    "filename": "Dublin_原始H5_20190402.zip",
+    "h5_files": 8,
+    "size_bytes": 248173192,
+    "sha256": "ac8df95a7bddf99c641d51a77c6a3869a6ea81c0c2c9b337a7022540af27c6b4"
+  },
+  {
+    "array": "Dublin",
+    "utc_day": "20190403",
+    "filename": "Dublin_原始H5_20190403.zip",
+    "h5_files": 8,
+    "size_bytes": 249532952,
+    "sha256": "9f52049e09ecd8cd1190cdb5803501f6b6c4a8f7a0eefb2e024e9334fc822b4d"
+  },
+  {
+    "array": "Dublin",
+    "utc_day": "20190404",
+    "filename": "Dublin_原始H5_20190404.zip",
+    "h5_files": 8,
+    "size_bytes": 250593061,
+    "sha256": "c957491e563ac119959737094de60ee5dd5d847fbd0911bae7ddb0ead181f218"
+  }
+]

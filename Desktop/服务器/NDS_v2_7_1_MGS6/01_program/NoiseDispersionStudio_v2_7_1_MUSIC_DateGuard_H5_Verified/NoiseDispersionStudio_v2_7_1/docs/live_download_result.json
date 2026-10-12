@@ -1,0 +1,92 @@
+{
+  "provider": "ETH",
+  "network": "CH",
+  "requested_start": "2026-10-08T12:00:00.000000Z",
+  "requested_end": "2026-10-08T12:10:00.000000Z",
+  "h5_files": 6,
+  "scan_ready": true,
+  "errors": [],
+  "responses": [
+    {
+      "station": "CH_ACB",
+      "samples": 120304,
+      "response_status": "nominal_response_corrected",
+      "nominal_dip_deg": -90.0,
+      "nominal_azimuth_deg": 0.0,
+      "sensitivity": 475600000.0,
+      "input_units": "M/S",
+      "all_stage_gains_positive": true,
+      "response_interpolation_phase_error_rad": 1.908353594636327e-05,
+      "epoch_start": "2020-07-14T11:00:00.000000Z",
+      "epoch_end": "None"
+    },
+    {
+      "station": "CH_AIGLE",
+      "samples": 120194,
+      "response_status": "nominal_response_corrected",
+      "nominal_dip_deg": -90.0,
+      "nominal_azimuth_deg": 0.0,
+      "sensitivity": 475600000.0,
+      "input_units": "M/S",
+      "all_stage_gains_positive": true,
+      "response_interpolation_phase_error_rad": 1.908353594636327e-05,
+      "epoch_start": "2018-11-07T15:00:00.000000Z",
+      "epoch_end": "None"
+    },
+    {
+      "station": "CH_BALST",
+      "samples": 120524,
+      "response_status": "nominal_response_corrected",
+      "nominal_dip_deg": -90.0,
+      "nominal_azimuth_deg": 0.0,
+      "sensitivity": 600000000.0,
+      "input_units": "M/S",
+      "all_stage_gains_positive": true,
+      "response_interpolation_phase_error_rad": 4.02988842828003e-05,
+      "epoch_start": "2020-01-23T10:30:00.000000Z",
+      "epoch_end": "None"
+    }
+  ],
+  "geometry": {
+    "stations": 3,
+    "stations_with_coordinates": 3,
+    "missing_coordinates": 0,
+    "coordinate_conflicts": [],
+    "mean_nearest_neighbor_m": 75156.85693860258,
+    "mean_pair_distance_m": 115038.1327389324,
+    "min_pair_distance_m": 50649.23896441232,
+    "max_pair_distance_m": 170293.0663654018,
+    "coincident_pair_count": 0,
+    "spacing_definition": "mean nearest-neighbour WGS84 surface distance",
+    "points": [
+      [
+        "CH",
+        "ACB",
+        47.58772,
+        8.25474,
+        468.0
+      ],
+      [
+        "CH",
+        "AIGLE",
+        46.34176,
+        6.95295,
+        785.0
+      ],
+      [
+        "CH",
+        "BALST",
+        47.33599,
+        7.69485,
+        860.0
+      ]
+    ],
+    "nearest_neighbor_m": {
+      "CH.ACB": 50649.23896441232,
+      "CH.AIGLE": 124172.09288698308,
+      "CH.BALST": 50649.23896441232
+    }
+  },
+  "scope": "Live metadata/download/H5/import/response validation; 10 minutes are too short for dispersion quality validation",
+  "final_schema_station_labels": true
+}

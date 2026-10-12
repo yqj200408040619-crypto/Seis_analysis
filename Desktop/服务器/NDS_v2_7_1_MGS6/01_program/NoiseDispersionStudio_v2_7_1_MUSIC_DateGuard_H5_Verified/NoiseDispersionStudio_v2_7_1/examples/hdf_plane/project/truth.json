@@ -1,0 +1,14 @@
+{
+  "type": "plane_scalar_random_field_not_a_layered_earth",
+  "phase_velocity_formula_m_s": "600 - 20*f_hz",
+  "group_velocity_formula_m_s": "(600-20*f_hz)^2 / 600",
+  "asynchronous_starts_s": [
+    0.0,
+    0.007,
+    0.013,
+    0.021
+  ],
+  "inserted_single_sample_spike_station": "D02",
+  "flatline_station": "D02",
+  "gap_station": "D03"
+}

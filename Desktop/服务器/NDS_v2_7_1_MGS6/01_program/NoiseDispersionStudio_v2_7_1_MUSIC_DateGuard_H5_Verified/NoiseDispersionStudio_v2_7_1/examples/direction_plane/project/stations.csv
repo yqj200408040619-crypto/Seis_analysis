@@ -1,0 +1,8 @@
+station,file,seed_id,x_m,y_m,precorrected,units,polarity
+S0,S0.npz,XX.S0..HHZ,0.0,0.0,True,m/s,1
+S1,S1.npz,XX.S1..HHZ,67.0,12.0,True,m/s,1
+S2,S2.npz,XX.S2..HHZ,21.0,94.0,True,m/s,1
+S3,S3.npz,XX.S3..HHZ,133.0,48.0,True,m/s,1
+S4,S4.npz,XX.S4..HHZ,-72.0,173.0,True,m/s,1
+S5,S5.npz,XX.S5..HHZ,219.0,159.0,True,m/s,1
+S6,S6.npz,XX.S6..HHZ,87.0,-123.0,True,m/s,1

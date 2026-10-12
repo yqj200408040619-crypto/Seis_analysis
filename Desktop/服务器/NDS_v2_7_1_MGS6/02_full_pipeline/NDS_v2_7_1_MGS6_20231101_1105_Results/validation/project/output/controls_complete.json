@@ -1,0 +1,8 @@
+{
+  "trials": 40,
+  "segments": 4,
+  "maximum_baseline_reproduction_error": 0.0,
+  "infeasible_segment_trials": 0,
+  "calibrated_p_values": false,
+  "missing_controls_stored_as_nan": true
+}

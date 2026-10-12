@@ -1,0 +1,12 @@
+{
+  "dataset_pattern": "/waveform",
+  "defaults": {
+    "sample_axis": 0,
+    "component_index": 2,
+    "channel": "BHZ",
+    "time_format": "iso_utc",
+    "valid_dataset": "/valid"
+  },
+  "rules": [],
+  "overrides": {}
+}

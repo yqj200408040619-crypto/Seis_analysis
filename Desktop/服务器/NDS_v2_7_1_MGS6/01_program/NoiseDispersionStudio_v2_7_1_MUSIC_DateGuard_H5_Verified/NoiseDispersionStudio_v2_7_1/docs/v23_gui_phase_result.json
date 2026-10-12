@@ -1,0 +1,16 @@
+{
+  "tab_count": 6,
+  "phase_tab": "6 曲线相位筛选",
+  "phase_export_child_exit_code": 0,
+  "settings_loaded": true,
+  "saved_phase_settings": {
+    "curve_ids": "P00001_b1_S0_N3,P00006_b1_S0_N3,P00008_b1_S0_N2,P00010_b1_S0_N3,P00017_b1_S0_N6,P00020_b1_S0_N3,P00001_b1_S0_N4",
+    "start": "2020-10-12T12:00:00Z",
+    "end": "2020-10-12T12:30:00Z",
+    "repeat_cycles": 20.0,
+    "slide_cycles": 1.0,
+    "tolerance_deg": 15.0,
+    "range_source": "fixed",
+    "taper": "none"
+  }
+}

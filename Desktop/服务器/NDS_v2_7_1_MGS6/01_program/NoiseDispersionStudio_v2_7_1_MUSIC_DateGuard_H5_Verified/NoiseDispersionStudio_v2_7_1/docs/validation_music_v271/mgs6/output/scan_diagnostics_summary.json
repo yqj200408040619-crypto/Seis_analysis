@@ -1,0 +1,17 @@
+{
+  "robust_contiguous_runs": 23,
+  "accepted_continuous_runs": 7,
+  "candidate_gates": 33,
+  "threshold_source": "scan_completion",
+  "thresholds_match_current_config": true,
+  "minimum_points": 8,
+  "minimum_bandwidth_hz": 0.05,
+  "frequency_step_hz": 0.005,
+  "rank_is_not_a_probability": true,
+  "failure_counts_can_overlap": true,
+  "block_phase_metric_also_requires_packet_pass": true,
+  "source_sha256": {
+    "point_diagnostics.csv": "53b6600902211b4c51f4d2311446663160ee0f68e76e507f034a6ea76bb40edb",
+    "candidate_gates.csv": "da57617950418d21a994ac0dbef6b87bf61b8627b64241a692a56fac06532f5a"
+  }
+}

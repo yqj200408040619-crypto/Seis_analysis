@@ -1,0 +1,503 @@
+{
+  "program_version": "2.7.1",
+  "release": "MUSIC patch",
+  "base_versions": [
+    "2.7.0",
+    "2.7.1"
+  ],
+  "validation_summary": {
+    "program_version": "2.7.1",
+    "direction_method": "music",
+    "regression": {
+      "passed": 206,
+      "skipped": 8
+    },
+    "real": {
+      "stations": [
+        "BW.MGS01",
+        "BW.MGS02",
+        "BW.MGS03",
+        "BW.MGS04",
+        "BW.MGS05",
+        "BW.MGSBH"
+      ],
+      "requested_utc": [
+        "2022-11-01",
+        "2022-11-05"
+      ],
+      "archived_h5_files": 94,
+      "no_data_chunks_mgs03": 2,
+      "scan_segments": 7,
+      "ccf_observed_points": 106,
+      "conditional_ccf_curves": 41,
+      "music_front_frequencies": 54,
+      "music_front_quality_windows": 241,
+      "front_qualified_continuous_points": 0,
+      "goertzel_frequencies": 61,
+      "goertzel_frequency_range_hz": [
+        0.08,
+        0.505
+      ],
+      "goertzel_gates": 122,
+      "valid_window_evaluations": 53902,
+      "accepted_window_evaluations": 142,
+      "qualified_inversion_points": 0,
+      "audit": {
+        "pass_audit": true,
+        "gates_checked": 122,
+        "waveform_cross_recomputed": 366,
+        "accepted_window_evaluations": 142,
+        "valid_window_evaluations": 53902,
+        "max_recomputed_phase_error_rad": 0.0,
+        "module_sha256": "0ab1550cd1494ead9e04c1877341eb6db5dfed0c0cc3f339ec8793d5ad28846c",
+        "aligned_h5_sha256": "50a807cd0871b3da93c7530d235e93f59b80e57f6a96ead3faa9699223a0f9ee"
+      },
+      "physical_dispersion_and_structure_obtained": false,
+      "inversion_skipped": true
+    },
+    "synthetic": {
+      "measured_frequency_hz": [
+        0.8,
+        1.8
+      ],
+      "measured_points": 11,
+      "new_low_frequency_points": 5,
+      "known_azimuth_deg": 30.0,
+      "estimated_azimuth_range_deg": [
+        29.953989660058397,
+        30.078990829709024
+      ],
+      "maximum_speed_error_fraction": 0.005665504412938042,
+      "compatible_models": {
+        "before_common": 4,
+        "after_common": 4,
+        "after_extended": 5
+      },
+      "known_vs_structure_not_supplied": true
+    },
+    "runtime": {
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "pandas": "2.2.3",
+      "matplotlib": "3.10.8",
+      "Pillow": "12.3.0",
+      "obspy": "1.5.0",
+      "pyproj": "3.8.0",
+      "h5py": "3.16.0",
+      "PySide6": "6.12.0",
+      "numba": "0.63.1",
+      "disba": "0.7.0",
+      "pysurf96": "1.0.1"
+    },
+    "windows_native_validation": false,
+    "persistent_raw_waveforms_included": false
+  },
+  "files": [
+    {
+      "path": "LICENSE.txt",
+      "size_bytes": 1246,
+      "sha256": "7613187bfd1be943a7d6f466784f8b4327add9ad766822f2ae1b1560c42f3b15"
+    },
+    {
+      "path": "OPEN_FIRST.txt",
+      "size_bytes": 10818,
+      "sha256": "ecd9e340ca74d08d8ecd45148925b9a0590eea9a2f1ee0a718392340d9643e2a"
+    },
+    {
+      "path": "PATCH_README_CN.txt",
+      "size_bytes": 2202,
+      "sha256": "8c99003ece9bb345c83010669ad53c2482480d4ade0bac2dbf32f1b270bc4fc0"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 12419,
+      "sha256": "9b463b72e0756327c32c4a0ca92ea564971162e46aa8e4aef053d5f16b0151ce"
+    },
+    {
+      "path": "THIRD_PARTY.md",
+      "size_bytes": 2126,
+      "sha256": "ac90ecef98819b1b3563a6adc0ce72b4650fc6a148986d14b9aac5cbb8a157c6"
+    },
+    {
+      "path": "Validation_v271.html",
+      "size_bytes": 298566,
+      "sha256": "2dae1b873757aa42c5eebf6694219363a1a94fa5284bb2271015b7c1b12ea8a3"
+    },
+    {
+      "path": "core/dispersion/__init__.py",
+      "size_bytes": 88,
+      "sha256": "f424cf361bfb2b624dc712ee75745afc027f7e8a0919aa2213c167f1d2c2e664"
+    },
+    {
+      "path": "core/dispersion/common.py",
+      "size_bytes": 11098,
+      "sha256": "43667455f96a3a8cda26f6f5c0bc554554fe6f1b56a33d1ea4659ce31f81abf0"
+    },
+    {
+      "path": "core/dispersion/controls.py",
+      "size_bytes": 5521,
+      "sha256": "fdad57e6426028c8134777996a211e21b67399dd10f4d71d3ce2a850c4640c32"
+    },
+    {
+      "path": "core/dispersion/demo.py",
+      "size_bytes": 5201,
+      "sha256": "ead85e8cbd1cd59a87a9ccad116ca822a08f305848ae5a2d6e8dddba926ada15"
+    },
+    {
+      "path": "core/dispersion/families.py",
+      "size_bytes": 8007,
+      "sha256": "6fe603d2c41cc9b85250bae9b5911103c5057dfcf161490cd3f8ae4928b88356"
+    },
+    {
+      "path": "core/dispersion/inversion.py",
+      "size_bytes": 12047,
+      "sha256": "e0277fedec30f9d4326dfb0e137c73608008a4276d4e0ac30f67d7285ea9a559"
+    },
+    {
+      "path": "core/dispersion/prepare.py",
+      "size_bytes": 25010,
+      "sha256": "ae84245c72237e0679aecd7afd21f4e5af2350e37759604437cb3e5ee30b7d14"
+    },
+    {
+      "path": "core/dispersion/products.py",
+      "size_bytes": 15975,
+      "sha256": "b48574666ea152d1937ab4c7e741efb172e7bfd996a40ca313d7a82499e1ab4f"
+    },
+    {
+      "path": "core/dispersion/scan.py",
+      "size_bytes": 22244,
+      "sha256": "8f0b17601dc14647a1b31359caca4251ab4fb041c17c086914884c6f0e1f154c"
+    },
+    {
+      "path": "core/requirements-tested.txt",
+      "size_bytes": 162,
+      "sha256": "96b59f8231d3a3b2054e53944a524c6d962f6df3ae4e4a5e9bd3f20644ccaafa"
+    },
+    {
+      "path": "core/requirements.txt",
+      "size_bytes": 104,
+      "sha256": "f559b15867d429a5848e3a6be366a075aff1050140507253f3d49255b6dca856"
+    },
+    {
+      "path": "docs/CHANGELOG_v271.md",
+      "size_bytes": 1292,
+      "sha256": "59c7cb93c908932d57569a0377baa1b0d35619fbd001fea6606d6ac5e6a3bd6d"
+    },
+    {
+      "path": "docs/MGS_Six_Station_Workflow.md",
+      "size_bytes": 1788,
+      "sha256": "4cff9efc9a6d4b70ce21bbbe198d0756be125ec83a75d1fc26ad22c5806a4e02"
+    },
+    {
+      "path": "docs/MUSIC_Workflow_v271.md",
+      "size_bytes": 5400,
+      "sha256": "5192c1acdda0cb0b0b1d504a76ea538a9d1d03f7e55d0fcbad355a9b355261bd"
+    },
+    {
+      "path": "docs/Validation_v271.md",
+      "size_bytes": 2270,
+      "sha256": "8e684d23d5b25edb0c047d5972ab33d1fa0776c97ac7e301b15c407ef3054fbd"
+    },
+    {
+      "path": "h5data.py",
+      "size_bytes": 36044,
+      "sha256": "4e923435b623871c4e6ac2000bf94145511775bea5c8e278969a6cd8e1850fd6"
+    },
+    {
+      "path": "h5data_gui.py",
+      "size_bytes": 58492,
+      "sha256": "dadb6f051e1a2ca111227e92884e75a60bc1d9875d97e187b32d31ff1ae73a8e"
+    },
+    {
+      "path": "h5data_handoff.py",
+      "size_bytes": 13545,
+      "sha256": "1c65e5be4bd5f1174c9e4683026bd9f5ab3118c6b0facc64ac684e73e2de31a4"
+    },
+    {
+      "path": "install_geothermal_windows.bat",
+      "size_bytes": 788,
+      "sha256": "0ca72fb273bccf64a37965ee3dd95119b31281f51046ca0987719f105735c72d"
+    },
+    {
+      "path": "install_windows.bat",
+      "size_bytes": 682,
+      "sha256": "9afeb8094e4fe60bc2a3ee66f9777f64eedd0916dd535e6850f43c0f61e74a7e"
+    },
+    {
+      "path": "ndstudio/__init__.py",
+      "size_bytes": 233,
+      "sha256": "09181a9da17f57c69ff27f94fc509b2310b84d9e49fcb125d02cfb6eb797b428"
+    },
+    {
+      "path": "ndstudio/acquisition.py",
+      "size_bytes": 20592,
+      "sha256": "a4e01978a7101f532fdec3191bbc2835e056d73cf40ecdf71b9d1fc2ffb6452d"
+    },
+    {
+      "path": "ndstudio/candidates.py",
+      "size_bytes": 11957,
+      "sha256": "2305b277e4c9f6ed8e42fe63c4c2442713644aa38f5864d9250fcacdd351300d"
+    },
+    {
+      "path": "ndstudio/configuration.py",
+      "size_bytes": 573,
+      "sha256": "c66688f61dfba525185b53187a9f1e51ea77266cef90327d68ebc27eb3aace5b"
+    },
+    {
+      "path": "ndstudio/curve_prior.py",
+      "size_bytes": 4455,
+      "sha256": "7f8415f2733b35d1ba8535b3667c8da6e8968a235b4519c6d2edf03a3ee6dd88"
+    },
+    {
+      "path": "ndstudio/diagnostics.py",
+      "size_bytes": 4793,
+      "sha256": "297758173f83deb68768c76a3c1d7ade65805373b9f9a3dd7da1058417b8c6bd"
+    },
+    {
+      "path": "ndstudio/direction.py",
+      "size_bytes": 24945,
+      "sha256": "e7f97a1633116adcb8fc48325316957963a71c4efcfa0c2e7d29b57e0e25aed3"
+    },
+    {
+      "path": "ndstudio/examples.py",
+      "size_bytes": 3777,
+      "sha256": "55af25f054551a81fd22af3847227b08e22d4ba255604d0525f9afad1e0066a5"
+    },
+    {
+      "path": "ndstudio/geothermal.py",
+      "size_bytes": 42646,
+      "sha256": "85725a850f6f0f9c6d87c48f7d993cbe0b9645f1aff4b2b67d011c87e1031b42"
+    },
+    {
+      "path": "ndstudio/geothermal_gui.py",
+      "size_bytes": 10502,
+      "sha256": "9ac4eb37fe400ea5d7a09a70b0c94c340572f66d0437fdccd50c9b71a0c94c1a"
+    },
+    {
+      "path": "ndstudio/gui.py",
+      "size_bytes": 40710,
+      "sha256": "4da49601033aac3ba39fc9d099f1960ab42957d1e8e6a34d8949370143d10a9d"
+    },
+    {
+      "path": "ndstudio/hdf.py",
+      "size_bytes": 13425,
+      "sha256": "a14dbf84c00d3de3f089d630e70700f823d2154fe7d9f787a8e7e501ee3b421e"
+    },
+    {
+      "path": "ndstudio/hvsr.py",
+      "size_bytes": 26831,
+      "sha256": "ec7bff1c63ab024f266dad1dc3265cf77f1c376e01da505e9b1ceef0ea0c7a45"
+    },
+    {
+      "path": "ndstudio/hvsr_acquisition.py",
+      "size_bytes": 4265,
+      "sha256": "3aab350e913f1e14a95c7ae77aa23f401484ccdb115dbc99afcef235a212ade5"
+    },
+    {
+      "path": "ndstudio/hvsr_example.py",
+      "size_bytes": 2485,
+      "sha256": "0233288fe4ef75e2bb5345d6905579d2706d40fc460cf20b2603804cc41aa006"
+    },
+    {
+      "path": "ndstudio/hvsr_gui.py",
+      "size_bytes": 9031,
+      "sha256": "4711d0fe442d20847968b3c66d949924e0e80ae93727d86cfd22a86600fa235e"
+    },
+    {
+      "path": "ndstudio/hvsr_reports.py",
+      "size_bytes": 8085,
+      "sha256": "8a0ff0878aecf5e5e2b17795fc010df60a674eb3f775b15149e63b0d55a6888f"
+    },
+    {
+      "path": "ndstudio/hvsr_structure.py",
+      "size_bytes": 7013,
+      "sha256": "a6d0b0484a295f0c642a13c04b989efc2d9fe6b5efd90b82193ff6e498f806c1"
+    },
+    {
+      "path": "ndstudio/hvsr_validation.py",
+      "size_bytes": 9834,
+      "sha256": "e799c05d6280242b705756f20a6bd110e862d69bf0554490448f60b1150081e0"
+    },
+    {
+      "path": "ndstudio/inversion.py",
+      "size_bytes": 17606,
+      "sha256": "178d54eaf284ef28fc288dbd23b28ab8befb3737e8886febd07cba6b5208b3d3"
+    },
+    {
+      "path": "ndstudio/mgs_e2e.py",
+      "size_bytes": 8110,
+      "sha256": "1e6bf90110aad2d55168f30132b6dc8ee27884a32a48d7ccc1bce78e4433f223"
+    },
+    {
+      "path": "ndstudio/music.py",
+      "size_bytes": 9162,
+      "sha256": "33485391d722f0a654d4d922d6bdfe5a34d46f6df6f7fa6de12ae46a9f802575"
+    },
+    {
+      "path": "ndstudio/music_front.py",
+      "size_bytes": 16302,
+      "sha256": "81c5830f9951afec815cd227b5a88962170b3e5af7fe895c2b2a335bd3053410"
+    },
+    {
+      "path": "ndstudio/phase_audit.py",
+      "size_bytes": 8376,
+      "sha256": "4a923bb84155e5e67cf881c4d5f85500b39330e4fe9a5910871118beb12144d4"
+    },
+    {
+      "path": "ndstudio/phase_bands.py",
+      "size_bytes": 7886,
+      "sha256": "81dfd501289fd0166c09dd2ceeb73f767d6b01f1492e943303d3134637fa2565"
+    },
+    {
+      "path": "ndstudio/phase_gui.py",
+      "size_bytes": 19329,
+      "sha256": "70e9ce589c2105312465a4e5d05beffec7b2776b0cf780c642e225dadc8277c3"
+    },
+    {
+      "path": "ndstudio/phase_records.py",
+      "size_bytes": 7398,
+      "sha256": "3e917f1b93322b2f3bbac38712491426e0c728381087b233799216c22bf7d5c6"
+    },
+    {
+      "path": "ndstudio/phase_screening.py",
+      "size_bytes": 4248,
+      "sha256": "524e99a6c3561e0fbe291be3a4096fd9dfdf9f157dfafb140eb79eb747e7e5f6"
+    },
+    {
+      "path": "ndstudio/phase_stack.py",
+      "size_bytes": 57194,
+      "sha256": "0ab1550cd1494ead9e04c1877341eb6db5dfed0c0cc3f339ec8793d5ad28846c"
+    },
+    {
+      "path": "ndstudio/phase_velocity.py",
+      "size_bytes": 18868,
+      "sha256": "21707c99488eef07b100ec1a4d9f29692bd22586273fd0bd17c1b3c7fa162b4d"
+    },
+    {
+      "path": "ndstudio/pipeline.py",
+      "size_bytes": 7898,
+      "sha256": "6f062403ec43e39603593702d00a08118c098eb82ab7f847330c20d14c2fb54b"
+    },
+    {
+      "path": "ndstudio/project.py",
+      "size_bytes": 14858,
+      "sha256": "ab5751b8b43a6bd4e8aea2b604d0e874462a0480b19f8f4396318a1e1f0d15f4"
+    },
+    {
+      "path": "ndstudio/real_compare.py",
+      "size_bytes": 24436,
+      "sha256": "27c5adf7c3c73e5e8f79580c493921f66da7bb67e4f6e11b06af35926897d953"
+    },
+    {
+      "path": "ndstudio/reconstruction.py",
+      "size_bytes": 26314,
+      "sha256": "4925ebb4e042ee18ff798f2b5f5cb5d2b60da61043ae100a5cd54f2f61af5340"
+    },
+    {
+      "path": "ndstudio/reports.py",
+      "size_bytes": 10697,
+      "sha256": "eb3f02b732d3261ab32a689a34707b8bf9778e7bb752af96d91ae279b923b700"
+    },
+    {
+      "path": "ndstudio/scan_diagnostics.py",
+      "size_bytes": 9652,
+      "sha256": "9a5c2c2e7a03543a5836c99e20b03a4b8a43b6647bd48c60568e2e62382b25e8"
+    },
+    {
+      "path": "ndstudio/tomography.py",
+      "size_bytes": 34505,
+      "sha256": "1103911889739ef1f0e3fd49f2d010e9a3fe89ba76b8ed0acced0f927b337114"
+    },
+    {
+      "path": "ndstudio/trace.py",
+      "size_bytes": 10484,
+      "sha256": "f4a1c240bff8a617e3561cd4e602bb407703817b7b1191a993567268230e1d9d"
+    },
+    {
+      "path": "repair_project_json.bat",
+      "size_bytes": 297,
+      "sha256": "e1ab71da558b649d9ab437bafa36c49e13812201eed6efeaa19e9716c943fa0d"
+    },
+    {
+      "path": "requirements-geothermal.txt",
+      "size_bytes": 145,
+      "sha256": "2918f271a4209fc58df482de61bd3c397945d9e75b9da80a5e8af14c35a12a31"
+    },
+    {
+      "path": "requirements-optional.txt",
+      "size_bytes": 100,
+      "sha256": "9bf02bde890661daefbd35aaaa5d86eeaef7dbe0507d85e6b0122ae39c07ea9c"
+    },
+    {
+      "path": "requirements-test.txt",
+      "size_bytes": 14,
+      "sha256": "93c4ab5f175d24229e46ec70a8ecaeb6db8b36e3f54d8005808044c060acbc92"
+    },
+    {
+      "path": "requirements.txt",
+      "size_bytes": 175,
+      "sha256": "53df5baebc0d98e8f93ba5717c3fe5097d3b08cf8698f2415b39e1827a191971"
+    },
+    {
+      "path": "requirements_independent.txt",
+      "size_bytes": 16,
+      "sha256": "665b3c5259e2648efdf157d7669d945a034b7f8a1368be832dd542815d02d7df"
+    },
+    {
+      "path": "run.py",
+      "size_bytes": 17037,
+      "sha256": "c408bee50415f8cdf59515ae24d68234e81138f1b33480cade9effd9ab96b03f"
+    },
+    {
+      "path": "run_dare_phase_test_windows.bat",
+      "size_bytes": 407,
+      "sha256": "122b522f07abd6939cd3feddc6d66734b3e0393f5952efd9ffd752f979f8145a"
+    },
+    {
+      "path": "run_download_linux_macos.sh",
+      "size_bytes": 158,
+      "sha256": "1f79a8e6244f8bac9455fab83b50389ee0bb62b2012e1dca3725516cf3b3b984"
+    },
+    {
+      "path": "run_download_windows.bat",
+      "size_bytes": 205,
+      "sha256": "751d4b5f4c14f9609ec90a33e082081dbb7ad09c6bcb91643112360ac5ba84a1"
+    },
+    {
+      "path": "run_geothermal_example_windows.bat",
+      "size_bytes": 337,
+      "sha256": "b953f516ddabde8779ef81bf6e44999c2d14dfee56cbf61d4e30a798cd2ef274"
+    },
+    {
+      "path": "run_linux_macos.sh",
+      "size_bytes": 261,
+      "sha256": "e21e0407b04ecebe82616a82a1d5238793e37c5f1158fe4831106f28afd7c06d"
+    },
+    {
+      "path": "run_mgs_six_windows.bat",
+      "size_bytes": 212,
+      "sha256": "74f184446cf4d4e8dea9eeb50c451d3bceccbf6abd8afde72532c8e7a8c93a85"
+    },
+    {
+      "path": "run_tomography_example_windows.bat",
+      "size_bytes": 337,
+      "sha256": "00a68cdacc2292a193df1336a368efd23e49455cdbd71d70d137701c0ea6e09f"
+    },
+    {
+      "path": "run_windows.bat",
+      "size_bytes": 196,
+      "sha256": "45d5e5a8e58915a4db0ce2c1da11a574cba74853506c9fc491e1319250aeb752"
+    },
+    {
+      "path": "station_filters.py",
+      "size_bytes": 5767,
+      "sha256": "b85dba844e639a5897ac1d36133fec381e7de09bf782f9f83984986a251f892d"
+    },
+    {
+      "path": "tools/repair_json_escape.py",
+      "size_bytes": 3318,
+      "sha256": "42d9a4d77b06e3e30b896dffc736a225c91254daebdeaf1576875731ffa5d144"
+    }
+  ],
+  "full_validation_evidence": "NoiseDispersionStudio_v2_7_1_MUSIC.zip"
+}

@@ -1,0 +1,4 @@
+curve_id,points,increasing_steps,largest_increase_m_s,accepted,reason
+P00005_b1_S0_N2,19,0,-6.294291176233173,True,accepted
+P00021_b1_S0_N2,19,0,-6.339071605058962,True,accepted
+P00029_b1_S0_N1,18,0,-21.12517008264922,True,accepted

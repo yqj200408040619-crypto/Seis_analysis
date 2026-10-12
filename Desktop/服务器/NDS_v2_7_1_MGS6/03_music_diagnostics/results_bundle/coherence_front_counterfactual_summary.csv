@@ -1,0 +1,6 @@
+min_coherence,pair_frequency_references,accepted_frequency_references,corrected_points,accepted_audit_points,candidate_bands,longest_band_points,longest_band_min_hz,longest_band_max_hz,settings_promoted
+0.4,50,4,0,0,0,0,,,False
+0.5,50,3,0,0,0,0,,,False
+0.6,50,0,0,0,0,0,,,False
+0.65,50,0,0,0,0,0,,,False
+0.7,50,0,0,0,0,0,,,False

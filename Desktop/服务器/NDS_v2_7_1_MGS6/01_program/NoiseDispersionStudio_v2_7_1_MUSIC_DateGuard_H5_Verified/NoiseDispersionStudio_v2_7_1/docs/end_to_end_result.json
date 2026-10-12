@@ -1,0 +1,65 @@
+{
+  "type": "synthetic deterministic counts fixture; not field data",
+  "duration_s": 86400,
+  "stations": 3,
+  "download_errors": 0,
+  "stages": [
+    {
+      "stage": "import",
+      "status": "complete",
+      "elapsed_s": 0.49707913398742676
+    },
+    {
+      "stage": "prepare",
+      "status": "complete",
+      "elapsed_s": 3.286336660385132
+    },
+    {
+      "stage": "scan",
+      "status": "complete",
+      "elapsed_s": 6.681398391723633
+    },
+    {
+      "stage": "controls",
+      "status": "complete",
+      "elapsed_s": 0.005590200424194336
+    },
+    {
+      "stage": "families",
+      "status": "complete",
+      "elapsed_s": 0.01419210433959961
+    },
+    {
+      "stage": "review",
+      "status": "complete",
+      "elapsed_s": 0.005564212799072266
+    },
+    {
+      "stage": "report",
+      "status": "complete",
+      "elapsed_s": 0.31960391998291016
+    },
+    {
+      "stage": "verify",
+      "status": "complete",
+      "elapsed_s": 0.04145646095275879
+    },
+    {
+      "stage": "autoselect",
+      "status": "complete",
+      "elapsed_s": 0.01244354248046875
+    },
+    {
+      "stage": "invert",
+      "status": "skipped",
+      "reason": "\u6ca1\u6709\u901a\u8fc7\u80cc\u666f\u4e0e\u8ddd\u79bb/\u6ce2\u957f\u8981\u6c42\u7684\u81ea\u52a8\u53cd\u6f14\u66f2\u7ebf\u7ec4",
+      "elapsed_s": 0.00022935867309570312
+    },
+    {
+      "stage": "report",
+      "status": "complete",
+      "elapsed_s": 0.31833815574645996
+    }
+  ],
+  "elapsed_s": 11.18695483700003
+}

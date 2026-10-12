@@ -1,0 +1,3679 @@
+{
+  "run_id": "20261011T090801_aa600438",
+  "complete": true,
+  "elapsed_s": 256.7811527252197,
+  "stages": [
+    {
+      "stage": "候选曲线与相位门限",
+      "status": "complete",
+      "parameters": {
+        "tolerance_deg": 0,
+        "range_source": "measured"
+      },
+      "results": {
+        "curves": 7,
+        "frequency_points": 301,
+        "output": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/curve_velocity_phase_table.csv"
+      },
+      "elapsed_s": 0.028957128524780273
+    },
+    {
+      "stage": "阵列几何",
+      "status": "info",
+      "message": "6台；近直线阵列=False；传播方向：北0°、顺时针；最大台对夹角=45°",
+      "details": {
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ]
+      },
+      "utc": "2026-10-11T09:08:01.282055+00:00"
+    },
+    {
+      "stage": "波形校正与UTC对齐",
+      "status": "info",
+      "message": "输入：校正H5；采样率=20 Hz；滤波=[0.1, 7.142857142857]；响应输出=VEL",
+      "details": {},
+      "utc": "2026-10-11T09:08:01.282393+00:00"
+    },
+    {
+      "stage": "波形校正结果",
+      "status": "info",
+      "message": "6台；36,000样本/台；UTC 2020-10-12T12:00:00.000000000Z → 2020-10-12T12:30:00.000000000Z",
+      "details": {
+        "output": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/aligned_waveforms.h5",
+        "station_metadata": [
+          {
+            "station": "Y7_A00",
+            "seed_id": "Y7.A00..HHZ",
+            "valid_samples": 36000,
+            "total_samples": 36000,
+            "response_status": "nominal_response_corrected",
+            "source_files": [
+              {
+                "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_A00_00000.npz",
+                "sha256": "3e32e0edfb0c6bce7ad0959d902201775635c10a8ea2d8b5613b952f8f571c86"
+              },
+              {
+                "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_A00_00001.npz",
+                "sha256": "9a190babc3cd3575f15731a7eba9dec4ddafa883ea347f97baadf70b17445d0c"
+              },
+              {
+                "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_A00_00002.npz",
+                "sha256": "7f3050c56207338111c4980aa1c787b0e0c3af0132062db3864ca49cdd8d6596"
+              },
+              {
+                "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_A00_00003.npz",
+                "sha256": "3e88c64851e6f6fcc74358d1f300a26c86aac0db3833aed9ccd1723dd47fdf87"
+              }
+            ]
+          },
+          {
+            "station": "Y7_B02",
+            "seed_id": "Y7.B02..HHZ",
+            "valid_samples": 36000,
+            "total_samples": 36000,
+            "response_status": "nominal_response_corrected",
+            "source_files": [
+              {
+                "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_B02_00000.npz",
+                "sha256": "bb5ff46d417cb2db2becd99a9442b49da4c47c0106a234c763625880a0bcb204"
+              },
+              {
+                "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_B02_00001.npz",
+                "sha256": "69e2ea7ac10a0e55b1e841b212cadc0d7066af67e139eaedf257f0fceda51e20"
+              },
+              {
+                "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_B02_00002.npz",
+                "sha256": "c72f9303ad2ec3f28a826c9f19acb824f2a1b46e758d4d0f502e993444cb8e8b"
+              },
+              {
+                "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_B02_00003.npz",
+                "sha256": "0626f04165939b5dab889ff2c4a43370e2839c6de3c3f8404b35af8a608b3508"
+              }
+            ]
+          },
+          {
+            "station": "Y7_C00",
+            "seed_id": "Y7.C00..HHZ",
+            "valid_samples": 36000,
+            "total_samples": 36000,
+            "response_status": "nominal_response_corrected",
+            "source_files": [
+              {
+                "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_C00_00000.npz",
+                "sha256": "b9335121163e1656303722b1d69a4b67087f738d01bb3c42fb08e92299de582c"
+              },
+              {
+                "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_C00_00001.npz",
+                "sha256": "9f47393551d252104d5c98357bcfc2c396293a541c375e30c24096f84537763b"
+              },
+              {
+                "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_C00_00002.npz",
+                "sha256": "07597a125cd043a5df1ec0959ba5db7b871db5ebd402ae5e103fc01fe9133fb0"
+              },
+              {
+                "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_C00_00003.npz",
+                "sha256": "a7e4e6805783d42fede630b70c7ef0fe03016977ff33f4471fe0db73cec4b78b"
+              }
+            ]
+          },
+          {
+            "station": "Y7_C01",
+            "seed_id": "Y7.C01..HHZ",
+            "valid_samples": 36000,
+            "total_samples": 36000,
+            "response_status": "nominal_response_corrected",
+            "source_files": [
+              {
+                "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_C01_00000.npz",
+                "sha256": "afc18e90e142cd2212c9f71bf7ea1351a5bf9370555f9ec450fbcafb3bd0a1cb"
+              },
+              {
+                "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_C01_00001.npz",
+                "sha256": "c55361b004b6bf4205988abccdadb322ae28cc51f4147f19eca30603ad5e2349"
+              },
+              {
+                "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_C01_00002.npz",
+                "sha256": "bf06cfc62c5b0069265cff2fd5fa80cc44a090ff25fa398ef2a74b60666aba08"
+              },
+              {
+                "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_C01_00003.npz",
+                "sha256": "3c18a241a03efb6da3c7e355f021e3ad4f64f1664a1d1d7b398baa05f77b1b68"
+              }
+            ]
+          },
+          {
+            "station": "Y7_C02",
+            "seed_id": "Y7.C02..HHZ",
+            "valid_samples": 36000,
+            "total_samples": 36000,
+            "response_status": "nominal_response_corrected",
+            "source_files": [
+              {
+                "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_C02_00000.npz",
+                "sha256": "ce2f54bdef7c6bd8a541755b7a561288a86067cfe8ea132f1651cd3447af1e97"
+              },
+              {
+                "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_C02_00001.npz",
+                "sha256": "3513e93dea3ac4163b7d69fd6bf639ab89e94499c4299f0e0edd1fc2172eff66"
+              },
+              {
+                "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_C02_00002.npz",
+                "sha256": "670a7267b5d15802baf7bdcee0b96451dc841c36cd23c5788bd82885201639eb"
+              },
+              {
+                "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_C02_00003.npz",
+                "sha256": "cefd6f4fe87eb8aaf977d0a410bd456a67ff24ed05161f248bba255292876522"
+              }
+            ]
+          },
+          {
+            "station": "Y7_D02",
+            "seed_id": "Y7.D02..HHZ",
+            "valid_samples": 36000,
+            "total_samples": 36000,
+            "response_status": "nominal_response_corrected",
+            "source_files": [
+              {
+                "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_D02_00000.npz",
+                "sha256": "1db92cb8127d59a6fbdfda4710c31295d5712ce70eaa074b4fa0ad6f9ef1be81"
+              },
+              {
+                "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_D02_00001.npz",
+                "sha256": "ba61516e299dc5137388f1cb8b21ab472a0c8324d67e6da6fe7b0808a1b60f5b"
+              },
+              {
+                "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_D02_00002.npz",
+                "sha256": "9be53ff7dfff5d8dcd04df0d9655c579ddd2b537392ee392da2b44fc5db5ccc4"
+              },
+              {
+                "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_D02_00003.npz",
+                "sha256": "f13dcd31f25f045b4c56399342fb938647a6f1ec2bd8a71b19d2cca413259901"
+              }
+            ]
+          }
+        ]
+      },
+      "utc": "2026-10-11T09:08:01.318877+00:00"
+    },
+    {
+      "stage": "方向估计 2.3 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.2988505747126435,
+        "windows": 2648,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 8.7,
+        "hop_s": 0.45,
+        "frequency_bins_hz": [
+          2.2988505747126435
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.3,
+        "actual_frequency_hz": 2.2988505747126435,
+        "total_windows": 2648,
+        "quality_windows": 1293,
+        "cache_reused": false,
+        "median_velocity_m_s": 1964.9785200073263,
+        "reasons": {
+          "通过": 1293,
+          "存在近等强的分离峰": 1116,
+          "最优速度在搜索边界": 191,
+          "阵列相干度不足": 48
+        }
+      },
+      "elapsed_s": 5.333174228668213
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.3 Hz · 2648窗 → 几何合格594 → 主方向组23保留96",
+      "details": {
+        "reasons": {
+          "通过": 96,
+          "存在近等强的分离峰": 1116,
+          "台对夹角超过阈值": 681,
+          "角度候选范围越过阈值": 18,
+          "最优速度在搜索边界": 191,
+          "阵列相干度不足": 48,
+          "属于另一传播方向组": 498
+        }
+      },
+      "utc": "2026-10-11T09:08:06.698758+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.3 Hz · 有效2648 → 幅值/方向合格93 → 接受1；正1/负0；最终相位=7.110203429705693",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/6e9e43e81119c66a.npz",
+        "amplitude_threshold": 6.410718840489331e-11,
+        "delta_threshold": 2.183480042603809e-11
+      },
+      "utc": "2026-10-11T09:08:06.714995+00:00"
+    },
+    {
+      "stage": "方向估计 2.31 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.3121387283236996,
+        "windows": 2648,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 8.65,
+        "hop_s": 0.45,
+        "frequency_bins_hz": [
+          2.3121387283236996
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.31,
+        "actual_frequency_hz": 2.3121387283236996,
+        "total_windows": 2648,
+        "quality_windows": 1243,
+        "cache_reused": false,
+        "median_velocity_m_s": 1976.3126953729427,
+        "reasons": {
+          "通过": 1243,
+          "存在近等强的分离峰": 1160,
+          "最优速度在搜索边界": 194,
+          "阵列相干度不足": 51
+        }
+      },
+      "elapsed_s": 4.268398284912109
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.31 Hz · 2648窗 → 几何合格571 → 主方向组23保留103",
+      "details": {
+        "reasons": {
+          "通过": 103,
+          "存在近等强的分离峰": 1160,
+          "台对夹角超过阈值": 652,
+          "角度候选范围越过阈值": 20,
+          "最优速度在搜索边界": 194,
+          "阵列相干度不足": 51,
+          "属于另一传播方向组": 468
+        }
+      },
+      "utc": "2026-10-11T09:08:11.019634+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.31 Hz · 有效2648 → 幅值/方向合格99 → 接受0；正0/负0；最终相位=None",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/0bd0e903a0217a18.npz",
+        "amplitude_threshold": 6.698502252982424e-11,
+        "delta_threshold": 2.322165814865695e-11
+      },
+      "utc": "2026-10-11T09:08:11.036650+00:00"
+    },
+    {
+      "stage": "方向估计 2.32 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.3255813953488373,
+        "windows": 2648,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 8.6,
+        "hop_s": 0.45,
+        "frequency_bins_hz": [
+          2.3255813953488373
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.32,
+        "actual_frequency_hz": 2.3255813953488373,
+        "total_windows": 2648,
+        "quality_windows": 1240,
+        "cache_reused": false,
+        "median_velocity_m_s": 1974.2217285265847,
+        "reasons": {
+          "通过": 1240,
+          "存在近等强的分离峰": 1145,
+          "最优速度在搜索边界": 224,
+          "阵列相干度不足": 39
+        }
+      },
+      "elapsed_s": 4.26004695892334
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.32 Hz · 2648窗 → 几何合格604 → 主方向组23保留110",
+      "details": {
+        "reasons": {
+          "通过": 110,
+          "存在近等强的分离峰": 1145,
+          "台对夹角超过阈值": 610,
+          "角度候选范围越过阈值": 26,
+          "最优速度在搜索边界": 224,
+          "阵列相干度不足": 39,
+          "属于另一传播方向组": 494
+        }
+      },
+      "utc": "2026-10-11T09:08:15.333113+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.32 Hz · 有效2648 → 幅值/方向合格104 → 接受1；正0/负1；最终相位=-1.6069311522471643",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/43ffbcf32fb051f6.npz",
+        "amplitude_threshold": 6.906191621382614e-11,
+        "delta_threshold": 2.3469708576272677e-11
+      },
+      "utc": "2026-10-11T09:08:15.348274+00:00"
+    },
+    {
+      "stage": "方向估计 2.33 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.3255813953488373,
+        "windows": 2648,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 8.6,
+        "hop_s": 0.45,
+        "frequency_bins_hz": [
+          2.3255813953488373
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.33,
+        "actual_frequency_hz": 2.3255813953488373,
+        "total_windows": 2648,
+        "quality_windows": 1240,
+        "cache_reused": false,
+        "median_velocity_m_s": 1974.2217285265847,
+        "reasons": {
+          "通过": 1240,
+          "存在近等强的分离峰": 1145,
+          "最优速度在搜索边界": 224,
+          "阵列相干度不足": 39
+        }
+      },
+      "elapsed_s": 4.233350038528442
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.33 Hz · 2648窗 → 几何合格604 → 主方向组23保留110",
+      "details": {
+        "reasons": {
+          "通过": 110,
+          "存在近等强的分离峰": 1145,
+          "台对夹角超过阈值": 610,
+          "角度候选范围越过阈值": 26,
+          "最优速度在搜索边界": 224,
+          "阵列相干度不足": 39,
+          "属于另一传播方向组": 494
+        }
+      },
+      "utc": "2026-10-11T09:08:19.618984+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.33 Hz · 有效2648 → 幅值/方向合格104 → 接受0；正0/负0；最终相位=None",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/d8aa5fd03428e407.npz",
+        "amplitude_threshold": 6.906191621382614e-11,
+        "delta_threshold": 2.3469708576272677e-11
+      },
+      "utc": "2026-10-11T09:08:19.634598+00:00"
+    },
+    {
+      "stage": "方向估计 2.34 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.3391812865497075,
+        "windows": 2648,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 8.55,
+        "hop_s": 0.45,
+        "frequency_bins_hz": [
+          2.3391812865497075
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.34,
+        "actual_frequency_hz": 2.3391812865497075,
+        "total_windows": 2648,
+        "quality_windows": 1271,
+        "cache_reused": false,
+        "median_velocity_m_s": 1945.9762161640097,
+        "reasons": {
+          "通过": 1271,
+          "存在近等强的分离峰": 1142,
+          "最优速度在搜索边界": 195,
+          "阵列相干度不足": 40
+        }
+      },
+      "elapsed_s": 4.264483690261841
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.34 Hz · 2648窗 → 几何合格636 → 主方向组23保留114",
+      "details": {
+        "reasons": {
+          "通过": 114,
+          "存在近等强的分离峰": 1142,
+          "台对夹角超过阈值": 617,
+          "角度候选范围越过阈值": 18,
+          "最优速度在搜索边界": 195,
+          "阵列相干度不足": 40,
+          "属于另一传播方向组": 522
+        }
+      },
+      "utc": "2026-10-11T09:08:23.945365+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.34 Hz · 有效2648 → 幅值/方向合格107 → 接受0；正0/负0；最终相位=None",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/f7112503998b2072.npz",
+        "amplitude_threshold": 7.060343386100093e-11,
+        "delta_threshold": 2.2401049527751515e-11
+      },
+      "utc": "2026-10-11T09:08:23.964239+00:00"
+    },
+    {
+      "stage": "方向估计 2.35 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.3529411764705883,
+        "windows": 2648,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 8.5,
+        "hop_s": 0.45,
+        "frequency_bins_hz": [
+          2.3529411764705883
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.35,
+        "actual_frequency_hz": 2.3529411764705883,
+        "total_windows": 2648,
+        "quality_windows": 1269,
+        "cache_reused": false,
+        "median_velocity_m_s": 1955.1876059146648,
+        "reasons": {
+          "通过": 1269,
+          "存在近等强的分离峰": 1157,
+          "最优速度在搜索边界": 175,
+          "阵列相干度不足": 47
+        }
+      },
+      "elapsed_s": 4.39100456237793
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.35 Hz · 2648窗 → 几何合格630 → 主方向组23保留105",
+      "details": {
+        "reasons": {
+          "通过": 105,
+          "存在近等强的分离峰": 1157,
+          "台对夹角超过阈值": 618,
+          "角度候选范围越过阈值": 21,
+          "最优速度在搜索边界": 175,
+          "阵列相干度不足": 47,
+          "属于另一传播方向组": 525
+        }
+      },
+      "utc": "2026-10-11T09:08:28.392422+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.35 Hz · 有效2648 → 幅值/方向合格95 → 接受1；正0/负1；最终相位=-12.405291888102848",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/85543d5f486d6f2e.npz",
+        "amplitude_threshold": 7.064341328977294e-11,
+        "delta_threshold": 2.2898948195770154e-11
+      },
+      "utc": "2026-10-11T09:08:28.407761+00:00"
+    },
+    {
+      "stage": "方向估计 2.36 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.366863905325444,
+        "windows": 2979,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 8.45,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.366863905325444
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.36,
+        "actual_frequency_hz": 2.366863905325444,
+        "total_windows": 2979,
+        "quality_windows": 1382,
+        "cache_reused": false,
+        "median_velocity_m_s": 1942.0314497154802,
+        "reasons": {
+          "通过": 1382,
+          "存在近等强的分离峰": 1359,
+          "最优速度在搜索边界": 193,
+          "阵列相干度不足": 45
+        }
+      },
+      "elapsed_s": 4.702019453048706
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.36 Hz · 2979窗 → 几何合格707 → 主方向组23保留129",
+      "details": {
+        "reasons": {
+          "通过": 129,
+          "存在近等强的分离峰": 1359,
+          "台对夹角超过阈值": 662,
+          "角度候选范围越过阈值": 13,
+          "最优速度在搜索边界": 193,
+          "阵列相干度不足": 45,
+          "属于另一传播方向组": 578
+        }
+      },
+      "utc": "2026-10-11T09:08:33.149852+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.36 Hz · 有效2979 → 幅值/方向合格121 → 接受1；正0/负1；最终相位=-14.08373391736581",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/d3143319b2c9f64c.npz",
+        "amplitude_threshold": 6.750703419653196e-11,
+        "delta_threshold": 2.2617799594522844e-11
+      },
+      "utc": "2026-10-11T09:08:33.166719+00:00"
+    },
+    {
+      "stage": "方向估计 2.37 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.366863905325444,
+        "windows": 2979,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 8.45,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.366863905325444
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.37,
+        "actual_frequency_hz": 2.366863905325444,
+        "total_windows": 2979,
+        "quality_windows": 1382,
+        "cache_reused": false,
+        "median_velocity_m_s": 1942.0314497154802,
+        "reasons": {
+          "通过": 1382,
+          "存在近等强的分离峰": 1359,
+          "最优速度在搜索边界": 193,
+          "阵列相干度不足": 45
+        }
+      },
+      "elapsed_s": 4.795519828796387
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.37 Hz · 2979窗 → 几何合格707 → 主方向组23保留129",
+      "details": {
+        "reasons": {
+          "通过": 129,
+          "存在近等强的分离峰": 1359,
+          "台对夹角超过阈值": 662,
+          "角度候选范围越过阈值": 13,
+          "最优速度在搜索边界": 193,
+          "阵列相干度不足": 45,
+          "属于另一传播方向组": 578
+        }
+      },
+      "utc": "2026-10-11T09:08:38.027966+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.37 Hz · 有效2979 → 幅值/方向合格121 → 接受1；正0/负1；最终相位=-17.737514752807815",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/85c799fef361411e.npz",
+        "amplitude_threshold": 6.750703419653196e-11,
+        "delta_threshold": 2.2617799594522844e-11
+      },
+      "utc": "2026-10-11T09:08:38.045755+00:00"
+    },
+    {
+      "stage": "方向估计 2.38 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.380952380952381,
+        "windows": 2980,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 8.4,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.380952380952381
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.38,
+        "actual_frequency_hz": 2.380952380952381,
+        "total_windows": 2980,
+        "quality_windows": 1379,
+        "cache_reused": false,
+        "median_velocity_m_s": 1984.5171881089043,
+        "reasons": {
+          "通过": 1379,
+          "存在近等强的分离峰": 1365,
+          "最优速度在搜索边界": 199,
+          "阵列相干度不足": 37
+        }
+      },
+      "elapsed_s": 4.715214014053345
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.38 Hz · 2980窗 → 几何合格702 → 主方向组23保留125",
+      "details": {
+        "reasons": {
+          "通过": 125,
+          "存在近等强的分离峰": 1365,
+          "台对夹角超过阈值": 657,
+          "角度候选范围越过阈值": 20,
+          "最优速度在搜索边界": 199,
+          "阵列相干度不足": 37,
+          "属于另一传播方向组": 577
+        }
+      },
+      "utc": "2026-10-11T09:08:42.801060+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.38 Hz · 有效2980 → 幅值/方向合格118 → 接受3；正0/负3；最终相位=-22.343245653169383",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/a20b032dd5646e9f.npz",
+        "amplitude_threshold": 6.736090292508736e-11,
+        "delta_threshold": 2.2408182821428726e-11
+      },
+      "utc": "2026-10-11T09:08:42.818965+00:00"
+    },
+    {
+      "stage": "方向估计 2.39 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.395209580838323,
+        "windows": 2980,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 8.35,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.395209580838323
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.39,
+        "actual_frequency_hz": 2.395209580838323,
+        "total_windows": 2980,
+        "quality_windows": 1400,
+        "cache_reused": false,
+        "median_velocity_m_s": 1958.8987017912655,
+        "reasons": {
+          "通过": 1400,
+          "存在近等强的分离峰": 1325,
+          "最优速度在搜索边界": 224,
+          "阵列相干度不足": 31
+        }
+      },
+      "elapsed_s": 4.767362594604492
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.39 Hz · 2980窗 → 几何合格717 → 主方向组11保留86",
+      "details": {
+        "reasons": {
+          "通过": 86,
+          "存在近等强的分离峰": 1325,
+          "台对夹角超过阈值": 662,
+          "角度候选范围越过阈值": 21,
+          "最优速度在搜索边界": 224,
+          "阵列相干度不足": 31,
+          "属于另一传播方向组": 631
+        }
+      },
+      "utc": "2026-10-11T09:08:47.626655+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.39 Hz · 有效2980 → 幅值/方向合格84 → 接受0；正0/负0；最终相位=None",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/564cb1116d2ee42d.npz",
+        "amplitude_threshold": 6.654284922984628e-11,
+        "delta_threshold": 2.2430095732752682e-11
+      },
+      "utc": "2026-10-11T09:08:47.643666+00:00"
+    },
+    {
+      "stage": "方向估计 2.4 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.395209580838323,
+        "windows": 2980,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 8.35,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.395209580838323
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.4,
+        "actual_frequency_hz": 2.395209580838323,
+        "total_windows": 2980,
+        "quality_windows": 1400,
+        "cache_reused": false,
+        "median_velocity_m_s": 1958.8987017912655,
+        "reasons": {
+          "通过": 1400,
+          "存在近等强的分离峰": 1325,
+          "最优速度在搜索边界": 224,
+          "阵列相干度不足": 31
+        }
+      },
+      "elapsed_s": 4.6548240184783936
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.4 Hz · 2980窗 → 几何合格717 → 主方向组11保留86",
+      "details": {
+        "reasons": {
+          "通过": 86,
+          "存在近等强的分离峰": 1325,
+          "台对夹角超过阈值": 662,
+          "角度候选范围越过阈值": 21,
+          "最优速度在搜索边界": 224,
+          "阵列相干度不足": 31,
+          "属于另一传播方向组": 631
+        }
+      },
+      "utc": "2026-10-11T09:08:52.338811+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.4 Hz · 有效2980 → 幅值/方向合格84 → 接受3；正0/负3；最终相位=-27.847457288685273",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/e92b63faf92c536e.npz",
+        "amplitude_threshold": 6.654284922984628e-11,
+        "delta_threshold": 2.2430095732752682e-11
+      },
+      "utc": "2026-10-11T09:08:52.356635+00:00"
+    },
+    {
+      "stage": "方向估计 2.41 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.4096385542168677,
+        "windows": 2980,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 8.3,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.4096385542168677
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.41,
+        "actual_frequency_hz": 2.4096385542168677,
+        "total_windows": 2980,
+        "quality_windows": 1371,
+        "cache_reused": false,
+        "median_velocity_m_s": 1946.9170787941196,
+        "reasons": {
+          "通过": 1371,
+          "存在近等强的分离峰": 1340,
+          "最优速度在搜索边界": 235,
+          "阵列相干度不足": 34
+        }
+      },
+      "elapsed_s": 4.671276092529297
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.41 Hz · 2980窗 → 几何合格702 → 主方向组11保留86",
+      "details": {
+        "reasons": {
+          "通过": 86,
+          "存在近等强的分离峰": 1340,
+          "台对夹角超过阈值": 654,
+          "角度候选范围越过阈值": 15,
+          "最优速度在搜索边界": 235,
+          "阵列相干度不足": 34,
+          "属于另一传播方向组": 616
+        }
+      },
+      "utc": "2026-10-11T09:08:57.068323+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.41 Hz · 有效2980 → 幅值/方向合格85 → 接受4；正0/负4；最终相位=-32.10421044890951",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/a65bef28ea2a9816.npz",
+        "amplitude_threshold": 6.951793184073959e-11,
+        "delta_threshold": 2.1675965298527202e-11
+      },
+      "utc": "2026-10-11T09:08:57.086284+00:00"
+    },
+    {
+      "stage": "方向估计 2.42 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.4242424242424243,
+        "windows": 2980,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 8.25,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.4242424242424243
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.42,
+        "actual_frequency_hz": 2.4242424242424243,
+        "total_windows": 2980,
+        "quality_windows": 1360,
+        "cache_reused": false,
+        "median_velocity_m_s": 1945.240364773028,
+        "reasons": {
+          "通过": 1360,
+          "存在近等强的分离峰": 1378,
+          "最优速度在搜索边界": 225,
+          "阵列相干度不足": 17
+        }
+      },
+      "elapsed_s": 4.92033839225769
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.42 Hz · 2980窗 → 几何合格707 → 主方向组11保留88",
+      "details": {
+        "reasons": {
+          "通过": 88,
+          "存在近等强的分离峰": 1378,
+          "台对夹角超过阈值": 632,
+          "角度候选范围越过阈值": 21,
+          "最优速度在搜索边界": 225,
+          "阵列相干度不足": 17,
+          "属于另一传播方向组": 619
+        }
+      },
+      "utc": "2026-10-11T09:09:02.046775+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.42 Hz · 有效2980 → 幅值/方向合格87 → 接受2；正0/负2；最终相位=-36.7603573617536",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/ce0d5c510f920af1.npz",
+        "amplitude_threshold": 6.859209186270328e-11,
+        "delta_threshold": 2.1340405224666373e-11
+      },
+      "utc": "2026-10-11T09:09:02.065079+00:00"
+    },
+    {
+      "stage": "方向估计 2.43 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.4242424242424243,
+        "windows": 2980,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 8.25,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.4242424242424243
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.43,
+        "actual_frequency_hz": 2.4242424242424243,
+        "total_windows": 2980,
+        "quality_windows": 1360,
+        "cache_reused": false,
+        "median_velocity_m_s": 1945.240364773028,
+        "reasons": {
+          "通过": 1360,
+          "存在近等强的分离峰": 1378,
+          "最优速度在搜索边界": 225,
+          "阵列相干度不足": 17
+        }
+      },
+      "elapsed_s": 4.773269176483154
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.43 Hz · 2980窗 → 几何合格707 → 主方向组11保留88",
+      "details": {
+        "reasons": {
+          "通过": 88,
+          "存在近等强的分离峰": 1378,
+          "台对夹角超过阈值": 632,
+          "角度候选范围越过阈值": 21,
+          "最优速度在搜索边界": 225,
+          "阵列相干度不足": 17,
+          "属于另一传播方向组": 619
+        }
+      },
+      "utc": "2026-10-11T09:09:06.878982+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.43 Hz · 有效2980 → 幅值/方向合格87 → 接受0；正0/负0；最终相位=None",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/06c1479d1f886d16.npz",
+        "amplitude_threshold": 6.859209186270328e-11,
+        "delta_threshold": 2.1340405224666373e-11
+      },
+      "utc": "2026-10-11T09:09:06.896418+00:00"
+    },
+    {
+      "stage": "方向估计 2.44 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.4390243902439024,
+        "windows": 2980,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 8.2,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.4390243902439024
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.44,
+        "actual_frequency_hz": 2.4390243902439024,
+        "total_windows": 2980,
+        "quality_windows": 1318,
+        "cache_reused": false,
+        "median_velocity_m_s": 1934.3521259078923,
+        "reasons": {
+          "通过": 1318,
+          "存在近等强的分离峰": 1388,
+          "最优速度在搜索边界": 243,
+          "阵列相干度不足": 31
+        }
+      },
+      "elapsed_s": 4.693973541259766
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.44 Hz · 2980窗 → 几何合格701 → 主方向组11保留81",
+      "details": {
+        "reasons": {
+          "通过": 81,
+          "存在近等强的分离峰": 1388,
+          "台对夹角超过阈值": 595,
+          "角度候选范围越过阈值": 22,
+          "最优速度在搜索边界": 243,
+          "阵列相干度不足": 31,
+          "属于另一传播方向组": 620
+        }
+      },
+      "utc": "2026-10-11T09:09:11.629151+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.44 Hz · 有效2980 → 幅值/方向合格81 → 接受2；正0/负2；最终相位=-43.499188355289455",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/105e941b602b9b17.npz",
+        "amplitude_threshold": 6.433864861409924e-11,
+        "delta_threshold": 2.073466355350826e-11
+      },
+      "utc": "2026-10-11T09:09:11.646858+00:00"
+    },
+    {
+      "stage": "方向估计 2.45 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.4539877300613497,
+        "windows": 2980,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 8.15,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.4539877300613497
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.45,
+        "actual_frequency_hz": 2.4539877300613497,
+        "total_windows": 2980,
+        "quality_windows": 1320,
+        "cache_reused": false,
+        "median_velocity_m_s": 1977.3013184982824,
+        "reasons": {
+          "通过": 1320,
+          "存在近等强的分离峰": 1396,
+          "最优速度在搜索边界": 232,
+          "阵列相干度不足": 32
+        }
+      },
+      "elapsed_s": 4.723587274551392
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.45 Hz · 2980窗 → 几何合格698 → 主方向组11保留96",
+      "details": {
+        "reasons": {
+          "通过": 96,
+          "存在近等强的分离峰": 1396,
+          "台对夹角超过阈值": 600,
+          "角度候选范围越过阈值": 22,
+          "最优速度在搜索边界": 232,
+          "阵列相干度不足": 32,
+          "属于另一传播方向组": 602
+        }
+      },
+      "utc": "2026-10-11T09:09:16.410873+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.45 Hz · 有效2980 → 幅值/方向合格94 → 接受0；正0/负0；最终相位=None",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/bec27a306cb5d9eb.npz",
+        "amplitude_threshold": 6.364054051276767e-11,
+        "delta_threshold": 2.070396433093398e-11
+      },
+      "utc": "2026-10-11T09:09:16.428100+00:00"
+    },
+    {
+      "stage": "方向估计 2.46 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.4539877300613497,
+        "windows": 2980,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 8.15,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.4539877300613497
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.46,
+        "actual_frequency_hz": 2.4539877300613497,
+        "total_windows": 2980,
+        "quality_windows": 1320,
+        "cache_reused": false,
+        "median_velocity_m_s": 1977.3013184982824,
+        "reasons": {
+          "通过": 1320,
+          "存在近等强的分离峰": 1396,
+          "最优速度在搜索边界": 232,
+          "阵列相干度不足": 32
+        }
+      },
+      "elapsed_s": 4.745319843292236
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.46 Hz · 2980窗 → 几何合格698 → 主方向组11保留96",
+      "details": {
+        "reasons": {
+          "通过": 96,
+          "存在近等强的分离峰": 1396,
+          "台对夹角超过阈值": 600,
+          "角度候选范围越过阈值": 22,
+          "最优速度在搜索边界": 232,
+          "阵列相干度不足": 32,
+          "属于另一传播方向组": 602
+        }
+      },
+      "utc": "2026-10-11T09:09:21.215712+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.46 Hz · 有效2980 → 幅值/方向合格94 → 接受1；正0/负1；最终相位=-51.102422100914985",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/208554ac183bb368.npz",
+        "amplitude_threshold": 6.364054051276767e-11,
+        "delta_threshold": 2.070396433093398e-11
+      },
+      "utc": "2026-10-11T09:09:21.233441+00:00"
+    },
+    {
+      "stage": "方向估计 2.47 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.4691358024691357,
+        "windows": 2980,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 8.1,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.4691358024691357
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.47,
+        "actual_frequency_hz": 2.4691358024691357,
+        "total_windows": 2980,
+        "quality_windows": 1360,
+        "cache_reused": false,
+        "median_velocity_m_s": 1973.7683135874413,
+        "reasons": {
+          "通过": 1360,
+          "存在近等强的分离峰": 1367,
+          "最优速度在搜索边界": 226,
+          "阵列相干度不足": 27
+        }
+      },
+      "elapsed_s": 4.749803304672241
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.47 Hz · 2980窗 → 几何合格701 → 主方向组11保留112",
+      "details": {
+        "reasons": {
+          "通过": 112,
+          "存在近等强的分离峰": 1367,
+          "台对夹角超过阈值": 640,
+          "角度候选范围越过阈值": 19,
+          "最优速度在搜索边界": 226,
+          "阵列相干度不足": 27,
+          "属于另一传播方向组": 589
+        }
+      },
+      "utc": "2026-10-11T09:09:26.024655+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.47 Hz · 有效2980 → 幅值/方向合格108 → 接受2；正0/负2；最终相位=-54.19223592928098",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/470d4ae90b3755b4.npz",
+        "amplitude_threshold": 6.156392233523599e-11,
+        "delta_threshold": 2.0412749742358912e-11
+      },
+      "utc": "2026-10-11T09:09:26.042658+00:00"
+    },
+    {
+      "stage": "方向估计 2.48 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.484472049689441,
+        "windows": 2980,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 8.05,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.484472049689441
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.48,
+        "actual_frequency_hz": 2.484472049689441,
+        "total_windows": 2980,
+        "quality_windows": 1279,
+        "cache_reused": false,
+        "median_velocity_m_s": 1956.760111271903,
+        "reasons": {
+          "通过": 1279,
+          "存在近等强的分离峰": 1442,
+          "最优速度在搜索边界": 233,
+          "阵列相干度不足": 26
+        }
+      },
+      "elapsed_s": 4.665223121643066
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.48 Hz · 2980窗 → 几何合格631 → 主方向组11保留84",
+      "details": {
+        "reasons": {
+          "通过": 84,
+          "存在近等强的分离峰": 1442,
+          "台对夹角超过阈值": 629,
+          "角度候选范围越过阈值": 19,
+          "最优速度在搜索边界": 233,
+          "阵列相干度不足": 26,
+          "属于另一传播方向组": 547
+        }
+      },
+      "utc": "2026-10-11T09:09:30.748470+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.48 Hz · 有效2980 → 幅值/方向合格80 → 接受0；正0/负0；最终相位=None",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/9be7bfcabc5ab718.npz",
+        "amplitude_threshold": 5.93011918333799e-11,
+        "delta_threshold": 1.9284779958770963e-11
+      },
+      "utc": "2026-10-11T09:09:30.765604+00:00"
+    },
+    {
+      "stage": "方向估计 2.49 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.484472049689441,
+        "windows": 2980,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 8.05,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.484472049689441
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.49,
+        "actual_frequency_hz": 2.484472049689441,
+        "total_windows": 2980,
+        "quality_windows": 1279,
+        "cache_reused": false,
+        "median_velocity_m_s": 1956.760111271903,
+        "reasons": {
+          "通过": 1279,
+          "存在近等强的分离峰": 1442,
+          "最优速度在搜索边界": 233,
+          "阵列相干度不足": 26
+        }
+      },
+      "elapsed_s": 4.654384136199951
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.49 Hz · 2980窗 → 几何合格631 → 主方向组11保留84",
+      "details": {
+        "reasons": {
+          "通过": 84,
+          "存在近等强的分离峰": 1442,
+          "台对夹角超过阈值": 629,
+          "角度候选范围越过阈值": 19,
+          "最优速度在搜索边界": 233,
+          "阵列相干度不足": 26,
+          "属于另一传播方向组": 547
+        }
+      },
+      "utc": "2026-10-11T09:09:35.461445+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.49 Hz · 有效2980 → 幅值/方向合格80 → 接受1；正0/负1；最终相位=-60.204355143854045",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/08f6c941d82c1242.npz",
+        "amplitude_threshold": 5.93011918333799e-11,
+        "delta_threshold": 1.9284779958770963e-11
+      },
+      "utc": "2026-10-11T09:09:35.479388+00:00"
+    },
+    {
+      "stage": "方向估计 2.5 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.5,
+        "windows": 2981,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 8.0,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.5
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.5,
+        "actual_frequency_hz": 2.5,
+        "total_windows": 2981,
+        "quality_windows": 1280,
+        "cache_reused": false,
+        "median_velocity_m_s": 1959.711987810298,
+        "reasons": {
+          "通过": 1280,
+          "存在近等强的分离峰": 1450,
+          "最优速度在搜索边界": 229,
+          "阵列相干度不足": 22
+        }
+      },
+      "elapsed_s": 4.739646673202515
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.5 Hz · 2981窗 → 几何合格597 → 主方向组11保留91",
+      "details": {
+        "reasons": {
+          "通过": 91,
+          "存在近等强的分离峰": 1450,
+          "台对夹角超过阈值": 671,
+          "角度候选范围越过阈值": 12,
+          "最优速度在搜索边界": 229,
+          "阵列相干度不足": 22,
+          "属于另一传播方向组": 506
+        }
+      },
+      "utc": "2026-10-11T09:09:40.261490+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.5 Hz · 有效2981 → 幅值/方向合格87 → 接受0；正0/负0；最终相位=None",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/76fdb4c05c7eaa5d.npz",
+        "amplitude_threshold": 5.7292596021936574e-11,
+        "delta_threshold": 1.870736156865284e-11
+      },
+      "utc": "2026-10-11T09:09:40.279057+00:00"
+    },
+    {
+      "stage": "方向估计 2.51 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.5157232704402515,
+        "windows": 2981,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.95,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.5157232704402515
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.51,
+        "actual_frequency_hz": 2.5157232704402515,
+        "total_windows": 2981,
+        "quality_windows": 1288,
+        "cache_reused": false,
+        "median_velocity_m_s": 1982.405042476949,
+        "reasons": {
+          "通过": 1288,
+          "存在近等强的分离峰": 1440,
+          "最优速度在搜索边界": 242,
+          "阵列相干度不足": 11
+        }
+      },
+      "elapsed_s": 4.68818736076355
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.51 Hz · 2981窗 → 几何合格588 → 主方向组11保留90",
+      "details": {
+        "reasons": {
+          "通过": 90,
+          "存在近等强的分离峰": 1440,
+          "台对夹角超过阈值": 686,
+          "角度候选范围越过阈值": 14,
+          "最优速度在搜索边界": 242,
+          "阵列相干度不足": 11,
+          "属于另一传播方向组": 498
+        }
+      },
+      "utc": "2026-10-11T09:09:45.008046+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.51 Hz · 有效2981 → 幅值/方向合格89 → 接受1；正0/负1；最终相位=-68.00118966011935",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/14c11e3e67fde55d.npz",
+        "amplitude_threshold": 5.64852928224649e-11,
+        "delta_threshold": 1.9131364531002185e-11
+      },
+      "utc": "2026-10-11T09:09:45.026103+00:00"
+    },
+    {
+      "stage": "方向估计 2.52 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.5157232704402515,
+        "windows": 2981,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.95,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.5157232704402515
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.52,
+        "actual_frequency_hz": 2.5157232704402515,
+        "total_windows": 2981,
+        "quality_windows": 1288,
+        "cache_reused": false,
+        "median_velocity_m_s": 1982.405042476949,
+        "reasons": {
+          "通过": 1288,
+          "存在近等强的分离峰": 1440,
+          "最优速度在搜索边界": 242,
+          "阵列相干度不足": 11
+        }
+      },
+      "elapsed_s": 4.686361312866211
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.52 Hz · 2981窗 → 几何合格588 → 主方向组11保留90",
+      "details": {
+        "reasons": {
+          "通过": 90,
+          "存在近等强的分离峰": 1440,
+          "台对夹角超过阈值": 686,
+          "角度候选范围越过阈值": 14,
+          "最优速度在搜索边界": 242,
+          "阵列相干度不足": 11,
+          "属于另一传播方向组": 498
+        }
+      },
+      "utc": "2026-10-11T09:09:49.752700+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.52 Hz · 有效2981 → 幅值/方向合格89 → 接受1；正0/负1；最终相位=-69.73977731762888",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/08eeb28f5d3024e2.npz",
+        "amplitude_threshold": 5.64852928224649e-11,
+        "delta_threshold": 1.9131364531002185e-11
+      },
+      "utc": "2026-10-11T09:09:49.770866+00:00"
+    },
+    {
+      "stage": "方向估计 2.53 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.5316455696202533,
+        "windows": 2981,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.9,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.5316455696202533
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.53,
+        "actual_frequency_hz": 2.5316455696202533,
+        "total_windows": 2981,
+        "quality_windows": 1276,
+        "cache_reused": false,
+        "median_velocity_m_s": 1980.5852081688129,
+        "reasons": {
+          "通过": 1276,
+          "存在近等强的分离峰": 1470,
+          "最优速度在搜索边界": 223,
+          "阵列相干度不足": 12
+        }
+      },
+      "elapsed_s": 4.604173421859741
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.53 Hz · 2981窗 → 几何合格590 → 主方向组11保留87",
+      "details": {
+        "reasons": {
+          "通过": 87,
+          "存在近等强的分离峰": 1470,
+          "台对夹角超过阈值": 669,
+          "角度候选范围越过阈值": 17,
+          "最优速度在搜索边界": 223,
+          "阵列相干度不足": 12,
+          "属于另一传播方向组": 503
+        }
+      },
+      "utc": "2026-10-11T09:09:54.417769+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.53 Hz · 有效2981 → 幅值/方向合格85 → 接受1；正0/负1；最终相位=-76.39914170029532",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/925a537b86c755a2.npz",
+        "amplitude_threshold": 5.6500315694446397e-11,
+        "delta_threshold": 1.8876694177099836e-11
+      },
+      "utc": "2026-10-11T09:09:54.435759+00:00"
+    },
+    {
+      "stage": "方向估计 2.54 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.5477707006369426,
+        "windows": 2981,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.85,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.5477707006369426
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.54,
+        "actual_frequency_hz": 2.5477707006369426,
+        "total_windows": 2981,
+        "quality_windows": 1288,
+        "cache_reused": false,
+        "median_velocity_m_s": 2001.164091778442,
+        "reasons": {
+          "通过": 1288,
+          "存在近等强的分离峰": 1481,
+          "最优速度在搜索边界": 202,
+          "阵列相干度不足": 10
+        }
+      },
+      "elapsed_s": 4.850696325302124
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.54 Hz · 2981窗 → 几何合格608 → 主方向组11保留84",
+      "details": {
+        "reasons": {
+          "通过": 84,
+          "存在近等强的分离峰": 1481,
+          "台对夹角超过阈值": 660,
+          "角度候选范围越过阈值": 20,
+          "最优速度在搜索边界": 202,
+          "阵列相干度不足": 10,
+          "属于另一传播方向组": 524
+        }
+      },
+      "utc": "2026-10-11T09:09:59.327495+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.54 Hz · 有效2981 → 幅值/方向合格82 → 接受0；正0/负0；最终相位=None",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/86b75ba7d4486a3f.npz",
+        "amplitude_threshold": 5.680027727688842e-11,
+        "delta_threshold": 1.9241459929212273e-11
+      },
+      "utc": "2026-10-11T09:09:59.345368+00:00"
+    },
+    {
+      "stage": "方向估计 2.55 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.5477707006369426,
+        "windows": 2981,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.85,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.5477707006369426
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.55,
+        "actual_frequency_hz": 2.5477707006369426,
+        "total_windows": 2981,
+        "quality_windows": 1288,
+        "cache_reused": false,
+        "median_velocity_m_s": 2001.164091778442,
+        "reasons": {
+          "通过": 1288,
+          "存在近等强的分离峰": 1481,
+          "最优速度在搜索边界": 202,
+          "阵列相干度不足": 10
+        }
+      },
+      "elapsed_s": 4.703213453292847
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.55 Hz · 2981窗 → 几何合格608 → 主方向组11保留84",
+      "details": {
+        "reasons": {
+          "通过": 84,
+          "存在近等强的分离峰": 1481,
+          "台对夹角超过阈值": 660,
+          "角度候选范围越过阈值": 20,
+          "最优速度在搜索边界": 202,
+          "阵列相干度不足": 10,
+          "属于另一传播方向组": 524
+        }
+      },
+      "utc": "2026-10-11T09:10:04.090797+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.55 Hz · 有效2981 → 幅值/方向合格82 → 接受1；正0/负1；最终相位=-80.69399238749261",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/202e87b4efb2b171.npz",
+        "amplitude_threshold": 5.680027727688842e-11,
+        "delta_threshold": 1.9241459929212273e-11
+      },
+      "utc": "2026-10-11T09:10:04.109012+00:00"
+    },
+    {
+      "stage": "方向估计 2.56 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.5641025641025643,
+        "windows": 2981,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.8,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.5641025641025643
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.56,
+        "actual_frequency_hz": 2.5641025641025643,
+        "total_windows": 2981,
+        "quality_windows": 1333,
+        "cache_reused": false,
+        "median_velocity_m_s": 2013.6189575488793,
+        "reasons": {
+          "通过": 1333,
+          "存在近等强的分离峰": 1444,
+          "最优速度在搜索边界": 197,
+          "阵列相干度不足": 7
+        }
+      },
+      "elapsed_s": 4.557880401611328
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.56 Hz · 2981窗 → 几何合格588 → 主方向组11保留74",
+      "details": {
+        "reasons": {
+          "通过": 74,
+          "存在近等强的分离峰": 1444,
+          "台对夹角超过阈值": 729,
+          "角度候选范围越过阈值": 16,
+          "最优速度在搜索边界": 197,
+          "阵列相干度不足": 7,
+          "属于另一传播方向组": 514
+        }
+      },
+      "utc": "2026-10-11T09:10:08.709177+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.56 Hz · 有效2981 → 幅值/方向合格71 → 接受4；正0/负4；最终相位=-84.88143622435878",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/83c5a6ddf12df7e1.npz",
+        "amplitude_threshold": 5.716811699418611e-11,
+        "delta_threshold": 1.9368484922812463e-11
+      },
+      "utc": "2026-10-11T09:10:08.727601+00:00"
+    },
+    {
+      "stage": "方向估计 2.57 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.5641025641025643,
+        "windows": 2981,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.8,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.5641025641025643
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.57,
+        "actual_frequency_hz": 2.5641025641025643,
+        "total_windows": 2981,
+        "quality_windows": 1333,
+        "cache_reused": false,
+        "median_velocity_m_s": 2013.6189575488793,
+        "reasons": {
+          "通过": 1333,
+          "存在近等强的分离峰": 1444,
+          "最优速度在搜索边界": 197,
+          "阵列相干度不足": 7
+        }
+      },
+      "elapsed_s": 4.525757789611816
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.57 Hz · 2981窗 → 几何合格588 → 主方向组11保留74",
+      "details": {
+        "reasons": {
+          "通过": 74,
+          "存在近等强的分离峰": 1444,
+          "台对夹角超过阈值": 729,
+          "角度候选范围越过阈值": 16,
+          "最优速度在搜索边界": 197,
+          "阵列相干度不足": 7,
+          "属于另一传播方向组": 514
+        }
+      },
+      "utc": "2026-10-11T09:10:13.295074+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.57 Hz · 有效2981 → 幅值/方向合格71 → 接受5；正0/负5；最终相位=-88.83471368228682",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/02df7ea7b9866d6b.npz",
+        "amplitude_threshold": 5.716811699418611e-11,
+        "delta_threshold": 1.9368484922812463e-11
+      },
+      "utc": "2026-10-11T09:10:13.314130+00:00"
+    },
+    {
+      "stage": "方向估计 2.58 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.5806451612903225,
+        "windows": 2981,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.75,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.5806451612903225
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.58,
+        "actual_frequency_hz": 2.5806451612903225,
+        "total_windows": 2981,
+        "quality_windows": 1252,
+        "cache_reused": false,
+        "median_velocity_m_s": 2031.0292212010113,
+        "reasons": {
+          "通过": 1252,
+          "存在近等强的分离峰": 1530,
+          "最优速度在搜索边界": 196,
+          "阵列相干度不足": 3
+        }
+      },
+      "elapsed_s": 4.559735536575317
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.58 Hz · 2981窗 → 几何合格541 → 主方向组11保留78",
+      "details": {
+        "reasons": {
+          "通过": 78,
+          "存在近等强的分离峰": 1530,
+          "台对夹角超过阈值": 690,
+          "角度候选范围越过阈值": 21,
+          "最优速度在搜索边界": 196,
+          "阵列相干度不足": 3,
+          "属于另一传播方向组": 463
+        }
+      },
+      "utc": "2026-10-11T09:10:17.915257+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.58 Hz · 有效2981 → 幅值/方向合格77 → 接受0；正0/负0；最终相位=None",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/90d6fa2359abe4ec.npz",
+        "amplitude_threshold": 5.855354121672683e-11,
+        "delta_threshold": 1.9767743402544695e-11
+      },
+      "utc": "2026-10-11T09:10:17.933045+00:00"
+    },
+    {
+      "stage": "方向估计 2.59 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.5974025974025974,
+        "windows": 2981,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.7,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.5974025974025974
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.59,
+        "actual_frequency_hz": 2.5974025974025974,
+        "total_windows": 2981,
+        "quality_windows": 1300,
+        "cache_reused": false,
+        "median_velocity_m_s": 2011.0595811895055,
+        "reasons": {
+          "通过": 1300,
+          "存在近等强的分离峰": 1502,
+          "最优速度在搜索边界": 178,
+          "阵列相干度不足": 1
+        }
+      },
+      "elapsed_s": 4.592165470123291
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.59 Hz · 2981窗 → 几何合格546 → 主方向组21保留77",
+      "details": {
+        "reasons": {
+          "通过": 77,
+          "存在近等强的分离峰": 1502,
+          "台对夹角超过阈值": 738,
+          "角度候选范围越过阈值": 16,
+          "最优速度在搜索边界": 178,
+          "阵列相干度不足": 1,
+          "属于另一传播方向组": 469
+        }
+      },
+      "utc": "2026-10-11T09:10:22.566686+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.59 Hz · 有效2981 → 幅值/方向合格77 → 接受2；正0/负2；最终相位=-94.93055053363321",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/41b9fec2410e5e37.npz",
+        "amplitude_threshold": 6.125005086059062e-11,
+        "delta_threshold": 2.0124527231060438e-11
+      },
+      "utc": "2026-10-11T09:10:22.584892+00:00"
+    },
+    {
+      "stage": "方向估计 2.6 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.5974025974025974,
+        "windows": 2981,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.7,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.5974025974025974
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.6,
+        "actual_frequency_hz": 2.5974025974025974,
+        "total_windows": 2981,
+        "quality_windows": 1300,
+        "cache_reused": false,
+        "median_velocity_m_s": 2011.0595811895055,
+        "reasons": {
+          "通过": 1300,
+          "存在近等强的分离峰": 1502,
+          "最优速度在搜索边界": 178,
+          "阵列相干度不足": 1
+        }
+      },
+      "elapsed_s": 4.608728885650635
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.6 Hz · 2981窗 → 几何合格546 → 主方向组21保留77",
+      "details": {
+        "reasons": {
+          "通过": 77,
+          "存在近等强的分离峰": 1502,
+          "台对夹角超过阈值": 738,
+          "角度候选范围越过阈值": 16,
+          "最优速度在搜索边界": 178,
+          "阵列相干度不足": 1,
+          "属于另一传播方向组": 469
+        }
+      },
+      "utc": "2026-10-11T09:10:27.234689+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.6 Hz · 有效2981 → 幅值/方向合格77 → 接受1；正0/负1；最终相位=-97.21111517877344",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/0324d7dea9745f57.npz",
+        "amplitude_threshold": 6.125005086059062e-11,
+        "delta_threshold": 2.0124527231060438e-11
+      },
+      "utc": "2026-10-11T09:10:27.253233+00:00"
+    },
+    {
+      "stage": "方向估计 2.61 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.6143790849673203,
+        "windows": 2981,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.65,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.6143790849673203
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.61,
+        "actual_frequency_hz": 2.6143790849673203,
+        "total_windows": 2981,
+        "quality_windows": 1296,
+        "cache_reused": false,
+        "median_velocity_m_s": 2003.457074606049,
+        "reasons": {
+          "通过": 1296,
+          "存在近等强的分离峰": 1519,
+          "最优速度在搜索边界": 161,
+          "阵列相干度不足": 5
+        }
+      },
+      "elapsed_s": 4.639479160308838
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.61 Hz · 2981窗 → 几何合格553 → 主方向组11保留83",
+      "details": {
+        "reasons": {
+          "通过": 83,
+          "存在近等强的分离峰": 1519,
+          "台对夹角超过阈值": 729,
+          "角度候选范围越过阈值": 14,
+          "最优速度在搜索边界": 161,
+          "阵列相干度不足": 5,
+          "属于另一传播方向组": 470
+        }
+      },
+      "utc": "2026-10-11T09:10:31.934891+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.61 Hz · 有效2981 → 幅值/方向合格81 → 接受1；正0/负1；最终相位=-100.05771934610829",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/a999f260c1dd9c92.npz",
+        "amplitude_threshold": 6.463114838188293e-11,
+        "delta_threshold": 2.009011226538473e-11
+      },
+      "utc": "2026-10-11T09:10:31.953085+00:00"
+    },
+    {
+      "stage": "方向估计 2.62 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.6143790849673203,
+        "windows": 2981,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.65,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.6143790849673203
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.62,
+        "actual_frequency_hz": 2.6143790849673203,
+        "total_windows": 2981,
+        "quality_windows": 1296,
+        "cache_reused": false,
+        "median_velocity_m_s": 2003.457074606049,
+        "reasons": {
+          "通过": 1296,
+          "存在近等强的分离峰": 1519,
+          "最优速度在搜索边界": 161,
+          "阵列相干度不足": 5
+        }
+      },
+      "elapsed_s": 4.588198900222778
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.62 Hz · 2981窗 → 几何合格553 → 主方向组11保留83",
+      "details": {
+        "reasons": {
+          "通过": 83,
+          "存在近等强的分离峰": 1519,
+          "台对夹角超过阈值": 729,
+          "角度候选范围越过阈值": 14,
+          "最优速度在搜索边界": 161,
+          "阵列相干度不足": 5,
+          "属于另一传播方向组": 470
+        }
+      },
+      "utc": "2026-10-11T09:10:36.583404+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.62 Hz · 有效2981 → 幅值/方向合格81 → 接受2；正0/负2；最终相位=-107.65233816685564",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/b6a0ad12415d30b2.npz",
+        "amplitude_threshold": 6.463114838188293e-11,
+        "delta_threshold": 2.009011226538473e-11
+      },
+      "utc": "2026-10-11T09:10:36.601991+00:00"
+    },
+    {
+      "stage": "方向估计 2.63 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.6315789473684212,
+        "windows": 2982,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.6,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.6315789473684212
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.63,
+        "actual_frequency_hz": 2.6315789473684212,
+        "total_windows": 2982,
+        "quality_windows": 1262,
+        "cache_reused": false,
+        "median_velocity_m_s": 2029.0035992614958,
+        "reasons": {
+          "通过": 1262,
+          "存在近等强的分离峰": 1539,
+          "最优速度在搜索边界": 179,
+          "阵列相干度不足": 2
+        }
+      },
+      "elapsed_s": 4.604594707489014
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.63 Hz · 2982窗 → 几何合格512 → 主方向组11保留82",
+      "details": {
+        "reasons": {
+          "通过": 82,
+          "存在近等强的分离峰": 1539,
+          "台对夹角超过阈值": 738,
+          "角度候选范围越过阈值": 12,
+          "最优速度在搜索边界": 179,
+          "阵列相干度不足": 2,
+          "属于另一传播方向组": 430
+        }
+      },
+      "utc": "2026-10-11T09:10:41.246784+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.63 Hz · 有效2982 → 幅值/方向合格81 → 接受3；正0/负3；最终相位=-109.3725759571006",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/b4bcddd2571a74c2.npz",
+        "amplitude_threshold": 6.908498723291789e-11,
+        "delta_threshold": 2.0905183107093988e-11
+      },
+      "utc": "2026-10-11T09:10:41.264632+00:00"
+    },
+    {
+      "stage": "方向估计 2.64 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.6315789473684212,
+        "windows": 2982,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.6,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.6315789473684212
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.64,
+        "actual_frequency_hz": 2.6315789473684212,
+        "total_windows": 2982,
+        "quality_windows": 1262,
+        "cache_reused": false,
+        "median_velocity_m_s": 2029.0035992614958,
+        "reasons": {
+          "通过": 1262,
+          "存在近等强的分离峰": 1539,
+          "最优速度在搜索边界": 179,
+          "阵列相干度不足": 2
+        }
+      },
+      "elapsed_s": 4.581862926483154
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.64 Hz · 2982窗 → 几何合格512 → 主方向组11保留82",
+      "details": {
+        "reasons": {
+          "通过": 82,
+          "存在近等强的分离峰": 1539,
+          "台对夹角超过阈值": 738,
+          "角度候选范围越过阈值": 12,
+          "最优速度在搜索边界": 179,
+          "阵列相干度不足": 2,
+          "属于另一传播方向组": 430
+        }
+      },
+      "utc": "2026-10-11T09:10:45.891372+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.64 Hz · 有效2982 → 幅值/方向合格81 → 接受1；正0/负1；最终相位=-110.13790545194811",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/1b5db079f7518401.npz",
+        "amplitude_threshold": 6.908498723291789e-11,
+        "delta_threshold": 2.0905183107093988e-11
+      },
+      "utc": "2026-10-11T09:10:45.909813+00:00"
+    },
+    {
+      "stage": "方向估计 2.65 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.6490066225165565,
+        "windows": 2982,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.55,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.6490066225165565
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.65,
+        "actual_frequency_hz": 2.6490066225165565,
+        "total_windows": 2982,
+        "quality_windows": 1277,
+        "cache_reused": false,
+        "median_velocity_m_s": 2020.4528915475735,
+        "reasons": {
+          "通过": 1277,
+          "存在近等强的分离峰": 1557,
+          "最优速度在搜索边界": 144,
+          "阵列相干度不足": 4
+        }
+      },
+      "elapsed_s": 4.640998363494873
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.65 Hz · 2982窗 → 几何合格549 → 主方向组11保留102",
+      "details": {
+        "reasons": {
+          "通过": 102,
+          "存在近等强的分离峰": 1557,
+          "台对夹角超过阈值": 721,
+          "角度候选范围越过阈值": 7,
+          "最优速度在搜索边界": 144,
+          "阵列相干度不足": 4,
+          "属于另一传播方向组": 447
+        }
+      },
+      "utc": "2026-10-11T09:10:50.594405+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.65 Hz · 有效2982 → 幅值/方向合格101 → 接受3；正0/负3；最终相位=-114.97996560864091",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/0ae782394147dff6.npz",
+        "amplitude_threshold": 7.103824004710376e-11,
+        "delta_threshold": 2.2179077245263884e-11
+      },
+      "utc": "2026-10-11T09:10:50.613211+00:00"
+    },
+    {
+      "stage": "方向估计 2.66 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.6666666666666665,
+        "windows": 2982,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.5,
+        "hop_s": 0.4,
+        "frequency_bins_hz": [
+          2.6666666666666665
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.66,
+        "actual_frequency_hz": 2.6666666666666665,
+        "total_windows": 2982,
+        "quality_windows": 1244,
+        "cache_reused": false,
+        "median_velocity_m_s": 2046.2115654454124,
+        "reasons": {
+          "通过": 1244,
+          "存在近等强的分离峰": 1587,
+          "最优速度在搜索边界": 151
+        }
+      },
+      "elapsed_s": 4.551914930343628
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.66 Hz · 2982窗 → 几何合格521 → 主方向组11保留93",
+      "details": {
+        "reasons": {
+          "通过": 93,
+          "存在近等强的分离峰": 1587,
+          "台对夹角超过阈值": 712,
+          "角度候选范围越过阈值": 11,
+          "最优速度在搜索边界": 151,
+          "属于另一传播方向组": 428
+        }
+      },
+      "utc": "2026-10-11T09:10:55.207177+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.66 Hz · 有效2982 → 幅值/方向合格90 → 接受0；正0/负0；最终相位=None",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/7ad775ec8fc9ef0a.npz",
+        "amplitude_threshold": 7.151369944612235e-11,
+        "delta_threshold": 2.2578749114055265e-11
+      },
+      "utc": "2026-10-11T09:10:55.225969+00:00"
+    },
+    {
+      "stage": "方向估计 2.67 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.6666666666666665,
+        "windows": 3408,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.5,
+        "hop_s": 0.35,
+        "frequency_bins_hz": [
+          2.6666666666666665
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.67,
+        "actual_frequency_hz": 2.6666666666666665,
+        "total_windows": 3408,
+        "quality_windows": 1446,
+        "cache_reused": false,
+        "median_velocity_m_s": 2038.0973038360999,
+        "reasons": {
+          "通过": 1446,
+          "存在近等强的分离峰": 1780,
+          "最优速度在搜索边界": 182
+        }
+      },
+      "elapsed_s": 5.28739070892334
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.67 Hz · 3408窗 → 几何合格593 → 主方向组11保留102",
+      "details": {
+        "reasons": {
+          "通过": 102,
+          "存在近等强的分离峰": 1780,
+          "台对夹角超过阈值": 837,
+          "角度候选范围越过阈值": 16,
+          "最优速度在搜索边界": 182,
+          "属于另一传播方向组": 491
+        }
+      },
+      "utc": "2026-10-11T09:11:00.565298+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.67 Hz · 有效3408 → 幅值/方向合格96 → 接受1；正0/负1；最终相位=-124.28732571257211",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/97c2bdd98610dacb.npz",
+        "amplitude_threshold": 7.202196638502206e-11,
+        "delta_threshold": 2.119163616321129e-11
+      },
+      "utc": "2026-10-11T09:11:00.586723+00:00"
+    },
+    {
+      "stage": "方向估计 2.68 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.684563758389262,
+        "windows": 3408,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.45,
+        "hop_s": 0.35,
+        "frequency_bins_hz": [
+          2.684563758389262
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.68,
+        "actual_frequency_hz": 2.684563758389262,
+        "total_windows": 3408,
+        "quality_windows": 1421,
+        "cache_reused": false,
+        "median_velocity_m_s": 2008.813917621091,
+        "reasons": {
+          "通过": 1421,
+          "存在近等强的分离峰": 1806,
+          "最优速度在搜索边界": 180,
+          "阵列相干度不足": 1
+        }
+      },
+      "elapsed_s": 5.297157287597656
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.68 Hz · 3408窗 → 几何合格609 → 主方向组11保留95",
+      "details": {
+        "reasons": {
+          "通过": 95,
+          "存在近等强的分离峰": 1806,
+          "台对夹角超过阈值": 797,
+          "角度候选范围越过阈值": 15,
+          "最优速度在搜索边界": 180,
+          "阵列相干度不足": 1,
+          "属于另一传播方向组": 514
+        }
+      },
+      "utc": "2026-10-11T09:11:05.929389+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.68 Hz · 有效3408 → 幅值/方向合格90 → 接受3；正0/负3；最终相位=-125.05927164288308",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/9870b737f80b4192.npz",
+        "amplitude_threshold": 7.297500952954004e-11,
+        "delta_threshold": 2.0993256215584735e-11
+      },
+      "utc": "2026-10-11T09:11:05.951465+00:00"
+    },
+    {
+      "stage": "方向估计 2.69 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.684563758389262,
+        "windows": 3408,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.45,
+        "hop_s": 0.35,
+        "frequency_bins_hz": [
+          2.684563758389262
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.69,
+        "actual_frequency_hz": 2.684563758389262,
+        "total_windows": 3408,
+        "quality_windows": 1421,
+        "cache_reused": false,
+        "median_velocity_m_s": 2008.813917621091,
+        "reasons": {
+          "通过": 1421,
+          "存在近等强的分离峰": 1806,
+          "最优速度在搜索边界": 180,
+          "阵列相干度不足": 1
+        }
+      },
+      "elapsed_s": 5.243253946304321
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.69 Hz · 3408窗 → 几何合格609 → 主方向组11保留95",
+      "details": {
+        "reasons": {
+          "通过": 95,
+          "存在近等强的分离峰": 1806,
+          "台对夹角超过阈值": 797,
+          "角度候选范围越过阈值": 15,
+          "最优速度在搜索边界": 180,
+          "阵列相干度不足": 1,
+          "属于另一传播方向组": 514
+        }
+      },
+      "utc": "2026-10-11T09:11:11.239779+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.69 Hz · 有效3408 → 幅值/方向合格90 → 接受0；正0/负0；最终相位=None",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/cc5a890af1683a03.npz",
+        "amplitude_threshold": 7.297500952954004e-11,
+        "delta_threshold": 2.0993256215584735e-11
+      },
+      "utc": "2026-10-11T09:11:11.260526+00:00"
+    },
+    {
+      "stage": "方向估计 2.7 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.7027027027027026,
+        "windows": 3408,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.4,
+        "hop_s": 0.35,
+        "frequency_bins_hz": [
+          2.7027027027027026
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.7,
+        "actual_frequency_hz": 2.7027027027027026,
+        "total_windows": 3408,
+        "quality_windows": 1445,
+        "cache_reused": false,
+        "median_velocity_m_s": 2016.1219972392178,
+        "reasons": {
+          "通过": 1445,
+          "存在近等强的分离峰": 1770,
+          "最优速度在搜索边界": 190,
+          "阵列相干度不足": 3
+        }
+      },
+      "elapsed_s": 5.2797441482543945
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.7 Hz · 3408窗 → 几何合格590 → 主方向组11保留74",
+      "details": {
+        "reasons": {
+          "通过": 74,
+          "存在近等强的分离峰": 1770,
+          "台对夹角超过阈值": 834,
+          "角度候选范围越过阈值": 21,
+          "最优速度在搜索边界": 190,
+          "阵列相干度不足": 3,
+          "属于另一传播方向组": 516
+        }
+      },
+      "utc": "2026-10-11T09:11:16.587045+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.7 Hz · 有效3408 → 幅值/方向合格70 → 接受1；正0/负1；最终相位=-135.21646256463464",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/9dfc61af7b6333df.npz",
+        "amplitude_threshold": 7.326236569938495e-11,
+        "delta_threshold": 2.039765257684964e-11
+      },
+      "utc": "2026-10-11T09:11:16.608861+00:00"
+    },
+    {
+      "stage": "方向估计 2.71 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.7027027027027026,
+        "windows": 3408,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.4,
+        "hop_s": 0.35,
+        "frequency_bins_hz": [
+          2.7027027027027026
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.71,
+        "actual_frequency_hz": 2.7027027027027026,
+        "total_windows": 3408,
+        "quality_windows": 1445,
+        "cache_reused": false,
+        "median_velocity_m_s": 2016.1219972392178,
+        "reasons": {
+          "通过": 1445,
+          "存在近等强的分离峰": 1770,
+          "最优速度在搜索边界": 190,
+          "阵列相干度不足": 3
+        }
+      },
+      "elapsed_s": 5.3100409507751465
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.71 Hz · 3408窗 → 几何合格590 → 主方向组11保留74",
+      "details": {
+        "reasons": {
+          "通过": 74,
+          "存在近等强的分离峰": 1770,
+          "台对夹角超过阈值": 834,
+          "角度候选范围越过阈值": 21,
+          "最优速度在搜索边界": 190,
+          "阵列相干度不足": 3,
+          "属于另一传播方向组": 516
+        }
+      },
+      "utc": "2026-10-11T09:11:21.966323+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.71 Hz · 有效3408 → 幅值/方向合格70 → 接受2；正0/负2；最终相位=-136.17425521840002",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/781391d19437c4ff.npz",
+        "amplitude_threshold": 7.326236569938495e-11,
+        "delta_threshold": 2.039765257684964e-11
+      },
+      "utc": "2026-10-11T09:11:21.991138+00:00"
+    },
+    {
+      "stage": "方向估计 2.72 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.7210884353741496,
+        "windows": 3408,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.35,
+        "hop_s": 0.35,
+        "frequency_bins_hz": [
+          2.7210884353741496
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.72,
+        "actual_frequency_hz": 2.7210884353741496,
+        "total_windows": 3408,
+        "quality_windows": 1366,
+        "cache_reused": false,
+        "median_velocity_m_s": 2023.8444046626378,
+        "reasons": {
+          "通过": 1366,
+          "存在近等强的分离峰": 1850,
+          "最优速度在搜索边界": 191,
+          "阵列相干度不足": 1
+        }
+      },
+      "elapsed_s": 5.27623438835144
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.72 Hz · 3408窗 → 几何合格573 → 主方向组11保留69",
+      "details": {
+        "reasons": {
+          "通过": 69,
+          "存在近等强的分离峰": 1850,
+          "台对夹角超过阈值": 780,
+          "角度候选范围越过阈值": 13,
+          "最优速度在搜索边界": 191,
+          "阵列相干度不足": 1,
+          "属于另一传播方向组": 504
+        }
+      },
+      "utc": "2026-10-11T09:11:27.315550+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.72 Hz · 有效3408 → 幅值/方向合格66 → 接受1；正0/负1；最终相位=-137.37435481215923",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/1ad1e7c822e59c26.npz",
+        "amplitude_threshold": 7.388802007631135e-11,
+        "delta_threshold": 2.0376115712512653e-11
+      },
+      "utc": "2026-10-11T09:11:27.336404+00:00"
+    },
+    {
+      "stage": "方向估计 2.73 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.7210884353741496,
+        "windows": 3408,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.35,
+        "hop_s": 0.35,
+        "frequency_bins_hz": [
+          2.7210884353741496
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.73,
+        "actual_frequency_hz": 2.7210884353741496,
+        "total_windows": 3408,
+        "quality_windows": 1366,
+        "cache_reused": false,
+        "median_velocity_m_s": 2023.8444046626378,
+        "reasons": {
+          "通过": 1366,
+          "存在近等强的分离峰": 1850,
+          "最优速度在搜索边界": 191,
+          "阵列相干度不足": 1
+        }
+      },
+      "elapsed_s": 5.295680284500122
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.73 Hz · 3408窗 → 几何合格573 → 主方向组11保留69",
+      "details": {
+        "reasons": {
+          "通过": 69,
+          "存在近等强的分离峰": 1850,
+          "台对夹角超过阈值": 780,
+          "角度候选范围越过阈值": 13,
+          "最优速度在搜索边界": 191,
+          "阵列相干度不足": 1,
+          "属于另一传播方向组": 504
+        }
+      },
+      "utc": "2026-10-11T09:11:32.678768+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.73 Hz · 有效3408 → 幅值/方向合格66 → 接受0；正0/负0；最终相位=None",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/fd656163ad79af7a.npz",
+        "amplitude_threshold": 7.388802007631135e-11,
+        "delta_threshold": 2.0376115712512653e-11
+      },
+      "utc": "2026-10-11T09:11:32.702138+00:00"
+    },
+    {
+      "stage": "方向估计 2.74 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.73972602739726,
+        "windows": 3408,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.3,
+        "hop_s": 0.35,
+        "frequency_bins_hz": [
+          2.73972602739726
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.74,
+        "actual_frequency_hz": 2.73972602739726,
+        "total_windows": 3408,
+        "quality_windows": 1412,
+        "cache_reused": false,
+        "median_velocity_m_s": 2025.7519751861182,
+        "reasons": {
+          "通过": 1412,
+          "存在近等强的分离峰": 1811,
+          "最优速度在搜索边界": 184,
+          "阵列相干度不足": 1
+        }
+      },
+      "elapsed_s": 5.326499938964844
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.74 Hz · 3408窗 → 几何合格572 → 主方向组20保留65",
+      "details": {
+        "reasons": {
+          "通过": 65,
+          "存在近等强的分离峰": 1811,
+          "台对夹角超过阈值": 823,
+          "角度候选范围越过阈值": 17,
+          "最优速度在搜索边界": 184,
+          "阵列相干度不足": 1,
+          "属于另一传播方向组": 507
+        }
+      },
+      "utc": "2026-10-11T09:11:38.075999+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.74 Hz · 有效3408 → 幅值/方向合格61 → 接受2；正0/负2；最终相位=-146.50002363516853",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/25e498d4b59b72ee.npz",
+        "amplitude_threshold": 7.470522028947944e-11,
+        "delta_threshold": 2.062581317027604e-11
+      },
+      "utc": "2026-10-11T09:11:38.098313+00:00"
+    },
+    {
+      "stage": "方向估计 2.75 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.7586206896551726,
+        "windows": 3408,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.25,
+        "hop_s": 0.35,
+        "frequency_bins_hz": [
+          2.7586206896551726
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.75,
+        "actual_frequency_hz": 2.7586206896551726,
+        "total_windows": 3408,
+        "quality_windows": 1435,
+        "cache_reused": false,
+        "median_velocity_m_s": 2005.9571394124275,
+        "reasons": {
+          "通过": 1435,
+          "存在近等强的分离峰": 1802,
+          "最优速度在搜索边界": 170,
+          "阵列相干度不足": 1
+        }
+      },
+      "elapsed_s": 5.370800971984863
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.75 Hz · 3408窗 → 几何合格565 → 主方向组8保留72",
+      "details": {
+        "reasons": {
+          "通过": 72,
+          "存在近等强的分离峰": 1802,
+          "台对夹角超过阈值": 850,
+          "角度候选范围越过阈值": 20,
+          "最优速度在搜索边界": 170,
+          "阵列相干度不足": 1,
+          "属于另一传播方向组": 493
+        }
+      },
+      "utc": "2026-10-11T09:11:43.515065+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.75 Hz · 有效3408 → 幅值/方向合格62 → 接受0；正0/负0；最终相位=None",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/df95fa62129ddb37.npz",
+        "amplitude_threshold": 7.759226815324223e-11,
+        "delta_threshold": 2.1038318404363938e-11
+      },
+      "utc": "2026-10-11T09:11:43.537238+00:00"
+    },
+    {
+      "stage": "方向估计 2.76 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.7586206896551726,
+        "windows": 3408,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.25,
+        "hop_s": 0.35,
+        "frequency_bins_hz": [
+          2.7586206896551726
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.76,
+        "actual_frequency_hz": 2.7586206896551726,
+        "total_windows": 3408,
+        "quality_windows": 1435,
+        "cache_reused": false,
+        "median_velocity_m_s": 2005.9571394124275,
+        "reasons": {
+          "通过": 1435,
+          "存在近等强的分离峰": 1802,
+          "最优速度在搜索边界": 170,
+          "阵列相干度不足": 1
+        }
+      },
+      "elapsed_s": 5.255887746810913
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.76 Hz · 3408窗 → 几何合格565 → 主方向组8保留72",
+      "details": {
+        "reasons": {
+          "通过": 72,
+          "存在近等强的分离峰": 1802,
+          "台对夹角超过阈值": 850,
+          "角度候选范围越过阈值": 20,
+          "最优速度在搜索边界": 170,
+          "阵列相干度不足": 1,
+          "属于另一传播方向组": 493
+        }
+      },
+      "utc": "2026-10-11T09:11:48.838694+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.76 Hz · 有效3408 → 幅值/方向合格62 → 接受2；正0/负2；最终相位=-153.54046678659827",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/283006d634a58b9e.npz",
+        "amplitude_threshold": 7.759226815324223e-11,
+        "delta_threshold": 2.1038318404363938e-11
+      },
+      "utc": "2026-10-11T09:11:48.859635+00:00"
+    },
+    {
+      "stage": "方向估计 2.77 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.7777777777777777,
+        "windows": 3409,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.2,
+        "hop_s": 0.35,
+        "frequency_bins_hz": [
+          2.7777777777777777
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.77,
+        "actual_frequency_hz": 2.7777777777777777,
+        "total_windows": 3409,
+        "quality_windows": 1405,
+        "cache_reused": false,
+        "median_velocity_m_s": 2069.292699046978,
+        "reasons": {
+          "通过": 1405,
+          "存在近等强的分离峰": 1825,
+          "最优速度在搜索边界": 176,
+          "阵列相干度不足": 3
+        }
+      },
+      "elapsed_s": 5.250524997711182
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.77 Hz · 3409窗 → 几何合格578 → 主方向组20保留72",
+      "details": {
+        "reasons": {
+          "通过": 72,
+          "存在近等强的分离峰": 1825,
+          "台对夹角超过阈值": 805,
+          "角度候选范围越过阈值": 22,
+          "最优速度在搜索边界": 176,
+          "阵列相干度不足": 3,
+          "属于另一传播方向组": 506
+        }
+      },
+      "utc": "2026-10-11T09:11:54.157412+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.77 Hz · 有效3409 → 幅值/方向合格68 → 接受0；正0/负0；最终相位=None",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/b25801aae8c0f243.npz",
+        "amplitude_threshold": 8.270518064674349e-11,
+        "delta_threshold": 2.1323172608450716e-11
+      },
+      "utc": "2026-10-11T09:11:54.177423+00:00"
+    },
+    {
+      "stage": "方向估计 2.78 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.7777777777777777,
+        "windows": 3409,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.2,
+        "hop_s": 0.35,
+        "frequency_bins_hz": [
+          2.7777777777777777
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.78,
+        "actual_frequency_hz": 2.7777777777777777,
+        "total_windows": 3409,
+        "quality_windows": 1405,
+        "cache_reused": false,
+        "median_velocity_m_s": 2069.292699046978,
+        "reasons": {
+          "通过": 1405,
+          "存在近等强的分离峰": 1825,
+          "最优速度在搜索边界": 176,
+          "阵列相干度不足": 3
+        }
+      },
+      "elapsed_s": 5.194157600402832
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.78 Hz · 3409窗 → 几何合格578 → 主方向组20保留72",
+      "details": {
+        "reasons": {
+          "通过": 72,
+          "存在近等强的分离峰": 1825,
+          "台对夹角超过阈值": 805,
+          "角度候选范围越过阈值": 22,
+          "最优速度在搜索边界": 176,
+          "阵列相干度不足": 3,
+          "属于另一传播方向组": 506
+        }
+      },
+      "utc": "2026-10-11T09:11:59.420188+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.78 Hz · 有效3409 → 幅值/方向合格68 → 接受0；正0/负0；最终相位=None",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/eefaeb5d9b4112dd.npz",
+        "amplitude_threshold": 8.270518064674349e-11,
+        "delta_threshold": 2.1323172608450716e-11
+      },
+      "utc": "2026-10-11T09:11:59.441620+00:00"
+    },
+    {
+      "stage": "方向估计 2.79 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.797202797202797,
+        "windows": 3409,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.15,
+        "hop_s": 0.35,
+        "frequency_bins_hz": [
+          2.797202797202797
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.79,
+        "actual_frequency_hz": 2.797202797202797,
+        "total_windows": 3409,
+        "quality_windows": 1396,
+        "cache_reused": false,
+        "median_velocity_m_s": 2053.929439753708,
+        "reasons": {
+          "通过": 1396,
+          "存在近等强的分离峰": 1816,
+          "最优速度在搜索边界": 195,
+          "阵列相干度不足": 2
+        }
+      },
+      "elapsed_s": 5.3089752197265625
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.79 Hz · 3409窗 → 几何合格590 → 主方向组23保留80",
+      "details": {
+        "reasons": {
+          "通过": 80,
+          "存在近等强的分离峰": 1816,
+          "台对夹角超过阈值": 790,
+          "角度候选范围越过阈值": 16,
+          "最优速度在搜索边界": 195,
+          "阵列相干度不足": 2,
+          "属于另一传播方向组": 510
+        }
+      },
+      "utc": "2026-10-11T09:12:04.797624+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.79 Hz · 有效3409 → 幅值/方向合格80 → 接受1；正0/负1；最终相位=-160.009972426186",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/aac912bdde60b8f7.npz",
+        "amplitude_threshold": 8.834019992969609e-11,
+        "delta_threshold": 2.1994128729002482e-11
+      },
+      "utc": "2026-10-11T09:12:04.818383+00:00"
+    },
+    {
+      "stage": "方向估计 2.8 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.797202797202797,
+        "windows": 3409,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.15,
+        "hop_s": 0.35,
+        "frequency_bins_hz": [
+          2.797202797202797
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.8,
+        "actual_frequency_hz": 2.797202797202797,
+        "total_windows": 3409,
+        "quality_windows": 1396,
+        "cache_reused": false,
+        "median_velocity_m_s": 2053.929439753708,
+        "reasons": {
+          "通过": 1396,
+          "存在近等强的分离峰": 1816,
+          "最优速度在搜索边界": 195,
+          "阵列相干度不足": 2
+        }
+      },
+      "elapsed_s": 5.205477952957153
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.8 Hz · 3409窗 → 几何合格590 → 主方向组23保留80",
+      "details": {
+        "reasons": {
+          "通过": 80,
+          "存在近等强的分离峰": 1816,
+          "台对夹角超过阈值": 790,
+          "角度候选范围越过阈值": 16,
+          "最优速度在搜索边界": 195,
+          "阵列相干度不足": 2,
+          "属于另一传播方向组": 510
+        }
+      },
+      "utc": "2026-10-11T09:12:10.071134+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.8 Hz · 有效3409 → 幅值/方向合格80 → 接受2；正0/负2；最终相位=-165.33002238794995",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/7a07e22070e36003.npz",
+        "amplitude_threshold": 8.834019992969609e-11,
+        "delta_threshold": 2.1994128729002482e-11
+      },
+      "utc": "2026-10-11T09:12:10.093661+00:00"
+    },
+    {
+      "stage": "方向估计 2.81 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 2.816901408450704,
+        "windows": 3409,
+        "stations": [
+          "Y7_A00",
+          "Y7_B02",
+          "Y7_C00",
+          "Y7_C01",
+          "Y7_C02",
+          "Y7_D02"
+        ],
+        "window_s": 7.1,
+        "hop_s": 0.35,
+        "frequency_bins_hz": [
+          2.816901408450704
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 2.81,
+        "actual_frequency_hz": 2.816901408450704,
+        "total_windows": 3409,
+        "quality_windows": 1417,
+        "cache_reused": false,
+        "median_velocity_m_s": 2056.1997873758414,
+        "reasons": {
+          "通过": 1417,
+          "存在近等强的分离峰": 1796,
+          "最优速度在搜索边界": 193,
+          "阵列相干度不足": 3
+        }
+      },
+      "elapsed_s": 5.213603734970093
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "Y7_A00--Y7_C02 · 2.81 Hz · 3409窗 → 几何合格580 → 主方向组23保留85",
+      "details": {
+        "reasons": {
+          "通过": 85,
+          "存在近等强的分离峰": 1796,
+          "台对夹角超过阈值": 815,
+          "角度候选范围越过阈值": 22,
+          "最优速度在搜索边界": 193,
+          "阵列相干度不足": 3,
+          "属于另一传播方向组": 495
+        }
+      },
+      "utc": "2026-10-11T09:12:15.353121+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "P00008_b1 · 2.81 Hz · 有效3409 → 幅值/方向合格84 → 接受5；正0/负5；最终相位=-167.10178360756552",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/windows/990443fa7bc43ba3.npz",
+        "amplitude_threshold": 9.144500080556328e-11,
+        "delta_threshold": 2.124679198916587e-11
+      },
+      "utc": "2026-10-11T09:12:15.375199+00:00"
+    },
+    {
+      "stage": "方向汇总",
+      "status": "info",
+      "message": "52个频率；联合原始点 1248；连续频带保留点 1248",
+      "details": {
+        "output": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/direction/report.html"
+      },
+      "utc": "2026-10-11T09:12:17.379563+00:00"
+    },
+    {
+      "stage": "连续频带",
+      "status": "info",
+      "message": "P00008_b1_S0_N2__B1 · 2.38–2.38 Hz · 1点 · 带宽0 Hz · 连续点数或最小连续带宽不足",
+      "details": {},
+      "utc": "2026-10-11T09:12:17.947457+00:00"
+    },
+    {
+      "stage": "连续频带",
+      "status": "info",
+      "message": "P00008_b1_S0_N2__B2 · 2.4–2.41 Hz · 2点 · 带宽0.01 Hz · 连续点数或最小连续带宽不足",
+      "details": {},
+      "utc": "2026-10-11T09:12:17.951551+00:00"
+    },
+    {
+      "stage": "连续频带",
+      "status": "info",
+      "message": "P00008_b1_S0_N2__B3 · 2.56–2.57 Hz · 2点 · 带宽0.01 Hz · 连续点数或最小连续带宽不足",
+      "details": {},
+      "utc": "2026-10-11T09:12:17.954966+00:00"
+    },
+    {
+      "stage": "连续频带",
+      "status": "info",
+      "message": "P00008_b1_S0_N2__B4 · 2.63–2.63 Hz · 1点 · 带宽0 Hz · 连续点数或最小连续带宽不足",
+      "details": {},
+      "utc": "2026-10-11T09:12:17.958228+00:00"
+    },
+    {
+      "stage": "连续频带",
+      "status": "info",
+      "message": "P00008_b1_S0_N2__B5 · 2.65–2.65 Hz · 1点 · 带宽0 Hz · 连续点数或最小连续带宽不足",
+      "details": {},
+      "utc": "2026-10-11T09:12:17.961661+00:00"
+    },
+    {
+      "stage": "连续频带",
+      "status": "info",
+      "message": "P00008_b1_S0_N2__B6 · 2.68–2.68 Hz · 1点 · 带宽0 Hz · 连续点数或最小连续带宽不足",
+      "details": {},
+      "utc": "2026-10-11T09:12:17.965053+00:00"
+    },
+    {
+      "stage": "连续频带",
+      "status": "info",
+      "message": "P00008_b1_S0_N2__B7 · 2.81–2.81 Hz · 1点 · 带宽0 Hz · 连续点数或最小连续带宽不足",
+      "details": {},
+      "utc": "2026-10-11T09:12:17.968561+00:00"
+    },
+    {
+      "stage": "连续频带参数",
+      "status": "info",
+      "message": "min_band_hz=0.25；min_points=8；合格曲线频点=0",
+      "details": {
+        "output": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/phase_continuous_bands.csv"
+      },
+      "utc": "2026-10-11T09:12:17.971860+00:00"
+    },
+    {
+      "stage": "反演交接",
+      "status": "info",
+      "message": "0条合格连续曲线；0个频点。沿用原始源相位、周期及背景检验状态。",
+      "details": {
+        "output": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/inversion_curves.csv"
+      },
+      "utc": "2026-10-11T09:12:17.979114+00:00"
+    },
+    {
+      "stage": "叠加后频散与原曲线对比",
+      "status": "complete",
+      "parameters": {},
+      "results": {
+        "output": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/velocity_comparison/report.html"
+      },
+      "elapsed_s": 0.012051820755004883
+    },
+    {
+      "stage": "结果索引",
+      "status": "info",
+      "message": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/phase_report.html",
+      "details": {
+        "direction_report": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/direction/report.html",
+        "handoff": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/inversion_curves.csv",
+        "trace": "/workspace/scratch/fc99dc820d4e/phase_validation_v254/real_fine/phase_trace.json"
+      },
+      "utc": "2026-10-11T09:12:18.012525+00:00"
+    }
+  ],
+  "settings_file": "phase_settings_used.json",
+  "log_file": "phase_processing.log"
+}

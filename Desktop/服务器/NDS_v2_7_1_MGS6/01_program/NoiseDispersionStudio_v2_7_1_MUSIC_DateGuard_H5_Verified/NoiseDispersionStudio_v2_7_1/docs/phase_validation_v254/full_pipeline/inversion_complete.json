@@ -1,0 +1,14 @@
+{
+  "cases": 1,
+  "compatible_models": 0,
+  "independent_solver_available": false,
+  "unique_structure_identified": false,
+  "observed_and_predicted_points_separate": true,
+  "missing_roots_not_filled": true,
+  "frequency_samples_not_treated_as_independent": true,
+  "selection_sha256": "644719e50c6099e10e2db3b27e8e228537caa27d1a41df823e19f0af9511c8f5",
+  "studio_code_sha256": "871b2d3216997f9de7cb4750bceea50822edd2bc3fc3d13d883cd37801c5e1f5",
+  "input_curve_file": "output/conditional_dispersion.csv",
+  "input_curve_sha256": "82931ff4890d6dce17cc0ad08d5302206a393b22fab295f006a7c35a3065fb75",
+  "project_config_sha256": "697109b7f31ce6fe4646e0445e78434e23b5f5d522e4140ee5977360d2b0b0dd"
+}

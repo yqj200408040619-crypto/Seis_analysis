@@ -1,0 +1,4 @@
+cohort,train_windows,validation_windows,eligible_blocks
+all,41,55,10
+night,25,21,5
+day,16,34,5

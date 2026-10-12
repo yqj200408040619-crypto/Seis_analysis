@@ -1,0 +1,38 @@
+{
+  "offline_fixture_total_stations": 100,
+  "matched_stations": 20,
+  "matched_channel_epochs": 60,
+  "download_jobs": 20,
+  "download_station_codes": [
+    "QS00",
+    "QS01",
+    "QS02",
+    "QS03",
+    "QS04",
+    "QS05",
+    "QS06",
+    "QS07",
+    "QS08",
+    "QS09",
+    "QS10",
+    "QS11",
+    "QS12",
+    "QS13",
+    "QS14",
+    "QS15",
+    "QS16",
+    "QS17",
+    "QS18",
+    "QS19"
+  ],
+  "prefix": "QS",
+  "bounds": {
+    "station_prefix": "QS",
+    "minlatitude": 47.0,
+    "maxlatitude": 49.0,
+    "minlongitude": 11.0,
+    "maxlongitude": 11.04
+  },
+  "all_rows_visible": true,
+  "errors": []
+}

@@ -1,0 +1,16 @@
+{
+  "pair_distance_m": [
+    5918.036016863625,
+    18404.891528370834
+  ],
+  "expected_arrival_s": [
+    1.3151191148585835,
+    36.809783056741665
+  ],
+  "arrival_reference_velocity_m_s": 2000.0,
+  "arrival_search_covers_slowest_prior": true,
+  "suggested_arrival_max_s": 45.0,
+  "suggested_max_lag_s": 100.0,
+  "suggested_min_clean_segment_s": 480.0,
+  "unknown_geometry_does_not_change_thresholds": true
+}

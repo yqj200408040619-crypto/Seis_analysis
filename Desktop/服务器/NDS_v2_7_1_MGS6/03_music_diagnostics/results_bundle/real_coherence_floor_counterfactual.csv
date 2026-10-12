@@ -1,0 +1,6 @@
+min_coherence,real_q1_candidates,pass_all_other_gates,counterfactual_accepted_windows,n_frequencies_with_any,longest_contiguous_points,longest_band_min_hz,longest_band_max_hz,settings_promoted
+0.4,2798,357,357,43,40,0.42,0.615,False
+0.5,2798,357,299,43,40,0.42,0.615,False
+0.6,2798,357,21,16,6,0.475,0.5,False
+0.65,2798,357,0,0,0,,,False
+0.7,2798,357,0,0,0,,,False

@@ -1,0 +1,12 @@
+{
+  "version": "2.2.0",
+  "date": "2026-10-09",
+  "scientific_implementation_preserved_byte_for_byte": true,
+  "guide_rewritten_from_current_controls_and_commands": true,
+  "stored_results_preserved": true,
+  "omitted_regenerable_examples": [
+    "old synthetic H5",
+    "old example output and canonical arrays"
+  ],
+  "original_program_zip_sha256": "a3c89b6f2cc4c2fd9de7b1bca3f37ef41e9282cda5c40a83c0c10093059ac64b"
+}

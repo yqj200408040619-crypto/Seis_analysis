@@ -1,0 +1,518 @@
+{
+  "complete": true,
+  "direction_method": "music",
+  "music_module_sha256": "33485391d722f0a654d4d922d6bdfe5a34d46f6df6f7fa6de12ae46a9f802575",
+  "reconstruction": {
+    "enabled": true,
+    "lower_frequency_hz": 0.08,
+    "step_hz": 0.01,
+    "minimum_direction_frequencies": 2,
+    "null_trials": 40,
+    "null_p_max": 0.05
+  },
+  "reconstruction_module_sha256": "4925ebb4e042ee18ff798f2b5f5cb5d2b60da61043ae100a5cd54f2f61af5340",
+  "module_sha256": "0ab1550cd1494ead9e04c1877341eb6db5dfed0c0cc3f339ec8793d5ad28846c",
+  "direction_sha256": "e7f97a1633116adcb8fc48325316957963a71c4efcfa0c2e7d29b57e0e25aed3",
+  "phase_records_sha256": "3e917f1b93322b2f3bbac38712491426e0c728381087b233799216c22bf7d5c6",
+  "phase_screening_sha256": "524e99a6c3561e0fbe291be3a4096fd9dfdf9f157dfafb140eb79eb747e7e5f6",
+  "settings_sha256": "74735d4a26943821a0b30a09dd9d57ad465055f653ec914133f426fcba550adf",
+  "phase_settings_sha256": "f2f4c9104fad8b94e472efc818ffcd76a8b57bcd88a147ba8bd3858b8a364b43",
+  "aligned_h5_sha256": "d7059754225a4f114ded140cf096e8a78d6597b9c569dc74bcee6ad6ae723ec5",
+  "station_geometry_sha256": "fb70ed0bbd73c14d1399226b0fc558f811b6d5cd30669c48c3d5d86ac1c14c29",
+  "stations_csv_sha256": "3c620f85a485bde5490f58cbcc088b5af98d71cfc63341897e09c76058529f0f",
+  "direction": {
+    "mode": "filter",
+    "max_pair_angle_deg": 45.0,
+    "direction_step_deg": 2.0,
+    "velocity_min_m_s": 200.0,
+    "velocity_max_m_s": 5000.0,
+    "velocity_points": 128,
+    "min_stations": 3,
+    "min_geometry_ratio": 0.05,
+    "min_coherence": 0.7,
+    "envelope_fraction": 0.95,
+    "max_direction_uncertainty_deg": 20.0,
+    "max_secondary_peak_ratio": 0.95,
+    "direction_group_width_deg": 15.0,
+    "conservative_angle": true,
+    "max_angle_velocity_error_fraction": 0.15,
+    "frequency_half_width_hz": 0.0,
+    "frequency_bins": 1,
+    "phase_rms_max_deg": 25.0,
+    "minimum_independent_windows": 3,
+    "minimum_accepted_windows": 3,
+    "method": "music",
+    "music_snapshots": 6,
+    "music_time_bandwidth": 3.5,
+    "music_sources": 0,
+    "music_max_sources": 2,
+    "music_diagonal_loading": 1e-05,
+    "music_min_source_fraction": 0.1,
+    "music_front_cycles": 200.0
+  },
+  "frequency_method": "exact",
+  "screening_mode": "curve",
+  "repeat_cycles": 200.0,
+  "slide_cycles": 200.0,
+  "taper": "hann",
+  "amplitude_rejection": true,
+  "split_phase_branches": false,
+  "projection_applied": true,
+  "velocity_type": "wave_vector_phase_velocity",
+  "raw_cross_source_phase_rad": 0.0,
+  "monotonic_only": true,
+  "prior": null,
+  "shared_utc_windows": true,
+  "stabilization_s": 600.0,
+  "response_corrected": true,
+  "valid_window_evaluations": 120927,
+  "accepted_window_evaluations": 150,
+  "inversion_handoff_points": 0,
+  "low_frequency_measured_points": 0,
+  "selected_curves": 3,
+  "unique_pair_frequency_gates": 194,
+  "station_metadata": [
+    {
+      "station": "BW_MGS01",
+      "seed_id": "BW.MGS01..HHZ",
+      "valid_samples": 3454379,
+      "total_samples": 3456035,
+      "response_status": "nominal_response_corrected",
+      "source_files": [
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00000.npz",
+          "sha256": "6ea2dc46036ffda01cbaac99dbe92a8f40962f9f84faa71ce1aa7d7d5b6a4765"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00001.npz",
+          "sha256": "42c2af045fc2c1d0f159c02e29f550f26e5aa2ac3e462ce1900061f84982e24d"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00002.npz",
+          "sha256": "e813c7babe7740f0520304f68c2c0b47d65feb12006b992247d715224fdf0d31"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00003.npz",
+          "sha256": "ab6f682b92b785c83ebc977491366b875ef117e2b5f9e72b1df166f7e89d4f22"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00004.npz",
+          "sha256": "cc313c77f691f56978c8f474c249d8be36258cd10ccfaa1e674ded85a90975d5"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00005.npz",
+          "sha256": "0537f8175b9f1a2f17e4a3021cf0538b6e1d69334fef0b5745d1fded7c25a9b5"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00006.npz",
+          "sha256": "f7dec6352e938677e1e3fc4f5223e23dddd913939203b31dc58bddb4cf92b1b2"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00007.npz",
+          "sha256": "2a1083983ace9c64c094fece072be0bbcc3047f20f94c0024d5f4fc8d3ac6392"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00008.npz",
+          "sha256": "acc7ebe55cbb71e872f6f5ca0f5708be211720b844724ce88548de8113ebab96"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00009.npz",
+          "sha256": "cc9e3056c16768525983e5759d706ded5157718b4923b3ac37b56b80998cf5c5"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00010.npz",
+          "sha256": "0e933180d500e46e4dbf0662c437ebc915344747c70566f807763dcdd2b75694"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00011.npz",
+          "sha256": "6354c44534493c0b9f61369b8e9d6c1dc863a97acc119aced7ac88aef8392aca"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00012.npz",
+          "sha256": "cdda088fb4dfcb18131d32873e73a0f3c43095cc62ff498cd2d50c8431f4d4bc"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00013.npz",
+          "sha256": "80e058327e925ee94a104ff2ab000652282a0f6d3708eaaf41c6da5ad73f2e6d"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00014.npz",
+          "sha256": "4cc281f71d8eda7ccaae9389e8fe42ba448c23fba30cf11e4e41a91ad008506b"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00015.npz",
+          "sha256": "3004fa91be9196d5baa06632c2544ed2be89d23f35d5c32071c566b166f16e72"
+        }
+      ]
+    },
+    {
+      "station": "BW_MGS02",
+      "seed_id": "BW.MGS02..HHZ",
+      "valid_samples": 3454371,
+      "total_samples": 3456035,
+      "response_status": "nominal_response_corrected",
+      "source_files": [
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00000.npz",
+          "sha256": "4cf1fefeedd38f63a82af59dc194e942fc74013440eef165d7f71680e82b52ca"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00001.npz",
+          "sha256": "e3c3f89d6a57475dd45ba35dd063ed73aee82b4978d6b07f4a50f5845a1d2a69"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00002.npz",
+          "sha256": "afd0002c3290a555cc8d76142607cba826ef804e6a0d3c424ced238bfac5da33"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00003.npz",
+          "sha256": "e25976194108f948e2275643ed406a3e46f00d013c82dbc0824b23c00f63425d"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00004.npz",
+          "sha256": "006a6aab2766ebea67a49dfac626a9a968e0c4b6dee15c8d1ed86e6fe799b548"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00005.npz",
+          "sha256": "0134377109d8842fa826a6aed170c8240fef01a9f76de9f644cf56155b3af1f0"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00006.npz",
+          "sha256": "f15491e332f93b539801e96e2482142c52eaeba5fc8fd3840558987d7d21b8d4"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00007.npz",
+          "sha256": "4a5e82639005fce88de482f8fd4e8efd2a7f99fbd5178bb15657b6f5d969daaf"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00008.npz",
+          "sha256": "88fdfbebe8da60a2969901fa66b4c25c4dcdc234100125e8a46cc359347a52e4"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00009.npz",
+          "sha256": "f2936722e77b42859be8786a0abfd2b27c2d9006cc24cabde659d8d617937242"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00010.npz",
+          "sha256": "7d3666cb89cdd8f5e253f7a0501a9a9e4023f730dfc7e4b6d1373f499f56cea5"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00011.npz",
+          "sha256": "1bbfd8bb319f034754967059d2ac9b7de3ead071c9c82252a2765a8b1c74ac92"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00012.npz",
+          "sha256": "ff4ab46fbb7a9f693675fc98e6c2630cc2a1ddd50eafd66e85fac7c07a3ab389"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00013.npz",
+          "sha256": "163bc8169a5c9156127bd45edcaec2ecceffd5a0e96affa47b92d00d06e3b974"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00014.npz",
+          "sha256": "8ce6bf1e263fe0643433cd11869b2b4607083073ddefb5e81bf3c3fe9bc56d07"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00015.npz",
+          "sha256": "abf98fc7de6582bb21c6580343a09234596462e19d2f52c091a5765edc81e2d1"
+        }
+      ]
+    },
+    {
+      "station": "BW_MGS03",
+      "seed_id": "BW.MGS03..HHZ",
+      "valid_samples": 3454374,
+      "total_samples": 3456035,
+      "response_status": "nominal_response_corrected",
+      "source_files": [
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00000.npz",
+          "sha256": "3b594431b8baa24d54e6244ea2438d9909aed1f357ab6d5fea174223c0e791dc"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00001.npz",
+          "sha256": "4826f2c7ccf629a909fce7286231732677123c201c4c01684433fe57b936d4aa"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00002.npz",
+          "sha256": "d8a7b8e0d1e7ab0af0762ce1a351dd306dfffb630295077f98b49d55fd22ab33"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00003.npz",
+          "sha256": "9fb0c6b9fcd82c23d6d8563c5228735d4b79a3cf9b9fd55dc31991db337a1d51"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00004.npz",
+          "sha256": "25904709925554aef9c7399b437bdd0b7b8411c60ce513cc0daa589430b66dd4"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00005.npz",
+          "sha256": "01d775231a1b2840119b626919b649c70e7a19f1123c70213702d25646a455d3"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00006.npz",
+          "sha256": "b9508454920b557259739261954bfdb5f8acbd744323678f862db18f0011726e"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00007.npz",
+          "sha256": "31972473a3ebb712376b464ed62e4b2ec2f8a0fa8779f28541f9555fb2edb857"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00008.npz",
+          "sha256": "786cf7396b56f23ba87151f9bda4812518c116b63083704b2745423ebd9385e0"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00009.npz",
+          "sha256": "91aac380e3d4d35994b9a0197f86d46c235ccdfc3a106d8af0a06940283d1649"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00010.npz",
+          "sha256": "ea94815cf6b28021c8ce9ed236ed6645b06cabda67cbca19d9ac7076af782bd1"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00011.npz",
+          "sha256": "26270110eabf6905f6c8e40e824e8ebd3ba786928c8ab10141e4e1f9e93644d4"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00012.npz",
+          "sha256": "43f86ef1fb051737cc87376210117fc36d482d27120b9940727ffe052f0f8b49"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00013.npz",
+          "sha256": "724f5ebb75772f03c8434a8d1aac9113efd364b0aaf960a29c8dce55932ad357"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00014.npz",
+          "sha256": "4b8866da004be092ffa23465a002250a7a872d7d0e67a43d8d591e54a5b9a2c7"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00015.npz",
+          "sha256": "bd004607fd705b9c3fe20d5820d7af17ad6e337f15d06f40eb7da9e0d8e0a2d8"
+        }
+      ]
+    },
+    {
+      "station": "BW_MGS04",
+      "seed_id": "BW.MGS04..HHZ",
+      "valid_samples": 3454381,
+      "total_samples": 3456035,
+      "response_status": "nominal_response_corrected",
+      "source_files": [
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00000.npz",
+          "sha256": "8bad4959d8f140f1a91e5713ddd0b31b7a41e6b4164c38d3f465ecdc34eaa1c8"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00001.npz",
+          "sha256": "f476cad92a0755656c527df483473b9f8a764edd681db05187064b46bf0461bc"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00002.npz",
+          "sha256": "1eeb934ac15ed71d666a5cd0321df28c6e49e0ab60c1490da0ab7f1ceabea4eb"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00003.npz",
+          "sha256": "c90d0242069642b2fc8d584fbc7a0fbcf69e473ef27a6b760c6b8f67906f2f82"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00004.npz",
+          "sha256": "feffd1447ae82d9ffcfb40e682bfbbc8788089eea311a2038f6fee5203a5eff1"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00005.npz",
+          "sha256": "8c5cfb7f9cdd12aab7fd4b350b58bde1270d35335bd7852d7b9bb6704d4ab1d6"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00006.npz",
+          "sha256": "f36be4611492e6821404d483b0a6ce3d17312f2f7979cd265aca6ff706c10475"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00007.npz",
+          "sha256": "3471515ee87f0dcf8c6fa13694f66933bb91c022a512ef4a3fb8cd8028f373f9"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00008.npz",
+          "sha256": "438b1210c6d2d3cd6b5aa3e8360a17bbdc1b88cf18251dc2af8a75141fb32863"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00009.npz",
+          "sha256": "57d509f0cb76b08c78a6f090e04d33c0e02130f913e0971d5c908978a122fa99"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00010.npz",
+          "sha256": "0afd9faee7378fa9c1fa6fd149cfad26390ea4eef1ff4e53b46cebb9f6cad02d"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00011.npz",
+          "sha256": "f42bc82acd21657a43b2d7be19e47774e9c948e8268e84eee0a7cd36588dddac"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00012.npz",
+          "sha256": "ed031fb6c98e0d25a1089707abcfb35c108aa7ac4a7863859332fe670d3e38e4"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00013.npz",
+          "sha256": "f0d0b426558aa18ecbdf266f72b7ca9078c525bf8c80cc1affae3b550a178e99"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00014.npz",
+          "sha256": "a15a4a459f80dd6fc4289fbf9bcbb976042b0494868e5840386cb37e33e7ffe4"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00015.npz",
+          "sha256": "930ffc59c685e05aa5568db8df4a9e98ec0b241405a501402801e8a16d75ec50"
+        }
+      ]
+    },
+    {
+      "station": "BW_MGS05",
+      "seed_id": "BW.MGS05..HHZ",
+      "valid_samples": 3454369,
+      "total_samples": 3456035,
+      "response_status": "nominal_response_corrected",
+      "source_files": [
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00000.npz",
+          "sha256": "12a777eb3b47eeeedb3457dd2df43a3ca486bd39be4929cc5f7d66a80776b4d9"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00001.npz",
+          "sha256": "c306878bedce350dae9fba19b680b04398af54a2e64c2ca5a6adf564d4241c46"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00002.npz",
+          "sha256": "59ccd989e5fe44d3c7ae1941e78e9cc7c2e2d7758661177b3ae020da4bfb97a5"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00003.npz",
+          "sha256": "10f4a4ec2da8fb46522833454cf080d32a60453fea3b16cf1674fd333f995198"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00004.npz",
+          "sha256": "3c503e4dd3e657fe36bf03cd83eb88a8d0c6442fa6556df847d5d8432b073c56"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00005.npz",
+          "sha256": "a6edfb53ee3325e82c33bcf57841ca0432f03801dd31b682ce01aad98cb3c036"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00006.npz",
+          "sha256": "b59b3e89e8eea47165e1984acc01f099896025fb422de48b000cc8872cd645cf"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00007.npz",
+          "sha256": "b33aed5d419c193f7b47fdeacaf350fcf1b647ac1bc66627a51fd65ae066ceae"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00008.npz",
+          "sha256": "e834e037bac63c34099fa65b9eb1a3df6b7f26cf805eeb2d95623f54d5b80c94"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00009.npz",
+          "sha256": "3f12e71647329ef1dba587be37ec1dea4ed7ac73d8224e1be71182aa4a0595ec"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00010.npz",
+          "sha256": "120a699dbe7d112526e3fdb6ea66c528e70861c928cac34f07867a394a007689"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00011.npz",
+          "sha256": "2de5e1bea79331ea16b360fdc6c19f87f26ccd53705a261def82b058de59f1d3"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00012.npz",
+          "sha256": "7a27194154af1e6b7a64130554dca47b4fa0bc7cff856291314806dd1702e00c"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00013.npz",
+          "sha256": "03fca0dc1add5aebfcf11a8e0aa5efeae01627d7ab5afcd70942d685390a0f83"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00014.npz",
+          "sha256": "bc1e22c425784479f0035bd3c7feba5b02e8bcc3f04612a8296cd477cfc182dc"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00015.npz",
+          "sha256": "af0db88b877c26fb4f19015f0dea8ed3d8e07853809cee1dcf40e3cf5025756a"
+        }
+      ]
+    },
+    {
+      "station": "BW_MGSBH",
+      "seed_id": "BW.MGSBH..HHZ",
+      "valid_samples": 3454395,
+      "total_samples": 3456035,
+      "response_status": "nominal_response_corrected",
+      "source_files": [
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00000.npz",
+          "sha256": "055629316de4f36e42db459cef3e6d1c7fb65cbebab45ee2261a473f4eff4c81"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00001.npz",
+          "sha256": "b375a64fca750978e81bcb727a9362281e9f269e382ee959985dc4ca2366c45c"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00002.npz",
+          "sha256": "7f28b8aaaa9c2f157d06144fae7c05fb2b94f67afa359022db7b383b3530e181"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00003.npz",
+          "sha256": "a8bf4e3f88284d302110b9572868b35e337de48dacdbe31855d8546456240340"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00004.npz",
+          "sha256": "2172067748d50248bed92acf0328e458ac59e7cb421f0aaddda2b1063062c2ab"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00005.npz",
+          "sha256": "5ef6dee44050f4426a20ef77b7c44fa2360213798d0ebb0cae7b6bb19bf74820"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00006.npz",
+          "sha256": "a848443eab2d128b39d21cfaeca6004c946e005c234c8ab42702af8f0a41212e"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00007.npz",
+          "sha256": "c42aeaa289f9d51574bc845a105599fa2793eaafe748f72cecce3b1aa456ce9c"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00008.npz",
+          "sha256": "fbd13e4c807f305d86ca4e143838e31033c440e80db19268dffd5e32cc890bba"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00009.npz",
+          "sha256": "80b425886891e6b1d1a21365c27c4c536c6a447b8dcf48508c153d3f8b849a32"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00010.npz",
+          "sha256": "1e711d3acd31d4d731153a18442e9e53ac56aa6cb5901e3b94b6e44c090e80d4"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00011.npz",
+          "sha256": "16e372a7825509d9104114c7aeb9e31746159cfe7766e9be9072a4b0b441873c"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00012.npz",
+          "sha256": "b7cf4d270aa40a1051fe645b976feb3d78590a7372958a3aac7d0aed31838ef0"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00013.npz",
+          "sha256": "ad3b7e6c0de432a1170b89bd8eef898e3c8c46281760df3a58ee221a72f2c95a"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00014.npz",
+          "sha256": "eb13a0d1bc0c9bc1893bdcc8bcb8c575c758f8e865068b026361599bffb8bea1"
+        },
+        {
+          "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00015.npz",
+          "sha256": "26695a365c775f1ff0b5c5eacf4b7817c249d987a486a358f5427072dd1383cd"
+        }
+      ]
+    }
+  ],
+  "warnings": [
+    "Prior-guided gates do not independently identify the absolute cycle or Rayleigh mode.",
+    "Derived group velocities are not independent observations."
+  ]
+}

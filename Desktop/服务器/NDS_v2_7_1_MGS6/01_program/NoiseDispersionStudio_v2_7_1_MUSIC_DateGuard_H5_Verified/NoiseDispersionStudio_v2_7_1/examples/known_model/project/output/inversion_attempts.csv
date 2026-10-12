@@ -1,0 +1,6 @@
+case,finite_layers,attempt,optimizer_status,evaluations,accepted,reason,phase_weighted_rms_fraction,phase_max_fraction,maximum_group_median_fraction,model_id,independent_max_difference_m_s
+KNOWN_FUNDAMENTAL,1,0,1,12,True,conditional_compatible,7.522674959365658e-07,1.5309498813120825e-06,1.2051392578205089e-05,M00001,0.0007891379839293222
+KNOWN_FUNDAMENTAL,1,1,1,12,False,duplicate_structure,7.125989093168651e-07,1.5183698149900948e-06,1.2016919634261214e-05,,
+KNOWN_FUNDAMENTAL,1,2,3,10,False,duplicate_structure,7.951237720941413e-07,1.2071070782937454e-06,1.2002420735623964e-05,,
+KNOWN_FUNDAMENTAL,1,3,3,10,False,duplicate_structure,7.216238076530337e-07,1.0778226311458639e-06,1.2276626592977458e-05,,
+KNOWN_FUNDAMENTAL,1,4,3,11,False,duplicate_structure,7.094933807914777e-07,1.9122002437033103e-06,1.2195714164775495e-05,,

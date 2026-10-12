@@ -1,0 +1,14 @@
+{
+  "cases": 1,
+  "compatible_models": 1,
+  "independent_solver_available": true,
+  "unique_structure_identified": false,
+  "observed_and_predicted_points_separate": true,
+  "missing_roots_not_filled": true,
+  "frequency_samples_not_treated_as_independent": true,
+  "selection_sha256": "915dc4a185f09879974cb9d02770ce1290ce04783bebf682c20378ffa14b927c",
+  "studio_code_sha256": "bdb8ac275503e4e3268494d3d14d0bd434dee97353c2668b5552e42fd690e745",
+  "input_curve_file": "external_curves.csv",
+  "input_curve_sha256": "a971d0902c3cdc92577be3255e7d662611bf9a1c96bb3bb34278005d8c01d8bf",
+  "project_config_sha256": "63aea532cec9f0e403990ed32f20d3092a1dd31e9541d812dc05f772d1f90ca9"
+}

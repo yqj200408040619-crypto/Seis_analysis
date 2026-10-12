@@ -1,0 +1,46 @@
+{
+  "tests": {
+    "tests": 130,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 12,
+    "passed": 118
+  },
+  "phase_audit": {
+    "pass_audit": true,
+    "gates_checked": 15,
+    "waveform_cross_recomputed": 45,
+    "accepted_window_evaluations": 59561,
+    "valid_window_evaluations": 1584557,
+    "max_recomputed_phase_error_rad": 4.163336342344337e-17,
+    "module_sha256": "2593b75fcc61b0727d4422636997e47af56c9931ff054b452c3bb70b55dc08da",
+    "aligned_h5_sha256": "3fd8de6a5f0cbfd6090ee0bdb7a7b05e53f2d595e3403249462c7712827d7cc7"
+  },
+  "velocity_audit": {
+    "unique_gate_files_checked": 15,
+    "maximum_final_phase_error_deg": 2.5444437451708134e-14,
+    "raw_inverse_roundtrip_error_deg": 7.389644451905042e-13,
+    "unit_inverse_roundtrip_error_deg": 7.958078640513122e-13,
+    "curve_frequency_rows": 135,
+    "unique_segment_frequencies": 15,
+    "original_constant_cycles_preserved": true,
+    "source_phase_deg": 45.0,
+    "sources": {
+      "phase_stack_summary.csv": "b38d9cf8e486b12e59f5c75b2c9fce7f6046ed2cf25a94ce9edb2181953a97d1",
+      "selected_phase_targets.csv": "fcbdf1bb089792c43ffe073e1e39b34e06315e8e09aa15c028f2e5d17636d973"
+    },
+    "module_sha256": "0c00046cfeda01f041c6edcc237db31cc46e029cc77446810b115772d925cbcd",
+    "start_utc": "2020-11-01T00:00:00.000000000Z",
+    "end_utc_exclusive": "2020-11-05T00:00:00.000000000Z",
+    "conditional_comparison_not_independent_validation": true
+  },
+  "original_outputs_unchanged": {
+    "conditional_dispersion.csv": true,
+    "measured_phase_segments.csv": true,
+    "pairs.csv": true,
+    "conditional_models.json": true,
+    "selected_observed_dispersion.csv": true,
+    "structure_layers.csv": true
+  },
+  "gui_offscreen_buttons_checked": true
+}

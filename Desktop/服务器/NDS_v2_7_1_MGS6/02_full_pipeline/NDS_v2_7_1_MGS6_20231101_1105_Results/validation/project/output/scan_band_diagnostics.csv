@@ -1,0 +1,20 @@
+rank,gate_id,cohort,pair,branch,fmin_hz,fmax_hz,points,bandwidth_hz,required_points,required_bandwidth_hz,passes_minimum_points,passes_minimum_bandwidth,all_point_checks_pass,accepted_continuous_band,reason
+1,P00038,night,BW_MGS05--BW_MGSBH,positive,0.42,0.565,30,0.14499999999999996,8,0.05,True,True,True,True,通过连续频段条件
+2,P00033,night,BW_MGS03--BW_MGS04,negative,0.54,0.635,20,0.09499999999999997,8,0.05,True,True,True,True,通过连续频段条件
+3,P00050,day,BW_MGS05--BW_MGSBH,positive,0.44,0.495,12,0.05499999999999999,8,0.05,True,True,True,True,通过连续频段条件
+4,P00023,all,BW_MGS05--BW_MGSBH,positive,0.43,0.48,11,0.04999999999999999,8,0.05,True,True,True,True,通过连续频段条件
+5,P00004,all,BW_MGS01--BW_MGS04,positive,0.24,0.285,10,0.044999999999999984,8,0.05,True,False,True,False,带宽不足(0.045<0.050 Hz)
+6,P00031,night,BW_MGS02--BW_MGS04,positive,0.15,0.185,8,0.035,8,0.05,True,False,True,False,带宽不足(0.035<0.050 Hz)
+7,P00026,night,BW_MGS01--BW_MGS04,positive,0.25,0.285,8,0.034999999999999976,8,0.05,True,False,True,False,带宽不足(0.035<0.050 Hz)
+8,P00010,all,BW_MGS02--BW_MGS04,positive,0.165,0.19,6,0.024999999999999994,8,0.05,False,False,True,False,点数不足(6<8)；带宽不足(0.025<0.050 Hz)
+9,P00023,all,BW_MGS05--BW_MGSBH,positive,0.54,0.56,5,0.020000000000000018,8,0.05,False,False,True,False,点数不足(5<8)；带宽不足(0.020<0.050 Hz)
+10,P00027,night,BW_MGS01--BW_MGS05,negative,0.595,0.615,5,0.020000000000000018,8,0.05,False,False,True,False,点数不足(5<8)；带宽不足(0.020<0.050 Hz)
+11,P00044,day,BW_MGS02--BW_MGS04,positive,0.17,0.19,5,0.01999999999999999,8,0.05,False,False,True,False,点数不足(5<8)；带宽不足(0.020<0.050 Hz)
+12,P00005,all,BW_MGS01--BW_MGS05,negative,0.595,0.61,4,0.015000000000000013,8,0.05,False,False,True,False,点数不足(4<8)；带宽不足(0.015<0.050 Hz)
+13,P00023,all,BW_MGS05--BW_MGSBH,positive,0.4,0.415,4,0.014999999999999958,8,0.05,False,False,True,False,点数不足(4<8)；带宽不足(0.015<0.050 Hz)
+14,P00024,night,BW_MGS01--BW_MGS02,positive,0.26,0.27,3,0.010000000000000009,8,0.05,False,False,True,False,点数不足(3<8)；带宽不足(0.010<0.050 Hz)
+15,P00003,all,BW_MGS01--BW_MGS04,positive,0.15,0.155,2,0.0050000000000000044,8,0.05,False,False,True,False,点数不足(2<8)；带宽不足(0.005<0.050 Hz)
+16,P00034,night,BW_MGS03--BW_MGS05,negative,0.345,0.35,2,0.0050000000000000044,8,0.05,False,False,True,False,点数不足(2<8)；带宽不足(0.005<0.050 Hz)
+17,P00034,night,BW_MGS03--BW_MGS05,negative,0.37,0.375,2,0.0050000000000000044,8,0.05,False,False,True,False,点数不足(2<8)；带宽不足(0.005<0.050 Hz)
+18,P00038,night,BW_MGS05--BW_MGSBH,positive,0.6,0.605,2,0.0050000000000000044,8,0.05,False,False,True,False,点数不足(2<8)；带宽不足(0.005<0.050 Hz)
+19,P00003,all,BW_MGS01--BW_MGS04,positive,0.21,0.21,1,0.0,8,0.05,False,False,True,False,点数不足(1<8)；带宽不足(0.000<0.050 Hz)

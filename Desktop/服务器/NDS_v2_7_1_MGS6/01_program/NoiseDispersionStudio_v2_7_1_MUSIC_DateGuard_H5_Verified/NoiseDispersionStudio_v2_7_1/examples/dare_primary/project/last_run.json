@@ -1,0 +1,10 @@
+{
+  "stages": [
+    {
+      "stage": "report",
+      "status": "complete",
+      "elapsed_s": 1.0104150772094727
+    }
+  ],
+  "all_requested_stages_complete": true
+}

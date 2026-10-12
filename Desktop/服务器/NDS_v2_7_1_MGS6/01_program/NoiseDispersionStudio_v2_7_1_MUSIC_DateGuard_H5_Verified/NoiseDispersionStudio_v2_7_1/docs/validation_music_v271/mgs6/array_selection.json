@@ -1,0 +1,253 @@
+{
+  "schema": "ndstudio.array_selection/1",
+  "provider": "https://erde.geophysik.uni-muenchen.de",
+  "network": "BW",
+  "start_utc": "2022-11-01T00:00:00.000000Z",
+  "end_utc": "2022-11-05T00:00:00.000000Z",
+  "anchor_seed_id": "BW.MGS01..HHZ",
+  "constraints": {
+    "station_count": 6,
+    "minimum_station_count": 6,
+    "maximum_station_count": 49,
+    "minimum_nearest_neighbor_m": 1000.0,
+    "maximum_nearest_neighbor_m": 15000.0,
+    "maximum_pair_distance_m": 30000.0
+  },
+  "metadata_rows_queried": 6,
+  "eligible_stations": 6,
+  "station_pattern": "MGS*",
+  "station_filters": {
+    "station_prefix": "",
+    "minlatitude": null,
+    "maxlatitude": null,
+    "minlongitude": null,
+    "maxlongitude": null
+  },
+  "matching_station_catalog": [
+    {
+      "network": "BW",
+      "station": "MGS01",
+      "latitude": 48.0675,
+      "longitude": 11.51006,
+      "channels": "HHZ",
+      "seed_ids": "BW.MGS01..HHZ",
+      "sample_rates_hz": "200.0",
+      "channel_epoch_count": 1,
+      "coordinate_conflict": false,
+      "start_utc": "2018-02-14T08:00:00.000000Z",
+      "end_utc": ""
+    },
+    {
+      "network": "BW",
+      "station": "MGS02",
+      "latitude": 48.07788,
+      "longitude": 11.58795,
+      "channels": "HHZ",
+      "seed_ids": "BW.MGS02..HHZ",
+      "sample_rates_hz": "200.0",
+      "channel_epoch_count": 1,
+      "coordinate_conflict": false,
+      "start_utc": "2020-10-20T07:30:00.000000Z",
+      "end_utc": ""
+    },
+    {
+      "network": "BW",
+      "station": "MGS03",
+      "latitude": 48.070885,
+      "longitude": 11.707375,
+      "channels": "HHZ",
+      "seed_ids": "BW.MGS03..HHZ",
+      "sample_rates_hz": "200.0",
+      "channel_epoch_count": 1,
+      "coordinate_conflict": false,
+      "start_utc": "2017-12-21T11:00:00.000000Z",
+      "end_utc": "2023-07-27T10:00:00.000000Z"
+    },
+    {
+      "network": "BW",
+      "station": "MGS04",
+      "latitude": 47.97956,
+      "longitude": 11.7191,
+      "channels": "HHZ",
+      "seed_ids": "BW.MGS04..HHZ",
+      "sample_rates_hz": "200.0",
+      "channel_epoch_count": 1,
+      "coordinate_conflict": false,
+      "start_utc": "2018-04-11T07:30:00.000000Z",
+      "end_utc": ""
+    },
+    {
+      "network": "BW",
+      "station": "MGS05",
+      "latitude": 48.0,
+      "longitude": 11.5171,
+      "channels": "HHZ",
+      "seed_ids": "BW.MGS05..HHZ",
+      "sample_rates_hz": "200.0",
+      "channel_epoch_count": 1,
+      "coordinate_conflict": false,
+      "start_utc": "2018-10-30T13:45:08.100000Z",
+      "end_utc": "2025-10-02T09:00:00.000000Z"
+    },
+    {
+      "network": "BW",
+      "station": "MGSBH",
+      "latitude": 48.03025,
+      "longitude": 11.6389,
+      "channels": "HHZ",
+      "seed_ids": "BW.MGSBH..HHZ",
+      "sample_rates_hz": "200.0",
+      "channel_epoch_count": 1,
+      "coordinate_conflict": false,
+      "start_utc": "2022-07-04T12:00:00.000000Z",
+      "end_utc": "2022-11-29T09:00:00.000000Z"
+    }
+  ],
+  "channel_filter": "HHZ",
+  "rejected_metadata": [],
+  "geometry": {
+    "stations": 6,
+    "stations_with_coordinates": 6,
+    "missing_coordinates": 0,
+    "coordinate_conflicts": [],
+    "mean_nearest_neighbor_m": 6819.172694184053,
+    "mean_pair_distance_m": 10911.979945906816,
+    "min_pair_distance_m": 5918.036016863625,
+    "max_pair_distance_m": 18404.891528370834,
+    "coincident_pair_count": 0,
+    "spacing_definition": "mean nearest-neighbour WGS84 surface distance",
+    "points": [
+      [
+        "BW",
+        "MGS01",
+        48.0675,
+        11.51006,
+        580.0
+      ],
+      [
+        "BW",
+        "MGS02",
+        48.07788,
+        11.58795,
+        554.0
+      ],
+      [
+        "BW",
+        "MGS03",
+        48.070885,
+        11.707375,
+        560.0
+      ],
+      [
+        "BW",
+        "MGS04",
+        47.97956,
+        11.7191,
+        609.0
+      ],
+      [
+        "BW",
+        "MGS05",
+        48.0,
+        11.5171,
+        646.0
+      ],
+      [
+        "BW",
+        "MGSBH",
+        48.03025,
+        11.6389,
+        573.0
+      ]
+    ],
+    "nearest_neighbor_m": {
+      "BW.MGS01": 5918.036016863625,
+      "BW.MGS02": 5918.036016863625,
+      "BW.MGS03": 6817.288962268096,
+      "BW.MGS04": 8220.71096772674,
+      "BW.MGS05": 7523.731848884201,
+      "BW.MGSBH": 6517.232352498032
+    }
+  },
+  "stations": [
+    {
+      "network": "BW",
+      "station": "MGS01",
+      "location": "",
+      "channel": "HHZ",
+      "sample_rate": 200.0,
+      "latitude": 48.0675,
+      "longitude": 11.51006,
+      "start": "2018-02-14T08:00:00.000000Z",
+      "end": null,
+      "elevation": 580.0,
+      "sensor": "Trillium Compact, 120 s, 754 V/m/s-Centaur, 10 vpp"
+    },
+    {
+      "network": "BW",
+      "station": "MGS02",
+      "location": "",
+      "channel": "HHZ",
+      "sample_rate": 200.0,
+      "latitude": 48.07788,
+      "longitude": 11.58795,
+      "start": "2020-10-20T07:30:00.000000Z",
+      "end": null,
+      "elevation": 554.0,
+      "sensor": "Nanometrics; TrilliumCompact120; Sensitivity 754 V/m/s; Long-Period_Corner 120 s; Sensor_Type groundVel"
+    },
+    {
+      "network": "BW",
+      "station": "MGS03",
+      "location": "",
+      "channel": "HHZ",
+      "sample_rate": 200.0,
+      "latitude": 48.070885,
+      "longitude": 11.707375,
+      "start": "2017-12-21T11:00:00.000000Z",
+      "end": "2023-07-27T10:00:00.000000Z",
+      "elevation": 560.0,
+      "sensor": "broadband seismometer"
+    },
+    {
+      "network": "BW",
+      "station": "MGS04",
+      "location": "",
+      "channel": "HHZ",
+      "sample_rate": 200.0,
+      "latitude": 47.97956,
+      "longitude": 11.7191,
+      "start": "2018-04-11T07:30:00.000000Z",
+      "end": null,
+      "elevation": 609.0,
+      "sensor": "Nanometrics; TrilliumHorizon120; Long-Period_Corner 120 s; Sensitivity 1203 V/m/s; Sensor_Type groundVel"
+    },
+    {
+      "network": "BW",
+      "station": "MGS05",
+      "location": "",
+      "channel": "HHZ",
+      "sample_rate": 200.0,
+      "latitude": 48.0,
+      "longitude": 11.5171,
+      "start": "2018-10-30T13:45:08.100000Z",
+      "end": "2025-10-02T09:00:00.000000Z",
+      "elevation": 646.0,
+      "sensor": "Nanometrics; TrilliumCompact120; Sensitivity 754 V/m/s; Long-Period_Corner 120 s; Sensor_Type groundVel"
+    },
+    {
+      "network": "BW",
+      "station": "MGSBH",
+      "location": "",
+      "channel": "HHZ",
+      "sample_rate": 200.0,
+      "latitude": 48.03025,
+      "longitude": 11.6389,
+      "start": "2022-07-04T12:00:00.000000Z",
+      "end": "2022-11-29T09:00:00.000000Z",
+      "elevation": 573.0,
+      "sensor": "Nanometrics; TrilliumCompact20; Long-Period_Corner 20 s; Sensitivity 753 V/m/s; Sensor_Type groundVel"
+    }
+  ],
+  "selection_uses_waveforms_or_previous_curves": false
+}

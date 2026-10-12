@@ -1,0 +1,30 @@
+{
+  "curve_ids": [
+    "P00033_b1_S0_N2",
+    "P00038_b1_S0_N1",
+    "P00038_b1_S0_N2"
+  ],
+  "repeat_cycles": 200.0,
+  "slide_cycles": 200.0,
+  "taper": "hann",
+  "frequency_method": "exact",
+  "screening_mode": "curve",
+  "tolerance_deg": 15.0,
+  "monotonic_only": true,
+  "direction": {
+    "mode": "filter",
+    "max_pair_angle_deg": 45.0,
+    "direction_step_deg": 2.0,
+    "velocity_points": 128,
+    "velocity_min_m_s": 200.0,
+    "velocity_max_m_s": 5000.0,
+    "frequency_half_width_hz": 0.0,
+    "frequency_bins": 1,
+    "music_front_cycles": 200.0
+  },
+  "reconstruction": {
+    "enabled": true,
+    "lower_frequency_hz": 0.08,
+    "step_hz": 0.01
+  }
+}

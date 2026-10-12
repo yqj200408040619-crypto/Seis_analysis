@@ -1,0 +1,10 @@
+{
+  "type": "controlled broadband spectral example, not seismic full-wavefield simulation",
+  "designed_peak_hz": 3.0,
+  "conditional_example_vs_m_s": 240.0,
+  "conditional_example_depth_m": 20.0,
+  "injected_bad_windows": [
+    4,
+    12
+  ]
+}

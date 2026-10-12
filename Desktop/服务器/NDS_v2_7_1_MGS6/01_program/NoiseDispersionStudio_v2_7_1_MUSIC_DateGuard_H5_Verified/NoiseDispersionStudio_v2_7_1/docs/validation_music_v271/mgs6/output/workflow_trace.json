@@ -1,0 +1,24 @@
+{
+  "run_id": "20261011T224657_4de24682",
+  "complete": true,
+  "elapsed_s": 1.5569868087768555,
+  "stages": [
+    {
+      "stage": "report",
+      "status": "complete",
+      "parameters": {
+        "config_sha256": "74735d4a26943821a0b30a09dd9d57ad465055f653ec914133f426fcba550adf"
+      },
+      "results": {
+        "报告文件": [
+          "/workspace/scratch/f6601b903c79/mgs6/project/output/studio_report.html",
+          "/workspace/scratch/f6601b903c79/mgs6/project/output/report.html",
+          "/workspace/scratch/f6601b903c79/mgs6/project/output/studio_summary.json"
+        ]
+      },
+      "elapsed_s": 1.5546495914459229
+    }
+  ],
+  "settings_file": "workflow_settings_used.json",
+  "log_file": "workflow_processing.log"
+}

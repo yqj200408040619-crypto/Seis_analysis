@@ -1,0 +1,7 @@
+{
+  "scheduled_windows": 287,
+  "accepted_windows": 96,
+  "discarded_common_first_s": 600.0,
+  "filter_guard_s": 60.0,
+  "common_utc_aligned": true
+}

@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "input_folder": "/workspace/scratch/f6601b903c79/mgs6/download",
+  "excluded_stations": [],
+  "name": "project",
+  "automatic_geometry": true,
+  "exclude_increasing_velocity": true
+}

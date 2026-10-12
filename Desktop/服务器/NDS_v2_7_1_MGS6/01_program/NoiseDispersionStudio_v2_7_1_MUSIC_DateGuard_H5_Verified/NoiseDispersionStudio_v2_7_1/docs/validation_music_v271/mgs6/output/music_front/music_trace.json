@@ -1,0 +1,2587 @@
+{
+  "run_id": "20261011T224104_4075792e",
+  "complete": true,
+  "elapsed_s": 97.03870248794556,
+  "stages": [
+    {
+      "stage": "方向估计 0.15 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.15,
+        "windows": 260,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 1333.3,
+        "hop_s": 1333.3,
+        "frequency_bins_hz": [
+          0.15
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.0026250656266406662,
+        "frequency_hz": 0.15,
+        "actual_frequency_hz": 0.15,
+        "total_windows": 260,
+        "quality_windows": 41,
+        "cache_reused": false,
+        "median_velocity_m_s": 2876.7063613544133,
+        "reasons": {
+          "通过": 41,
+          "有效台站不足": 17,
+          "阵列相干度不足": 15,
+          "多波源窗不能唯一修正单一方向和速度": 183,
+          "MUSIC未识别出信号子空间": 4
+        }
+      },
+      "elapsed_s": 2.050614833831787
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.15 Hz · 阵列合格41/260窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:41:08.536803+00:00"
+    },
+    {
+      "stage": "方向估计 0.155 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.155,
+        "windows": 268,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 1290.3,
+        "hop_s": 1290.3,
+        "frequency_bins_hz": [
+          0.155
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.0027125474695807177,
+        "frequency_hz": 0.155,
+        "actual_frequency_hz": 0.155,
+        "total_windows": 268,
+        "quality_windows": 38,
+        "cache_reused": false,
+        "median_velocity_m_s": 2942.7175066130744,
+        "reasons": {
+          "通过": 38,
+          "存在近等强的分离峰": 2,
+          "有效台站不足": 17,
+          "阵列相干度不足": 23,
+          "多波源窗不能唯一修正单一方向和速度": 183,
+          "MUSIC未识别出信号子空间": 5
+        }
+      },
+      "elapsed_s": 2.382997512817383
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.155 Hz · 阵列合格38/268窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:41:10.932795+00:00"
+    },
+    {
+      "stage": "方向估计 0.16 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.16,
+        "windows": 277,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 1250.0,
+        "hop_s": 1250.0,
+        "frequency_bins_hz": [
+          0.16
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.0028,
+        "frequency_hz": 0.16,
+        "actual_frequency_hz": 0.16,
+        "total_windows": 277,
+        "quality_windows": 27,
+        "cache_reused": false,
+        "median_velocity_m_s": 2861.263408711334,
+        "reasons": {
+          "通过": 27,
+          "有效台站不足": 17,
+          "阵列孔径与频率要求更细扫描网格": 1,
+          "阵列相干度不足": 24,
+          "多波源窗不能唯一修正单一方向和速度": 203,
+          "MUSIC未识别出信号子空间": 5
+        }
+      },
+      "elapsed_s": 2.3815863132476807
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.16 Hz · 阵列合格27/277窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:41:13.339953+00:00"
+    },
+    {
+      "stage": "方向估计 0.165 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.165,
+        "windows": 286,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 1212.1,
+        "hop_s": 1212.1,
+        "frequency_bins_hz": [
+          0.165
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.0028875505321343123,
+        "frequency_hz": 0.165,
+        "actual_frequency_hz": 0.165,
+        "total_windows": 286,
+        "quality_windows": 21,
+        "cache_reused": false,
+        "median_velocity_m_s": 2829.1546517285,
+        "reasons": {
+          "通过": 21,
+          "存在近等强的分离峰": 1,
+          "有效台站不足": 17,
+          "阵列相干度不足": 29,
+          "多波源窗不能唯一修正单一方向和速度": 208,
+          "MUSIC未识别出信号子空间": 10
+        }
+      },
+      "elapsed_s": 2.334439277648926
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.165 Hz · 阵列合格21/286窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:41:15.690285+00:00"
+    },
+    {
+      "stage": "方向估计 0.17 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.17,
+        "windows": 294,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 1176.5,
+        "hop_s": 1176.5,
+        "frequency_bins_hz": [
+          0.17
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.0029749256268593286,
+        "frequency_hz": 0.17,
+        "actual_frequency_hz": 0.17,
+        "total_windows": 294,
+        "quality_windows": 20,
+        "cache_reused": false,
+        "median_velocity_m_s": 2700.510382157974,
+        "reasons": {
+          "通过": 20,
+          "有效台站不足": 17,
+          "阵列孔径与频率要求更细扫描网格": 2,
+          "阵列相干度不足": 35,
+          "多波源窗不能唯一修正单一方向和速度": 200,
+          "MUSIC未识别出信号子空间": 20
+        }
+      },
+      "elapsed_s": 2.268808364868164
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.17 Hz · 阵列合格20/294窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:41:17.977809+00:00"
+    },
+    {
+      "stage": "方向估计 0.175 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.175,
+        "windows": 303,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 1142.9,
+        "hop_s": 1142.9,
+        "frequency_bins_hz": [
+          0.175
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.003062385160556479,
+        "frequency_hz": 0.175,
+        "actual_frequency_hz": 0.175,
+        "total_windows": 303,
+        "quality_windows": 17,
+        "cache_reused": false,
+        "median_velocity_m_s": 2819.7847797968857,
+        "reasons": {
+          "通过": 17,
+          "有效台站不足": 17,
+          "阵列孔径与频率要求更细扫描网格": 1,
+          "阵列相干度不足": 65,
+          "多波源窗不能唯一修正单一方向和速度": 184,
+          "MUSIC未识别出信号子空间": 19
+        }
+      },
+      "elapsed_s": 1.9005045890808105
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.175 Hz · 阵列合格17/303窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:41:19.893969+00:00"
+    },
+    {
+      "stage": "方向估计 0.18 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.18,
+        "windows": 312,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 1111.1,
+        "hop_s": 1111.1,
+        "frequency_bins_hz": [
+          0.18
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.003150031500315003,
+        "frequency_hz": 0.18,
+        "actual_frequency_hz": 0.18,
+        "total_windows": 312,
+        "quality_windows": 19,
+        "cache_reused": false,
+        "median_velocity_m_s": 2745.967153639062,
+        "reasons": {
+          "通过": 19,
+          "有效台站不足": 18,
+          "阵列相干度不足": 60,
+          "多波源窗不能唯一修正单一方向和速度": 180,
+          "MUSIC未识别出信号子空间": 35
+        }
+      },
+      "elapsed_s": 1.9218392372131348
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.18 Hz · 阵列合格19/312窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:41:21.831067+00:00"
+    },
+    {
+      "stage": "方向估计 0.185 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.185,
+        "windows": 320,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 1081.1,
+        "hop_s": 1081.1,
+        "frequency_bins_hz": [
+          0.185
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.003237443344741467,
+        "frequency_hz": 0.185,
+        "actual_frequency_hz": 0.185,
+        "total_windows": 320,
+        "quality_windows": 16,
+        "cache_reused": false,
+        "median_velocity_m_s": 2554.916990189956,
+        "reasons": {
+          "通过": 16,
+          "有效台站不足": 17,
+          "阵列孔径与频率要求更细扫描网格": 2,
+          "阵列相干度不足": 79,
+          "多波源窗不能唯一修正单一方向和速度": 171,
+          "MUSIC未识别出信号子空间": 35
+        }
+      },
+      "elapsed_s": 1.8908734321594238
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.185 Hz · 阵列合格16/320窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:41:23.739456+00:00"
+    },
+    {
+      "stage": "方向估计 0.19 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.19,
+        "windows": 329,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 1052.6,
+        "hop_s": 1052.6,
+        "frequency_bins_hz": [
+          0.19
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.00332509975299259,
+        "frequency_hz": 0.19,
+        "actual_frequency_hz": 0.19,
+        "total_windows": 329,
+        "quality_windows": 12,
+        "cache_reused": false,
+        "median_velocity_m_s": 2797.5550357875136,
+        "reasons": {
+          "通过": 12,
+          "有效台站不足": 17,
+          "阵列相干度不足": 84,
+          "多波源窗不能唯一修正单一方向和速度": 169,
+          "MUSIC未识别出信号子空间": 47
+        }
+      },
+      "elapsed_s": 1.9475429058074951
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.19 Hz · 阵列合格12/329窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:41:25.701771+00:00"
+    },
+    {
+      "stage": "方向估计 0.195 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.195,
+        "windows": 337,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 1025.6,
+        "hop_s": 1025.6,
+        "frequency_bins_hz": [
+          0.195
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.0034126365054602185,
+        "frequency_hz": 0.195,
+        "actual_frequency_hz": 0.195,
+        "total_windows": 337,
+        "quality_windows": 15,
+        "cache_reused": false,
+        "median_velocity_m_s": 2581.6441788281495,
+        "reasons": {
+          "通过": 15,
+          "有效台站不足": 17,
+          "阵列相干度不足": 102,
+          "多波源窗不能唯一修正单一方向和速度": 135,
+          "MUSIC未识别出信号子空间": 68
+        }
+      },
+      "elapsed_s": 1.9073514938354492
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.195 Hz · 阵列合格15/337窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:41:27.624120+00:00"
+    },
+    {
+      "stage": "方向估计 0.2 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.2,
+        "windows": 346,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 1000.0,
+        "hop_s": 1000.0,
+        "frequency_bins_hz": [
+          0.2
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.0035,
+        "frequency_hz": 0.2,
+        "actual_frequency_hz": 0.2,
+        "total_windows": 346,
+        "quality_windows": 7,
+        "cache_reused": false,
+        "median_velocity_m_s": 1761.9328190303925,
+        "reasons": {
+          "通过": 7,
+          "有效台站不足": 20,
+          "阵列孔径与频率要求更细扫描网格": 3,
+          "阵列相干度不足": 102,
+          "多波源窗不能唯一修正单一方向和速度": 110,
+          "MUSIC未识别出信号子空间": 104
+        }
+      },
+      "elapsed_s": 1.7374935150146484
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.2 Hz · 阵列合格7/346窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:41:29.379137+00:00"
+    },
+    {
+      "stage": "方向估计 0.205 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.205,
+        "windows": 355,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 975.6,
+        "hop_s": 975.6,
+        "frequency_bins_hz": [
+          0.205
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.0035875358753587536,
+        "frequency_hz": 0.205,
+        "actual_frequency_hz": 0.205,
+        "total_windows": 355,
+        "quality_windows": 3,
+        "cache_reused": false,
+        "median_velocity_m_s": 1540.1801943359749,
+        "reasons": {
+          "通过": 3,
+          "有效台站不足": 17,
+          "阵列相干度不足": 96,
+          "多波源窗不能唯一修正单一方向和速度": 102,
+          "MUSIC未识别出信号子空间": 137
+        }
+      },
+      "elapsed_s": 1.7420625686645508
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.205 Hz · 阵列合格3/355窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:41:31.136366+00:00"
+    },
+    {
+      "stage": "方向估计 0.21 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.21,
+        "windows": 363,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 952.4,
+        "hop_s": 952.4,
+        "frequency_bins_hz": [
+          0.21
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.003674926501469971,
+        "frequency_hz": 0.21,
+        "actual_frequency_hz": 0.21,
+        "total_windows": 363,
+        "quality_windows": 2,
+        "cache_reused": false,
+        "median_velocity_m_s": 2689.565597933234,
+        "reasons": {
+          "通过": 2,
+          "存在近等强的分离峰": 1,
+          "有效台站不足": 17,
+          "阵列相干度不足": 86,
+          "多波源窗不能唯一修正单一方向和速度": 108,
+          "MUSIC未识别出信号子空间": 149
+        }
+      },
+      "elapsed_s": 1.8596038818359375
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.21 Hz · 阵列合格2/363窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:41:33.010826+00:00"
+    },
+    {
+      "stage": "方向估计 0.24 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.24,
+        "windows": 415,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 833.3,
+        "hop_s": 833.3,
+        "frequency_bins_hz": [
+          0.24
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.004200168006720269,
+        "frequency_hz": 0.24,
+        "actual_frequency_hz": 0.24,
+        "total_windows": 415,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 67,
+          "多波源窗不能唯一修正单一方向和速度": 71,
+          "MUSIC未识别出信号子空间": 260
+        }
+      },
+      "elapsed_s": 1.4994254112243652
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.24 Hz · 阵列合格0/415窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:41:34.524274+00:00"
+    },
+    {
+      "stage": "方向估计 0.245 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.245,
+        "windows": 424,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 816.3,
+        "hop_s": 816.3,
+        "frequency_bins_hz": [
+          0.245
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.004287639348278819,
+        "frequency_hz": 0.245,
+        "actual_frequency_hz": 0.245,
+        "total_windows": 424,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 79,
+          "多波源窗不能唯一修正单一方向和速度": 75,
+          "MUSIC未识别出信号子空间": 253
+        }
+      },
+      "elapsed_s": 1.5387532711029053
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.245 Hz · 阵列合格0/424窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:41:36.076280+00:00"
+    },
+    {
+      "stage": "方向估计 0.25 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.25,
+        "windows": 433,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 800.0,
+        "hop_s": 800.0,
+        "frequency_bins_hz": [
+          0.25
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.004375,
+        "frequency_hz": 0.25,
+        "actual_frequency_hz": 0.25,
+        "total_windows": 433,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 33,
+          "阵列相干度不足": 72,
+          "多波源窗不能唯一修正单一方向和速度": 52,
+          "MUSIC未识别出信号子空间": 276
+        }
+      },
+      "elapsed_s": 1.4022088050842285
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.25 Hz · 阵列合格0/433窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:41:37.491529+00:00"
+    },
+    {
+      "stage": "方向估计 0.255 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.255,
+        "windows": 441,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 784.3,
+        "hop_s": 784.3,
+        "frequency_bins_hz": [
+          0.255
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.004462578095116665,
+        "frequency_hz": 0.255,
+        "actual_frequency_hz": 0.255,
+        "total_windows": 441,
+        "quality_windows": 1,
+        "cache_reused": false,
+        "median_velocity_m_s": 611.7274603429696,
+        "reasons": {
+          "通过": 1,
+          "有效台站不足": 17,
+          "阵列相干度不足": 67,
+          "多波源窗不能唯一修正单一方向和速度": 60,
+          "MUSIC未识别出信号子空间": 296
+        }
+      },
+      "elapsed_s": 1.463245153427124
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.255 Hz · 阵列合格1/441窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:41:38.969600+00:00"
+    },
+    {
+      "stage": "方向估计 0.26 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.26,
+        "windows": 450,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 769.2,
+        "hop_s": 769.2,
+        "frequency_bins_hz": [
+          0.26
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.004550182007280291,
+        "frequency_hz": 0.26,
+        "actual_frequency_hz": 0.26,
+        "total_windows": 450,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 72,
+          "多波源窗不能唯一修正单一方向和速度": 57,
+          "MUSIC未识别出信号子空间": 304
+        }
+      },
+      "elapsed_s": 1.4935674667358398
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.26 Hz · 阵列合格0/450窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:41:40.478581+00:00"
+    },
+    {
+      "stage": "方向估计 0.265 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.265,
+        "windows": 458,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 754.7,
+        "hop_s": 754.7,
+        "frequency_bins_hz": [
+          0.265
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.004637604346097788,
+        "frequency_hz": 0.265,
+        "actual_frequency_hz": 0.265,
+        "total_windows": 458,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 51,
+          "多波源窗不能唯一修正单一方向和速度": 67,
+          "MUSIC未识别出信号子空间": 323
+        }
+      },
+      "elapsed_s": 1.4233973026275635
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.265 Hz · 阵列合格0/458窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:41:41.916143+00:00"
+    },
+    {
+      "stage": "方向估计 0.27 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.27,
+        "windows": 467,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 740.7,
+        "hop_s": 740.7,
+        "frequency_bins_hz": [
+          0.27
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.004725259889293911,
+        "frequency_hz": 0.27,
+        "actual_frequency_hz": 0.27,
+        "total_windows": 467,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 71,
+          "多波源窗不能唯一修正单一方向和速度": 73,
+          "MUSIC未识别出信号子空间": 306
+        }
+      },
+      "elapsed_s": 1.5009663105010986
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.27 Hz · 阵列合格0/467窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:41:43.434143+00:00"
+    },
+    {
+      "stage": "方向估计 0.275 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.275,
+        "windows": 476,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 727.3,
+        "hop_s": 727.3,
+        "frequency_bins_hz": [
+          0.275
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.004812319538017324,
+        "frequency_hz": 0.275,
+        "actual_frequency_hz": 0.275,
+        "total_windows": 476,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 75,
+          "多波源窗不能唯一修正单一方向和速度": 79,
+          "MUSIC未识别出信号子空间": 305
+        }
+      },
+      "elapsed_s": 1.5337071418762207
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.275 Hz · 阵列合格0/476窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:41:44.988989+00:00"
+    },
+    {
+      "stage": "方向估计 0.28 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.28,
+        "windows": 484,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 714.3,
+        "hop_s": 714.3,
+        "frequency_bins_hz": [
+          0.28
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.004899902001959961,
+        "frequency_hz": 0.28,
+        "actual_frequency_hz": 0.28,
+        "total_windows": 484,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 58,
+          "多波源窗不能唯一修正单一方向和速度": 64,
+          "MUSIC未识别出信号子空间": 345
+        }
+      },
+      "elapsed_s": 1.5063748359680176
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.28 Hz · 阵列合格0/484窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:41:46.512177+00:00"
+    },
+    {
+      "stage": "方向估计 0.285 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.285,
+        "windows": 493,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 701.8,
+        "hop_s": 701.8,
+        "frequency_bins_hz": [
+          0.285
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.004987175833570818,
+        "frequency_hz": 0.285,
+        "actual_frequency_hz": 0.285,
+        "total_windows": 493,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 61,
+          "多波源窗不能唯一修正单一方向和速度": 55,
+          "MUSIC未识别出信号子空间": 360
+        }
+      },
+      "elapsed_s": 2.200943946838379
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.285 Hz · 阵列合格0/493窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:41:48.731316+00:00"
+    },
+    {
+      "stage": "方向估计 0.29 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.29,
+        "windows": 502,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 689.7,
+        "hop_s": 689.7,
+        "frequency_bins_hz": [
+          0.29
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.005074670146440481,
+        "frequency_hz": 0.29,
+        "actual_frequency_hz": 0.29,
+        "total_windows": 502,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 65,
+          "多波源窗不能唯一修正单一方向和速度": 55,
+          "MUSIC未识别出信号子空间": 365
+        }
+      },
+      "elapsed_s": 1.7873220443725586
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.29 Hz · 阵列合格0/502窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:41:50.539055+00:00"
+    },
+    {
+      "stage": "方向估计 0.295 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.295,
+        "windows": 510,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 678.0,
+        "hop_s": 678.0,
+        "frequency_bins_hz": [
+          0.295
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.005162241887905605,
+        "frequency_hz": 0.295,
+        "actual_frequency_hz": 0.295,
+        "total_windows": 510,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 56,
+          "多波源窗不能唯一修正单一方向和速度": 55,
+          "MUSIC未识别出信号子空间": 382
+        }
+      },
+      "elapsed_s": 1.4462840557098389
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.295 Hz · 阵列合格0/510窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:41:52.004853+00:00"
+    },
+    {
+      "stage": "方向估计 0.3 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.3,
+        "windows": 519,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 666.7,
+        "hop_s": 666.7,
+        "frequency_bins_hz": [
+          0.3
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.005249737513124344,
+        "frequency_hz": 0.3,
+        "actual_frequency_hz": 0.3,
+        "total_windows": 519,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 59,
+          "多波源窗不能唯一修正单一方向和速度": 56,
+          "MUSIC未识别出信号子空间": 387
+        }
+      },
+      "elapsed_s": 1.4661839008331299
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.3 Hz · 阵列合格0/519窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:41:53.489310+00:00"
+    },
+    {
+      "stage": "方向估计 0.305 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.305,
+        "windows": 528,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 655.7,
+        "hop_s": 655.7,
+        "frequency_bins_hz": [
+          0.305
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.005337806923898124,
+        "frequency_hz": 0.305,
+        "actual_frequency_hz": 0.305,
+        "total_windows": 528,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 18,
+          "阵列相干度不足": 59,
+          "多波源窗不能唯一修正单一方向和速度": 63,
+          "MUSIC未识别出信号子空间": 388
+        }
+      },
+      "elapsed_s": 1.455735445022583
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.305 Hz · 阵列合格0/528窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:41:54.963097+00:00"
+    },
+    {
+      "stage": "方向估计 0.31 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.31,
+        "windows": 536,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 645.2,
+        "hop_s": 645.2,
+        "frequency_bins_hz": [
+          0.31
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.005424674519528828,
+        "frequency_hz": 0.31,
+        "actual_frequency_hz": 0.31,
+        "total_windows": 536,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 65,
+          "多波源窗不能唯一修正单一方向和速度": 78,
+          "MUSIC未识别出信号子空间": 376
+        }
+      },
+      "elapsed_s": 1.596325159072876
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.31 Hz · 阵列合格0/536窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:41:56.576368+00:00"
+    },
+    {
+      "stage": "方向估计 0.315 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.315,
+        "windows": 545,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 634.9,
+        "hop_s": 634.9,
+        "frequency_bins_hz": [
+          0.315
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.005512679162072767,
+        "frequency_hz": 0.315,
+        "actual_frequency_hz": 0.315,
+        "total_windows": 545,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 80,
+          "多波源窗不能唯一修正单一方向和速度": 69,
+          "MUSIC未识别出信号子空间": 379
+        }
+      },
+      "elapsed_s": 1.480907917022705
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.315 Hz · 阵列合格0/545窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:41:58.073162+00:00"
+    },
+    {
+      "stage": "方向估计 0.32 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.32,
+        "windows": 553,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 625.0,
+        "hop_s": 625.0,
+        "frequency_bins_hz": [
+          0.32
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.0056,
+        "frequency_hz": 0.32,
+        "actual_frequency_hz": 0.32,
+        "total_windows": 553,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列孔径与频率要求更细扫描网格": 1,
+          "阵列相干度不足": 63,
+          "多波源窗不能唯一修正单一方向和速度": 68,
+          "MUSIC未识别出信号子空间": 404
+        }
+      },
+      "elapsed_s": 1.5404846668243408
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.32 Hz · 阵列合格0/553窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:41:59.634345+00:00"
+    },
+    {
+      "stage": "方向估计 0.325 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.325,
+        "windows": 562,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 615.4,
+        "hop_s": 615.4,
+        "frequency_bins_hz": [
+          0.325
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.0056873578160545986,
+        "frequency_hz": 0.325,
+        "actual_frequency_hz": 0.325,
+        "total_windows": 562,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 60,
+          "多波源窗不能唯一修正单一方向和速度": 65,
+          "MUSIC未识别出信号子空间": 420
+        }
+      },
+      "elapsed_s": 1.5957155227661133
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.325 Hz · 阵列合格0/562窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:42:01.249636+00:00"
+    },
+    {
+      "stage": "方向估计 0.33 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.33,
+        "windows": 571,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 606.1,
+        "hop_s": 606.1,
+        "frequency_bins_hz": [
+          0.33
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.005774624649397789,
+        "frequency_hz": 0.33,
+        "actual_frequency_hz": 0.33,
+        "total_windows": 571,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 59,
+          "多波源窗不能唯一修正单一方向和速度": 60,
+          "MUSIC未识别出信号子空间": 435
+        }
+      },
+      "elapsed_s": 1.6008148193359375
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.33 Hz · 阵列合格0/571窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:42:02.870201+00:00"
+    },
+    {
+      "stage": "方向估计 0.335 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.335,
+        "windows": 579,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 597.0,
+        "hop_s": 597.0,
+        "frequency_bins_hz": [
+          0.335
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.005862646566164154,
+        "frequency_hz": 0.335,
+        "actual_frequency_hz": 0.335,
+        "total_windows": 579,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列孔径与频率要求更细扫描网格": 1,
+          "阵列相干度不足": 47,
+          "多波源窗不能唯一修正单一方向和速度": 57,
+          "MUSIC未识别出信号子空间": 457
+        }
+      },
+      "elapsed_s": 1.4234797954559326
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.335 Hz · 阵列合格0/579窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:42:04.312679+00:00"
+    },
+    {
+      "stage": "方向估计 0.34 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.34,
+        "windows": 588,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 588.2,
+        "hop_s": 588.2,
+        "frequency_bins_hz": [
+          0.34
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.005950357021421286,
+        "frequency_hz": 0.34,
+        "actual_frequency_hz": 0.34,
+        "total_windows": 588,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 58,
+          "多波源窗不能唯一修正单一方向和速度": 49,
+          "MUSIC未识别出信号子空间": 464
+        }
+      },
+      "elapsed_s": 1.4904918670654297
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.34 Hz · 阵列合格0/588窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:42:05.822761+00:00"
+    },
+    {
+      "stage": "方向估计 0.345 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.345,
+        "windows": 597,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 579.7,
+        "hop_s": 579.7,
+        "frequency_bins_hz": [
+          0.345
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.006037605658099017,
+        "frequency_hz": 0.345,
+        "actual_frequency_hz": 0.345,
+        "total_windows": 597,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 55,
+          "多波源窗不能唯一修正单一方向和速度": 71,
+          "MUSIC未识别出信号子空间": 454
+        }
+      },
+      "elapsed_s": 1.5453190803527832
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.345 Hz · 阵列合格0/597窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:42:07.387415+00:00"
+    },
+    {
+      "stage": "方向估计 0.35 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.35,
+        "windows": 605,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 571.4,
+        "hop_s": 571.4,
+        "frequency_bins_hz": [
+          0.35
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.006125306265313266,
+        "frequency_hz": 0.35,
+        "actual_frequency_hz": 0.35,
+        "total_windows": 605,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 66,
+          "多波源窗不能唯一修正单一方向和速度": 55,
+          "MUSIC未识别出信号子空间": 467
+        }
+      },
+      "elapsed_s": 1.5353360176086426
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.35 Hz · 阵列合格0/605窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:42:08.940658+00:00"
+    },
+    {
+      "stage": "方向估计 0.42 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.42,
+        "windows": 726,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 476.2,
+        "hop_s": 476.2,
+        "frequency_bins_hz": [
+          0.42
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.007349853002939942,
+        "frequency_hz": 0.42,
+        "actual_frequency_hz": 0.42,
+        "total_windows": 726,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 57,
+          "多波源窗不能唯一修正单一方向和速度": 60,
+          "MUSIC未识别出信号子空间": 592
+        }
+      },
+      "elapsed_s": 1.774566650390625
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.42 Hz · 阵列合格0/726窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:42:10.732862+00:00"
+    },
+    {
+      "stage": "方向估计 0.425 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.425,
+        "windows": 735,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 470.6,
+        "hop_s": 470.6,
+        "frequency_bins_hz": [
+          0.425
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.007437314067148321,
+        "frequency_hz": 0.425,
+        "actual_frequency_hz": 0.425,
+        "total_windows": 735,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 67,
+          "多波源窗不能唯一修正单一方向和速度": 67,
+          "MUSIC未识别出信号子空间": 584
+        }
+      },
+      "elapsed_s": 1.6956439018249512
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.425 Hz · 阵列合格0/735窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:42:12.445772+00:00"
+    },
+    {
+      "stage": "方向估计 0.43 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.43,
+        "windows": 744,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 465.1,
+        "hop_s": 465.1,
+        "frequency_bins_hz": [
+          0.43
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.007525263384218448,
+        "frequency_hz": 0.43,
+        "actual_frequency_hz": 0.43,
+        "total_windows": 744,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 18,
+          "阵列相干度不足": 53,
+          "多波源窗不能唯一修正单一方向和速度": 79,
+          "MUSIC未识别出信号子空间": 594
+        }
+      },
+      "elapsed_s": 2.0003912448883057
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.43 Hz · 阵列合格0/744窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:42:14.488049+00:00"
+    },
+    {
+      "stage": "方向估计 0.435 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.435,
+        "windows": 752,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 459.8,
+        "hop_s": 459.8,
+        "frequency_bins_hz": [
+          0.435
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.007612005219660722,
+        "frequency_hz": 0.435,
+        "actual_frequency_hz": 0.435,
+        "total_windows": 752,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 64,
+          "多波源窗不能唯一修正单一方向和速度": 57,
+          "MUSIC未识别出信号子空间": 614
+        }
+      },
+      "elapsed_s": 1.6341745853424072
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.435 Hz · 阵列合格0/752窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:42:16.150364+00:00"
+    },
+    {
+      "stage": "方向估计 0.44 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.44,
+        "windows": 761,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 454.5,
+        "hop_s": 454.5,
+        "frequency_bins_hz": [
+          0.44
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.007700770077007701,
+        "frequency_hz": 0.44,
+        "actual_frequency_hz": 0.44,
+        "total_windows": 761,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 69,
+          "多波源窗不能唯一修正单一方向和速度": 67,
+          "MUSIC未识别出信号子空间": 608
+        }
+      },
+      "elapsed_s": 1.7395522594451904
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.44 Hz · 阵列合格0/761窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:42:17.907626+00:00"
+    },
+    {
+      "stage": "方向估计 0.445 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.445,
+        "windows": 770,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 449.4,
+        "hop_s": 449.4,
+        "frequency_bins_hz": [
+          0.445
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.00778816199376947,
+        "frequency_hz": 0.445,
+        "actual_frequency_hz": 0.445,
+        "total_windows": 770,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 18,
+          "阵列相干度不足": 61,
+          "多波源窗不能唯一修正单一方向和速度": 67,
+          "MUSIC未识别出信号子空间": 624
+        }
+      },
+      "elapsed_s": 1.688826084136963
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.445 Hz · 阵列合格0/770窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:42:19.618748+00:00"
+    },
+    {
+      "stage": "方向估计 0.45 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.45,
+        "windows": 778,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 444.4,
+        "hop_s": 444.4,
+        "frequency_bins_hz": [
+          0.45
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.007875787578757875,
+        "frequency_hz": 0.45,
+        "actual_frequency_hz": 0.45,
+        "total_windows": 778,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 73,
+          "多波源窗不能唯一修正单一方向和速度": 70,
+          "MUSIC未识别出信号子空间": 618
+        }
+      },
+      "elapsed_s": 1.7765700817108154
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.45 Hz · 阵列合格0/778窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:42:21.416705+00:00"
+    },
+    {
+      "stage": "方向估计 0.455 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.455,
+        "windows": 787,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 439.6,
+        "hop_s": 439.6,
+        "frequency_bins_hz": [
+          0.455
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.007961783439490446,
+        "frequency_hz": 0.455,
+        "actual_frequency_hz": 0.455,
+        "total_windows": 787,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 65,
+          "多波源窗不能唯一修正单一方向和速度": 72,
+          "MUSIC未识别出信号子空间": 633
+        }
+      },
+      "elapsed_s": 1.7469372749328613
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.455 Hz · 阵列合格0/787窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:42:23.181789+00:00"
+    },
+    {
+      "stage": "方向估计 0.46 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.46,
+        "windows": 795,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 434.8,
+        "hop_s": 434.8,
+        "frequency_bins_hz": [
+          0.46
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.008049678012879485,
+        "frequency_hz": 0.46,
+        "actual_frequency_hz": 0.46,
+        "total_windows": 795,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列孔径与频率要求更细扫描网格": 1,
+          "阵列相干度不足": 69,
+          "多波源窗不能唯一修正单一方向和速度": 82,
+          "MUSIC未识别出信号子空间": 626
+        }
+      },
+      "elapsed_s": 1.674921989440918
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.46 Hz · 阵列合格0/795窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:42:24.874685+00:00"
+    },
+    {
+      "stage": "方向估计 0.465 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.465,
+        "windows": 804,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 430.1,
+        "hop_s": 430.1,
+        "frequency_bins_hz": [
+          0.465
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.008137642408742153,
+        "frequency_hz": 0.465,
+        "actual_frequency_hz": 0.465,
+        "total_windows": 804,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 74,
+          "多波源窗不能唯一修正单一方向和速度": 73,
+          "MUSIC未识别出信号子空间": 640
+        }
+      },
+      "elapsed_s": 1.6537139415740967
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.465 Hz · 阵列合格0/804窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:42:26.547956+00:00"
+    },
+    {
+      "stage": "方向估计 0.47 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.47,
+        "windows": 813,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 425.5,
+        "hop_s": 425.5,
+        "frequency_bins_hz": [
+          0.47
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.008225616921269096,
+        "frequency_hz": 0.47,
+        "actual_frequency_hz": 0.47,
+        "total_windows": 813,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 65,
+          "多波源窗不能唯一修正单一方向和速度": 82,
+          "MUSIC未识别出信号子空间": 649
+        }
+      },
+      "elapsed_s": 1.6276640892028809
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.47 Hz · 阵列合格0/813窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:42:28.193782+00:00"
+    },
+    {
+      "stage": "方向估计 0.475 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.475,
+        "windows": 821,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 421.1,
+        "hop_s": 421.1,
+        "frequency_bins_hz": [
+          0.475
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.008311564948943244,
+        "frequency_hz": 0.475,
+        "actual_frequency_hz": 0.475,
+        "total_windows": 821,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 63,
+          "多波源窗不能唯一修正单一方向和速度": 94,
+          "MUSIC未识别出信号子空间": 647
+        }
+      },
+      "elapsed_s": 1.6763989925384521
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.475 Hz · 阵列合格0/821窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:42:29.889959+00:00"
+    },
+    {
+      "stage": "方向估计 0.48 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.48,
+        "windows": 830,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 416.7,
+        "hop_s": 416.7,
+        "frequency_bins_hz": [
+          0.48
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.008399328053755699,
+        "frequency_hz": 0.48,
+        "actual_frequency_hz": 0.48,
+        "total_windows": 830,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列孔径与频率要求更细扫描网格": 2,
+          "阵列相干度不足": 69,
+          "多波源窗不能唯一修正单一方向和速度": 84,
+          "MUSIC未识别出信号子空间": 658
+        }
+      },
+      "elapsed_s": 1.6872310638427734
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.48 Hz · 阵列合格0/830窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:42:31.595444+00:00"
+    },
+    {
+      "stage": "方向估计 0.485 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.485,
+        "windows": 839,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 412.4,
+        "hop_s": 412.4,
+        "frequency_bins_hz": [
+          0.485
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.00848690591658584,
+        "frequency_hz": 0.485,
+        "actual_frequency_hz": 0.485,
+        "total_windows": 839,
+        "quality_windows": 1,
+        "cache_reused": false,
+        "median_velocity_m_s": 872.0438054284508,
+        "reasons": {
+          "通过": 1,
+          "有效台站不足": 18,
+          "阵列孔径与频率要求更细扫描网格": 1,
+          "阵列相干度不足": 67,
+          "多波源窗不能唯一修正单一方向和速度": 69,
+          "MUSIC未识别出信号子空间": 683
+        }
+      },
+      "elapsed_s": 1.6094341278076172
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.485 Hz · 阵列合格1/839窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:42:33.225418+00:00"
+    },
+    {
+      "stage": "方向估计 0.49 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.49,
+        "windows": 847,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 408.2,
+        "hop_s": 408.2,
+        "frequency_bins_hz": [
+          0.49
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.00857422831945125,
+        "frequency_hz": 0.49,
+        "actual_frequency_hz": 0.49,
+        "total_windows": 847,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列孔径与频率要求更细扫描网格": 1,
+          "阵列相干度不足": 69,
+          "多波源窗不能唯一修正单一方向和速度": 70,
+          "MUSIC未识别出信号子空间": 690
+        }
+      },
+      "elapsed_s": 1.624725341796875
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.49 Hz · 阵列合格0/847窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:42:34.885602+00:00"
+    },
+    {
+      "stage": "方向估计 0.495 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.495,
+        "windows": 856,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 404.0,
+        "hop_s": 404.0,
+        "frequency_bins_hz": [
+          0.495
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.008663366336633664,
+        "frequency_hz": 0.495,
+        "actual_frequency_hz": 0.495,
+        "total_windows": 856,
+        "quality_windows": 1,
+        "cache_reused": false,
+        "median_velocity_m_s": 971.795530298176,
+        "reasons": {
+          "通过": 1,
+          "有效台站不足": 17,
+          "阵列相干度不足": 54,
+          "多波源窗不能唯一修正单一方向和速度": 60,
+          "MUSIC未识别出信号子空间": 724
+        }
+      },
+      "elapsed_s": 1.5404407978057861
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.495 Hz · 阵列合格1/856窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:42:36.446855+00:00"
+    },
+    {
+      "stage": "方向估计 0.5 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.5,
+        "windows": 865,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 400.0,
+        "hop_s": 400.0,
+        "frequency_bins_hz": [
+          0.5
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.00875,
+        "frequency_hz": 0.5,
+        "actual_frequency_hz": 0.5,
+        "total_windows": 865,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 33,
+          "阵列相干度不足": 46,
+          "多波源窗不能唯一修正单一方向和速度": 51,
+          "MUSIC未识别出信号子空间": 735
+        }
+      },
+      "elapsed_s": 1.4954545497894287
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.5 Hz · 阵列合格0/865窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:42:37.963077+00:00"
+    },
+    {
+      "stage": "方向估计 0.505 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.505,
+        "windows": 873,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 396.0,
+        "hop_s": 396.0,
+        "frequency_bins_hz": [
+          0.505
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.008838383838383838,
+        "frequency_hz": 0.505,
+        "actual_frequency_hz": 0.505,
+        "total_windows": 873,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 18,
+          "阵列孔径与频率要求更细扫描网格": 1,
+          "阵列相干度不足": 60,
+          "多波源窗不能唯一修正单一方向和速度": 49,
+          "MUSIC未识别出信号子空间": 745
+        }
+      },
+      "elapsed_s": 1.5517857074737549
+    },
+    {
+      "stage": "MUSIC前段逐频修正",
+      "status": "info",
+      "message": "0.505 Hz · 阵列合格0/873窗；前段不使用45°台对门槛",
+      "details": {},
+      "utc": "2026-10-11T22:42:39.535724+00:00"
+    },
+    {
+      "stage": "方向汇总",
+      "status": "info",
+      "message": "54个频率；联合原始点 37；连续频带保留点 0",
+      "details": {
+        "output": "/workspace/scratch/f6601b903c79/mgs6/project/output/music_front/direction/report.html"
+      },
+      "utc": "2026-10-11T22:42:41.593264+00:00"
+    }
+  ],
+  "settings_file": "music_settings_used.json",
+  "log_file": "music_processing.log"
+}

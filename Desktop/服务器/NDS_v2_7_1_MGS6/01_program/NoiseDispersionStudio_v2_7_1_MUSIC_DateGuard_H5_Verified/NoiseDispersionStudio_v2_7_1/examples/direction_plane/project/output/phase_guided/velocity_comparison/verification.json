@@ -1,0 +1,18 @@
+{
+  "unique_gate_files_checked": 12,
+  "maximum_final_phase_error_deg": 2.5444437451708134e-14,
+  "raw_inverse_roundtrip_error_deg": 9.947598300641403e-14,
+  "unit_inverse_roundtrip_error_deg": 8.526512829121202e-14,
+  "curve_frequency_rows": 12,
+  "unique_segment_frequencies": 12,
+  "original_constant_cycles_preserved": true,
+  "source_phase_deg": 45.0,
+  "sources": {
+    "phase_stack_summary.csv": "742917cdf66d793d67c85c23abe78f1caccc9ca9e5bc41f0197f239131656c7a",
+    "selected_phase_targets.csv": "46b7aae902058a9db9a95096d970fe23e001c68ea60afceb1ff4192ffcdb83ae"
+  },
+  "module_sha256": "b3316c11d14f761d3624c8dcf741816f482b321a921b8cef742cde2f121b3987",
+  "start_utc": "2020-01-01T00:00:00.000000000Z",
+  "end_utc_exclusive": "2020-01-01T00:10:00.000000Z",
+  "conditional_comparison_not_independent_validation": true
+}

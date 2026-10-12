@@ -1,0 +1,17 @@
+{
+  "complete": true,
+  "stages": [
+    "preprocess and scan",
+    "front MUSIC direction and velocity",
+    "review",
+    "verify",
+    "Goertzel low-frequency reconstruction",
+    "phase-audit",
+    "select after",
+    "report"
+  ],
+  "scientific_outcome": "no_qualified_corrected_bands",
+  "inversion_skipped": true,
+  "physical_dispersion_and_structure_obtained": false,
+  "report": "/workspace/scratch/f6601b903c79/mgs6/project/output/phase_guided/phase_report.html"
+}

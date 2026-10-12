@@ -1,0 +1,18 @@
+{
+  "dataset_pattern": "/records/*/waveform",
+  "defaults": {
+    "attribute_map": {
+      "sampling_rate_hz": "YOUR_SAMPLE_RATE_ATTRIBUTE",
+      "start_utc": "YOUR_UTC_ATTRIBUTE",
+      "station": "YOUR_STATION_ATTRIBUTE",
+      "x_m": "YOUR_EAST_ATTRIBUTE",
+      "y_m": "YOUR_NORTH_ATTRIBUTE"
+    },
+    "channel": "BHZ",
+    "units": "counts",
+    "time_format": "iso_utc",
+    "response_xml": "metadata/response.xml"
+  },
+  "rules": [],
+  "overrides": {}
+}

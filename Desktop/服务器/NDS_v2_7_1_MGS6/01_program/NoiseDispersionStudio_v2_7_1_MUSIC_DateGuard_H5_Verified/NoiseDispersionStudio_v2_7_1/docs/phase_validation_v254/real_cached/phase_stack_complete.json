@@ -1,0 +1,269 @@
+{
+  "complete": true,
+  "selected_curves": 7,
+  "segments": 6,
+  "unique_pair_frequency_gates": 264,
+  "curve_frequency_rows": 301,
+  "valid_window_evaluations": 1195528,
+  "accepted_window_evaluations": 0,
+  "time_mode": "full",
+  "time_extent_source": "aligned_h5",
+  "station_record_bounds": [],
+  "start_utc": "2020-10-12T12:00:00.000000000Z",
+  "end_utc_exclusive": "2020-10-12T12:30:00.000000Z",
+  "record_duration_s": 1800.0,
+  "sample_count": 36000,
+  "sample_rate_hz": 20.0,
+  "window_duration_min_s": 4.0,
+  "window_duration_max_s": 8.7,
+  "end_anchored_windows": false,
+  "stabilization_s": 600.0,
+  "frequency_method": "matlab_bin",
+  "screening_mode": "curve",
+  "split_phase_branches": true,
+  "pair_processing_intervals": [
+    {
+      "pair": "Y7_A00--Y7_B02",
+      "common_start_utc": "2020-10-12T12:00:00.000000Z",
+      "common_end_utc_exclusive": "2020-10-12T12:30:00.000000Z",
+      "processing_start_utc": "2020-10-12T12:10:00.000000Z",
+      "processing_end_utc_exclusive": "2020-10-12T12:30:00.000000Z",
+      "usable_duration_s": 1200.0,
+      "unavailable_reason": ""
+    },
+    {
+      "pair": "Y7_A00--Y7_C01",
+      "common_start_utc": "2020-10-12T12:00:00.000000Z",
+      "common_end_utc_exclusive": "2020-10-12T12:30:00.000000Z",
+      "processing_start_utc": "2020-10-12T12:10:00.000000Z",
+      "processing_end_utc_exclusive": "2020-10-12T12:30:00.000000Z",
+      "usable_duration_s": 1200.0,
+      "unavailable_reason": ""
+    },
+    {
+      "pair": "Y7_A00--Y7_C02",
+      "common_start_utc": "2020-10-12T12:00:00.000000Z",
+      "common_end_utc_exclusive": "2020-10-12T12:30:00.000000Z",
+      "processing_start_utc": "2020-10-12T12:10:00.000000Z",
+      "processing_end_utc_exclusive": "2020-10-12T12:30:00.000000Z",
+      "usable_duration_s": 1200.0,
+      "unavailable_reason": ""
+    },
+    {
+      "pair": "Y7_B02--Y7_D02",
+      "common_start_utc": "2020-10-12T12:00:00.000000Z",
+      "common_end_utc_exclusive": "2020-10-12T12:30:00.000000Z",
+      "processing_start_utc": "2020-10-12T12:10:00.000000Z",
+      "processing_end_utc_exclusive": "2020-10-12T12:30:00.000000Z",
+      "usable_duration_s": 1200.0,
+      "unavailable_reason": ""
+    },
+    {
+      "pair": "Y7_C00--Y7_D02",
+      "common_start_utc": "2020-10-12T12:00:00.000000Z",
+      "common_end_utc_exclusive": "2020-10-12T12:30:00.000000Z",
+      "processing_start_utc": "2020-10-12T12:10:00.000000Z",
+      "processing_end_utc_exclusive": "2020-10-12T12:30:00.000000Z",
+      "usable_duration_s": 1200.0,
+      "unavailable_reason": ""
+    }
+  ],
+  "phase_screening_sha256": "524e99a6c3561e0fbe291be3a4096fd9dfdf9f157dfafb140eb79eb747e7e5f6",
+  "plots_subsampled": false,
+  "phase_records_sha256": "3d523c850c7da1a75029b194035ee5823bb8f19eb0ede5786066c3c63a465fc8",
+  "repeat_cycles": 20,
+  "slide_cycles": 1,
+  "taper": "none",
+  "tolerance_deg": 0,
+  "range_source": "measured",
+  "direction": {
+    "mode": "filter",
+    "max_pair_angle_deg": 45.0,
+    "direction_step_deg": 5.0,
+    "velocity_min_m_s": 150.0,
+    "velocity_max_m_s": 3500.0,
+    "velocity_points": 32,
+    "min_stations": 3,
+    "min_geometry_ratio": 0.05,
+    "min_coherence": 0.7,
+    "envelope_fraction": 0.95,
+    "max_direction_uncertainty_deg": 20.0,
+    "max_secondary_peak_ratio": 0.95,
+    "direction_group_width_deg": 15.0,
+    "conservative_angle": true,
+    "max_angle_velocity_error_fraction": 0.15,
+    "frequency_half_width_hz": 0.0,
+    "frequency_bins": 3,
+    "phase_rms_max_deg": 25.0,
+    "minimum_independent_windows": 3,
+    "minimum_accepted_windows": 3
+  },
+  "direction_sha256": "7a314af9e8011c09dac4f79a1d0d6cd6830a46a0e60a54c0bf4a3e788c8b1c89",
+  "shared_utc_windows": true,
+  "phase_settings_sha256": null,
+  "amplitude_rejection": true,
+  "response_corrected": true,
+  "station_metadata": [
+    {
+      "station": "Y7_A00",
+      "seed_id": "Y7.A00..HHZ",
+      "valid_samples": 36000,
+      "total_samples": 36000,
+      "response_status": "nominal_response_corrected",
+      "source_files": [
+        {
+          "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_A00_00000.npz",
+          "sha256": "3e32e0edfb0c6bce7ad0959d902201775635c10a8ea2d8b5613b952f8f571c86"
+        },
+        {
+          "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_A00_00001.npz",
+          "sha256": "9a190babc3cd3575f15731a7eba9dec4ddafa883ea347f97baadf70b17445d0c"
+        },
+        {
+          "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_A00_00002.npz",
+          "sha256": "7f3050c56207338111c4980aa1c787b0e0c3af0132062db3864ca49cdd8d6596"
+        },
+        {
+          "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_A00_00003.npz",
+          "sha256": "3e88c64851e6f6fcc74358d1f300a26c86aac0db3833aed9ccd1723dd47fdf87"
+        }
+      ]
+    },
+    {
+      "station": "Y7_B02",
+      "seed_id": "Y7.B02..HHZ",
+      "valid_samples": 36000,
+      "total_samples": 36000,
+      "response_status": "nominal_response_corrected",
+      "source_files": [
+        {
+          "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_B02_00000.npz",
+          "sha256": "bb5ff46d417cb2db2becd99a9442b49da4c47c0106a234c763625880a0bcb204"
+        },
+        {
+          "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_B02_00001.npz",
+          "sha256": "69e2ea7ac10a0e55b1e841b212cadc0d7066af67e139eaedf257f0fceda51e20"
+        },
+        {
+          "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_B02_00002.npz",
+          "sha256": "c72f9303ad2ec3f28a826c9f19acb824f2a1b46e758d4d0f502e993444cb8e8b"
+        },
+        {
+          "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_B02_00003.npz",
+          "sha256": "0626f04165939b5dab889ff2c4a43370e2839c6de3c3f8404b35af8a608b3508"
+        }
+      ]
+    },
+    {
+      "station": "Y7_C00",
+      "seed_id": "Y7.C00..HHZ",
+      "valid_samples": 36000,
+      "total_samples": 36000,
+      "response_status": "nominal_response_corrected",
+      "source_files": [
+        {
+          "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_C00_00000.npz",
+          "sha256": "b9335121163e1656303722b1d69a4b67087f738d01bb3c42fb08e92299de582c"
+        },
+        {
+          "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_C00_00001.npz",
+          "sha256": "9f47393551d252104d5c98357bcfc2c396293a541c375e30c24096f84537763b"
+        },
+        {
+          "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_C00_00002.npz",
+          "sha256": "07597a125cd043a5df1ec0959ba5db7b871db5ebd402ae5e103fc01fe9133fb0"
+        },
+        {
+          "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_C00_00003.npz",
+          "sha256": "a7e4e6805783d42fede630b70c7ef0fe03016977ff33f4471fe0db73cec4b78b"
+        }
+      ]
+    },
+    {
+      "station": "Y7_C01",
+      "seed_id": "Y7.C01..HHZ",
+      "valid_samples": 36000,
+      "total_samples": 36000,
+      "response_status": "nominal_response_corrected",
+      "source_files": [
+        {
+          "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_C01_00000.npz",
+          "sha256": "afc18e90e142cd2212c9f71bf7ea1351a5bf9370555f9ec450fbcafb3bd0a1cb"
+        },
+        {
+          "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_C01_00001.npz",
+          "sha256": "c55361b004b6bf4205988abccdadb322ae28cc51f4147f19eca30603ad5e2349"
+        },
+        {
+          "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_C01_00002.npz",
+          "sha256": "bf06cfc62c5b0069265cff2fd5fa80cc44a090ff25fa398ef2a74b60666aba08"
+        },
+        {
+          "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_C01_00003.npz",
+          "sha256": "3c18a241a03efb6da3c7e355f021e3ad4f64f1664a1d1d7b398baa05f77b1b68"
+        }
+      ]
+    },
+    {
+      "station": "Y7_C02",
+      "seed_id": "Y7.C02..HHZ",
+      "valid_samples": 36000,
+      "total_samples": 36000,
+      "response_status": "nominal_response_corrected",
+      "source_files": [
+        {
+          "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_C02_00000.npz",
+          "sha256": "ce2f54bdef7c6bd8a541755b7a561288a86067cfe8ea132f1651cd3447af1e97"
+        },
+        {
+          "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_C02_00001.npz",
+          "sha256": "3513e93dea3ac4163b7d69fd6bf639ab89e94499c4299f0e0edd1fc2172eff66"
+        },
+        {
+          "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_C02_00002.npz",
+          "sha256": "670a7267b5d15802baf7bdcee0b96451dc841c36cd23c5788bd82885201639eb"
+        },
+        {
+          "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_C02_00003.npz",
+          "sha256": "cefd6f4fe87eb8aaf977d0a410bd456a67ff24ed05161f248bba255292876522"
+        }
+      ]
+    },
+    {
+      "station": "Y7_D02",
+      "seed_id": "Y7.D02..HHZ",
+      "valid_samples": 36000,
+      "total_samples": 36000,
+      "response_status": "nominal_response_corrected",
+      "source_files": [
+        {
+          "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_D02_00000.npz",
+          "sha256": "1db92cb8127d59a6fbdfda4710c31295d5712ce70eaa074b4fa0ad6f9ef1be81"
+        },
+        {
+          "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_D02_00001.npz",
+          "sha256": "ba61516e299dc5137388f1cb8b21ab472a0c8324d67e6da6fe7b0808a1b60f5b"
+        },
+        {
+          "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_D02_00002.npz",
+          "sha256": "9be53ff7dfff5d8dcd04df0d9655c579ddd2b537392ee392da2b44fc5db5ccc4"
+        },
+        {
+          "path": "/workspace/scratch/9f22c8ce4cad/phase_work/DARE_project/canonical/Y7_D02_00003.npz",
+          "sha256": "f13dcd31f25f045b4c56399342fb938647a6f1ec2bd8a71b19d2cca413259901"
+        }
+      ]
+    }
+  ],
+  "settings_sha256": "d33e23907639d11896b58a442f2cc872a2fdfe1b1f3c897785cdd0742fe8e109",
+  "module_sha256": "3ff58df4f419117818d531fbd3cef811831c230978ee3220f801fcf648b3b7ed",
+  "aligned_h5_sha256": "f0d11f175a1a5ffb8aeaca22685629255c44a7ede336ac4b7efa497cb1a33458",
+  "project_name": "DARE phase offline replay (aligned H5 supplied separately)",
+  "warnings": [
+    "Input curves guide selection; this test is not independent validation.",
+    "Short overlapping windows are dependent; evaluation counts are not independent sample counts.",
+    "Gated CCF phase is transferred conditionally to raw window cross-spectra; selection cannot establish the source model.",
+    "Cycle aliases on the originating pair have identical gates and cannot be resolved by this test."
+  ],
+  "inversion_handoff_points": 0
+}

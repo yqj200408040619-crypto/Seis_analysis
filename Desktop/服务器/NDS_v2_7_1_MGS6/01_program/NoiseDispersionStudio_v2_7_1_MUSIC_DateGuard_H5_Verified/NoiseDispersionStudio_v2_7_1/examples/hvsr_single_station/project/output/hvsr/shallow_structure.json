@@ -1,0 +1,26 @@
+{
+  "method": "quarter-wave conditional travel-time constraint",
+  "status": "conditional",
+  "explanation": "一维高阻抗反差、所选峰为基频的条件下，输出等效覆盖层厚度范围；半空间Vs为输入先验。未自动输出Vs30。",
+  "f0_hz": 3.0160773184432808,
+  "period_s": 0.3315564869259188,
+  "s_wave_one_way_travel_time_s": 0.0828891217314797,
+  "frequency_scatter_band_hz": [
+    2.810553102833228,
+    3.2216015340533337
+  ],
+  "vs_prior_m_s": [
+    200.0,
+    300.0
+  ],
+  "depth_at_f0_range_m": [
+    16.57782434629594,
+    24.866736519443915
+  ],
+  "depth_with_window_scatter_range_m": [
+    15.52023100047737,
+    26.68513892315179
+  ],
+  "assumed_bedrock_vs_m_s": 1000.0,
+  "formula": "f0 ~= 1/(4*sum(h_i/Vs_i)); uniform equivalent layer H ~= Vs/(4*f0)"
+}

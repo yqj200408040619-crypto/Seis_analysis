@@ -1,0 +1,1 @@
+NDS 2.7.1 MUSIC补丁：用于已有2.7.0/2.7.1程序根目录。关闭Studio及下载窗口后，把本压缩包内容直接解压覆盖到原程序根目录，不要覆盖项目数据目录；重新打开run_windows.bat，无需重启Windows。原有依赖环境可继续使用；新安装按requirements.txt。完整结果、历史模块和测试资料在完整包。见docs/MUSIC_Workflow_v271.md和Validation_v271.html。

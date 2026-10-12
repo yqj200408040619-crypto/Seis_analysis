@@ -1,0 +1,13 @@
+{
+  "fmin_hz": 0.2,
+  "fmax_hz": 8.0,
+  "window_s": 120.0,
+  "overlap": 0.0,
+  "ko_bandwidth": 40.0,
+  "horizontal": "rms",
+  "reject_transients": true,
+  "vs_min_m_s": 150.0,
+  "vs_max_m_s": 500.0,
+  "bedrock_vs_m_s": 1000.0,
+  "rayleigh_assumption": false
+}

@@ -1,0 +1,805 @@
+{
+  "program_version": "2.2.0",
+  "tests_passed": 80,
+  "tests_skipped": 0,
+  "arrays": [
+    {
+      "array": "法国 DARE / Y7",
+      "network": "Y7",
+      "requested_start_utc": "2020-10-12T00:00:00.000000Z",
+      "requested_end_utc": "2020-10-16T00:00:00.000000Z",
+      "stations": [
+        "A00",
+        "B02",
+        "C00",
+        "C01",
+        "C02",
+        "D02"
+      ],
+      "geometry": {
+        "stations": 6,
+        "stations_with_coordinates": 6,
+        "missing_coordinates": 0,
+        "coordinate_conflicts": [],
+        "mean_nearest_neighbor_m": 1427.2687193826775,
+        "mean_pair_distance_m": 2419.985084585388,
+        "min_pair_distance_m": 931.1946720972347,
+        "max_pair_distance_m": 3830.7353352670907,
+        "coincident_pair_count": 0,
+        "spacing_definition": "mean nearest-neighbour WGS84 surface distance",
+        "points": [
+          [
+            "Y7",
+            "A00",
+            44.305797,
+            4.6888828,
+            30.0
+          ],
+          [
+            "Y7",
+            "B02",
+            44.315155,
+            4.653077,
+            30.0
+          ],
+          [
+            "Y7",
+            "C00",
+            44.283808,
+            4.673055,
+            30.0
+          ],
+          [
+            "Y7",
+            "C01",
+            44.301613,
+            4.670555,
+            30.0
+          ],
+          [
+            "Y7",
+            "C02",
+            44.3173,
+            4.67277,
+            30.0
+          ],
+          [
+            "Y7",
+            "D02",
+            44.3127,
+            4.6955,
+            30.0
+          ]
+        ],
+        "nearest_neighbor_m": {
+          "Y7.A00": 931.1946720972347,
+          "Y7.B02": 1589.0642279298552,
+          "Y7.C00": 1988.490937307862,
+          "Y7.C01": 1534.6035789340222,
+          "Y7.C02": 1589.0642279298552,
+          "Y7.D02": 931.1946720972347
+        }
+      },
+      "acquisition_audit": {
+        "checks_passed": true,
+        "h5_files": 40,
+        "native_samples": 380251787,
+        "records": [
+          {
+            "file": "Y7/A00/Y7_A00_--_HHZ_20201012T000000_20201013T000000.h5",
+            "sha256": "38e39b52a2aebb4710e95be212cb6d121230a86508d6b40e91db5531264ee4dd",
+            "traces": 1,
+            "samples": 8642276,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "37af411ccac51ac586bc3e30e9d34618da4775f5702c372d8a2f17df32978a00"
+          },
+          {
+            "file": "Y7/A00/Y7_A00_--_HHZ_20201013T000000_20201014T000000.h5",
+            "sha256": "31f49c6e7898763a12783eb7e32c79cbcfea9647143aa27a36d651ff520f8254",
+            "traces": 1,
+            "samples": 8641888,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "37af411ccac51ac586bc3e30e9d34618da4775f5702c372d8a2f17df32978a00"
+          },
+          {
+            "file": "Y7/A00/Y7_A00_--_HHZ_20201014T000000_20201015T000000.h5",
+            "sha256": "b0b3002d73691962682d666b960d2b43f5836c45d3ba6cf43780ca3ec20be29f",
+            "traces": 1,
+            "samples": 8642462,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "37af411ccac51ac586bc3e30e9d34618da4775f5702c372d8a2f17df32978a00"
+          },
+          {
+            "file": "Y7/A00/Y7_A00_--_HHZ_20201015T000000_20201016T000000.h5",
+            "sha256": "165882ad8ecfe12f782630497bd5d99a56e3484584ab4a63aace151db12bfc1b",
+            "traces": 1,
+            "samples": 8642133,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "37af411ccac51ac586bc3e30e9d34618da4775f5702c372d8a2f17df32978a00"
+          },
+          {
+            "file": "Y7/B02/Y7_B02_--_HHZ_20201012T000000_20201013T000000.h5",
+            "sha256": "e96f87cde9ffe10ef5c756d192e0a544122354c4ea71a07e7a573710594dacff",
+            "traces": 1,
+            "samples": 8642580,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "ba99cd512c244848675708f5195cf6028cfe9258350dd3fa26c7f5597124cd73"
+          },
+          {
+            "file": "Y7/B02/Y7_B02_--_HHZ_20201013T000000_20201014T000000.h5",
+            "sha256": "d48d58974e7c1221db3244f18b903f284dc4e22db3a836e3f2ade0ac85afab2b",
+            "traces": 1,
+            "samples": 8642308,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "ba99cd512c244848675708f5195cf6028cfe9258350dd3fa26c7f5597124cd73"
+          },
+          {
+            "file": "Y7/B02/Y7_B02_--_HHZ_20201014T000000_20201015T000000.h5",
+            "sha256": "fa91e6da71d2d69d5eec5ece5c681d0c8e8bd9c8d8bf6cc72bd53502b15dc38d",
+            "traces": 1,
+            "samples": 8642080,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "ba99cd512c244848675708f5195cf6028cfe9258350dd3fa26c7f5597124cd73"
+          },
+          {
+            "file": "Y7/B02/Y7_B02_--_HHZ_20201015T000000_20201016T000000.h5",
+            "sha256": "bd6f847771afdb0bf18df792c49df114ccb0fc7e0e6be2222849ca5a863eafac",
+            "traces": 1,
+            "samples": 8642037,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "c97571808f42eba1c183b6fbced276867972edb44582c0dd1fd88b2e13c46c95"
+          },
+          {
+            "file": "Y7/C00/Y7_C00_--_HHZ_20201012T000000_20201013T000000.h5",
+            "sha256": "16027fd9774cd1d6199de9bea5f605713880aea93a3c273a3686862c93e3c3a5",
+            "traces": 1,
+            "samples": 8642371,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "0055f768acc31f217552b0e156b04466318ca372051e1c072e5145579c5a2d89"
+          },
+          {
+            "file": "Y7/C00/Y7_C00_--_HHZ_20201013T000000_20201014T000000.h5",
+            "sha256": "49554b1df50dbdca91aca314289726927af8a3b31447c5e6edd5b138f41f0ca4",
+            "traces": 1,
+            "samples": 8642991,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "5538b61137de2c88e5a9d2317e3bdc3ad0e3553200aab35f8fa998056026980e"
+          },
+          {
+            "file": "Y7/C00/Y7_C00_--_HHZ_20201014T000000_20201015T000000.h5",
+            "sha256": "ceec3e8d219651011a8f42c5cb91e2f39120b9a7352e1207da57484c10da7a25",
+            "traces": 1,
+            "samples": 8642029,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "5538b61137de2c88e5a9d2317e3bdc3ad0e3553200aab35f8fa998056026980e"
+          },
+          {
+            "file": "Y7/C00/Y7_C00_--_HHZ_20201015T000000_20201016T000000.h5",
+            "sha256": "b494b4aaa955e7e4d80a233a560d243c6d8da27ca4fd0bda5a42befe1b7e84db",
+            "traces": 1,
+            "samples": 8641961,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "5538b61137de2c88e5a9d2317e3bdc3ad0e3553200aab35f8fa998056026980e"
+          },
+          {
+            "file": "Y7/C01/Y7_C01_--_HHZ_20201012T000000_20201013T000000.h5",
+            "sha256": "78c0075a6abf868619b90338034df20f33c8ce9b1a1c23839fb52a23d269d5df",
+            "traces": 1,
+            "samples": 8642424,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "5029368e256b11f324b5c44cd72d8271fe547f506659875241d2fb9d57e6ca2c"
+          },
+          {
+            "file": "Y7/C01/Y7_C01_--_HHZ_20201013T000000_20201014T000000.h5",
+            "sha256": "a4c7df98f0876ceb07680bac8a100e3b91bb09602b22df88cc0173869192da56",
+            "traces": 1,
+            "samples": 8642593,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "5029368e256b11f324b5c44cd72d8271fe547f506659875241d2fb9d57e6ca2c"
+          },
+          {
+            "file": "Y7/C01/Y7_C01_--_HHZ_20201014T000000_20201015T000000.h5",
+            "sha256": "8140a1f5228c8088ced3011b06da9e68c020d212d6a375c3b07328296809bdfc",
+            "traces": 1,
+            "samples": 8641922,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "5029368e256b11f324b5c44cd72d8271fe547f506659875241d2fb9d57e6ca2c"
+          },
+          {
+            "file": "Y7/C01/Y7_C01_--_HHZ_20201015T000000_20201016T000000.h5",
+            "sha256": "4a62162c3c3d1c2f6098e45304534de74789e73bc6d33c2135c9b912a89329e4",
+            "traces": 1,
+            "samples": 8641901,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "5029368e256b11f324b5c44cd72d8271fe547f506659875241d2fb9d57e6ca2c"
+          },
+          {
+            "file": "Y7/C02/Y7_C02_--_HHZ_20201012T000000_20201013T000000.h5",
+            "sha256": "88fc615df9a6df001c7734d85501d27751e6ac79fc47e2e67937ba1200d94c21",
+            "traces": 1,
+            "samples": 8641893,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "3a698c034ee29590ac54f45037907c0525682ba0b0e5acb940b8d19ba717b3a0"
+          },
+          {
+            "file": "Y7/C02/Y7_C02_--_HHZ_20201013T000000_20201014T000000.h5",
+            "sha256": "e38615a3919b4dd1faf3d1a5b399f618861f3fbb03a517897046e5ae6e8e8d62",
+            "traces": 1,
+            "samples": 8641889,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "3a698c034ee29590ac54f45037907c0525682ba0b0e5acb940b8d19ba717b3a0"
+          },
+          {
+            "file": "Y7/C02/Y7_C02_--_HHZ_20201014T000000_20201015T000000.h5",
+            "sha256": "66a026ea5f6aeee61e1e1b8fa8689a67d0cff42d9bd348366274660956db73f9",
+            "traces": 1,
+            "samples": 8641895,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "3a698c034ee29590ac54f45037907c0525682ba0b0e5acb940b8d19ba717b3a0"
+          },
+          {
+            "file": "Y7/C02/Y7_C02_--_HHZ_20201015T000000_20201016T000000.h5",
+            "sha256": "5d969f6b5917be3815a7064a09499ca9ea6f30e4d0d112b5b4dadfaa2a5d0308",
+            "traces": 1,
+            "samples": 8641887,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "3a698c034ee29590ac54f45037907c0525682ba0b0e5acb940b8d19ba717b3a0"
+          },
+          {
+            "file": "Y7/C03/Y7_C03_--_HHZ_20201012T000000_20201013T000000.h5",
+            "sha256": "a300001f796a22343feea2ee794713fa54ec78879570064650f379a4cfbf5967",
+            "traces": 1,
+            "samples": 8642223,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "b1062aa165544d5bb2c040902419734c2e75f3b09f125acc4595f77136adba30"
+          },
+          {
+            "file": "Y7/C03/Y7_C03_--_HHZ_20201013T000000_20201014T000000.h5",
+            "sha256": "ec7d31112d947782db5d04b8a5e65ab1baa3a796261794b123f834bb476470f1",
+            "traces": 1,
+            "samples": 8642358,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "b1062aa165544d5bb2c040902419734c2e75f3b09f125acc4595f77136adba30"
+          },
+          {
+            "file": "Y7/C03/Y7_C03_--_HHZ_20201014T000000_20201015T000000.h5",
+            "sha256": "a4e77e88d05c4a28ade3391219dc853950fa276b0ee0eafdfc2e1266c00d3196",
+            "traces": 1,
+            "samples": 8642280,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "b1062aa165544d5bb2c040902419734c2e75f3b09f125acc4595f77136adba30"
+          },
+          {
+            "file": "Y7/C03/Y7_C03_--_HHZ_20201015T000000_20201016T000000.h5",
+            "sha256": "0ab25222dbc244dd6b836b83228c4406d9e0562d4d12ea4237e80640166d632c",
+            "traces": 1,
+            "samples": 8641939,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "b1062aa165544d5bb2c040902419734c2e75f3b09f125acc4595f77136adba30"
+          },
+          {
+            "file": "Y7/D01/Y7_D01_--_HHZ_20201012T000000_20201013T000000.h5",
+            "sha256": "7414f10f68ba247b77dea28fefa83fef0d84596e8847b753ce5376011984a232",
+            "traces": 1,
+            "samples": 8642176,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "66db35f486bf4194e4f50fb863702099cb85f7aa024f7305f9995c53ac8678e8"
+          },
+          {
+            "file": "Y7/D01/Y7_D01_--_HHZ_20201013T000000_20201014T000000.h5",
+            "sha256": "62e9506b3acc52018d23228117962777ef07e1a1d1b162a05fdb12d270aad833",
+            "traces": 1,
+            "samples": 8642380,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "66db35f486bf4194e4f50fb863702099cb85f7aa024f7305f9995c53ac8678e8"
+          },
+          {
+            "file": "Y7/D01/Y7_D01_--_HHZ_20201014T000000_20201015T000000.h5",
+            "sha256": "cb76517dea3688a4b96869a5cac15690b9095aba8af6507c23734de6ca6432d2",
+            "traces": 1,
+            "samples": 8642148,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "66db35f486bf4194e4f50fb863702099cb85f7aa024f7305f9995c53ac8678e8"
+          },
+          {
+            "file": "Y7/D01/Y7_D01_--_HHZ_20201015T000000_20201016T000000.h5",
+            "sha256": "98122716822145fe9b6201def418d97f17a36fc62e7a8cc74c710bf375a1112f",
+            "traces": 1,
+            "samples": 8642223,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "66db35f486bf4194e4f50fb863702099cb85f7aa024f7305f9995c53ac8678e8"
+          },
+          {
+            "file": "Y7/D02/Y7_D02_--_HHZ_20201012T000000_20201013T000000.h5",
+            "sha256": "b2ee844202a42f33da0cc92e3fc5cafe2cc5f44d86d0da2a41c486b7dd96729e",
+            "traces": 1,
+            "samples": 8642025,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "a47c22a55eeddaa5c958655b01460baed43f9e4835fd3b6e83dff04174133ac9"
+          },
+          {
+            "file": "Y7/D02/Y7_D02_--_HHZ_20201013T000000_20201014T000000.h5",
+            "sha256": "e17c42a2dbfde1678e62b7b2f92a0a222d7b8e8d8c8faaece517b27ac2c48c0f",
+            "traces": 1,
+            "samples": 8641997,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "a47c22a55eeddaa5c958655b01460baed43f9e4835fd3b6e83dff04174133ac9"
+          },
+          {
+            "file": "Y7/D02/Y7_D02_--_HHZ_20201014T000000_20201015T000000.h5",
+            "sha256": "94b901c6d69196f8b068dac86b736378aaeb29b79209e5c6e7a1300638d9c71b",
+            "traces": 1,
+            "samples": 8641951,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "a47c22a55eeddaa5c958655b01460baed43f9e4835fd3b6e83dff04174133ac9"
+          },
+          {
+            "file": "Y7/D02/Y7_D02_--_HHZ_20201015T000000_20201016T000000.h5",
+            "sha256": "e87ef900fe832008e1ba97c522f8bac5d59164b8f74917279a995288c5afa797",
+            "traces": 1,
+            "samples": 8641931,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "a47c22a55eeddaa5c958655b01460baed43f9e4835fd3b6e83dff04174133ac9"
+          },
+          {
+            "file": "Y7/E01/Y7_E01_--_HHZ_20201012T000000_20201013T000000.h5",
+            "sha256": "fa727e632cc2b2f0a86598c7cee0be063e402df73e0750e286155c6c780b43b2",
+            "traces": 1,
+            "samples": 8641888,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "cadc98c05c851e058a36dde0b4192327a7a2616e1996294efbb9e34940a018d7"
+          },
+          {
+            "file": "Y7/E01/Y7_E01_--_HHZ_20201013T000000_20201014T000000.h5",
+            "sha256": "b370cc6f718ef319326b66bf75579995f39ddea549466963a5e6cfd92e815dae",
+            "traces": 1,
+            "samples": 8641887,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "cadc98c05c851e058a36dde0b4192327a7a2616e1996294efbb9e34940a018d7"
+          },
+          {
+            "file": "Y7/E01/Y7_E01_--_HHZ_20201014T000000_20201015T000000.h5",
+            "sha256": "c52809a1cb8bfe2d4e25707ed6e142036368ef3602606273c622fcab3467d14d",
+            "traces": 1,
+            "samples": 8641890,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "cadc98c05c851e058a36dde0b4192327a7a2616e1996294efbb9e34940a018d7"
+          },
+          {
+            "file": "Y7/E01/Y7_E01_--_HHZ_20201015T000000_20201016T000000.h5",
+            "sha256": "1c4e337249619e8ac57df1dd4bd80c8c836744c1de0f44304ee69f27c8367d06",
+            "traces": 1,
+            "samples": 8641895,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "cadc98c05c851e058a36dde0b4192327a7a2616e1996294efbb9e34940a018d7"
+          },
+          {
+            "file": "Y7/E02/Y7_E02_--_HHZ_20201012T000000_20201013T000000.h5",
+            "sha256": "582acce517d823f180b022217d775a89bff7c86933b42924b3239b56e998f856",
+            "traces": 2,
+            "samples": 17283769,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "5326201609d027449b1498fc7e148223cd4db5e462d9dcc131aaf8b9edc12a7a"
+          },
+          {
+            "file": "Y7/E02/Y7_E02_--_HHZ_20201013T000000_20201014T000000.h5",
+            "sha256": "b48f72b3e61783fcb5335dc4d812a83f4da2846d8a1fefb85861b761f2f91a00",
+            "traces": 2,
+            "samples": 17283769,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "5326201609d027449b1498fc7e148223cd4db5e462d9dcc131aaf8b9edc12a7a"
+          },
+          {
+            "file": "Y7/E02/Y7_E02_--_HHZ_20201014T000000_20201015T000000.h5",
+            "sha256": "bb81171597a95cb7ba96755f834dafa3d5f6904edb59429c0f6d6e62c7c9ee1e",
+            "traces": 2,
+            "samples": 17283769,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "5326201609d027449b1498fc7e148223cd4db5e462d9dcc131aaf8b9edc12a7a"
+          },
+          {
+            "file": "Y7/E02/Y7_E02_--_HHZ_20201015T000000_20201016T000000.h5",
+            "sha256": "0c0368579631127e9ab03c13f0a6320992f2aea8a54a7176e9ebba30481a282f",
+            "traces": 2,
+            "samples": 17283769,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "5326201609d027449b1498fc7e148223cd4db5e462d9dcc131aaf8b9edc12a7a"
+          }
+        ],
+        "original_mseed_and_full_stationxml_embedded": true
+      },
+      "verification": {
+        "checks_passed": true,
+        "windows": 45,
+        "pairs": 15,
+        "measured_segments": 33,
+        "conditional_curves": 1470,
+        "empty_curves_are_valid_outcome": true,
+        "verified_unique_physical_dispersion": false,
+        "raw_files_unchanged_and_fingerprint_checked": true
+      },
+      "inversion": {
+        "cases": 12,
+        "compatible_models": 19,
+        "independent_solver_available": true,
+        "unique_structure_identified": false,
+        "observed_and_predicted_points_separate": true,
+        "missing_roots_not_filled": true,
+        "frequency_samples_not_treated_as_independent": true,
+        "selection_sha256": "18415f79f97e0b3a1462ec3ac213630deac92977295148adea89b96a0eb34192",
+        "studio_code_sha256": "b0f4a6fe8eede17a80d4c20006dd5fd57067b645697fa8753e12c03bbcde166d",
+        "input_curve_file": "output/conditional_dispersion.csv",
+        "input_curve_sha256": "53ef037819bc7dd507944834ffff5c0e73bc9ce9c7c6eec6a80b739ff9feac95",
+        "project_config_sha256": "d33e23907639d11896b58a442f2cc872a2fdfe1b1f3c897785cdd0742fe8e109"
+      },
+      "conditional_model_count": 19
+    },
+    {
+      "array": "爱尔兰都柏林 Geo_URBAN / 1V",
+      "network": "1V",
+      "requested_start_utc": "2019-04-01T00:00:00.000000Z",
+      "requested_end_utc": "2019-04-05T00:00:00.000000Z",
+      "stations": [
+        "G003",
+        "G007",
+        "G010",
+        "G016",
+        "G018",
+        "G019"
+      ],
+      "geometry": {
+        "stations": 6,
+        "stations_with_coordinates": 6,
+        "missing_coordinates": 0,
+        "coordinate_conflicts": [],
+        "mean_nearest_neighbor_m": 1777.1917798629972,
+        "mean_pair_distance_m": 2958.394900192576,
+        "min_pair_distance_m": 1648.0993410703886,
+        "max_pair_distance_m": 4691.577264895825,
+        "coincident_pair_count": 0,
+        "spacing_definition": "mean nearest-neighbour WGS84 surface distance",
+        "points": [
+          [
+            "1V",
+            "G003",
+            53.36125,
+            -6.27075,
+            8.0
+          ],
+          [
+            "1V",
+            "G007",
+            53.352729,
+            -6.235802,
+            25.0
+          ],
+          [
+            "1V",
+            "G010",
+            53.344833,
+            -6.269886,
+            10.0
+          ],
+          [
+            "1V",
+            "G016",
+            53.336065,
+            -6.234938,
+            71.0
+          ],
+          [
+            "1V",
+            "G018",
+            53.32598,
+            -6.29024,
+            114.0
+          ],
+          [
+            "1V",
+            "G019",
+            53.32399,
+            -6.26573,
+            116.0
+          ]
+        ],
+        "nearest_neighbor_m": {
+          "1V.G003": 1828.001203909855,
+          "1V.G007": 1855.4747946087482,
+          "1V.G010": 1828.001203909855,
+          "1V.G016": 1855.4747946087482,
+          "1V.G018": 1648.0993410703886,
+          "1V.G019": 1648.0993410703886
+        }
+      },
+      "acquisition_audit": {
+        "checks_passed": true,
+        "h5_files": 32,
+        "native_samples": 276552602,
+        "records": [
+          {
+            "file": "1V/G003/1V_G003_--_HHZ_20190401T000000_20190402T000000.h5",
+            "sha256": "f89427ffba19fedd48acf4a7f524064bc664990f05f70a51efac4883cbb300b6",
+            "traces": 1,
+            "samples": 8642200,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "476cbc34a8c8c315a15503ed7d5e68cb3a43851f491285047cc52813bd50bece"
+          },
+          {
+            "file": "1V/G003/1V_G003_--_HHZ_20190402T000000_20190403T000000.h5",
+            "sha256": "dfd477dcf43e69c7c1639d933bff0ffad9d9e7a7af14e9fdac06a554be43f400",
+            "traces": 1,
+            "samples": 8642117,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "476cbc34a8c8c315a15503ed7d5e68cb3a43851f491285047cc52813bd50bece"
+          },
+          {
+            "file": "1V/G003/1V_G003_--_HHZ_20190403T000000_20190404T000000.h5",
+            "sha256": "e0bc8920ee7d2a12d9a84dcedc124a654d98a3ca3878cfd60b4d60b72db8559b",
+            "traces": 1,
+            "samples": 8641955,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "476cbc34a8c8c315a15503ed7d5e68cb3a43851f491285047cc52813bd50bece"
+          },
+          {
+            "file": "1V/G003/1V_G003_--_HHZ_20190404T000000_20190405T000000.h5",
+            "sha256": "1f5c8ec2927df87b26f69f6e6ce43aaf91b5a5ad9b4f810002fd0c48c718d6ed",
+            "traces": 1,
+            "samples": 8642135,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "476cbc34a8c8c315a15503ed7d5e68cb3a43851f491285047cc52813bd50bece"
+          },
+          {
+            "file": "1V/G007/1V_G007_--_HHZ_20190401T000000_20190402T000000.h5",
+            "sha256": "98acf6039d8111066a9a5df0dc2ab1722ef01c0cee9b4e39e313b53bc79bfe2a",
+            "traces": 1,
+            "samples": 8641929,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "8bffa6b7f3fcfc502f55abdea34a057d7f9e32c9a879ca5e1b3f2574a781aebc"
+          },
+          {
+            "file": "1V/G007/1V_G007_--_HHZ_20190402T000000_20190403T000000.h5",
+            "sha256": "99e63e2bbcaabd9027060204a8a8e204525449847369c6f90329aa11fd4941a1",
+            "traces": 1,
+            "samples": 8642000,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "8bffa6b7f3fcfc502f55abdea34a057d7f9e32c9a879ca5e1b3f2574a781aebc"
+          },
+          {
+            "file": "1V/G007/1V_G007_--_HHZ_20190403T000000_20190404T000000.h5",
+            "sha256": "8a207a42ddf9f3d98ad5d418d61b6ea0207c8a9209fe608e8e436786b8b28fef",
+            "traces": 1,
+            "samples": 8642006,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "8bffa6b7f3fcfc502f55abdea34a057d7f9e32c9a879ca5e1b3f2574a781aebc"
+          },
+          {
+            "file": "1V/G007/1V_G007_--_HHZ_20190404T000000_20190405T000000.h5",
+            "sha256": "cf436d2b37808a6402bbb58095d8b1593788b24f6905287d53988724f905cc34",
+            "traces": 1,
+            "samples": 8642050,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "8bffa6b7f3fcfc502f55abdea34a057d7f9e32c9a879ca5e1b3f2574a781aebc"
+          },
+          {
+            "file": "1V/G010/1V_G010_--_HHZ_20190401T000000_20190402T000000.h5",
+            "sha256": "ec24ff022d48736b07bbf6381cf1a4618515a0c8035a9845bcd388ee76f8d9c4",
+            "traces": 1,
+            "samples": 8641890,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "dea3f9457644311b72b88dec7f7192a8cff0176566878d813ed94c425508cff0"
+          },
+          {
+            "file": "1V/G010/1V_G010_--_HHZ_20190402T000000_20190403T000000.h5",
+            "sha256": "8441d3c16ed2e110f9ca5c3be6f2690b08119999b28d660166022791be58e9fe",
+            "traces": 1,
+            "samples": 8641895,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "dea3f9457644311b72b88dec7f7192a8cff0176566878d813ed94c425508cff0"
+          },
+          {
+            "file": "1V/G010/1V_G010_--_HHZ_20190403T000000_20190404T000000.h5",
+            "sha256": "754c60caef80a4f7f2b10ee24e858d951468dadfc8fde5eff34cc3c2843a2452",
+            "traces": 1,
+            "samples": 8641892,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "dea3f9457644311b72b88dec7f7192a8cff0176566878d813ed94c425508cff0"
+          },
+          {
+            "file": "1V/G010/1V_G010_--_HHZ_20190404T000000_20190405T000000.h5",
+            "sha256": "45e0cf72231a105786345cfa2e4b9312c3d4777ab8ccafa560da2db5e24b7a7c",
+            "traces": 1,
+            "samples": 8641908,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "dea3f9457644311b72b88dec7f7192a8cff0176566878d813ed94c425508cff0"
+          },
+          {
+            "file": "1V/G011/1V_G011_--_HHZ_20190401T000000_20190402T000000.h5",
+            "sha256": "a2a1d3f7bc473fd656b8d2ffcd3567d822b9f0508b959d018695a9b872ec5efb",
+            "traces": 1,
+            "samples": 8643586,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "5f4cf789faffaf9ba83e394580aa61b9349de8c0bd368eddb0d23dca82e2a69f"
+          },
+          {
+            "file": "1V/G011/1V_G011_--_HHZ_20190402T000000_20190403T000000.h5",
+            "sha256": "6e7391e67b093ea55312cf23d5079ea9c15190a8211f033faf4bbb956f221b72",
+            "traces": 1,
+            "samples": 8643391,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "5f4cf789faffaf9ba83e394580aa61b9349de8c0bd368eddb0d23dca82e2a69f"
+          },
+          {
+            "file": "1V/G011/1V_G011_--_HHZ_20190403T000000_20190404T000000.h5",
+            "sha256": "aeda7de783a083dcad01eaaf18b69d5bb42c8f4e24b23064315d448ee2bfabd0",
+            "traces": 1,
+            "samples": 8643561,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "5f4cf789faffaf9ba83e394580aa61b9349de8c0bd368eddb0d23dca82e2a69f"
+          },
+          {
+            "file": "1V/G011/1V_G011_--_HHZ_20190404T000000_20190405T000000.h5",
+            "sha256": "4c7b2c728fa1a0b0652726574cd472bb91595d0b98ee6f65532a246261b74a7c",
+            "traces": 1,
+            "samples": 8643525,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "5f4cf789faffaf9ba83e394580aa61b9349de8c0bd368eddb0d23dca82e2a69f"
+          },
+          {
+            "file": "1V/G015/1V_G015_--_HHZ_20190401T000000_20190402T000000.h5",
+            "sha256": "8ca44b04822f7ac3d3d92827a2515f90ff58b0095f99b01d29ed88b0fd628a75",
+            "traces": 1,
+            "samples": 8641862,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "81beec1106ddf02fe20b8b23e3a8390a1fb7e8a2befed51ee71ac38e3d4d912b"
+          },
+          {
+            "file": "1V/G015/1V_G015_--_HHZ_20190402T000000_20190403T000000.h5",
+            "sha256": "635d0b7bb1ab8b61916bba530d854634a8ac6ca5ab70fa2622186a4693ac6b3f",
+            "traces": 1,
+            "samples": 8641995,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "81beec1106ddf02fe20b8b23e3a8390a1fb7e8a2befed51ee71ac38e3d4d912b"
+          },
+          {
+            "file": "1V/G015/1V_G015_--_HHZ_20190403T000000_20190404T000000.h5",
+            "sha256": "c4863d34fbcd7e23850a2ac1ee79c76af7b2fa4dd0e7436d2a4fc41dbdc0c3f3",
+            "traces": 1,
+            "samples": 8641915,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "ab8ed29d9162804a1893bb44ea8a4d62d8141d4bbbb5b76f4308b2cfa6aa1704"
+          },
+          {
+            "file": "1V/G015/1V_G015_--_HHZ_20190404T000000_20190405T000000.h5",
+            "sha256": "a9a86e748ac69918b614a0a930768c4a7c5c883977f78ae8add4d86a23183eb8",
+            "traces": 1,
+            "samples": 8642015,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "ab8ed29d9162804a1893bb44ea8a4d62d8141d4bbbb5b76f4308b2cfa6aa1704"
+          },
+          {
+            "file": "1V/G016/1V_G016_--_HHZ_20190401T000000_20190402T000000.h5",
+            "sha256": "ea8e6f58090c4a8d995087b3dca49a607cfe6a6970819837977f52085c3337dd",
+            "traces": 1,
+            "samples": 8642847,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "83705ca066025f1815d17741dc99aa89b5a7ea275c77a2ea4051654c2b9a74b5"
+          },
+          {
+            "file": "1V/G016/1V_G016_--_HHZ_20190402T000000_20190403T000000.h5",
+            "sha256": "baad5304b16318ef351ba3611529651dfe96608cbe7b4fce1adcfd327e57ead7",
+            "traces": 1,
+            "samples": 8642288,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "6cdbcaa92f5adba88c713f118a79b256b947ff75d95bcd640b943dbe4b815ffe"
+          },
+          {
+            "file": "1V/G016/1V_G016_--_HHZ_20190403T000000_20190404T000000.h5",
+            "sha256": "aa491455dbcfaa698d4e973de2eda96d69ab1443ed2535a70b5c21617ea4f790",
+            "traces": 1,
+            "samples": 8641954,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "6cdbcaa92f5adba88c713f118a79b256b947ff75d95bcd640b943dbe4b815ffe"
+          },
+          {
+            "file": "1V/G016/1V_G016_--_HHZ_20190404T000000_20190405T000000.h5",
+            "sha256": "f8785c5aa360c49d76d4dccc8311f5ce80f9c75f3bface000f538be0061d158f",
+            "traces": 1,
+            "samples": 8642047,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "6cdbcaa92f5adba88c713f118a79b256b947ff75d95bcd640b943dbe4b815ffe"
+          },
+          {
+            "file": "1V/G018/1V_G018_--_HHZ_20190401T000000_20190402T000000.h5",
+            "sha256": "0fe6cd9b8a9e01a1818c5b3d5de8ae4f2d48278ecb16f64909ddc2f9a83f6963",
+            "traces": 1,
+            "samples": 8641886,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "b8efe056e18eeb40142ca40bc29090f71d443d4832f420008fd4e06b7842f082"
+          },
+          {
+            "file": "1V/G018/1V_G018_--_HHZ_20190402T000000_20190403T000000.h5",
+            "sha256": "f224bc31c7ec249b821b27c9b726216a403dfcb0d52375519c39aca8fe865736",
+            "traces": 1,
+            "samples": 8641889,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "599fe1e9d402ea9d474abb82287350b2b8fc2df196b4296e2cc4ddd19be01072"
+          },
+          {
+            "file": "1V/G018/1V_G018_--_HHZ_20190403T000000_20190404T000000.h5",
+            "sha256": "608173f6988b7ba811f1f3a94eb25984d9ba0dc0bcf6f3ce00946991193a5bdd",
+            "traces": 1,
+            "samples": 8642122,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "599fe1e9d402ea9d474abb82287350b2b8fc2df196b4296e2cc4ddd19be01072"
+          },
+          {
+            "file": "1V/G018/1V_G018_--_HHZ_20190404T000000_20190405T000000.h5",
+            "sha256": "d7b4f082c1df96fc88229f954e4d7191556db592f989005f087532449fa00e1e",
+            "traces": 1,
+            "samples": 8642245,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "599fe1e9d402ea9d474abb82287350b2b8fc2df196b4296e2cc4ddd19be01072"
+          },
+          {
+            "file": "1V/G019/1V_G019_--_HHZ_20190401T000000_20190402T000000.h5",
+            "sha256": "ce6d06c5b705d1c7108dc07a1c07056094b05630452f86351ba9c780c5fbda74",
+            "traces": 1,
+            "samples": 8642792,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "39b3c1cea943f99a5911da065bc488713532345546a1f7f85ff580cfffed4839"
+          },
+          {
+            "file": "1V/G019/1V_G019_--_HHZ_20190402T000000_20190403T000000.h5",
+            "sha256": "b898f20e0c845d7bc344d6597ca2ec57d8a992379554acb4f67526a5bbb7a17e",
+            "traces": 1,
+            "samples": 8642393,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "39b3c1cea943f99a5911da065bc488713532345546a1f7f85ff580cfffed4839"
+          },
+          {
+            "file": "1V/G019/1V_G019_--_HHZ_20190403T000000_20190404T000000.h5",
+            "sha256": "85e300751014e31247612d257b0a623b0a2b287c874042d452f0a019d56a4c5c",
+            "traces": 1,
+            "samples": 8642063,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "39b3c1cea943f99a5911da065bc488713532345546a1f7f85ff580cfffed4839"
+          },
+          {
+            "file": "1V/G019/1V_G019_--_HHZ_20190404T000000_20190405T000000.h5",
+            "sha256": "aa3a693e4a97fef09284c13c359df8a04a955b7932dcfaeb81c0505743c350d9",
+            "traces": 1,
+            "samples": 8642249,
+            "native_values_utc_rate_equal_to_original_mseed": true,
+            "stationxml_sha256": "39b3c1cea943f99a5911da065bc488713532345546a1f7f85ff580cfffed4839"
+          }
+        ],
+        "original_mseed_and_full_stationxml_embedded": true
+      },
+      "verification": {
+        "checks_passed": true,
+        "windows": 73,
+        "pairs": 15,
+        "measured_segments": 9,
+        "conditional_curves": 301,
+        "empty_curves_are_valid_outcome": true,
+        "verified_unique_physical_dispersion": false,
+        "raw_files_unchanged_and_fingerprint_checked": true
+      },
+      "inversion": {
+        "cases": 219,
+        "compatible_models": 45,
+        "independent_solver_available": true,
+        "unique_structure_identified": false,
+        "observed_and_predicted_points_separate": true,
+        "missing_roots_not_filled": true,
+        "frequency_samples_not_treated_as_independent": true,
+        "selection_sha256": "588edb6d1b411cb6b83720633e2dc77984b9bb1d4a9529fd4b88c0483c9602ff",
+        "studio_code_sha256": "b0f4a6fe8eede17a80d4c20006dd5fd57067b645697fa8753e12c03bbcde166d",
+        "input_curve_file": "output/conditional_dispersion.csv",
+        "input_curve_sha256": "216be1a6e9ce33dd5d92640807827f741b49a254eb8785f0910fbe5ed9a8e111",
+        "project_config_sha256": "2f63a7075a6d38e122f3ccc90e75aaedd29097fa54e8231cf123b3517c753029"
+      },
+      "conditional_model_count": 45
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "name": "合成HDF5平面场流程示例",
+  "input_folder": "../h5",
+  "excluded_stations": [],
+  "automatic_geometry": false
+}

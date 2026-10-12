@@ -1,0 +1,207 @@
+{
+  "program_version": "2.5.1",
+  "date_utc": "2026-10-10",
+  "runtime": {
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "python": "3.12.14",
+    "packages": {
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "pandas": "2.2.3",
+      "h5py": "3.16.0",
+      "obspy": "1.5.1",
+      "pyproj": "3.8.0",
+      "matplotlib": "3.10.8",
+      "PySide6": "6.12.0",
+      "disba": "0.7.0",
+      "numba": "0.68.0",
+      "llvmlite": "0.50.0",
+      "pytest": "9.1.1"
+    }
+  },
+  "tests": {
+    "passed": 90,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 8,
+    "skipped_reason": "Tk tests require graphical DISPLAY; unavailable"
+  },
+  "coverage": [
+    "controlled 3Hz peak recovery",
+    "gap/transient detection",
+    "counts instrument response with different component gains",
+    "instrument-family/location separation",
+    "fractional-sample clock rejection",
+    "rotation invariance",
+    "source hash preservation",
+    "conditional depth tradeoff",
+    "Rayleigh ellipticity trial recovery",
+    "actual Qt QProcess H/V button",
+    "download-button project handoff",
+    "existing HDF5 import and station-filter regression",
+    "actual live FDSN three-component acquisition and native audit",
+    "real archive resume: all 12 chunks existing",
+    "two-sided peak-shape structural gate",
+    "padding/core-gap distinction",
+    "CLI time override and three-component defaults",
+    "same-record frequency/window sensitivity"
+  ],
+  "example": {
+    "data_type": "controlled broadband spectral synthetic; not field observation",
+    "designed_peak_hz": 3.0,
+    "recovered_peak_hz": 3.0160773184432808,
+    "reliability_pass": true,
+    "clarity_checks_passed": 6,
+    "accepted_windows": 28,
+    "injected_rejected_windows": [
+      4,
+      12
+    ],
+    "vs_prior_m_s": [
+      200.0,
+      300.0
+    ],
+    "depth_range_m": [
+      16.57782434629594,
+      24.866736519443915
+    ]
+  },
+  "limitations": [
+    "Linux Qt offscreen validation; native Windows not exercised",
+    "Download handoff action tested without rendering full Tk downloader",
+    "Rayleigh-only approximation, not diffuse-field full-wavefield inversion",
+    "Single finite layer plus fixed halfspace in optional ellipticity search",
+    "Pinned Windows requirements retained; numerical verification versions explicitly listed",
+    "Real dataset did not establish a reliable fundamental peak; no shallow profile exported",
+    "Eight Tk tests skipped without DISPLAY; actual Qt real-data task exercised"
+  ],
+  "real_data": {
+    "program_version": "2.5.1",
+    "station": "BW.MGS01..HH",
+    "provider": "LMU",
+    "request_start_utc": "2020-11-01T00:00:00.000000Z",
+    "request_end_utc": "2020-11-01T02:00:00.000000Z",
+    "channels": [
+      "HHE",
+      "HHN",
+      "HHZ"
+    ],
+    "sampling_rate_hz": 200.0,
+    "acquisition_checks_passed": true,
+    "h5_files": 12,
+    "archived_native_samples": 4323686,
+    "source_hashes_unchanged": true,
+    "cases": [
+      {
+        "case": "baseline",
+        "frequency_band_hz": [
+          0.2,
+          20.0
+        ],
+        "window_s": 120.0,
+        "windows": 60,
+        "accepted": 43,
+        "independent": 43,
+        "candidate_hz": 0.4240234041296994,
+        "clarity": 5,
+        "reliability_pass": true,
+        "left_drop": false,
+        "right_drop": true,
+        "structure_status": "incomplete_peak_shape",
+        "rejected_by_reason": {
+          "响应校正缓冲区不完整（分析窗内数据完整）": 2,
+          "transient": 15
+        }
+      },
+      {
+        "case": "same_window",
+        "frequency_band_hz": [
+          0.1,
+          20.0
+        ],
+        "window_s": 120.0,
+        "windows": 60,
+        "accepted": 43,
+        "independent": 43,
+        "candidate_hz": 0.42247706451573414,
+        "clarity": 5,
+        "reliability_pass": true,
+        "left_drop": false,
+        "right_drop": true,
+        "structure_status": "incomplete_peak_shape",
+        "rejected_by_reason": {
+          "响应校正缓冲区不完整（分析窗内数据完整）": 2,
+          "transient": 15
+        }
+      },
+      {
+        "case": "low_frequency",
+        "frequency_band_hz": [
+          0.05,
+          20.0
+        ],
+        "window_s": 300.0,
+        "windows": 24,
+        "accepted": 7,
+        "independent": 7,
+        "candidate_hz": 0.2035437169790774,
+        "clarity": 4,
+        "reliability_pass": true,
+        "left_drop": false,
+        "right_drop": false,
+        "structure_status": "no_reliable_peak",
+        "rejected_by_reason": {
+          "响应校正缓冲区不完整（分析窗内数据完整）": 2,
+          "transient": 15
+        }
+      }
+    ],
+    "conclusion": "真实下载、响应校正、H/V、质量控制与报告链路运行成功。候选低频宽肩峰未建立可靠基频，暂停自动层厚和速度剖面。",
+    "limits": [
+      "低频变化同时涉及频段与窗长；同窗长对照单独检查了频段影响。",
+      "更长窗的突发噪声剔除减少有效窗；未放松质量门限或按H/V形状挑窗。",
+      "此次没有可确认的浅层结构解释，不输出Vs30；Rayleigh条件试算保持关闭。"
+    ],
+    "gui_validation": {
+      "task": "H/V from actual Qt primary button / actual QProcess",
+      "exit_code": 0,
+      "instrument": "BW.MGS01..HH",
+      "accepted_windows": 43,
+      "structure_status": "incomplete_peak_shape",
+      "display_text": "完成 · BW.MGS01..HH · 有效窗43 · 独立窗43 · 浅层约束：峰形不完整，暂停层厚估计",
+      "curve_loaded": true,
+      "platform": "Linux Qt offscreen",
+      "startup_cli_screenshot": true,
+      "bundled_chinese_font_loaded": true
+    }
+  },
+  "gui": {
+    "task": "H/V from actual Qt primary button / actual QProcess",
+    "exit_code": 0,
+    "instrument": "BW.MGS01..HH",
+    "accepted_windows": 43,
+    "structure_status": "incomplete_peak_shape",
+    "display_text": "完成 · BW.MGS01..HH · 有效窗43 · 独立窗43 · 浅层约束：峰形不完整，暂停层厚估计",
+    "curve_loaded": true,
+    "platform": "Linux Qt offscreen",
+    "startup_cli_screenshot": true,
+    "bundled_chinese_font_loaded": true
+  },
+  "offline_replay": {
+    "mode": "offline replay from unpacked program and real-data archive",
+    "exit_code": 0,
+    "network_requests": false,
+    "same_candidate_peaks_and_window_qc": true,
+    "source_hashes_unchanged": true,
+    "accepted_windows": [
+      43,
+      43,
+      7
+    ],
+    "structure_statuses": [
+      "incomplete_peak_shape",
+      "incomplete_peak_shape",
+      "no_reliable_peak"
+    ]
+  }
+}

@@ -1,0 +1,2 @@
+# Independent phase-speed solver. Some platforms require a Fortran build toolchain.
+pysurf96==1.0.1

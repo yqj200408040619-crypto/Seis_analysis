@@ -1,0 +1,9 @@
+{
+  "project": "project",
+  "accepted_windows": 96,
+  "candidate_curves": 0,
+  "conditional_models": 0,
+  "inversion_complete": false,
+  "unique_physical_curve_or_structure_verified": false,
+  "independent_solver_passed_models": 0
+}

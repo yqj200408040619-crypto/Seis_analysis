@@ -1,0 +1,77 @@
+{
+  "settings": {
+    "layers": [
+      1,
+      2
+    ],
+    "starts": 4,
+    "max_evaluations": 120,
+    "vp_vs_ratio": 2.0,
+    "density_g_cm3": 2.0,
+    "thickness_bounds_m": [
+      5.0,
+      500.0
+    ],
+    "vs_bounds_m_s": [
+      150.0,
+      2200.0
+    ],
+    "phase_rms_max_fraction": 0.03,
+    "phase_point_max_fraction": 0.05,
+    "group_median_max_fraction": 0.15,
+    "group_fit_weight": 0.25,
+    "max_fit_points_per_band": 24,
+    "finite_difference_log_step": 0.003,
+    "require_independent_solver": false,
+    "independent_max_difference_m_s": 0.5,
+    "allow_background_unverified": false,
+    "seed": 9075
+  },
+  "cases": [
+    {
+      "name": "DARE_N3_M0",
+      "bands": [
+        {
+          "curve_id": "P00156_b1_S0_N3",
+          "mode": 0
+        }
+      ],
+      "assumptions": {
+        "common_1d_structure": true,
+        "source_phase_pi_over_4_assumed": true,
+        "cycle_and_fundamental_mode_assumed": true,
+        "actual_observation_from_previous_DARE_trial": true
+      }
+    },
+    {
+      "name": "DARE_N4_M0",
+      "bands": [
+        {
+          "curve_id": "P00156_b1_S0_N4",
+          "mode": 0
+        }
+      ],
+      "assumptions": {
+        "common_1d_structure": true,
+        "source_phase_pi_over_4_assumed": true,
+        "cycle_and_fundamental_mode_assumed": true,
+        "actual_observation_from_previous_DARE_trial": true
+      }
+    },
+    {
+      "name": "DARE_N5_M0",
+      "bands": [
+        {
+          "curve_id": "P00156_b1_S0_N5",
+          "mode": 0
+        }
+      ],
+      "assumptions": {
+        "common_1d_structure": true,
+        "source_phase_pi_over_4_assumed": true,
+        "cycle_and_fundamental_mode_assumed": true,
+        "actual_observation_from_previous_DARE_trial": true
+      }
+    }
+  ]
+}

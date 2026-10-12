@@ -1,0 +1,5 @@
+# Optional geospatial stack. Core CSV + Matplotlib geothermal output works without these.
+geopandas>=1.0
+xarray>=2025.1
+netCDF4>=1.7
+pygmt>=0.19

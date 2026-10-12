@@ -1,0 +1,126 @@
+{
+  "schema": "ndstudio.hvsr/1",
+  "instrument_id": "XX.DEMO..HH",
+  "settings": {
+    "fmin_hz": 0.3,
+    "fmax_hz": 15.0,
+    "window_s": 60.0,
+    "overlap": 0.0,
+    "ko_bandwidth": 40.0,
+    "frequency_points": 240,
+    "horizontal": "rms",
+    "start": "",
+    "end": "",
+    "max_crest": 12.0,
+    "max_block_rms_ratio": 4.0,
+    "reject_transients": true,
+    "water_level": null,
+    "response_padding_cycles": 3.0,
+    "vs_min_m_s": 200.0,
+    "vs_max_m_s": 300.0,
+    "bedrock_vs_m_s": 1000.0,
+    "peak_frequency_hz": null,
+    "rayleigh_assumption": false,
+    "ellipticity_trials": 160,
+    "ellipticity_seed": 42,
+    "thickness_min_m": 1.0,
+    "thickness_max_m": 300.0,
+    "vp_vs": 1.9,
+    "bedrock_vp_vs": 1.8,
+    "density_g_cm3": 1.8,
+    "bedrock_density_g_cm3": 2.2
+  },
+  "windows": 30,
+  "accepted_windows": 28,
+  "independent_windows": 28,
+  "statistics": "lognormal; non-overlapping windows",
+  "selected_peak": {
+    "f0_hz": 3.0160773184432808,
+    "amplitude": 5.931843219399416,
+    "period_s": 0.3315564869259188,
+    "sigma_f_hz": 0.10485929367859839,
+    "amplitude_std_factor": 1.0500417794507158,
+    "cycles_per_window": 180.96463910659685,
+    "independent_cycles": 5067.0098949847115,
+    "reliability_pass": true,
+    "clarity_pass_count": 6,
+    "clear_peak": true,
+    "individual_peak_support_fraction": 1.0,
+    "minimum_significant_cycles": 200,
+    "full_scatter_band_covered": true,
+    "relative_width": 0.47881146925601226,
+    "narrow_peak_check": false,
+    "selected": true,
+    "ten_cycles": true,
+    "significant_cycle_count_pass": true,
+    "band_scatter": true,
+    "left_drop": true,
+    "right_drop": true,
+    "amplitude_gt_2": true,
+    "plus_minus_peak_stable": true,
+    "frequency_scatter": true,
+    "amplitude_scatter": true
+  },
+  "peaks": [
+    {
+      "f0_hz": 3.0160773184432808,
+      "amplitude": 5.931843219399416,
+      "period_s": 0.3315564869259188,
+      "sigma_f_hz": 0.10485929367859839,
+      "amplitude_std_factor": 1.0500417794507158,
+      "cycles_per_window": 180.96463910659685,
+      "independent_cycles": 5067.0098949847115,
+      "reliability_pass": true,
+      "clarity_pass_count": 6,
+      "clear_peak": true,
+      "individual_peak_support_fraction": 1.0,
+      "minimum_significant_cycles": 200,
+      "full_scatter_band_covered": true,
+      "relative_width": 0.47881146925601226,
+      "narrow_peak_check": false,
+      "selected": true,
+      "ten_cycles": true,
+      "significant_cycle_count_pass": true,
+      "band_scatter": true,
+      "left_drop": true,
+      "right_drop": true,
+      "amplitude_gt_2": true,
+      "plus_minus_peak_stable": true,
+      "frequency_scatter": true,
+      "amplitude_scatter": true
+    }
+  ],
+  "warnings": [
+    "H/V峰幅值不等于地震放大倍数；响应校正不保证低于仪器噪声底的频段可信"
+  ],
+  "source_files_opened_read_only": true,
+  "source_sha256": {
+    "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_0/examples/hvsr_single_station/raw/XX.DEMO..HH_3C.h5": "98764d992878917eda4312bf8e43af368d820014d166a07d735cdd202042b845"
+  },
+  "structure": {
+    "method": "quarter-wave conditional travel-time constraint",
+    "status": "conditional",
+    "explanation": "一维高阻抗反差、所选峰为基频的条件下，输出等效覆盖层厚度范围；半空间Vs为输入先验。未自动输出Vs30。",
+    "f0_hz": 3.0160773184432808,
+    "period_s": 0.3315564869259188,
+    "s_wave_one_way_travel_time_s": 0.0828891217314797,
+    "frequency_scatter_band_hz": [
+      2.810553102833228,
+      3.2216015340533337
+    ],
+    "vs_prior_m_s": [
+      200.0,
+      300.0
+    ],
+    "depth_at_f0_range_m": [
+      16.57782434629594,
+      24.866736519443915
+    ],
+    "depth_with_window_scatter_range_m": [
+      15.52023100047737,
+      26.68513892315179
+    ],
+    "assumed_bedrock_vs_m_s": 1000.0,
+    "formula": "f0 ~= 1/(4*sum(h_i/Vs_i)); uniform equivalent layer H ~= Vs/(4*f0)"
+  }
+}

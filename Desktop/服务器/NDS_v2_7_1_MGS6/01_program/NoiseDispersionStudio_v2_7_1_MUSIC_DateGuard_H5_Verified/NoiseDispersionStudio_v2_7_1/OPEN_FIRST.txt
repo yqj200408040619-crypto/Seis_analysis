@@ -1,0 +1,95 @@
+本版前段频散和后段Goertzel均使用MUSIC。先读 docs/MUSIC_Workflow_v271.md。关闭程序后覆盖更新，重新打开即可，无需重启Windows。
+
+Noise Dispersion Studio 2.7.1 — MUSIC Direction and Phase-Velocity Tomography
+
+本版以完整 2.6.0 地热整合版为基线，继续保持 2.5.6 已成熟的下载、H5审计、预处理、扫描、错时背景、条件频散、方向/F-K、Goertzel低频实测修正和条件结构反演逻辑不变；新增真正的逐频二维相速度层析求解器，并把输出推进到网格局部频散 `local_dispersion.csv`。
+
+新增主功能：`tomography-invert`。第8页“地热与空间层析”新增二维层析参数、selection case 指定、质量模式、方向夹角限制、网格、阻尼/平滑、最少路径、checkerboard 开关和“运行二维相速度层析”按钮。Windows 可运行 `run_tomography_example_windows.bat` 做自包含验证。
+
+二维层析对每个频率独立建立规则网格，精确计算每条台站直线在各网格单元内的路径长度，并求解带阻尼和一阶平滑的慢度扰动。结果同时输出时延残差、ray_count、累计路径长度、射线方位覆盖、模型分辨率矩阵对角元、线性化速度标准差尺度和 checkerboard 恢复。
+
+对 2.5.6 的方向投影 Goertzel 结果做了专门处理：`wave_vector_phase_velocity` 不直接当作 A-B 直线路径速度，而是优先使用 `apparent_pair_velocity_m_s`，否则由 `projected_distance_m` 与真实波矢速度换算成台对等效相位时延速度。默认还要求波矢轴与台对轴夹角 <=15°；这是二维直线路径层析的观测算子约束，不替代前面 Goertzel 阶段的 45°筛窗。
+
+科学保护继续加强：同一台对/频率若存在多个竞争周期/分支，默认直接报错，不把别名重复计权。可通过 `tomo_selection_case` 明确指定 `selection.json` 中的联合 case；只有一个 case 时程序自动使用。输出 `phase_velocity_tomography.csv` 是 c(x,y,f)，不是 Vs(x,y,z)；`local_dispersion.csv` 是下一阶段逐网格 Vs(z) 反演的统一交接表。
+
+详见 `docs/Spatial_Tomography_Workflow_v270.md`、`docs/CHANGELOG_v270.md` 和后续 `docs/Validation_v270.md`。
+
+--- 2.6.0 地热整合说明 ---
+
+Noise Dispersion Studio 2.6.0 — Geothermal Integration
+
+本版以完整 2.5.6 为基线，不改动已经成熟的下载、H5审计、预处理、扫描、错时背景、候选频散、方向/Goertzel低频修正和条件结构反演逻辑；新增统一的地热解释与空间层析下游模块。
+
+新增主界面第8页“地热与空间层析”，并新增 CLI：tomography-export、geothermal-validate、geothermal、geothermal-example。当前频散结果可导出为 output/geothermal/tomography_paths.csv，作为下一阶段二维相速度层析的稳定交接协议。方向约束后的 inversion_curves.csv 若有效，会优先作为交接来源，并保留 projected_distance_m、confirmed_azimuth_deg、direction_quality_verified、background_discriminated 等质量字段。
+
+地热模块支持真正的空间 Vs 输入（CSV/TXT 或 NetCDF/GRD），标准化为 longitude, latitude, depth_m, vs_m_s；可选携带 vs_std_m_s、resolution、ray_count 并按门限遮罩。可批量生成指定深度切片，叠加地质、断裂、Studio台站、钻井和温泉，输出 PNG/PDF/CSV 和独立 HTML 报告。Matplotlib 为基础后端；安装可选地热依赖与 GMT 后可使用 PyGMT。
+
+科学边界保持明确：共同 1-D 条件结构不会被平铺成伪二维/三维 Vs；低 Vs 本身不能直接解释为地热资源；切片深度不等于已证明的深度分辨率。真正二维/三维 Vs 必须来自空间层析或外部空间模型。
+
+下一阶段接口已经前推：tomography_paths.csv 保存台站端点、频率/周期、速度、距离/投影距离、方位和质量状态；后续可在此之上实现逐频直线路径二维相速度层析、覆盖/分辨率评估、网格局部频散和 Vs(z) 反演，再接入 MT、重力、热流与钻井测温综合评价。详见 docs/Geothermal_Workflow_v260.md、docs/Spatial_Tomography_Interface_v260.md、docs/Validation_v260.md。
+
+Windows：原核心依赖仍运行 install_windows.bat；需要 GeoPandas/PyGMT/NetCDF 支持时再运行 install_geothermal_windows.bat。可先运行 run_geothermal_example_windows.bat 检查地热模块。
+
+本轮新增地热模块定向回归 3 项通过；同时用 2.5.6 自带 direction_plane 项目验证“显式 pair 标签优先于历史 pair_index”以避免错误射线路径。当前容器缺 ObsPy/PySide6，未在本环境重跑全套 GUI/原始波形回归；原 2.5.6 历史测试记录保留如下。
+
+--- 2.5.6 基线说明 ---
+
+新增低频实测重建、先确认传播方向再筛窗、叠加前有符号台距投影相位对齐，以及修正前共同频段、修正后共同频段、修正后完整实测频段三组结构反演。
+
+若最终要输出沿波矢的真实相速度，还必须一致地处理台距投影，不能直接把台对视速度当作真实波速。
+
+第6页勾选低频重建，设置下限和步长。预测只用于筛选，须经过真实波形、方向、独立窗口、错移背景和连续频带检验才能生成新增实测点；所有升频增速曲线排除。45°限制只作用于后面的方向/Goertzel筛窗，不改变前面的扫描。
+
+详见 docs/Low_Frequency_Projection_v256.md。此版仅定向检查新增链路，未重跑下载、预处理或DARE真实全流程；下方旧版测试数量与现场结果属于历史记录。完整解压后，Windows运行 install_windows.bat 和 run_windows.bat。
+
+--- 历史版本说明 ---
+
+Noise Dispersion Studio 2.5.5
+
+本版完成程序原生GFZ重新下载、导入、预处理、扫描、错时对照、频散枚举、Goertzel相位与方向筛选、成对条件反演的真实端到端测试。升频增速候选在输入和修正后均排除；局部端点外延最多0.1 Hz，仅作为相位门限先验，不加入最终观测及反演。
+
+修复方向批处理复制全部记录的内存/性能问题、周期别名外延相位门限冲突、GUI保存外延设置丢失，以及续跑混用旧输入/参数/反演结果的问题。新增逐频检查点和原生成对对比工作流。
+
+实测结论：六个DARE宽频台站约96小时，35个验证测量段，1554条条件候选中222条非增速。选定三条候选严格方向/相位筛选后没有合格连续修正带，因此修正后结构跳过。0.2–1.5 Hz补充扫描没有验证测量段。独立的相位模块控制试验关闭方向门限，只用于模块诊断；两条同频点曲线修正最大0.211%，前后各20个相容模型，不构成真实地层验证。详见 docs/Real_Comparison_v255.md。
+
+当前回归183通过、8项环境相关跳过；真实窗口重算与存储筛选掩码审计通过。本版未进行Windows原生或MATLAB运行时实测。
+
+完整解压后运行 install_windows.bat 和 run_windows.bat；Linux/macOS使用 run_linux_macos.sh。
+
+--- 历史版本说明 ---
+
+Noise Dispersion Studio 2.5.3
+
+第6页改为自动处理各台站对的全部共同记录，无需填写开始/结束UTC。按频率f计算窗长N/f和滑动M/f。按用户MATLAB附件框架新增起点稳定时间（默认600秒）、最近DFT频点/MAD异常剔除/正负相位分开复数叠加。曲线模式使用逐频速度对应的相位门限，另可选附件初叠加相位±90°模式。两分支均保存，窗长与实际变换频率实时预览。详见docs/Phase_Guided_User_Guide.html与docs/Phase_Workflow_v253.md。
+本版完整回归163通过、12项环境/可选求解器跳过；附件数值核对与DARE真实波形复核通过。
+
+v2.5.2 已完成：第2页增加最小连续带宽及连续点数，修正按钮步长和高级JSON参数生效。保存后须重新扫描；升级旧缓存先预处理一次，之后只改这两项可直接扫描。详见docs/Analysis_Settings_v252.md。完整回归144通过、9项环境/可选依赖跳过。
+
+先完整解压，运行 install_windows.bat，再运行 run_windows.bat。
+
+新增单台三分量 H/V 与浅层分析：下载 HH? / BH?（Z + 两个水平分量），保持 H5 + full metadata 勾选。下载结束点击 Open single-station H/V，或进入主窗口第7页“单台 H/V 与浅层”。仅有Z分量不能计算H/V；无需先执行多台站导入。
+
+新增功能：逐分量响应校正、方向恢复、统一UTC时窗、缺测与异常噪声诊断、K–O平滑、H/V及分量谱、峰值逐项质量检查、Vs–厚度条件约束、可选Rayleigh椭圆率试算。结构结果显示先验与多解性；不把H/V单独解释为唯一分层速度。
+
+详细使用说明：docs/HVSR_User_Guide_v250.md。
+已附可运行合成示例：examples/hvsr_single_station/project。主窗口“打开项目”选此目录，进入第7页查看/重算。示例为受控谱形合成数据，不是实际台站观测。
+本次已用程序实际下载LMU的BW.MGS01三分量真实波形并完成H/V与参数复核。详见docs/HVSR_Real_Validation_v251.md、docs/HVSR_Validation_v251.json。相关回归90通过、8项Tk显示测试跳过；实际Qt真实数据子进程成功。该记录未建立可信基频，暂停自动层厚估计。未进行Windows原生实测。
+可重复真数据验证：python examples/hvsr_live_test.py --directory live_hvsr；已下载数据可加--offline。
+
+原有台站范围筛选、频散、相位筛选与叠加、条件结构反演入口保留。
+
+--- v2.4 功能说明 ---
+
+Noise Dispersion Studio 2.4
+
+先完整解压，运行 install_windows.bat，再运行 run_windows.bat。
+
+新增台站经纬度与前缀筛选：主窗口点击“下载数据 / 阵列预览”，在下载窗口顶部 Station filters 中填写 Station prefix（例如 QS）和经纬度边界，点击 Apply filters。
+完整匹配名单可以滚动查看并用 Export stations 导出。Download matched stations 只下载当前匹配台站。多个前缀可写 QS,QT；边界留空为不限。详见 docs/Station_Filter_Guide_v2_4.html。
+
+曲线相位筛选位于第6页。详细步骤见 docs/Phase_Guided_User_Guide.html；完整下载到反演流程见 docs/使用手册.html。上次新增的 phase-velocity 命令也已整合。
+
+MATLAB 新入口：matlab/mseed_cross_corr_2_branch.m，读取输出的响应校正 aligned_waveforms.h5 和 selected_phase_targets.csv。原版备份位于 matlab/legacy。
+
+本版验证结果见 docs/pytest_v24_all.xml。新增范围与前缀逻辑、100站筛为20个QS台站、实际Tk界面、名单导出和下载任务一致性均已验证。
+范围筛选还用之前 DARE 的真实 StationXML 做了离线核对。测试未向服务商重新下载波形；MATLAB运行时仍未验证。

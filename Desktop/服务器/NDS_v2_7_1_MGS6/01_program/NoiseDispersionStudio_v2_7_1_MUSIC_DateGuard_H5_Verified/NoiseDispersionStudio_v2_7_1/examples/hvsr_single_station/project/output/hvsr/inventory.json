@@ -1,0 +1,78 @@
+{
+  "folder": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_0/examples/hvsr_single_station/raw",
+  "instruments": [
+    {
+      "instrument_id": "XX.DEMO..HH",
+      "channels": {
+        "HHE": [
+          {
+            "file": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_0/examples/hvsr_single_station/raw/XX.DEMO..HH_3C.h5",
+            "dataset": "XX.DEMO..HHE",
+            "seed_id": "XX.DEMO..HHE",
+            "channel": "HHE",
+            "fs_hz": 50.0,
+            "start_ns": 1767225600000000000,
+            "end_ns": 1767227399980000000,
+            "npts": 90000,
+            "units": "m/s",
+            "azimuth_deg": 90.0,
+            "dip_deg": 0.0,
+            "orientation_source": "metadata",
+            "response_embedded_dataset": null,
+            "response_xml": "",
+            "valid_dataset": null,
+            "clock_offset_s": 0.0,
+            "stationxml_sha256": null
+          }
+        ],
+        "HHN": [
+          {
+            "file": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_0/examples/hvsr_single_station/raw/XX.DEMO..HH_3C.h5",
+            "dataset": "XX.DEMO..HHN",
+            "seed_id": "XX.DEMO..HHN",
+            "channel": "HHN",
+            "fs_hz": 50.0,
+            "start_ns": 1767225600000000000,
+            "end_ns": 1767227399980000000,
+            "npts": 90000,
+            "units": "m/s",
+            "azimuth_deg": 0.0,
+            "dip_deg": 0.0,
+            "orientation_source": "metadata",
+            "response_embedded_dataset": null,
+            "response_xml": "",
+            "valid_dataset": null,
+            "clock_offset_s": 0.0,
+            "stationxml_sha256": null
+          }
+        ],
+        "HHZ": [
+          {
+            "file": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_0/examples/hvsr_single_station/raw/XX.DEMO..HH_3C.h5",
+            "dataset": "XX.DEMO..HHZ",
+            "seed_id": "XX.DEMO..HHZ",
+            "channel": "HHZ",
+            "fs_hz": 50.0,
+            "start_ns": 1767225600000000000,
+            "end_ns": 1767227399980000000,
+            "npts": 90000,
+            "units": "m/s",
+            "azimuth_deg": 0.0,
+            "dip_deg": -90.0,
+            "orientation_source": "metadata",
+            "response_embedded_dataset": null,
+            "response_xml": "",
+            "valid_dataset": null,
+            "clock_offset_s": 0.0,
+            "stationxml_sha256": null
+          }
+        ]
+      },
+      "ready": true,
+      "issues": [],
+      "start_utc": "2026-01-01T00:00:00.000000Z",
+      "end_utc": "2026-01-01T00:29:59.980000Z"
+    }
+  ],
+  "errors": []
+}

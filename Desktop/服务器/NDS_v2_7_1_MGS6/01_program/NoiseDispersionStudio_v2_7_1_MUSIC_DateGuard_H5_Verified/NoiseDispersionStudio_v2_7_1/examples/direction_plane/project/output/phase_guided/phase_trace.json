@@ -1,0 +1,732 @@
+{
+  "run_id": "20261011T090802_f7f62026",
+  "complete": true,
+  "elapsed_s": 4.077597141265869,
+  "stages": [
+    {
+      "stage": "候选曲线与相位门限",
+      "status": "complete",
+      "parameters": {
+        "tolerance_deg": 20.0,
+        "range_source": "fixed"
+      },
+      "results": {
+        "curves": 3,
+        "frequency_points": 18,
+        "output": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_4/examples/direction_plane/project/output/phase_guided/curve_velocity_phase_table.csv"
+      },
+      "elapsed_s": 0.016834735870361328
+    },
+    {
+      "stage": "阵列几何",
+      "status": "info",
+      "message": "7台；近直线阵列=False；传播方向：北0°、顺时针；最大台对夹角=45°",
+      "details": {
+        "stations": [
+          "S0",
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5",
+          "S6"
+        ]
+      },
+      "utc": "2026-10-11T09:08:02.949504+00:00"
+    },
+    {
+      "stage": "波形校正与UTC对齐",
+      "status": "info",
+      "message": "输入：校正H5；采样率=20 Hz；滤波=[0.1, 7.142857142857]；响应输出=VEL",
+      "details": {},
+      "utc": "2026-10-11T09:08:02.949787+00:00"
+    },
+    {
+      "stage": "波形校正结果",
+      "status": "info",
+      "message": "7台；12,000样本/台；UTC 2020-01-01T00:00:00.000000000Z → 2020-01-01T00:10:00.000000000Z",
+      "details": {
+        "output": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_4/examples/direction_plane/project/output/phase_guided/aligned_waveforms.h5",
+        "station_metadata": []
+      },
+      "utc": "2026-10-11T09:08:02.959476+00:00"
+    },
+    {
+      "stage": "方向估计 1.3 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 1.3,
+        "windows": 368,
+        "stations": [
+          "S0",
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5",
+          "S6"
+        ],
+        "window_s": 30.75,
+        "hop_s": 1.55,
+        "frequency_bins_hz": [
+          1.3
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 1.3,
+        "actual_frequency_hz": 1.3,
+        "total_windows": 368,
+        "quality_windows": 368,
+        "cache_reused": false,
+        "median_velocity_m_s": 500.4341328021063,
+        "reasons": {
+          "通过": 368
+        }
+      },
+      "elapsed_s": 0.23487615585327148
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "S0--S1 · 1.3 Hz · 368窗 → 几何合格0 → 主方向组-1保留0",
+      "details": {
+        "reasons": {
+          "台对夹角超过阈值": 368
+        }
+      },
+      "utc": "2026-10-11T09:08:03.208021+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "S0--S1 · 1.3 Hz · 有效368 → 幅值/方向合格0 → 接受0；正0/负0；最终相位=None",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_4/examples/direction_plane/project/output/phase_guided/windows/2fc677c876040f17.npz",
+        "amplitude_threshold": 1004.2606049528735,
+        "delta_threshold": 159.19226595299364
+      },
+      "utc": "2026-10-11T09:08:03.217713+00:00"
+    },
+    {
+      "stage": "方向估计 1.4 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 1.4,
+        "windows": 395,
+        "stations": [
+          "S0",
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5",
+          "S6"
+        ],
+        "window_s": 28.55,
+        "hop_s": 1.45,
+        "frequency_bins_hz": [
+          1.4
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 1.4,
+        "actual_frequency_hz": 1.4,
+        "total_windows": 395,
+        "quality_windows": 395,
+        "cache_reused": false,
+        "median_velocity_m_s": 500.19661475078505,
+        "reasons": {
+          "通过": 395
+        }
+      },
+      "elapsed_s": 0.07686352729797363
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "S0--S1 · 1.4 Hz · 395窗 → 几何合格0 → 主方向组-1保留0",
+      "details": {
+        "reasons": {
+          "台对夹角超过阈值": 395
+        }
+      },
+      "utc": "2026-10-11T09:08:03.302662+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "S0--S1 · 1.4 Hz · 有效395 → 幅值/方向合格0 → 接受0；正0/负0；最终相位=None",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_4/examples/direction_plane/project/output/phase_guided/windows/e11ae67c3112a7c8.npz",
+        "amplitude_threshold": 795.2842701850168,
+        "delta_threshold": 162.79325751175884
+      },
+      "utc": "2026-10-11T09:08:03.308607+00:00"
+    },
+    {
+      "stage": "方向估计 1.5 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 1.5000000000000002,
+        "windows": 425,
+        "stations": [
+          "S0",
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5",
+          "S6"
+        ],
+        "window_s": 26.65,
+        "hop_s": 1.35,
+        "frequency_bins_hz": [
+          1.5000000000000002
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 1.5000000000000002,
+        "actual_frequency_hz": 1.5000000000000002,
+        "total_windows": 425,
+        "quality_windows": 425,
+        "cache_reused": false,
+        "median_velocity_m_s": 498.7614495124715,
+        "reasons": {
+          "通过": 425
+        }
+      },
+      "elapsed_s": 0.08598470687866211
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "S0--S1 · 1.5 Hz · 425窗 → 几何合格0 → 主方向组-1保留0",
+      "details": {
+        "reasons": {
+          "台对夹角超过阈值": 425
+        }
+      },
+      "utc": "2026-10-11T09:08:03.404223+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "S0--S1 · 1.5 Hz · 有效425 → 幅值/方向合格0 → 接受0；正0/负0；最终相位=None",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_4/examples/direction_plane/project/output/phase_guided/windows/30d491621a7d4f78.npz",
+        "amplitude_threshold": 935.1004350334583,
+        "delta_threshold": 176.14603508036663
+      },
+      "utc": "2026-10-11T09:08:03.410870+00:00"
+    },
+    {
+      "stage": "方向估计 1.6 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 1.6000000000000003,
+        "windows": 461,
+        "stations": [
+          "S0",
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5",
+          "S6"
+        ],
+        "window_s": 25.0,
+        "hop_s": 1.25,
+        "frequency_bins_hz": [
+          1.6000000000000003
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 1.6000000000000003,
+        "actual_frequency_hz": 1.6000000000000003,
+        "total_windows": 461,
+        "quality_windows": 461,
+        "cache_reused": false,
+        "median_velocity_m_s": 501.9960784236233,
+        "reasons": {
+          "通过": 461
+        }
+      },
+      "elapsed_s": 0.09175443649291992
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "S0--S1 · 1.6 Hz · 461窗 → 几何合格0 → 主方向组-1保留0",
+      "details": {
+        "reasons": {
+          "台对夹角超过阈值": 460,
+          "角度候选范围越过阈值": 1
+        }
+      },
+      "utc": "2026-10-11T09:08:03.511858+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "S0--S1 · 1.6 Hz · 有效461 → 幅值/方向合格0 → 接受0；正0/负0；最终相位=None",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_4/examples/direction_plane/project/output/phase_guided/windows/7e2f15670c53ddd4.npz",
+        "amplitude_threshold": 748.3522602300543,
+        "delta_threshold": 131.22570538628383
+      },
+      "utc": "2026-10-11T09:08:03.518866+00:00"
+    },
+    {
+      "stage": "方向估计 1.7 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 1.7000000000000004,
+        "windows": 481,
+        "stations": [
+          "S0",
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5",
+          "S6"
+        ],
+        "window_s": 23.55,
+        "hop_s": 1.2,
+        "frequency_bins_hz": [
+          1.7000000000000004
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 1.7000000000000004,
+        "actual_frequency_hz": 1.7000000000000004,
+        "total_windows": 481,
+        "quality_windows": 481,
+        "cache_reused": false,
+        "median_velocity_m_s": 500.0466422958691,
+        "reasons": {
+          "通过": 481
+        }
+      },
+      "elapsed_s": 0.09116530418395996
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "S0--S1 · 1.7 Hz · 481窗 → 几何合格0 → 主方向组-1保留0",
+      "details": {
+        "reasons": {
+          "台对夹角超过阈值": 481
+        }
+      },
+      "utc": "2026-10-11T09:08:03.620477+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "S0--S1 · 1.7 Hz · 有效481 → 幅值/方向合格0 → 接受0；正0/负0；最终相位=None",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_4/examples/direction_plane/project/output/phase_guided/windows/6b2f362ef5188077.npz",
+        "amplitude_threshold": 708.7951175477203,
+        "delta_threshold": 150.71294723226384
+      },
+      "utc": "2026-10-11T09:08:03.627222+00:00"
+    },
+    {
+      "stage": "方向估计 1.8 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 1.8000000000000005,
+        "windows": 526,
+        "stations": [
+          "S0",
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5",
+          "S6"
+        ],
+        "window_s": 22.2,
+        "hop_s": 1.1,
+        "frequency_bins_hz": [
+          1.8000000000000005
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "frequency_hz": 1.8000000000000005,
+        "actual_frequency_hz": 1.8000000000000005,
+        "total_windows": 526,
+        "quality_windows": 526,
+        "cache_reused": false,
+        "median_velocity_m_s": 498.94576284383913,
+        "reasons": {
+          "通过": 526
+        }
+      },
+      "elapsed_s": 0.11450362205505371
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "S0--S1 · 1.8 Hz · 526窗 → 几何合格0 → 主方向组-1保留0",
+      "details": {
+        "reasons": {
+          "台对夹角超过阈值": 525,
+          "角度候选范围越过阈值": 1
+        }
+      },
+      "utc": "2026-10-11T09:08:03.752945+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "S0--S1 · 1.8 Hz · 有效526 → 幅值/方向合格0 → 接受0；正0/负0；最终相位=None",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_4/examples/direction_plane/project/output/phase_guided/windows/efa4b2b97e53d067.npz",
+        "amplitude_threshold": 897.655814123303,
+        "delta_threshold": 152.69884395579305
+      },
+      "utc": "2026-10-11T09:08:03.759568+00:00"
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "S0--S2 · 1.3 Hz · 368窗 → 几何合格368 → 主方向组2保留368",
+      "details": {
+        "reasons": {
+          "通过": 368
+        }
+      },
+      "utc": "2026-10-11T09:08:03.763747+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "S0--S2 · 1.3 Hz · 有效368 → 幅值/方向合格368 → 接受367；正0/负367；最终相位=-85.99909840648992",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_4/examples/direction_plane/project/output/phase_guided/windows/c338c5493fb2c22a.npz",
+        "amplitude_threshold": 1004.6174004114573,
+        "delta_threshold": 156.95523825411942
+      },
+      "utc": "2026-10-11T09:08:03.770328+00:00"
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "S0--S2 · 1.4 Hz · 395窗 → 几何合格395 → 主方向组2保留395",
+      "details": {
+        "reasons": {
+          "通过": 395
+        }
+      },
+      "utc": "2026-10-11T09:08:03.773601+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "S0--S2 · 1.4 Hz · 有效395 → 幅值/方向合格395 → 接受395；正0/负395；最终相位=-92.60272056225425",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_4/examples/direction_plane/project/output/phase_guided/windows/783b14802d05930c.npz",
+        "amplitude_threshold": 799.9741986036522,
+        "delta_threshold": 165.33063770978882
+      },
+      "utc": "2026-10-11T09:08:03.780023+00:00"
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "S0--S2 · 1.5 Hz · 425窗 → 几何合格425 → 主方向组2保留425",
+      "details": {
+        "reasons": {
+          "通过": 425
+        }
+      },
+      "utc": "2026-10-11T09:08:03.784136+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "S0--S2 · 1.5 Hz · 有效425 → 幅值/方向合格425 → 接受425；正0/负425；最终相位=-99.49071452807927",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_4/examples/direction_plane/project/output/phase_guided/windows/4233ed4228844ede.npz",
+        "amplitude_threshold": 928.9126114019523,
+        "delta_threshold": 174.91496636561087
+      },
+      "utc": "2026-10-11T09:08:03.790506+00:00"
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "S0--S2 · 1.6 Hz · 461窗 → 几何合格461 → 主方向组2保留461",
+      "details": {
+        "reasons": {
+          "通过": 461
+        }
+      },
+      "utc": "2026-10-11T09:08:03.794120+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "S0--S2 · 1.6 Hz · 有效461 → 幅值/方向合格461 → 接受461；正0/负461；最终相位=-105.70521024244255",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_4/examples/direction_plane/project/output/phase_guided/windows/8e3d6f567f289b22.npz",
+        "amplitude_threshold": 758.2959050803577,
+        "delta_threshold": 130.87644176558757
+      },
+      "utc": "2026-10-11T09:08:03.801194+00:00"
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "S0--S2 · 1.7 Hz · 481窗 → 几何合格481 → 主方向组2保留480",
+      "details": {
+        "reasons": {
+          "通过": 480,
+          "属于另一传播方向组": 1
+        }
+      },
+      "utc": "2026-10-11T09:08:03.804806+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "S0--S2 · 1.7 Hz · 有效481 → 幅值/方向合格480 → 接受478；正0/负478；最终相位=-112.52375616310445",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_4/examples/direction_plane/project/output/phase_guided/windows/5b61c3da84b12f61.npz",
+        "amplitude_threshold": 709.3732204495169,
+        "delta_threshold": 150.98347645710174
+      },
+      "utc": "2026-10-11T09:08:03.811515+00:00"
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "S0--S2 · 1.8 Hz · 526窗 → 几何合格526 → 主方向组2保留524",
+      "details": {
+        "reasons": {
+          "通过": 524,
+          "属于另一传播方向组": 2
+        }
+      },
+      "utc": "2026-10-11T09:08:03.815132+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "S0--S2 · 1.8 Hz · 有效526 → 幅值/方向合格524 → 接受522；正0/负522；最终相位=-119.26656633055165",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_4/examples/direction_plane/project/output/phase_guided/windows/113527354dac3787.npz",
+        "amplitude_threshold": 891.3724164236463,
+        "delta_threshold": 151.137925087589
+      },
+      "utc": "2026-10-11T09:08:03.821829+00:00"
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "S1--S3 · 1.3 Hz · 368窗 → 几何合格367 → 主方向组2保留367",
+      "details": {
+        "reasons": {
+          "通过": 367,
+          "角度候选范围越过阈值": 1
+        }
+      },
+      "utc": "2026-10-11T09:08:03.825694+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "S1--S3 · 1.3 Hz · 有效368 → 幅值/方向合格367 → 接受367；正0/负367；最终相位=-60.05243577309318",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_4/examples/direction_plane/project/output/phase_guided/windows/9566d77f2e34e4c4.npz",
+        "amplitude_threshold": 1008.7612645115717,
+        "delta_threshold": 151.21726386410046
+      },
+      "utc": "2026-10-11T09:08:03.832012+00:00"
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "S1--S3 · 1.4 Hz · 395窗 → 几何合格395 → 主方向组2保留395",
+      "details": {
+        "reasons": {
+          "通过": 395
+        }
+      },
+      "utc": "2026-10-11T09:08:03.836913+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "S1--S3 · 1.4 Hz · 有效395 → 幅值/方向合格395 → 接受395；正0/负395；最终相位=-64.66322634683834",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_4/examples/direction_plane/project/output/phase_guided/windows/1af8c1e35158a824.npz",
+        "amplitude_threshold": 793.4661872265896,
+        "delta_threshold": 167.57622142921417
+      },
+      "utc": "2026-10-11T09:08:03.844291+00:00"
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "S1--S3 · 1.5 Hz · 425窗 → 几何合格425 → 主方向组2保留425",
+      "details": {
+        "reasons": {
+          "通过": 425
+        }
+      },
+      "utc": "2026-10-11T09:08:03.848066+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "S1--S3 · 1.5 Hz · 有效425 → 幅值/方向合格425 → 接受425；正0/负425；最终相位=-69.47290550574445",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_4/examples/direction_plane/project/output/phase_guided/windows/39d00766f5249ba0.npz",
+        "amplitude_threshold": 922.7806205548181,
+        "delta_threshold": 174.89765965056418
+      },
+      "utc": "2026-10-11T09:08:03.854656+00:00"
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "S1--S3 · 1.6 Hz · 461窗 → 几何合格461 → 主方向组2保留461",
+      "details": {
+        "reasons": {
+          "通过": 461
+        }
+      },
+      "utc": "2026-10-11T09:08:03.858064+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "S1--S3 · 1.6 Hz · 有效461 → 幅值/方向合格461 → 接受461；正0/负461；最终相位=-73.81239963959187",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_4/examples/direction_plane/project/output/phase_guided/windows/6c4831366137974f.npz",
+        "amplitude_threshold": 759.9607228686009,
+        "delta_threshold": 129.61440632005448
+      },
+      "utc": "2026-10-11T09:08:03.867761+00:00"
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "S1--S3 · 1.7 Hz · 481窗 → 几何合格480 → 主方向组2保留480",
+      "details": {
+        "reasons": {
+          "通过": 480,
+          "角度候选范围越过阈值": 1
+        }
+      },
+      "utc": "2026-10-11T09:08:03.871496+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "S1--S3 · 1.7 Hz · 有效481 → 幅值/方向合格480 → 接受479；正0/负479；最终相位=-78.57325307448008",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_4/examples/direction_plane/project/output/phase_guided/windows/b682b23c94a8271a.npz",
+        "amplitude_threshold": 704.8580531754691,
+        "delta_threshold": 149.8949068328896
+      },
+      "utc": "2026-10-11T09:08:03.878107+00:00"
+    },
+    {
+      "stage": "台对角度筛选",
+      "status": "info",
+      "message": "S1--S3 · 1.8 Hz · 526窗 → 几何合格525 → 主方向组2保留524",
+      "details": {
+        "reasons": {
+          "通过": 524,
+          "台对夹角超过阈值": 1,
+          "属于另一传播方向组": 1
+        }
+      },
+      "utc": "2026-10-11T09:08:03.882058+00:00"
+    },
+    {
+      "stage": "相位筛选与叠加",
+      "status": "info",
+      "message": "S1--S3 · 1.8 Hz · 有效526 → 幅值/方向合格524 → 接受523；正0/负523；最终相位=-83.2822812484286",
+      "details": {
+        "windows_file": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_4/examples/direction_plane/project/output/phase_guided/windows/c8eefce76246432f.npz",
+        "amplitude_threshold": 893.9518979951315,
+        "delta_threshold": 147.87155985692175
+      },
+      "utc": "2026-10-11T09:08:03.889994+00:00"
+    },
+    {
+      "stage": "方向汇总",
+      "status": "info",
+      "message": "6个频率；联合原始点 7；连续频带保留点 6",
+      "details": {
+        "output": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_4/examples/direction_plane/project/output/phase_guided/direction/report.html"
+      },
+      "utc": "2026-10-11T09:08:05.231199+00:00"
+    },
+    {
+      "stage": "连续频带",
+      "status": "info",
+      "message": "S0--S2__B1 · 1.3–1.8 Hz · 6点 · 带宽0.5 Hz · accepted",
+      "details": {},
+      "utc": "2026-10-11T09:08:06.195717+00:00"
+    },
+    {
+      "stage": "连续频带",
+      "status": "info",
+      "message": "S1--S3__B1 · 1.3–1.8 Hz · 6点 · 带宽0.5 Hz · accepted",
+      "details": {},
+      "utc": "2026-10-11T09:08:06.197027+00:00"
+    },
+    {
+      "stage": "连续频带参数",
+      "status": "info",
+      "message": "min_band_hz=0.25；min_points=3；合格曲线频点=12",
+      "details": {
+        "output": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_4/examples/direction_plane/project/output/phase_guided/phase_continuous_bands.csv"
+      },
+      "utc": "2026-10-11T09:08:06.197935+00:00"
+    },
+    {
+      "stage": "反演交接",
+      "status": "info",
+      "message": "2条合格连续曲线；12个频点。沿用原始源相位、周期及背景检验状态。",
+      "details": {
+        "output": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_4/examples/direction_plane/project/output/phase_guided/inversion_curves.csv"
+      },
+      "utc": "2026-10-11T09:08:06.234898+00:00"
+    },
+    {
+      "stage": "叠加后频散与原曲线对比",
+      "status": "complete",
+      "parameters": {},
+      "results": {
+        "output": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_4/examples/direction_plane/project/output/phase_guided/velocity_comparison/report.html"
+      },
+      "elapsed_s": 0.7504534721374512
+    },
+    {
+      "stage": "结果索引",
+      "status": "info",
+      "message": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_4/examples/direction_plane/project/output/phase_guided/phase_report.html",
+      "details": {
+        "direction_report": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_4/examples/direction_plane/project/output/phase_guided/direction/report.html",
+        "handoff": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_4/examples/direction_plane/project/output/phase_guided/inversion_curves.csv",
+        "trace": "/workspace/scratch/fc99dc820d4e/program/NoiseDispersionStudio_v2_5_4/examples/direction_plane/project/output/phase_guided/phase_trace.json"
+      },
+      "utc": "2026-10-11T09:08:06.998263+00:00"
+    }
+  ],
+  "settings_file": "phase_settings_used.json",
+  "log_file": "phase_processing.log"
+}

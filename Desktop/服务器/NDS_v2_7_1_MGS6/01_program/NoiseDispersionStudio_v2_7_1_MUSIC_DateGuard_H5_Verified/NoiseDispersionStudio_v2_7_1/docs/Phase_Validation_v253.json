@@ -1,0 +1,123 @@
+{
+  "program_version": "2.5.3",
+  "date": "2026-10-10",
+  "runtime": {
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "python": "3.12.14",
+    "packages": {
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "pandas": "2.2.3",
+      "h5py": "3.16.0",
+      "obspy": "1.5.1",
+      "PySide6": "6.12.0",
+      "numba": "0.63.1",
+      "llvmlite": "0.46.0",
+      "pytest": "9.1.1"
+    }
+  },
+  "tests": {
+    "passed": 163,
+    "skipped": 12,
+    "failures": 0,
+    "errors": 0
+  },
+  "final_targeted_workflow_tests": 9,
+  "skipped": [
+    {
+      "test": "tests.test_download_gui.test_filtered_array_preview_matches_download_stations",
+      "reason": "Tk display unavailable: no display name and no $DISPLAY environment variable"
+    },
+    {
+      "test": "tests.test_download_gui.test_channel_tab_has_selection_map_and_meter_spacing",
+      "reason": "Tk display unavailable: no display name and no $DISPLAY environment variable"
+    },
+    {
+      "test": "tests.test_download_gui.test_real_download_button_worker_h5_and_open_project",
+      "reason": "Tk display unavailable: no display name and no $DISPLAY environment variable"
+    },
+    {
+      "test": "tests.test_download_gui.test_canvas_fallback_and_dateline_points",
+      "reason": "Tk display unavailable: no display name and no $DISPLAY environment variable"
+    },
+    {
+      "test": "tests.test_download_gui.test_provider_change_clears_old_selection",
+      "reason": "Tk display unavailable: no display name and no $DISPLAY environment variable"
+    },
+    {
+      "test": "tests.test_inversion.test_independent_solver_missing_root_is_recorded_without_aborting",
+      "reason": "could not import 'pysurf96.wrapper': No module named 'pysurf96'"
+    },
+    {
+      "test": "tests.test_station_filter_gui.test_array_filter_lists_20_and_downloads_only_20",
+      "reason": "Tk display unavailable: no display name and no $DISPLAY environment variable"
+    },
+    {
+      "test": "tests.test_station_filter_gui.test_channels_filter_and_stale_result_is_rejected",
+      "reason": "Tk display unavailable: no display name and no $DISPLAY environment variable"
+    },
+    {
+      "test": "tests.test_station_filter_gui.test_every_matching_table_row_is_shown_not_capped",
+      "reason": "Tk display unavailable: no display name and no $DISPLAY environment variable"
+    },
+    {
+      "test": "core.tests.test_forward.ForwardTests.test_homogeneous_analytic_rayleigh_root",
+      "reason": "Optional disba/pysurf96 not installed"
+    },
+    {
+      "test": "core.tests.test_forward.ForwardTests.test_independent_solver_more_than_sixty_frequencies",
+      "reason": "Optional disba/pysurf96 not installed"
+    },
+    {
+      "test": "core.tests.test_forward.ForwardTests.test_layered_fundamental_and_first_higher_mode",
+      "reason": "Optional disba/pysurf96 not installed"
+    }
+  ],
+  "uploaded_matlab_sha256": "4a4131948cc9ceaaefb15a2383cedfcfee2dbeb220285ea3c7c5df1d2dd9c100",
+  "matlab_core_check": {
+    "passed": true,
+    "all_window_masks_checked": 1195528,
+    "gates_checked": 264,
+    "raw_scalar_cross_recomputed": 792,
+    "maximum_scalar_phase_error_rad": 7.116852158413282e-14,
+    "note": "Independent translation of the uploaded MATLAB core; MATLAB runtime not executed."
+  },
+  "real_modes": {
+    "curve": {
+      "pass_audit": true,
+      "gates_checked": 264,
+      "waveform_cross_recomputed": 792,
+      "accepted_window_evaluations": 37508,
+      "valid_window_evaluations": 1195528,
+      "max_recomputed_phase_error_rad": 0.0,
+      "module_sha256": "b80605f79dfcc0f3f8f75cbedfa71f1bf52d54fa3317c3dcb1e76ef41ac28a5c",
+      "aligned_h5_sha256": "f0d11f175a1a5ffb8aeaca22685629255c44a7ede336ac4b7efa497cb1a33458"
+    },
+    "matlab": {
+      "pass_audit": true,
+      "gates_checked": 264,
+      "waveform_cross_recomputed": 792,
+      "accepted_window_evaluations": 555429,
+      "valid_window_evaluations": 1195528,
+      "max_recomputed_phase_error_rad": 0.0,
+      "module_sha256": "b80605f79dfcc0f3f8f75cbedfa71f1bf52d54fa3317c3dcb1e76ef41ac28a5c",
+      "aligned_h5_sha256": "f0d11f175a1a5ffb8aeaca22685629255c44a7ede336ac4b7efa497cb1a33458"
+    }
+  },
+  "verified": [
+    "Actual Qt QProcess full raw-record job without entering start/end UTC",
+    "Old saved UTC times ignored by default full mode",
+    "Pair-local common starts plus stabilization; unrelated station does not truncate another pair",
+    "UTC gaps preserved; no Goertzel window crossing missing data accepted",
+    "Disk-backed native NPZ reads and phase continuity across six-hour preprocessing blocks",
+    "Failure closes mappings and removes stale report",
+    "Both phase branches retain original complex sign and sum separately",
+    "Displayed cumulative sums use all accepted windows",
+    "DARE real 30-minute corrected H5 fully traversed after the documented 600-second stabilization"
+  ],
+  "limitations": [
+    "MATLAB and Windows native runtimes were not executed.",
+    "Real-data validation used the supplied 30-minute DARE H5, not a new multi-day download.",
+    "MATLAB-bin mode uses actual_frequency_hz near curve frequency; exact mode is available for strict frequency matching."
+  ]
+}

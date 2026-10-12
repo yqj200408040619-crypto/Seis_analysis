@@ -1,0 +1,188 @@
+{
+  "version": "2.1.0",
+  "tests": {
+    "tests": 69,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 3,
+    "passed": 66
+  },
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.2.3",
+    "h5py": "3.16.0",
+    "obspy": "1.5.1",
+    "pyproj": "3.8.0",
+    "matplotlib": "3.10.8",
+    "PySide6": "6.12.0",
+    "disba": "0.7.0",
+    "pytest": "9.1.1"
+  },
+  "live": {
+    "provider": "ETH",
+    "network": "CH",
+    "requested_start": "2026-10-08T12:00:00.000000Z",
+    "requested_end": "2026-10-08T12:10:00.000000Z",
+    "h5_files": 6,
+    "scan_ready": true,
+    "errors": [],
+    "responses": [
+      {
+        "station": "CH_ACB",
+        "samples": 120304,
+        "response_status": "nominal_response_corrected",
+        "nominal_dip_deg": -90.0,
+        "nominal_azimuth_deg": 0.0,
+        "sensitivity": 475600000.0,
+        "input_units": "M/S",
+        "all_stage_gains_positive": true,
+        "response_interpolation_phase_error_rad": 1.908353594636327e-05,
+        "epoch_start": "2020-07-14T11:00:00.000000Z",
+        "epoch_end": "None"
+      },
+      {
+        "station": "CH_AIGLE",
+        "samples": 120194,
+        "response_status": "nominal_response_corrected",
+        "nominal_dip_deg": -90.0,
+        "nominal_azimuth_deg": 0.0,
+        "sensitivity": 475600000.0,
+        "input_units": "M/S",
+        "all_stage_gains_positive": true,
+        "response_interpolation_phase_error_rad": 1.908353594636327e-05,
+        "epoch_start": "2018-11-07T15:00:00.000000Z",
+        "epoch_end": "None"
+      },
+      {
+        "station": "CH_BALST",
+        "samples": 120524,
+        "response_status": "nominal_response_corrected",
+        "nominal_dip_deg": -90.0,
+        "nominal_azimuth_deg": 0.0,
+        "sensitivity": 600000000.0,
+        "input_units": "M/S",
+        "all_stage_gains_positive": true,
+        "response_interpolation_phase_error_rad": 4.02988842828003e-05,
+        "epoch_start": "2020-01-23T10:30:00.000000Z",
+        "epoch_end": "None"
+      }
+    ],
+    "geometry": {
+      "stations": 3,
+      "stations_with_coordinates": 3,
+      "missing_coordinates": 0,
+      "coordinate_conflicts": [],
+      "mean_nearest_neighbor_m": 75156.85693860258,
+      "mean_pair_distance_m": 115038.1327389324,
+      "min_pair_distance_m": 50649.23896441232,
+      "max_pair_distance_m": 170293.0663654018,
+      "coincident_pair_count": 0,
+      "spacing_definition": "mean nearest-neighbour WGS84 surface distance",
+      "points": [
+        [
+          "CH",
+          "ACB",
+          47.58772,
+          8.25474,
+          468.0
+        ],
+        [
+          "CH",
+          "AIGLE",
+          46.34176,
+          6.95295,
+          785.0
+        ],
+        [
+          "CH",
+          "BALST",
+          47.33599,
+          7.69485,
+          860.0
+        ]
+      ],
+      "nearest_neighbor_m": {
+        "CH.ACB": 50649.23896441232,
+        "CH.AIGLE": 124172.09288698308,
+        "CH.BALST": 50649.23896441232
+      }
+    },
+    "scope": "Live metadata/download/H5/import/response validation; 10 minutes are too short for dispersion quality validation",
+    "final_schema_station_labels": true
+  },
+  "end_to_end": {
+    "type": "synthetic deterministic counts fixture; not field data",
+    "duration_s": 86400,
+    "stations": 3,
+    "download_errors": 0,
+    "stages": [
+      {
+        "stage": "import",
+        "status": "complete",
+        "elapsed_s": 0.49707913398742676
+      },
+      {
+        "stage": "prepare",
+        "status": "complete",
+        "elapsed_s": 3.286336660385132
+      },
+      {
+        "stage": "scan",
+        "status": "complete",
+        "elapsed_s": 6.681398391723633
+      },
+      {
+        "stage": "controls",
+        "status": "complete",
+        "elapsed_s": 0.005590200424194336
+      },
+      {
+        "stage": "families",
+        "status": "complete",
+        "elapsed_s": 0.01419210433959961
+      },
+      {
+        "stage": "review",
+        "status": "complete",
+        "elapsed_s": 0.005564212799072266
+      },
+      {
+        "stage": "report",
+        "status": "complete",
+        "elapsed_s": 0.31960391998291016
+      },
+      {
+        "stage": "verify",
+        "status": "complete",
+        "elapsed_s": 0.04145646095275879
+      },
+      {
+        "stage": "autoselect",
+        "status": "complete",
+        "elapsed_s": 0.01244354248046875
+      },
+      {
+        "stage": "invert",
+        "status": "skipped",
+        "reason": "没有通过背景与距离/波长要求的自动反演曲线组",
+        "elapsed_s": 0.00022935867309570312
+      },
+      {
+        "stage": "report",
+        "status": "complete",
+        "elapsed_s": 0.31833815574645996
+      }
+    ],
+    "elapsed_s": 11.18695483700003
+  },
+  "qt": {
+    "hdf_records_displayed": 4,
+    "implicit_parameter_save_passed": true,
+    "qt_child_process_success": true,
+    "ui_timer_ticks_during_inversion": 148,
+    "conditional_models": 1,
+    "actual_ui_screenshots": 5
+  },
+  "windows_tested": false
+}

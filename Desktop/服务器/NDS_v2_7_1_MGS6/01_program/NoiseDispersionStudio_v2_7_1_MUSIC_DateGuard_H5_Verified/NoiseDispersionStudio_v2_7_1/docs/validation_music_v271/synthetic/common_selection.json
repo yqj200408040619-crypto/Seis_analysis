@@ -1,0 +1,58 @@
+{
+  "settings": {
+    "layers": [
+      1,
+      2
+    ],
+    "starts": 4,
+    "max_evaluations": 160,
+    "vp_vs_ratio": 2.0,
+    "density_g_cm3": 2.0,
+    "thickness_bounds_m": [
+      2.0,
+      1500.0
+    ],
+    "vs_bounds_m_s": [
+      120.0,
+      3500.0
+    ],
+    "phase_rms_max_fraction": 0.03,
+    "phase_point_max_fraction": 0.05,
+    "group_median_max_fraction": 0.15,
+    "group_fit_weight": 0.25,
+    "max_fit_points_per_band": 32,
+    "finite_difference_log_step": 0.003,
+    "require_independent_solver": false,
+    "independent_max_difference_m_s": 0.5,
+    "allow_background_unverified": false,
+    "seed": 9075
+  },
+  "cases": [
+    {
+      "name": "AUTO_001_M0",
+      "bands": [
+        {
+          "curve_id": "S0--S2__B1__B1",
+          "mode": 0
+        }
+      ],
+      "assumptions": {
+        "common_1d_structure": true,
+        "rayleigh_modes_assumed_not_verified": true,
+        "source_phase_and_cycles_conditional": true
+      },
+      "origin": "automatic_pairwise_compatible_group"
+    }
+  ],
+  "selection_notes": {
+    "automatic_selection_is_exploratory": true,
+    "screening_priors_only": false,
+    "max_cases": 1,
+    "max_bands_per_case": 3,
+    "minimum_distance_over_wavelength": 3,
+    "all_other_candidates_retained": true,
+    "projected_goertzel_uses_array_direction_independent_windows_and_shifted_null_instead_of_CCF_wavelength_floor": true,
+    "groups_are_pairwise_cliques_not_transitive_components": true,
+    "rank_is_not_a_posterior_probability": true
+  }
+}

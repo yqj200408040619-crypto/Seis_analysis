@@ -1,0 +1,10 @@
+{
+  "checks_passed": true,
+  "windows": 52,
+  "pairs": 6,
+  "measured_segments": 6,
+  "conditional_curves": 124,
+  "empty_curves_are_valid_outcome": true,
+  "verified_unique_physical_dispersion": false,
+  "raw_files_unchanged_and_fingerprint_checked": true
+}

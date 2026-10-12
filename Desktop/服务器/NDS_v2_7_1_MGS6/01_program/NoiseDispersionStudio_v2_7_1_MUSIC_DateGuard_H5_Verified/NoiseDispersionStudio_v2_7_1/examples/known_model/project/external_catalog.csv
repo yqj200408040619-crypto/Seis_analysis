@@ -1,0 +1,2 @@
+curve_id,segment_id,cohort,pair_index,pair,branch,constant_cycle,source_phase_rad,fmin_hz,fmax_hz,points,background_discriminated,compatible_other_pairs
+KNOWN_N0,SYNTHETIC,synthetic,0,A--B,positive,0,0.0,1.5,5.0,45,True,0

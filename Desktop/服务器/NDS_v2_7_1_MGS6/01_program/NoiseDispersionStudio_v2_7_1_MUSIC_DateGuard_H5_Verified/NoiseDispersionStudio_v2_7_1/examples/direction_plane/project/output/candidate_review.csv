@@ -1,0 +1,3 @@
+curve_id,segment_id,cohort,pair_index,pair,branch,constant_cycle,source_phase_rad,fmin_hz,fmax_hz,points,background_discriminated,compatible_other_pairs,parent_curve_id,minimum_phase_velocity_m_s,maximum_phase_velocity_m_s,minimum_distance_over_wavelength,bandwidth_hz,review_priority,unique_physical_dispersion_verified
+S0--S2__B1,S0--S2,synthetic,0,S0--S2,positive,1,0.7853981633974483,1.3,1.8000000000000005,6,True,0,S0--S2,91.80554998856772,119.04923842827668,1.3638863844624722,0.5000000000000004,False,False
+S1--S3__B1,S1--S3,synthetic,2,S1--S3,positive,1,0.7853981633974483,1.3,1.8000000000000005,6,True,0,S1--S3,75.656283996011,99.77118203503436,1.2918123215919255,0.5000000000000004,False,False

@@ -1,0 +1,104 @@
+{
+  "program_version": "2.5.2",
+  "date_utc": "2026-10-10",
+  "runtime": {
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "python": "3.12.14",
+    "packages": {
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "pandas": "2.2.3",
+      "h5py": "3.16.0",
+      "obspy": "1.5.1",
+      "pyproj": "3.8.0",
+      "matplotlib": "3.10.8",
+      "PySide6": "6.12.0",
+      "disba": "0.7.0",
+      "numba": "0.68.0",
+      "llvmlite": "0.50.0",
+      "pytest": "9.1.1"
+    }
+  },
+  "tests": {
+    "passed": 144,
+    "skipped": 9,
+    "failures": 0,
+    "errors": 0
+  },
+  "skipped": [
+    {
+      "test": "tests.test_download_gui.test_filtered_array_preview_matches_download_stations",
+      "reason": "Tk display unavailable: no display name and no $DISPLAY environment variable"
+    },
+    {
+      "test": "tests.test_download_gui.test_channel_tab_has_selection_map_and_meter_spacing",
+      "reason": "Tk display unavailable: no display name and no $DISPLAY environment variable"
+    },
+    {
+      "test": "tests.test_download_gui.test_real_download_button_worker_h5_and_open_project",
+      "reason": "Tk display unavailable: no display name and no $DISPLAY environment variable"
+    },
+    {
+      "test": "tests.test_download_gui.test_canvas_fallback_and_dateline_points",
+      "reason": "Tk display unavailable: no display name and no $DISPLAY environment variable"
+    },
+    {
+      "test": "tests.test_download_gui.test_provider_change_clears_old_selection",
+      "reason": "Tk display unavailable: no display name and no $DISPLAY environment variable"
+    },
+    {
+      "test": "tests.test_inversion.test_independent_solver_missing_root_is_recorded_without_aborting",
+      "reason": "could not import 'pysurf96.wrapper': No module named 'pysurf96'"
+    },
+    {
+      "test": "tests.test_station_filter_gui.test_array_filter_lists_20_and_downloads_only_20",
+      "reason": "Tk display unavailable: no display name and no $DISPLAY environment variable"
+    },
+    {
+      "test": "tests.test_station_filter_gui.test_channels_filter_and_stale_result_is_rejected",
+      "reason": "Tk display unavailable: no display name and no $DISPLAY environment variable"
+    },
+    {
+      "test": "tests.test_station_filter_gui.test_every_matching_table_row_is_shown_not_capped",
+      "reason": "Tk display unavailable: no display name and no $DISPLAY environment variable"
+    }
+  ],
+  "actual_qt_child_process": {
+    "stage": "scan",
+    "exit_code": 0,
+    "preparation_min_band_hz": 0.1,
+    "saved_json_min_band_hz": 0.05,
+    "scan_min_band_hz": 0.05,
+    "diagnostic_min_band_hz": 0.05,
+    "preparation_snapshot_unchanged": true,
+    "controlled_cache": true
+  },
+  "band_gate_case": {
+    "frequency_range_hz": [
+      0.27,
+      0.34
+    ],
+    "points": 15,
+    "required_points": 8,
+    "old_min_band_hz": 0.1,
+    "new_min_band_hz": 0.05,
+    "old_acceptance": false,
+    "new_acceptance": true,
+    "exact_boundary_hz": 0.07,
+    "exact_boundary_accepted": true
+  },
+  "scope": [
+    "GUI controls and unit-based button increments",
+    "explicit edits preserved across saving/startup/reopening",
+    "worker geometry changes preserved",
+    "scan-specific parameter provenance",
+    "band-only preprocessing cache compatibility",
+    "stale downstream rejection",
+    "existing complete test suite"
+  ],
+  "limitations": [
+    "Linux Qt offscreen; Windows native not exercised",
+    "Controlled CCF cache checks parameter propagation; not new real-data dispersion evidence",
+    "Existing tests emitted Matplotlib CJK-font and ObsPy precision deprecation warnings"
+  ]
+}

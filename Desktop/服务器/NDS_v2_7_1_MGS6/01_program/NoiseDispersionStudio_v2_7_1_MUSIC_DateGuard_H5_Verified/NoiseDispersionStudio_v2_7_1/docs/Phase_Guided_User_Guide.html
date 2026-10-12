@@ -1,0 +1,30 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>Studio 2.5.3 曲线相位筛选</title><style>body{font:16px/1.75 system-ui;max-width:1100px;margin:35px auto;padding:0 20px;color:#24394a}h1,h2{color:#15566a}table{border-collapse:collapse;width:100%}td,th{border:1px solid #ccd7df;padding:8px;text-align:left}pre{background:#edf3f7;padding:15px;white-space:pre-wrap}img{max-width:100%}</style>
+<h1>整段共同记录 → 逐频 Goertzel → 相位筛窗 → 分支复数叠加</h1>
+<p>第6页默认自动使用所选曲线涉及的每对台站的完整共同记录。无需填写开始或结束时间。旧版开始/结束UTC只是手动截取记录区间，与单窗长度无关；旧配置没有time_mode时，界面迁移为全部记录模式。可选调试区间放在折叠区域，必须明确选择自定义模式才生效。</p>
+<h2>处理顺序</h2>
+<ol><li>从已导入波形的真实UTC头信息读取记录范围，校正时钟偏移；每对台站独立确定共同起点与终点。默认仅把共同起点顺延600秒，沿用用户提供的MATLAB稳定时间，可以改为0。不会借用其他台站对的较短共同范围。</li>
+<li>各台站执行声明的仪器响应校正、重采样及带通滤波，保持缺测的原UTC位置。分块处理并使用磁盘数组，降低长记录的内存需求；滤波边缘和缺测窗口不参与叠加。</li>
+<li>对于每个曲线频点f，用T=N/f和滑动Δt=M/f计算时窗，取整为采样点。默认每窗20周期、每次滑动1周期，仅处理完整滑窗；末尾不足一个滑动步长的余数不会额外增设窗口，与附件一致。</li>
+<li>窗口去均值，执行Goertzel，形成C=G目标·conj(G参考)。默认取最近DFT频点k=round(f·n/fs)、fk=k·fs/n，与附件一致；界面同时显示曲线频率与实际fk。精确频率模式直接计算f。窗函数默认矩形，可选Hann。</li>
+<li>默认先筛除幅值与相邻窗口突变异常，门限为median+5·1.4826·MAD；MAD为0时用5·median。突变统计不含人为添加的第一个零。取消幅值复选框时仅标记这些异常。</li>
+<li>按原始互谱相位≥0°与&lt;0°分开筛选和累加，不把负分支取共轭或反号。曲线模式使用该频点的速度、台距、源相位和CCF时延分支给出的相位范围；附件原门限模式使用每个相位分支的初叠加相位±90°。</li>
+<li>各分支最终相位为arg(ΣC)，另输出arg(ΣC/|C|)用于检查幅值权重。所有保留窗口进入求和。两分支完整结果均保存；曲线对比使用预测相位同号分支。</li></ol>
+<p>相位的正负号分组与CCF正/负时延分支不是同一种分类，也不能独立证明传播方向。曲线源相位及整数周期N沿用原曲线，周期别名仍无法由原台站对的相同相位门限区分。</p>
+<h2>两个筛选模式</h2><table><tr><th>设置</th><th>频散曲线引导（默认）</th><th>附件MATLAB原门限</th></tr><tr><td>时间、时窗、互谱、MAD、正负分别叠加</td><td colspan="2">共用附件处理框架</td></tr><tr><td>相位门限</td><td>逐频曲线预测相位±容差，或原片段bootstrap范围+余量</td><td>各相位分支初叠加相位±90°</td></tr><tr><td>速度对比</td><td>保留窗口充分时自动生成条件速度对比</td><td>只输出相位分支结果，不自动生成曲线门限意义下的速度对比</td></tr></table>
+<p>最近DFT频点模式的fk与曲线f可能略有不同，actual_frequency_hz记录差值。需要严格频点对应的曲线处理，应选择精确频率重算。默认参数未强制复制附件的0.05–10Hz滤波和0.2:0.02:3频率表：滤波来自项目配置，频率来自所选真实候选曲线。</p>
+<h2>如何运行</h2><ol><li>打开已完成候选枚举的项目，确认output含conditional_dispersion.csv、pairs.csv与measured_phase_segments.csv，原波形已导入canonical并有stations.csv。</li><li>第6页选择曲线编号，留空为全部；检查稳定时间、每窗周期数、滑动周期数及窗长预览。</li><li>保留曲线引导模式并设置相位容差，点击“处理全部记录并叠加”或本页底部“一键相位筛选与叠加”。无需手填日期。</li><li>报告显示每对台站实际处理UTC范围、逐频窗长、全部保留窗数与两分支最终复数和。记录不足一个时窗会明确显示无结果，不编造相位。</li></ol>
+<pre>python run.py phase-stack --project YOUR_PROJECT
+python run.py phase-stack --project YOUR_PROJECT --goertzel-frequency exact --stabilization-seconds 0
+python run.py phase-stack --project YOUR_PROJECT --phase-screening matlab
+python run.py phase-audit --folder YOUR_PROJECT/output/phase_guided</pre>
+<p>--phase-settings指定JSON时，该文件同名设置优先于命令行默认值。--phase-time-mode full可强制全记录。明确传入--start和--end且未指定full时才启用自定义截取。结束UTC不含该时刻。</p>
+<h2>输出文件</h2><table><tr><th>文件</th><th>内容</th></tr><tr><td>pair_processing_intervals.csv</td><td>各台站对共同与稳定后实际处理范围</td></tr><tr><td>phase_gate_summary.csv</td><td>去除周期别名重复后的逐频门限与主分支统计</td></tr><tr><td>phase_branch_summary.csv</td><td>正负分支各自的保留窗数、最终复数和与相位</td></tr><tr><td>phase_stack_summary.csv</td><td>逐曲线逐频主分支结果</td></tr><tr><td>windows/*.npz</td><td>全部窗口UTC采样索引、互谱、有效掩码、幅值标记及两分支筛选掩码</td></tr><tr><td>aligned_waveforms.h5</td><td>校正、对齐并保持缺测的UTC波形，可用于独立重算</td></tr><tr><td>velocity_comparison/</td><td>曲线模式叠加后条件相速度对比</td></tr></table>
+<p>筛选之后的集中相位不能独立验证输入频散。高度重叠窗口不等于独立样本。主分支取预测相位同号只是一个明确的条件选择，两分支原始结果始终可检查。</p>
+<h2>MATLAB复核</h2><p>用户附件原文件字节不变地保存在matlab/reference/mseed_cross_corr_2.m。主MATLAB入口matlab/mseed_cross_corr_2_branch.m现在支持同样的稳定时间、频率方式、MAD与分支逻辑；输入程序导出的校正H5与CSV，保持UTC缺测。</p>
+<pre>options=struct('stabilization_s',600,'frequency_method','matlab_bin', ...
+ 'amplitude_rejection',true,'split_branches',true,'screening_mode','curve');
+summary=mseed_cross_corr_2_branch('aligned_waveforms.h5', ...
+ 'selected_phase_targets.csv','matlab_results',20,1,'none',options);</pre>
+<p>新增测试逐行实现附件的核心标量Goertzel/MAD/正负分支算法，并与程序窗口互谱、筛选掩码和最终复数和核对。当前没有MATLAB原生运行时，未声称执行了.m文件；详情见Phase_Validation_v253.json。</p>
+<h2>真实波形示例</h2><p>双击run_dare_phase_test_windows.bat或按examples/dare_phase_guided/README.txt运行。附件示例只含30分钟已校正真实DARE波形；全记录模式会使用这个H5的全部范围，起点稳定600秒后处理剩余20分钟。不能用这份30分钟示例验证四天原始数据的完整遍历；实际完整项目会自动读取其全部已导入记录。</p>
+</html>

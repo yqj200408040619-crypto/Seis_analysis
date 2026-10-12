@@ -1,0 +1,75 @@
+{
+  "settings": {
+    "layers": [
+      1
+    ],
+    "starts": 5,
+    "max_evaluations": 180,
+    "vp_vs_ratio": 2.0,
+    "density_g_cm3": 2.0,
+    "thickness_bounds_m": [
+      10.0,
+      150.0
+    ],
+    "vs_bounds_m_s": [
+      200.0,
+      1200.0
+    ],
+    "phase_rms_max_fraction": 0.03,
+    "phase_point_max_fraction": 0.05,
+    "group_median_max_fraction": 0.15,
+    "group_fit_weight": 0.25,
+    "max_fit_points_per_band": 32,
+    "finite_difference_log_step": 0.003,
+    "require_independent_solver": false,
+    "independent_max_difference_m_s": 0.5,
+    "allow_background_unverified": false,
+    "seed": 9075
+  },
+  "models": [
+    {
+      "model_id": "M00001",
+      "case": "KNOWN_FUNDAMENTAL",
+      "finite_layers": 1,
+      "parameters": [
+        35.00009393877839,
+        350.0007181050283,
+        799.9998580425032
+      ],
+      "thickness_m": [
+        35.00009393877839
+      ],
+      "vs_m_s": [
+        350.0007181050283,
+        799.9998580425032
+      ],
+      "vp_vs_ratio": 2.0,
+      "density_g_cm3": 2.0,
+      "phase_weighted_rms_fraction": 7.522674959365658e-07,
+      "phase_max_fraction": 1.5309498813120825e-06,
+      "maximum_group_median_fraction": 1.2051392578205089e-05,
+      "independent_solver_available": true,
+      "independent_solver_pass": true,
+      "independent_max_difference_m_s": 0.0007891379839293222,
+      "parameters_near_search_bound": false,
+      "optimizer_converged": true,
+      "curve_ids": [
+        "KNOWN_N0"
+      ],
+      "assumed_modes": [
+        0
+      ],
+      "assumptions": {
+        "synthetic_truth_case": true,
+        "common_1d_structure": true
+      },
+      "source_phase_verified": true,
+      "absolute_cycles_or_modes_verified": false,
+      "unique_structure_identified": false,
+      "posterior_probability_calibrated": false
+    }
+  ],
+  "independent_solver_available": true,
+  "unique_structure_identified": false,
+  "posterior_probabilities_calibrated": false
+}

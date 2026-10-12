@@ -1,0 +1,5025 @@
+{
+  "run_id": "20261012T080034_55455845",
+  "complete": true,
+  "elapsed_s": 171.57757472991943,
+  "stages": [
+    {
+      "stage": "候选曲线与相位门限",
+      "status": "complete",
+      "parameters": {
+        "tolerance_deg": 15.0,
+        "range_source": "fixed"
+      },
+      "results": {
+        "curves": 31,
+        "frequency_points": 571,
+        "output": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/output/phase_guided/curve_velocity_phase_table.csv"
+      },
+      "elapsed_s": 1.074181318283081
+    },
+    {
+      "stage": "升频增速曲线筛除",
+      "status": "info",
+      "message": "3条候选 → 保留3条；逐相邻频点要求非增速。",
+      "details": {},
+      "utc": "2026-10-12T08:00:35.347856+00:00"
+    },
+    {
+      "stage": "相位筛选先验外延",
+      "status": "info",
+      "message": "0个外延先验点；均标记为预测，禁止流入观测频散及结构反演。",
+      "details": {
+        "extension_hz": 0.1
+      },
+      "utc": "2026-10-12T08:00:35.349143+00:00"
+    },
+    {
+      "stage": "阵列几何",
+      "status": "info",
+      "message": "6台；近直线阵列=False；传播方向：北0°、顺时针；最大台对夹角=45°",
+      "details": {
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ]
+      },
+      "utc": "2026-10-12T08:00:35.361592+00:00"
+    },
+    {
+      "stage": "波形校正与UTC对齐",
+      "status": "info",
+      "message": "输入：全部原始记录；采样率=10 Hz；滤波=[0.05, 2.5]；响应输出=VEL",
+      "details": {},
+      "utc": "2026-10-12T08:00:35.361954+00:00"
+    },
+    {
+      "stage": "复用前段MUSIC校正波形",
+      "status": "info",
+      "message": "沿用同一UTC时间轴、缺口及响应校正；逐频重算MUSIC和相位筛窗。",
+      "details": {},
+      "utc": "2026-10-12T08:00:36.386602+00:00"
+    },
+    {
+      "stage": "波形校正结果",
+      "status": "info",
+      "message": "6台；3,456,035样本/台；UTC 2023-10-31T23:59:58.470000000Z → 2023-11-05T00:00:01.970000000Z",
+      "details": {
+        "output": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/output/phase_guided/aligned_waveforms.h5",
+        "station_metadata": [
+          {
+            "station": "BW_MGS01",
+            "seed_id": "BW.MGS01..HHZ",
+            "valid_samples": 3454379,
+            "total_samples": 3456035,
+            "response_status": "nominal_response_corrected",
+            "source_files": [
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00000.npz",
+                "sha256": "6ea2dc46036ffda01cbaac99dbe92a8f40962f9f84faa71ce1aa7d7d5b6a4765"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00001.npz",
+                "sha256": "42c2af045fc2c1d0f159c02e29f550f26e5aa2ac3e462ce1900061f84982e24d"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00002.npz",
+                "sha256": "e813c7babe7740f0520304f68c2c0b47d65feb12006b992247d715224fdf0d31"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00003.npz",
+                "sha256": "ab6f682b92b785c83ebc977491366b875ef117e2b5f9e72b1df166f7e89d4f22"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00004.npz",
+                "sha256": "cc313c77f691f56978c8f474c249d8be36258cd10ccfaa1e674ded85a90975d5"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00005.npz",
+                "sha256": "0537f8175b9f1a2f17e4a3021cf0538b6e1d69334fef0b5745d1fded7c25a9b5"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00006.npz",
+                "sha256": "f7dec6352e938677e1e3fc4f5223e23dddd913939203b31dc58bddb4cf92b1b2"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00007.npz",
+                "sha256": "2a1083983ace9c64c094fece072be0bbcc3047f20f94c0024d5f4fc8d3ac6392"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00008.npz",
+                "sha256": "acc7ebe55cbb71e872f6f5ca0f5708be211720b844724ce88548de8113ebab96"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00009.npz",
+                "sha256": "cc9e3056c16768525983e5759d706ded5157718b4923b3ac37b56b80998cf5c5"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00010.npz",
+                "sha256": "0e933180d500e46e4dbf0662c437ebc915344747c70566f807763dcdd2b75694"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00011.npz",
+                "sha256": "6354c44534493c0b9f61369b8e9d6c1dc863a97acc119aced7ac88aef8392aca"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00012.npz",
+                "sha256": "cdda088fb4dfcb18131d32873e73a0f3c43095cc62ff498cd2d50c8431f4d4bc"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00013.npz",
+                "sha256": "80e058327e925ee94a104ff2ab000652282a0f6d3708eaaf41c6da5ad73f2e6d"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00014.npz",
+                "sha256": "4cc281f71d8eda7ccaae9389e8fe42ba448c23fba30cf11e4e41a91ad008506b"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS01_00015.npz",
+                "sha256": "3004fa91be9196d5baa06632c2544ed2be89d23f35d5c32071c566b166f16e72"
+              }
+            ]
+          },
+          {
+            "station": "BW_MGS02",
+            "seed_id": "BW.MGS02..HHZ",
+            "valid_samples": 3454371,
+            "total_samples": 3456035,
+            "response_status": "nominal_response_corrected",
+            "source_files": [
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00000.npz",
+                "sha256": "4cf1fefeedd38f63a82af59dc194e942fc74013440eef165d7f71680e82b52ca"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00001.npz",
+                "sha256": "e3c3f89d6a57475dd45ba35dd063ed73aee82b4978d6b07f4a50f5845a1d2a69"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00002.npz",
+                "sha256": "afd0002c3290a555cc8d76142607cba826ef804e6a0d3c424ced238bfac5da33"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00003.npz",
+                "sha256": "e25976194108f948e2275643ed406a3e46f00d013c82dbc0824b23c00f63425d"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00004.npz",
+                "sha256": "006a6aab2766ebea67a49dfac626a9a968e0c4b6dee15c8d1ed86e6fe799b548"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00005.npz",
+                "sha256": "0134377109d8842fa826a6aed170c8240fef01a9f76de9f644cf56155b3af1f0"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00006.npz",
+                "sha256": "f15491e332f93b539801e96e2482142c52eaeba5fc8fd3840558987d7d21b8d4"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00007.npz",
+                "sha256": "4a5e82639005fce88de482f8fd4e8efd2a7f99fbd5178bb15657b6f5d969daaf"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00008.npz",
+                "sha256": "88fdfbebe8da60a2969901fa66b4c25c4dcdc234100125e8a46cc359347a52e4"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00009.npz",
+                "sha256": "f2936722e77b42859be8786a0abfd2b27c2d9006cc24cabde659d8d617937242"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00010.npz",
+                "sha256": "7d3666cb89cdd8f5e253f7a0501a9a9e4023f730dfc7e4b6d1373f499f56cea5"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00011.npz",
+                "sha256": "1bbfd8bb319f034754967059d2ac9b7de3ead071c9c82252a2765a8b1c74ac92"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00012.npz",
+                "sha256": "ff4ab46fbb7a9f693675fc98e6c2630cc2a1ddd50eafd66e85fac7c07a3ab389"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00013.npz",
+                "sha256": "163bc8169a5c9156127bd45edcaec2ecceffd5a0e96affa47b92d00d06e3b974"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00014.npz",
+                "sha256": "8ce6bf1e263fe0643433cd11869b2b4607083073ddefb5e81bf3c3fe9bc56d07"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS02_00015.npz",
+                "sha256": "abf98fc7de6582bb21c6580343a09234596462e19d2f52c091a5765edc81e2d1"
+              }
+            ]
+          },
+          {
+            "station": "BW_MGS03",
+            "seed_id": "BW.MGS03..HHZ",
+            "valid_samples": 3454374,
+            "total_samples": 3456035,
+            "response_status": "nominal_response_corrected",
+            "source_files": [
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00000.npz",
+                "sha256": "3b594431b8baa24d54e6244ea2438d9909aed1f357ab6d5fea174223c0e791dc"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00001.npz",
+                "sha256": "4826f2c7ccf629a909fce7286231732677123c201c4c01684433fe57b936d4aa"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00002.npz",
+                "sha256": "d8a7b8e0d1e7ab0af0762ce1a351dd306dfffb630295077f98b49d55fd22ab33"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00003.npz",
+                "sha256": "9fb0c6b9fcd82c23d6d8563c5228735d4b79a3cf9b9fd55dc31991db337a1d51"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00004.npz",
+                "sha256": "25904709925554aef9c7399b437bdd0b7b8411c60ce513cc0daa589430b66dd4"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00005.npz",
+                "sha256": "01d775231a1b2840119b626919b649c70e7a19f1123c70213702d25646a455d3"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00006.npz",
+                "sha256": "b9508454920b557259739261954bfdb5f8acbd744323678f862db18f0011726e"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00007.npz",
+                "sha256": "31972473a3ebb712376b464ed62e4b2ec2f8a0fa8779f28541f9555fb2edb857"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00008.npz",
+                "sha256": "786cf7396b56f23ba87151f9bda4812518c116b63083704b2745423ebd9385e0"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00009.npz",
+                "sha256": "91aac380e3d4d35994b9a0197f86d46c235ccdfc3a106d8af0a06940283d1649"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00010.npz",
+                "sha256": "ea94815cf6b28021c8ce9ed236ed6645b06cabda67cbca19d9ac7076af782bd1"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00011.npz",
+                "sha256": "26270110eabf6905f6c8e40e824e8ebd3ba786928c8ab10141e4e1f9e93644d4"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00012.npz",
+                "sha256": "43f86ef1fb051737cc87376210117fc36d482d27120b9940727ffe052f0f8b49"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00013.npz",
+                "sha256": "724f5ebb75772f03c8434a8d1aac9113efd364b0aaf960a29c8dce55932ad357"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00014.npz",
+                "sha256": "4b8866da004be092ffa23465a002250a7a872d7d0e67a43d8d591e54a5b9a2c7"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS03_00015.npz",
+                "sha256": "bd004607fd705b9c3fe20d5820d7af17ad6e337f15d06f40eb7da9e0d8e0a2d8"
+              }
+            ]
+          },
+          {
+            "station": "BW_MGS04",
+            "seed_id": "BW.MGS04..HHZ",
+            "valid_samples": 3454381,
+            "total_samples": 3456035,
+            "response_status": "nominal_response_corrected",
+            "source_files": [
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00000.npz",
+                "sha256": "8bad4959d8f140f1a91e5713ddd0b31b7a41e6b4164c38d3f465ecdc34eaa1c8"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00001.npz",
+                "sha256": "f476cad92a0755656c527df483473b9f8a764edd681db05187064b46bf0461bc"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00002.npz",
+                "sha256": "1eeb934ac15ed71d666a5cd0321df28c6e49e0ab60c1490da0ab7f1ceabea4eb"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00003.npz",
+                "sha256": "c90d0242069642b2fc8d584fbc7a0fbcf69e473ef27a6b760c6b8f67906f2f82"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00004.npz",
+                "sha256": "feffd1447ae82d9ffcfb40e682bfbbc8788089eea311a2038f6fee5203a5eff1"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00005.npz",
+                "sha256": "8c5cfb7f9cdd12aab7fd4b350b58bde1270d35335bd7852d7b9bb6704d4ab1d6"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00006.npz",
+                "sha256": "f36be4611492e6821404d483b0a6ce3d17312f2f7979cd265aca6ff706c10475"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00007.npz",
+                "sha256": "3471515ee87f0dcf8c6fa13694f66933bb91c022a512ef4a3fb8cd8028f373f9"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00008.npz",
+                "sha256": "438b1210c6d2d3cd6b5aa3e8360a17bbdc1b88cf18251dc2af8a75141fb32863"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00009.npz",
+                "sha256": "57d509f0cb76b08c78a6f090e04d33c0e02130f913e0971d5c908978a122fa99"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00010.npz",
+                "sha256": "0afd9faee7378fa9c1fa6fd149cfad26390ea4eef1ff4e53b46cebb9f6cad02d"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00011.npz",
+                "sha256": "f42bc82acd21657a43b2d7be19e47774e9c948e8268e84eee0a7cd36588dddac"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00012.npz",
+                "sha256": "ed031fb6c98e0d25a1089707abcfb35c108aa7ac4a7863859332fe670d3e38e4"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00013.npz",
+                "sha256": "f0d0b426558aa18ecbdf266f72b7ca9078c525bf8c80cc1affae3b550a178e99"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00014.npz",
+                "sha256": "a15a4a459f80dd6fc4289fbf9bcbb976042b0494868e5840386cb37e33e7ffe4"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS04_00015.npz",
+                "sha256": "930ffc59c685e05aa5568db8df4a9e98ec0b241405a501402801e8a16d75ec50"
+              }
+            ]
+          },
+          {
+            "station": "BW_MGS05",
+            "seed_id": "BW.MGS05..HHZ",
+            "valid_samples": 3454369,
+            "total_samples": 3456035,
+            "response_status": "nominal_response_corrected",
+            "source_files": [
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00000.npz",
+                "sha256": "12a777eb3b47eeeedb3457dd2df43a3ca486bd39be4929cc5f7d66a80776b4d9"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00001.npz",
+                "sha256": "c306878bedce350dae9fba19b680b04398af54a2e64c2ca5a6adf564d4241c46"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00002.npz",
+                "sha256": "59ccd989e5fe44d3c7ae1941e78e9cc7c2e2d7758661177b3ae020da4bfb97a5"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00003.npz",
+                "sha256": "10f4a4ec2da8fb46522833454cf080d32a60453fea3b16cf1674fd333f995198"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00004.npz",
+                "sha256": "3c503e4dd3e657fe36bf03cd83eb88a8d0c6442fa6556df847d5d8432b073c56"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00005.npz",
+                "sha256": "a6edfb53ee3325e82c33bcf57841ca0432f03801dd31b682ce01aad98cb3c036"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00006.npz",
+                "sha256": "b59b3e89e8eea47165e1984acc01f099896025fb422de48b000cc8872cd645cf"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00007.npz",
+                "sha256": "b33aed5d419c193f7b47fdeacaf350fcf1b647ac1bc66627a51fd65ae066ceae"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00008.npz",
+                "sha256": "e834e037bac63c34099fa65b9eb1a3df6b7f26cf805eeb2d95623f54d5b80c94"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00009.npz",
+                "sha256": "3f12e71647329ef1dba587be37ec1dea4ed7ac73d8224e1be71182aa4a0595ec"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00010.npz",
+                "sha256": "120a699dbe7d112526e3fdb6ea66c528e70861c928cac34f07867a394a007689"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00011.npz",
+                "sha256": "2de5e1bea79331ea16b360fdc6c19f87f26ccd53705a261def82b058de59f1d3"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00012.npz",
+                "sha256": "7a27194154af1e6b7a64130554dca47b4fa0bc7cff856291314806dd1702e00c"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00013.npz",
+                "sha256": "03fca0dc1add5aebfcf11a8e0aa5efeae01627d7ab5afcd70942d685390a0f83"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00014.npz",
+                "sha256": "bc1e22c425784479f0035bd3c7feba5b02e8bcc3f04612a8296cd477cfc182dc"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGS05_00015.npz",
+                "sha256": "af0db88b877c26fb4f19015f0dea8ed3d8e07853809cee1dcf40e3cf5025756a"
+              }
+            ]
+          },
+          {
+            "station": "BW_MGSBH",
+            "seed_id": "BW.MGSBH..HHZ",
+            "valid_samples": 3454395,
+            "total_samples": 3456035,
+            "response_status": "nominal_response_corrected",
+            "source_files": [
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00000.npz",
+                "sha256": "055629316de4f36e42db459cef3e6d1c7fb65cbebab45ee2261a473f4eff4c81"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00001.npz",
+                "sha256": "b375a64fca750978e81bcb727a9362281e9f269e382ee959985dc4ca2366c45c"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00002.npz",
+                "sha256": "7f28b8aaaa9c2f157d06144fae7c05fb2b94f67afa359022db7b383b3530e181"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00003.npz",
+                "sha256": "a8bf4e3f88284d302110b9572868b35e337de48dacdbe31855d8546456240340"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00004.npz",
+                "sha256": "2172067748d50248bed92acf0328e458ac59e7cb421f0aaddda2b1063062c2ab"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00005.npz",
+                "sha256": "5ef6dee44050f4426a20ef77b7c44fa2360213798d0ebb0cae7b6bb19bf74820"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00006.npz",
+                "sha256": "a848443eab2d128b39d21cfaeca6004c946e005c234c8ab42702af8f0a41212e"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00007.npz",
+                "sha256": "c42aeaa289f9d51574bc845a105599fa2793eaafe748f72cecce3b1aa456ce9c"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00008.npz",
+                "sha256": "fbd13e4c807f305d86ca4e143838e31033c440e80db19268dffd5e32cc890bba"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00009.npz",
+                "sha256": "80b425886891e6b1d1a21365c27c4c536c6a447b8dcf48508c153d3f8b849a32"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00010.npz",
+                "sha256": "1e711d3acd31d4d731153a18442e9e53ac56aa6cb5901e3b94b6e44c090e80d4"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00011.npz",
+                "sha256": "16e372a7825509d9104114c7aeb9e31746159cfe7766e9be9072a4b0b441873c"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00012.npz",
+                "sha256": "b7cf4d270aa40a1051fe645b976feb3d78590a7372958a3aac7d0aed31838ef0"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00013.npz",
+                "sha256": "ad3b7e6c0de432a1170b89bd8eef898e3c8c46281760df3a58ee221a72f2c95a"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00014.npz",
+                "sha256": "eb13a0d1bc0c9bc1893bdcc8bcb8c575c758f8e865068b026361599bffb8bea1"
+              },
+              {
+                "path": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/canonical/BW_MGSBH_00015.npz",
+                "sha256": "26695a365c775f1ff0b5c5eacf4b7817c249d987a486a358f5427072dd1383cd"
+              }
+            ]
+          }
+        ]
+      },
+      "utc": "2026-10-12T08:00:38.397461+00:00"
+    },
+    {
+      "stage": "方向估计 0.08 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.08,
+        "windows": 139,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 2500.0,
+        "hop_s": 2500.0,
+        "frequency_bins_hz": [
+          0.08
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.0014,
+        "frequency_hz": 0.08,
+        "actual_frequency_hz": 0.08,
+        "total_windows": 139,
+        "quality_windows": 63,
+        "cache_reused": false,
+        "median_velocity_m_s": 3299.389983006049,
+        "reasons": {
+          "通过": 63,
+          "最优速度在搜索边界": 1,
+          "有效台站不足": 18,
+          "阵列相干度不足": 2,
+          "多波源窗不能唯一修正单一方向和速度": 55
+        }
+      },
+      "elapsed_s": 1.5835037231445312
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.08 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:00:40.231735+00:00"
+    },
+    {
+      "stage": "方向估计 0.09 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.09,
+        "windows": 156,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 2222.2,
+        "hop_s": 2222.2,
+        "frequency_bins_hz": [
+          0.09
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.0015750157501575016,
+        "frequency_hz": 0.09,
+        "actual_frequency_hz": 0.09,
+        "total_windows": 156,
+        "quality_windows": 66,
+        "cache_reused": false,
+        "median_velocity_m_s": 3222.3480912900595,
+        "reasons": {
+          "通过": 66,
+          "最优速度在搜索边界": 1,
+          "有效台站不足": 17,
+          "多波源窗不能唯一修正单一方向和速度": 72
+        }
+      },
+      "elapsed_s": 1.5479638576507568
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.09 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:00:41.802445+00:00"
+    },
+    {
+      "stage": "方向估计 0.1 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.1,
+        "windows": 173,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 2000.0,
+        "hop_s": 2000.0,
+        "frequency_bins_hz": [
+          0.1
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.00175,
+        "frequency_hz": 0.1,
+        "actual_frequency_hz": 0.1,
+        "total_windows": 173,
+        "quality_windows": 97,
+        "cache_reused": false,
+        "median_velocity_m_s": 3084.599707399237,
+        "reasons": {
+          "通过": 97,
+          "有效台站不足": 17,
+          "多波源窗不能唯一修正单一方向和速度": 59
+        }
+      },
+      "elapsed_s": 1.5447592735290527
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.1 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:00:43.370755+00:00"
+    },
+    {
+      "stage": "方向估计 0.11 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.11,
+        "windows": 190,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 1818.2,
+        "hop_s": 1818.2,
+        "frequency_bins_hz": [
+          0.11
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.0019249807501924981,
+        "frequency_hz": 0.11,
+        "actual_frequency_hz": 0.11,
+        "total_windows": 190,
+        "quality_windows": 107,
+        "cache_reused": false,
+        "median_velocity_m_s": 3089.577848706915,
+        "reasons": {
+          "通过": 107,
+          "有效台站不足": 17,
+          "多波源窗不能唯一修正单一方向和速度": 66
+        }
+      },
+      "elapsed_s": 1.9385602474212646
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.11 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:00:45.330851+00:00"
+    },
+    {
+      "stage": "方向估计 0.12 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.12,
+        "windows": 207,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 1666.7,
+        "hop_s": 1666.7,
+        "frequency_bins_hz": [
+          0.12
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.0020999580008399833,
+        "frequency_hz": 0.12,
+        "actual_frequency_hz": 0.12,
+        "total_windows": 207,
+        "quality_windows": 91,
+        "cache_reused": false,
+        "median_velocity_m_s": 3013.486603563998,
+        "reasons": {
+          "通过": 91,
+          "有效台站不足": 17,
+          "阵列相干度不足": 2,
+          "多波源窗不能唯一修正单一方向和速度": 97
+        }
+      },
+      "elapsed_s": 3.421762704849243
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.12 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:00:48.804532+00:00"
+    },
+    {
+      "stage": "方向估计 0.13 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.13,
+        "windows": 225,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 1538.5,
+        "hop_s": 1538.5,
+        "frequency_bins_hz": [
+          0.13
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.0022749431264218393,
+        "frequency_hz": 0.13,
+        "actual_frequency_hz": 0.13,
+        "total_windows": 225,
+        "quality_windows": 76,
+        "cache_reused": false,
+        "median_velocity_m_s": 3029.4905099519465,
+        "reasons": {
+          "通过": 76,
+          "有效台站不足": 17,
+          "阵列相干度不足": 1,
+          "多波源窗不能唯一修正单一方向和速度": 131
+        }
+      },
+      "elapsed_s": 2.8417868614196777
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.13 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:00:51.670955+00:00"
+    },
+    {
+      "stage": "方向估计 0.14 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.14,
+        "windows": 242,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 1428.6,
+        "hop_s": 1428.6,
+        "frequency_bins_hz": [
+          0.14
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.0024499510009799805,
+        "frequency_hz": 0.14,
+        "actual_frequency_hz": 0.14,
+        "total_windows": 242,
+        "quality_windows": 46,
+        "cache_reused": false,
+        "median_velocity_m_s": 3021.5062420064964,
+        "reasons": {
+          "通过": 46,
+          "有效台站不足": 17,
+          "阵列相干度不足": 7,
+          "多波源窗不能唯一修正单一方向和速度": 172
+        }
+      },
+      "elapsed_s": 2.2671961784362793
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.14 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:00:53.964947+00:00"
+    },
+    {
+      "stage": "方向估计 0.15 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.15,
+        "windows": 259,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 1333.3,
+        "hop_s": 1333.3,
+        "frequency_bins_hz": [
+          0.15
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.0026250656266406662,
+        "frequency_hz": 0.15,
+        "actual_frequency_hz": 0.15,
+        "total_windows": 259,
+        "quality_windows": 28,
+        "cache_reused": false,
+        "median_velocity_m_s": 3041.9555974294144,
+        "reasons": {
+          "通过": 28,
+          "有效台站不足": 17,
+          "阵列相干度不足": 14,
+          "多波源窗不能唯一修正单一方向和速度": 198,
+          "MUSIC未识别出信号子空间": 2
+        }
+      },
+      "elapsed_s": 2.0876410007476807
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.15 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:00:56.079998+00:00"
+    },
+    {
+      "stage": "方向估计 0.16 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.16,
+        "windows": 277,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 1250.0,
+        "hop_s": 1250.0,
+        "frequency_bins_hz": [
+          0.16
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.0028,
+        "frequency_hz": 0.16,
+        "actual_frequency_hz": 0.16,
+        "total_windows": 277,
+        "quality_windows": 11,
+        "cache_reused": false,
+        "median_velocity_m_s": 3022.9230867110696,
+        "reasons": {
+          "通过": 11,
+          "有效台站不足": 18,
+          "阵列孔径与频率要求更细扫描网格": 1,
+          "阵列相干度不足": 35,
+          "多波源窗不能唯一修正单一方向和速度": 196,
+          "MUSIC未识别出信号子空间": 16
+        }
+      },
+      "elapsed_s": 2.062469244003296
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.16 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:00:58.168457+00:00"
+    },
+    {
+      "stage": "方向估计 0.17 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.17,
+        "windows": 294,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 1176.5,
+        "hop_s": 1176.5,
+        "frequency_bins_hz": [
+          0.17
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.0029749256268593286,
+        "frequency_hz": 0.17,
+        "actual_frequency_hz": 0.17,
+        "total_windows": 294,
+        "quality_windows": 12,
+        "cache_reused": false,
+        "median_velocity_m_s": 2884.617795374719,
+        "reasons": {
+          "通过": 12,
+          "有效台站不足": 17,
+          "阵列相干度不足": 56,
+          "多波源窗不能唯一修正单一方向和速度": 183,
+          "MUSIC未识别出信号子空间": 26
+        }
+      },
+      "elapsed_s": 2.0638184547424316
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.17 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:00.257734+00:00"
+    },
+    {
+      "stage": "方向估计 0.18 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.18,
+        "windows": 311,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 1111.1,
+        "hop_s": 1111.1,
+        "frequency_bins_hz": [
+          0.18
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.003150031500315003,
+        "frequency_hz": 0.18,
+        "actual_frequency_hz": 0.18,
+        "total_windows": 311,
+        "quality_windows": 9,
+        "cache_reused": false,
+        "median_velocity_m_s": 2949.9570235577894,
+        "reasons": {
+          "通过": 9,
+          "存在近等强的分离峰": 1,
+          "有效台站不足": 17,
+          "阵列相干度不足": 58,
+          "多波源窗不能唯一修正单一方向和速度": 180,
+          "MUSIC未识别出信号子空间": 46
+        }
+      },
+      "elapsed_s": 2.100728988647461
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.18 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:02.388223+00:00"
+    },
+    {
+      "stage": "方向估计 0.19 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.19,
+        "windows": 328,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 1052.6,
+        "hop_s": 1052.6,
+        "frequency_bins_hz": [
+          0.19
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.00332509975299259,
+        "frequency_hz": 0.19,
+        "actual_frequency_hz": 0.19,
+        "total_windows": 328,
+        "quality_windows": 6,
+        "cache_reused": false,
+        "median_velocity_m_s": 2702.3256552209577,
+        "reasons": {
+          "通过": 6,
+          "有效台站不足": 17,
+          "阵列相干度不足": 83,
+          "多波源窗不能唯一修正单一方向和速度": 162,
+          "MUSIC未识别出信号子空间": 60
+        }
+      },
+      "elapsed_s": 2.3018760681152344
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.19 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:04.711771+00:00"
+    },
+    {
+      "stage": "方向估计 0.2 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.2,
+        "windows": 346,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 1000.0,
+        "hop_s": 1000.0,
+        "frequency_bins_hz": [
+          0.2
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.0035,
+        "frequency_hz": 0.2,
+        "actual_frequency_hz": 0.2,
+        "total_windows": 346,
+        "quality_windows": 8,
+        "cache_reused": false,
+        "median_velocity_m_s": 3714.021684283393,
+        "reasons": {
+          "通过": 8,
+          "有效台站不足": 21,
+          "阵列相干度不足": 99,
+          "多波源窗不能唯一修正单一方向和速度": 160,
+          "MUSIC未识别出信号子空间": 58
+        }
+      },
+      "elapsed_s": 2.1972732543945312
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.2 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:06.932483+00:00"
+    },
+    {
+      "stage": "方向估计 0.21 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.21,
+        "windows": 363,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 952.4,
+        "hop_s": 952.4,
+        "frequency_bins_hz": [
+          0.21
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.003674926501469971,
+        "frequency_hz": 0.21,
+        "actual_frequency_hz": 0.21,
+        "total_windows": 363,
+        "quality_windows": 1,
+        "cache_reused": false,
+        "median_velocity_m_s": 2873.9698169148974,
+        "reasons": {
+          "通过": 1,
+          "有效台站不足": 17,
+          "阵列相干度不足": 106,
+          "多波源窗不能唯一修正单一方向和速度": 118,
+          "MUSIC未识别出信号子空间": 121
+        }
+      },
+      "elapsed_s": 1.9587218761444092
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.21 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:08.917062+00:00"
+    },
+    {
+      "stage": "方向估计 0.22 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.22,
+        "windows": 380,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 909.1,
+        "hop_s": 909.1,
+        "frequency_bins_hz": [
+          0.22
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.0038499615003849963,
+        "frequency_hz": 0.22,
+        "actual_frequency_hz": 0.22,
+        "total_windows": 380,
+        "quality_windows": 1,
+        "cache_reused": false,
+        "median_velocity_m_s": 778.090005329626,
+        "reasons": {
+          "通过": 1,
+          "有效台站不足": 17,
+          "阵列孔径与频率要求更细扫描网格": 1,
+          "阵列相干度不足": 69,
+          "多波源窗不能唯一修正单一方向和速度": 96,
+          "MUSIC未识别出信号子空间": 196
+        }
+      },
+      "elapsed_s": 1.6374061107635498
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.22 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:10.575967+00:00"
+    },
+    {
+      "stage": "方向估计 0.23 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.23,
+        "windows": 397,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 869.6,
+        "hop_s": 869.6,
+        "frequency_bins_hz": [
+          0.23
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.0040248390064397425,
+        "frequency_hz": 0.23,
+        "actual_frequency_hz": 0.23,
+        "total_windows": 397,
+        "quality_windows": 1,
+        "cache_reused": false,
+        "median_velocity_m_s": 2424.6165151510722,
+        "reasons": {
+          "通过": 1,
+          "有效台站不足": 17,
+          "阵列相干度不足": 79,
+          "多波源窗不能唯一修正单一方向和速度": 98,
+          "MUSIC未识别出信号子空间": 202
+        }
+      },
+      "elapsed_s": 1.7832493782043457
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.23 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:12.378965+00:00"
+    },
+    {
+      "stage": "方向估计 0.24 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.24,
+        "windows": 415,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 833.3,
+        "hop_s": 833.3,
+        "frequency_bins_hz": [
+          0.24
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.004200168006720269,
+        "frequency_hz": 0.24,
+        "actual_frequency_hz": 0.24,
+        "total_windows": 415,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 18,
+          "阵列相干度不足": 93,
+          "多波源窗不能唯一修正单一方向和速度": 83,
+          "MUSIC未识别出信号子空间": 221
+        }
+      },
+      "elapsed_s": 1.6778171062469482
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.24 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:14.077172+00:00"
+    },
+    {
+      "stage": "方向估计 0.25 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.25,
+        "windows": 432,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 800.0,
+        "hop_s": 800.0,
+        "frequency_bins_hz": [
+          0.25
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.004375,
+        "frequency_hz": 0.25,
+        "actual_frequency_hz": 0.25,
+        "total_windows": 432,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 77,
+          "多波源窗不能唯一修正单一方向和速度": 73,
+          "MUSIC未识别出信号子空间": 265
+        }
+      },
+      "elapsed_s": 1.557241678237915
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.25 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:15.656034+00:00"
+    },
+    {
+      "stage": "方向估计 0.26 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.26,
+        "windows": 449,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 769.2,
+        "hop_s": 769.2,
+        "frequency_bins_hz": [
+          0.26
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.004550182007280291,
+        "frequency_hz": 0.26,
+        "actual_frequency_hz": 0.26,
+        "total_windows": 449,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 64,
+          "多波源窗不能唯一修正单一方向和速度": 71,
+          "MUSIC未识别出信号子空间": 297
+        }
+      },
+      "elapsed_s": 1.6392438411712646
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.26 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:17.332271+00:00"
+    },
+    {
+      "stage": "方向估计 0.27 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.27,
+        "windows": 466,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 740.7,
+        "hop_s": 740.7,
+        "frequency_bins_hz": [
+          0.27
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.004725259889293911,
+        "frequency_hz": 0.27,
+        "actual_frequency_hz": 0.27,
+        "total_windows": 466,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 50,
+          "多波源窗不能唯一修正单一方向和速度": 68,
+          "MUSIC未识别出信号子空间": 331
+        }
+      },
+      "elapsed_s": 1.546752691268921
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.27 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:18.901780+00:00"
+    },
+    {
+      "stage": "方向估计 0.28 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.28,
+        "windows": 483,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 714.3,
+        "hop_s": 714.3,
+        "frequency_bins_hz": [
+          0.28
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.004899902001959961,
+        "frequency_hz": 0.28,
+        "actual_frequency_hz": 0.28,
+        "total_windows": 483,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 44,
+          "多波源窗不能唯一修正单一方向和速度": 62,
+          "MUSIC未识别出信号子空间": 360
+        }
+      },
+      "elapsed_s": 1.6515755653381348
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.28 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:20.583436+00:00"
+    },
+    {
+      "stage": "方向估计 0.29 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.29,
+        "windows": 501,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 689.7,
+        "hop_s": 689.7,
+        "frequency_bins_hz": [
+          0.29
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.005074670146440481,
+        "frequency_hz": 0.29,
+        "actual_frequency_hz": 0.29,
+        "total_windows": 501,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 43,
+          "多波源窗不能唯一修正单一方向和速度": 62,
+          "MUSIC未识别出信号子空间": 379
+        }
+      },
+      "elapsed_s": 1.5846741199493408
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.29 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:22.237919+00:00"
+    },
+    {
+      "stage": "方向估计 0.3 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.3,
+        "windows": 518,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 666.7,
+        "hop_s": 666.7,
+        "frequency_bins_hz": [
+          0.3
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.005249737513124344,
+        "frequency_hz": 0.3,
+        "actual_frequency_hz": 0.3,
+        "total_windows": 518,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 36,
+          "多波源窗不能唯一修正单一方向和速度": 60,
+          "MUSIC未识别出信号子空间": 405
+        }
+      },
+      "elapsed_s": 1.6482367515563965
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.3 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:23.908147+00:00"
+    },
+    {
+      "stage": "方向估计 0.31 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.31,
+        "windows": 535,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 645.2,
+        "hop_s": 645.2,
+        "frequency_bins_hz": [
+          0.31
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.005424674519528828,
+        "frequency_hz": 0.31,
+        "actual_frequency_hz": 0.31,
+        "total_windows": 535,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 66,
+          "多波源窗不能唯一修正单一方向和速度": 50,
+          "MUSIC未识别出信号子空间": 402
+        }
+      },
+      "elapsed_s": 1.5654985904693604
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.31 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:25.497597+00:00"
+    },
+    {
+      "stage": "方向估计 0.32 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.32,
+        "windows": 553,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 625.0,
+        "hop_s": 625.0,
+        "frequency_bins_hz": [
+          0.32
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.0056,
+        "frequency_hz": 0.32,
+        "actual_frequency_hz": 0.32,
+        "total_windows": 553,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 18,
+          "阵列相干度不足": 55,
+          "多波源窗不能唯一修正单一方向和速度": 63,
+          "MUSIC未识别出信号子空间": 417
+        }
+      },
+      "elapsed_s": 1.7826013565063477
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.32 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:27.330484+00:00"
+    },
+    {
+      "stage": "方向估计 0.33 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.33,
+        "windows": 570,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 606.1,
+        "hop_s": 606.1,
+        "frequency_bins_hz": [
+          0.33
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.005774624649397789,
+        "frequency_hz": 0.33,
+        "actual_frequency_hz": 0.33,
+        "total_windows": 570,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 60,
+          "多波源窗不能唯一修正单一方向和速度": 48,
+          "MUSIC未识别出信号子空间": 445
+        }
+      },
+      "elapsed_s": 1.548478126525879
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.33 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:28.907513+00:00"
+    },
+    {
+      "stage": "方向估计 0.34 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.34,
+        "windows": 587,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 588.2,
+        "hop_s": 588.2,
+        "frequency_bins_hz": [
+          0.34
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.005950357021421286,
+        "frequency_hz": 0.34,
+        "actual_frequency_hz": 0.34,
+        "total_windows": 587,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 58,
+          "多波源窗不能唯一修正单一方向和速度": 46,
+          "MUSIC未识别出信号子空间": 466
+        }
+      },
+      "elapsed_s": 1.5322768688201904
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.34 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:30.465461+00:00"
+    },
+    {
+      "stage": "方向估计 0.35 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.35,
+        "windows": 604,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 571.4,
+        "hop_s": 571.4,
+        "frequency_bins_hz": [
+          0.35
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.006125306265313266,
+        "frequency_hz": 0.35,
+        "actual_frequency_hz": 0.35,
+        "total_windows": 604,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 57,
+          "多波源窗不能唯一修正单一方向和速度": 57,
+          "MUSIC未识别出信号子空间": 473
+        }
+      },
+      "elapsed_s": 1.602926254272461
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.35 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:32.098608+00:00"
+    },
+    {
+      "stage": "方向估计 0.36 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.36,
+        "windows": 621,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 555.6,
+        "hop_s": 555.6,
+        "frequency_bins_hz": [
+          0.36
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.006299496040316775,
+        "frequency_hz": 0.36,
+        "actual_frequency_hz": 0.36,
+        "total_windows": 621,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 48,
+          "多波源窗不能唯一修正单一方向和速度": 52,
+          "MUSIC未识别出信号子空间": 504
+        }
+      },
+      "elapsed_s": 1.569732666015625
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.36 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:33.693700+00:00"
+    },
+    {
+      "stage": "方向估计 0.37 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.37,
+        "windows": 639,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 540.5,
+        "hop_s": 540.5,
+        "frequency_bins_hz": [
+          0.37
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.0064754856614246065,
+        "frequency_hz": 0.37,
+        "actual_frequency_hz": 0.37,
+        "total_windows": 639,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列孔径与频率要求更细扫描网格": 1,
+          "阵列相干度不足": 49,
+          "多波源窗不能唯一修正单一方向和速度": 56,
+          "MUSIC未识别出信号子空间": 516
+        }
+      },
+      "elapsed_s": 1.6986773014068604
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.37 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:35.418612+00:00"
+    },
+    {
+      "stage": "方向估计 0.38 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.38,
+        "windows": 656,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 526.3,
+        "hop_s": 526.3,
+        "frequency_bins_hz": [
+          0.38
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.00665019950598518,
+        "frequency_hz": 0.38,
+        "actual_frequency_hz": 0.38,
+        "total_windows": 656,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 34,
+          "多波源窗不能唯一修正单一方向和速度": 53,
+          "MUSIC未识别出信号子空间": 552
+        }
+      },
+      "elapsed_s": 1.5218605995178223
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.38 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:36.964799+00:00"
+    },
+    {
+      "stage": "方向估计 0.39 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.39,
+        "windows": 673,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 512.8,
+        "hop_s": 512.8,
+        "frequency_bins_hz": [
+          0.39
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.006825273010920437,
+        "frequency_hz": 0.39,
+        "actual_frequency_hz": 0.39,
+        "total_windows": 673,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 38,
+          "多波源窗不能唯一修正单一方向和速度": 46,
+          "MUSIC未识别出信号子空间": 572
+        }
+      },
+      "elapsed_s": 1.6163299083709717
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.39 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:38.604400+00:00"
+    },
+    {
+      "stage": "方向估计 0.4 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.4,
+        "windows": 691,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 500.0,
+        "hop_s": 500.0,
+        "frequency_bins_hz": [
+          0.4
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.007,
+        "frequency_hz": 0.4,
+        "actual_frequency_hz": 0.4,
+        "total_windows": 691,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 21,
+          "阵列相干度不足": 46,
+          "多波源窗不能唯一修正单一方向和速度": 34,
+          "MUSIC未识别出信号子空间": 590
+        }
+      },
+      "elapsed_s": 1.4843645095825195
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.4 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:40.118049+00:00"
+    },
+    {
+      "stage": "方向估计 0.41 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.41,
+        "windows": 708,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 487.8,
+        "hop_s": 487.8,
+        "frequency_bins_hz": [
+          0.41
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.007175071750717507,
+        "frequency_hz": 0.41,
+        "actual_frequency_hz": 0.41,
+        "total_windows": 708,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 48,
+          "多波源窗不能唯一修正单一方向和速度": 45,
+          "MUSIC未识别出信号子空间": 598
+        }
+      },
+      "elapsed_s": 1.6024129390716553
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.41 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:41.746818+00:00"
+    },
+    {
+      "stage": "方向估计 0.42 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.42,
+        "windows": 725,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 476.2,
+        "hop_s": 476.2,
+        "frequency_bins_hz": [
+          0.42
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.007349853002939942,
+        "frequency_hz": 0.42,
+        "actual_frequency_hz": 0.42,
+        "total_windows": 725,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 55,
+          "多波源窗不能唯一修正单一方向和速度": 64,
+          "MUSIC未识别出信号子空间": 589
+        }
+      },
+      "elapsed_s": 1.7467520236968994
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.42 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:43.521264+00:00"
+    },
+    {
+      "stage": "方向估计 0.43 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.43,
+        "windows": 742,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 465.1,
+        "hop_s": 465.1,
+        "frequency_bins_hz": [
+          0.43
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.007525263384218448,
+        "frequency_hz": 0.43,
+        "actual_frequency_hz": 0.43,
+        "total_windows": 742,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 60,
+          "多波源窗不能唯一修正单一方向和速度": 67,
+          "MUSIC未识别出信号子空间": 598
+        }
+      },
+      "elapsed_s": 1.7316937446594238
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.43 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:45.277409+00:00"
+    },
+    {
+      "stage": "方向估计 0.44 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.44,
+        "windows": 760,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 454.5,
+        "hop_s": 454.5,
+        "frequency_bins_hz": [
+          0.44
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.007700770077007701,
+        "frequency_hz": 0.44,
+        "actual_frequency_hz": 0.44,
+        "total_windows": 760,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 18,
+          "阵列相干度不足": 67,
+          "多波源窗不能唯一修正单一方向和速度": 69,
+          "MUSIC未识别出信号子空间": 606
+        }
+      },
+      "elapsed_s": 1.846632957458496
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.44 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:47.153501+00:00"
+    },
+    {
+      "stage": "方向估计 0.45 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.45,
+        "windows": 777,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 444.4,
+        "hop_s": 444.4,
+        "frequency_bins_hz": [
+          0.45
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.007875787578757875,
+        "frequency_hz": 0.45,
+        "actual_frequency_hz": 0.45,
+        "total_windows": 777,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 78,
+          "多波源窗不能唯一修正单一方向和速度": 64,
+          "MUSIC未识别出信号子空间": 618
+        }
+      },
+      "elapsed_s": 1.8989753723144531
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.45 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:49.086514+00:00"
+    },
+    {
+      "stage": "方向估计 0.46 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.46,
+        "windows": 794,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 434.8,
+        "hop_s": 434.8,
+        "frequency_bins_hz": [
+          0.46
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.008049678012879485,
+        "frequency_hz": 0.46,
+        "actual_frequency_hz": 0.46,
+        "total_windows": 794,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 59,
+          "多波源窗不能唯一修正单一方向和速度": 68,
+          "MUSIC未识别出信号子空间": 650
+        }
+      },
+      "elapsed_s": 1.8482170104980469
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.46 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:50.970784+00:00"
+    },
+    {
+      "stage": "方向估计 0.47 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.47,
+        "windows": 811,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 425.5,
+        "hop_s": 425.5,
+        "frequency_bins_hz": [
+          0.47
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.008225616921269096,
+        "frequency_hz": 0.47,
+        "actual_frequency_hz": 0.47,
+        "total_windows": 811,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 66,
+          "多波源窗不能唯一修正单一方向和速度": 59,
+          "MUSIC未识别出信号子空间": 669
+        }
+      },
+      "elapsed_s": 2.164792776107788
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.47 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:53.165375+00:00"
+    },
+    {
+      "stage": "方向估计 0.48 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.48,
+        "windows": 828,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 416.7,
+        "hop_s": 416.7,
+        "frequency_bins_hz": [
+          0.48
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.008399328053755699,
+        "frequency_hz": 0.48,
+        "actual_frequency_hz": 0.48,
+        "total_windows": 828,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 55,
+          "多波源窗不能唯一修正单一方向和速度": 72,
+          "MUSIC未识别出信号子空间": 684
+        }
+      },
+      "elapsed_s": 2.1170194149017334
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.48 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:55.313154+00:00"
+    },
+    {
+      "stage": "方向估计 0.49 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.49,
+        "windows": 846,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 408.2,
+        "hop_s": 408.2,
+        "frequency_bins_hz": [
+          0.49
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.00857422831945125,
+        "frequency_hz": 0.49,
+        "actual_frequency_hz": 0.49,
+        "total_windows": 846,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 48,
+          "多波源窗不能唯一修正单一方向和速度": 71,
+          "MUSIC未识别出信号子空间": 710
+        }
+      },
+      "elapsed_s": 1.9333961009979248
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.49 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:57.278107+00:00"
+    },
+    {
+      "stage": "方向估计 0.5 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.5,
+        "windows": 863,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 400.0,
+        "hop_s": 400.0,
+        "frequency_bins_hz": [
+          0.5
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.00875,
+        "frequency_hz": 0.5,
+        "actual_frequency_hz": 0.5,
+        "total_windows": 863,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 61,
+          "多波源窗不能唯一修正单一方向和速度": 68,
+          "MUSIC未识别出信号子空间": 717
+        }
+      },
+      "elapsed_s": 1.8352198600769043
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.5 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:01:59.141745+00:00"
+    },
+    {
+      "stage": "方向估计 0.51 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.51,
+        "windows": 880,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 392.2,
+        "hop_s": 392.2,
+        "frequency_bins_hz": [
+          0.51
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.008924018357980621,
+        "frequency_hz": 0.51,
+        "actual_frequency_hz": 0.51,
+        "total_windows": 880,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 46,
+          "多波源窗不能唯一修正单一方向和速度": 45,
+          "MUSIC未识别出信号子空间": 772
+        }
+      },
+      "elapsed_s": 3.077322483062744
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.51 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:02.286031+00:00"
+    },
+    {
+      "stage": "方向估计 0.52 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.52,
+        "windows": 898,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 384.6,
+        "hop_s": 384.6,
+        "frequency_bins_hz": [
+          0.52
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.009100364014560582,
+        "frequency_hz": 0.52,
+        "actual_frequency_hz": 0.52,
+        "total_windows": 898,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 18,
+          "阵列相干度不足": 58,
+          "多波源窗不能唯一修正单一方向和速度": 64,
+          "MUSIC未识别出信号子空间": 758
+        }
+      },
+      "elapsed_s": 3.0266754627227783
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.52 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:05.344232+00:00"
+    },
+    {
+      "stage": "方向估计 0.53 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.53,
+        "windows": 915,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 377.4,
+        "hop_s": 377.4,
+        "frequency_bins_hz": [
+          0.53
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.009273979862215157,
+        "frequency_hz": 0.53,
+        "actual_frequency_hz": 0.53,
+        "total_windows": 915,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 18,
+          "阵列相干度不足": 62,
+          "多波源窗不能唯一修正单一方向和速度": 58,
+          "MUSIC未识别出信号子空间": 777
+        }
+      },
+      "elapsed_s": 2.1300430297851562
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.53 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:07.510673+00:00"
+    },
+    {
+      "stage": "方向估计 0.54 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.54,
+        "windows": 932,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 370.4,
+        "hop_s": 370.4,
+        "frequency_bins_hz": [
+          0.54
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.009449244060475162,
+        "frequency_hz": 0.54,
+        "actual_frequency_hz": 0.54,
+        "total_windows": 932,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 60,
+          "多波源窗不能唯一修正单一方向和速度": 48,
+          "MUSIC未识别出信号子空间": 807
+        }
+      },
+      "elapsed_s": 3.0093064308166504
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.54 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:10.578298+00:00"
+    },
+    {
+      "stage": "方向估计 0.545 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.545,
+        "windows": 941,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 367.0,
+        "hop_s": 367.0,
+        "frequency_bins_hz": [
+          0.545
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.009536784741144414,
+        "frequency_hz": 0.545,
+        "actual_frequency_hz": 0.545,
+        "total_windows": 941,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 18,
+          "阵列相干度不足": 58,
+          "多波源窗不能唯一修正单一方向和速度": 66,
+          "MUSIC未识别出信号子空间": 799
+        }
+      },
+      "elapsed_s": 2.491605043411255
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.545 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:13.112550+00:00"
+    },
+    {
+      "stage": "方向估计 0.55 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.55,
+        "windows": 949,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 363.6,
+        "hop_s": 363.6,
+        "frequency_bins_hz": [
+          0.55
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.009625962596259627,
+        "frequency_hz": 0.55,
+        "actual_frequency_hz": 0.55,
+        "total_windows": 949,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 68,
+          "多波源窗不能唯一修正单一方向和速度": 67,
+          "MUSIC未识别出信号子空间": 797
+        }
+      },
+      "elapsed_s": 2.607301712036133
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.55 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:15.776323+00:00"
+    },
+    {
+      "stage": "方向估计 0.555 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.555,
+        "windows": 958,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 360.4,
+        "hop_s": 360.4,
+        "frequency_bins_hz": [
+          0.555
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.009711431742508323,
+        "frequency_hz": 0.555,
+        "actual_frequency_hz": 0.555,
+        "total_windows": 958,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 18,
+          "阵列相干度不足": 76,
+          "多波源窗不能唯一修正单一方向和速度": 71,
+          "MUSIC未识别出信号子空间": 793
+        }
+      },
+      "elapsed_s": 2.52604341506958
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.555 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:18.353581+00:00"
+    },
+    {
+      "stage": "方向估计 0.56 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.56,
+        "windows": 967,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 357.1,
+        "hop_s": 357.1,
+        "frequency_bins_hz": [
+          0.56
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.009801176141136937,
+        "frequency_hz": 0.56,
+        "actual_frequency_hz": 0.56,
+        "total_windows": 967,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 18,
+          "阵列相干度不足": 74,
+          "多波源窗不能唯一修正单一方向和速度": 66,
+          "MUSIC未识别出信号子空间": 809
+        }
+      },
+      "elapsed_s": 2.6315417289733887
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.56 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:21.020683+00:00"
+    },
+    {
+      "stage": "方向估计 0.565 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.565,
+        "windows": 975,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 354.0,
+        "hop_s": 354.0,
+        "frequency_bins_hz": [
+          0.565
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.009887005649717515,
+        "frequency_hz": 0.565,
+        "actual_frequency_hz": 0.565,
+        "total_windows": 975,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 73,
+          "多波源窗不能唯一修正单一方向和速度": 57,
+          "MUSIC未识别出信号子空间": 828
+        }
+      },
+      "elapsed_s": 2.882197380065918
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.565 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:23.945016+00:00"
+    },
+    {
+      "stage": "方向估计 0.57 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.57,
+        "windows": 984,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 350.9,
+        "hop_s": 350.9,
+        "frequency_bins_hz": [
+          0.57
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.009974351667141636,
+        "frequency_hz": 0.57,
+        "actual_frequency_hz": 0.57,
+        "total_windows": 984,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 59,
+          "多波源窗不能唯一修正单一方向和速度": 74,
+          "MUSIC未识别出信号子空间": 834
+        }
+      },
+      "elapsed_s": 2.241981029510498
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.57 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:26.220334+00:00"
+    },
+    {
+      "stage": "方向估计 0.575 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.575,
+        "windows": 992,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 347.8,
+        "hop_s": 347.8,
+        "frequency_bins_hz": [
+          0.575
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.010063254744105807,
+        "frequency_hz": 0.575,
+        "actual_frequency_hz": 0.575,
+        "total_windows": 992,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 67,
+          "多波源窗不能唯一修正单一方向和速度": 61,
+          "MUSIC未识别出信号子空间": 847
+        }
+      },
+      "elapsed_s": 2.7417426109313965
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.575 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:29.000152+00:00"
+    },
+    {
+      "stage": "方向估计 0.58 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.58,
+        "windows": 1001,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 344.8,
+        "hop_s": 344.8,
+        "frequency_bins_hz": [
+          0.58
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.010150812064965197,
+        "frequency_hz": 0.58,
+        "actual_frequency_hz": 0.58,
+        "total_windows": 1001,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 18,
+          "阵列相干度不足": 53,
+          "多波源窗不能唯一修正单一方向和速度": 68,
+          "MUSIC未识别出信号子空间": 862
+        }
+      },
+      "elapsed_s": 1.9565999507904053
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.58 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:30.991127+00:00"
+    },
+    {
+      "stage": "方向估计 0.585 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.585,
+        "windows": 1010,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 341.9,
+        "hop_s": 341.9,
+        "frequency_bins_hz": [
+          0.585
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.010236911377595788,
+        "frequency_hz": 0.585,
+        "actual_frequency_hz": 0.585,
+        "total_windows": 1010,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 18,
+          "阵列相干度不足": 69,
+          "多波源窗不能唯一修正单一方向和速度": 66,
+          "MUSIC未识别出信号子空间": 857
+        }
+      },
+      "elapsed_s": 2.104297637939453
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.585 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:33.150626+00:00"
+    },
+    {
+      "stage": "方向估计 0.59 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.59,
+        "windows": 1018,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 339.0,
+        "hop_s": 339.0,
+        "frequency_bins_hz": [
+          0.59
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.01032448377581121,
+        "frequency_hz": 0.59,
+        "actual_frequency_hz": 0.59,
+        "total_windows": 1018,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 68,
+          "多波源窗不能唯一修正单一方向和速度": 56,
+          "MUSIC未识别出信号子空间": 877
+        }
+      },
+      "elapsed_s": 2.2659711837768555
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.59 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:35.453290+00:00"
+    },
+    {
+      "stage": "方向估计 0.595 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.595,
+        "windows": 1027,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 336.1,
+        "hop_s": 336.1,
+        "frequency_bins_hz": [
+          0.595
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.010413567390657543,
+        "frequency_hz": 0.595,
+        "actual_frequency_hz": 0.595,
+        "total_windows": 1027,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 66,
+          "多波源窗不能唯一修正单一方向和速度": 65,
+          "MUSIC未识别出信号子空间": 879
+        }
+      },
+      "elapsed_s": 2.1110496520996094
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.595 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:37.602922+00:00"
+    },
+    {
+      "stage": "方向估计 0.6 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.6,
+        "windows": 1036,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 333.3,
+        "hop_s": 333.3,
+        "frequency_bins_hz": [
+          0.6
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.010501050105010502,
+        "frequency_hz": 0.6,
+        "actual_frequency_hz": 0.6,
+        "total_windows": 1036,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 18,
+          "阵列相干度不足": 75,
+          "多波源窗不能唯一修正单一方向和速度": 60,
+          "MUSIC未识别出信号子空间": 883
+        }
+      },
+      "elapsed_s": 2.1252593994140625
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.6 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:39.767885+00:00"
+    },
+    {
+      "stage": "方向估计 0.605 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.605,
+        "windows": 1044,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 330.6,
+        "hop_s": 330.6,
+        "frequency_bins_hz": [
+          0.605
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.01058681185722928,
+        "frequency_hz": 0.605,
+        "actual_frequency_hz": 0.605,
+        "total_windows": 1044,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 68,
+          "多波源窗不能唯一修正单一方向和速度": 55,
+          "MUSIC未识别出信号子空间": 904
+        }
+      },
+      "elapsed_s": 2.0055480003356934
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.605 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:41.809810+00:00"
+    },
+    {
+      "stage": "方向估计 0.61 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.61,
+        "windows": 1053,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 327.9,
+        "hop_s": 327.9,
+        "frequency_bins_hz": [
+          0.61
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.010673985971332723,
+        "frequency_hz": 0.61,
+        "actual_frequency_hz": 0.61,
+        "total_windows": 1053,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 18,
+          "阵列相干度不足": 61,
+          "多波源窗不能唯一修正单一方向和速度": 67,
+          "MUSIC未识别出信号子空间": 907
+        }
+      },
+      "elapsed_s": 2.0735626220703125
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.61 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:43.925779+00:00"
+    },
+    {
+      "stage": "方向估计 0.615 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.615,
+        "windows": 1061,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 325.2,
+        "hop_s": 325.2,
+        "frequency_bins_hz": [
+          0.615
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.01076260762607626,
+        "frequency_hz": 0.615,
+        "actual_frequency_hz": 0.615,
+        "total_windows": 1061,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 18,
+          "阵列相干度不足": 54,
+          "多波源窗不能唯一修正单一方向和速度": 59,
+          "MUSIC未识别出信号子空间": 930
+        }
+      },
+      "elapsed_s": 2.0038704872131348
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.615 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:45.970821+00:00"
+    },
+    {
+      "stage": "方向估计 0.62 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.62,
+        "windows": 1070,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 322.6,
+        "hop_s": 322.6,
+        "frequency_bins_hz": [
+          0.62
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.010849349039057656,
+        "frequency_hz": 0.62,
+        "actual_frequency_hz": 0.62,
+        "total_windows": 1070,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 66,
+          "多波源窗不能唯一修正单一方向和速度": 62,
+          "MUSIC未识别出信号子空间": 925
+        }
+      },
+      "elapsed_s": 2.022700309753418
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.62 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:48.029403+00:00"
+    },
+    {
+      "stage": "方向估计 0.625 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.625,
+        "windows": 1079,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 320.0,
+        "hop_s": 320.0,
+        "frequency_bins_hz": [
+          0.625
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.0109375,
+        "frequency_hz": 0.625,
+        "actual_frequency_hz": 0.625,
+        "total_windows": 1079,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 18,
+          "阵列相干度不足": 58,
+          "多波源窗不能唯一修正单一方向和速度": 54,
+          "MUSIC未识别出信号子空间": 949
+        }
+      },
+      "elapsed_s": 1.9941542148590088
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.625 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:50.061218+00:00"
+    },
+    {
+      "stage": "方向估计 0.63 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.63,
+        "windows": 1087,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 317.5,
+        "hop_s": 317.5,
+        "frequency_bins_hz": [
+          0.63
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.011023622047244094,
+        "frequency_hz": 0.63,
+        "actual_frequency_hz": 0.63,
+        "total_windows": 1087,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 53,
+          "多波源窗不能唯一修正单一方向和速度": 52,
+          "MUSIC未识别出信号子空间": 965
+        }
+      },
+      "elapsed_s": 2.063133478164673
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.63 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:52.177551+00:00"
+    },
+    {
+      "stage": "方向估计 0.635 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.635,
+        "windows": 1096,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 315.0,
+        "hop_s": 315.0,
+        "frequency_bins_hz": [
+          0.635
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.011111111111111112,
+        "frequency_hz": 0.635,
+        "actual_frequency_hz": 0.635,
+        "total_windows": 1096,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 53,
+          "多波源窗不能唯一修正单一方向和速度": 55,
+          "MUSIC未识别出信号子空间": 971
+        }
+      },
+      "elapsed_s": 2.7115275859832764
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00033_b1_S0_N2 · 0.635 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:54.943381+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.08 Hz · 24窗 · 独立24 · null p=0.0243902 · 合格=True",
+      "details": {},
+      "utc": "2026-10-12T08:02:54.988490+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.08 Hz · 1窗 · 独立1 · null p=0.95122 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.029086+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.09 Hz · 17窗 · 独立17 · null p=0.0243902 · 合格=True",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.055794+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.09 Hz · 1窗 · 独立1 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.079778+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.1 Hz · 21窗 · 独立21 · null p=0.0243902 · 合格=True",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.135239+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.1 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.157639+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.11 Hz · 34窗 · 独立34 · null p=0.0243902 · 合格=True",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.187633+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.11 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.213536+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.12 Hz · 22窗 · 独立22 · null p=0.0243902 · 合格=True",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.254008+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.12 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.283562+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.13 Hz · 13窗 · 独立13 · null p=0.0243902 · 合格=True",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.312182+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.13 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.334678+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.14 Hz · 5窗 · 独立5 · null p=0.0625 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.353081+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.14 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.368294+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.15 Hz · 2窗 · 独立2 · null p=0.4 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.388093+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.15 Hz · 1窗 · 独立1 · null p=0.85 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.403484+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.16 Hz · 1窗 · 独立1 · null p=0.166667 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.419948+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.16 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.432476+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.17 Hz · 2窗 · 独立2 · null p=0.166667 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.446689+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.17 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.456807+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.18 Hz · 2窗 · 独立2 · null p=0.25 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.473060+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.18 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.499612+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.19 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.515165+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.19 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.527401+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.2 Hz · 4窗 · 独立4 · null p=0.2 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.541774+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.2 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.552786+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.21 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.566515+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.21 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.577329+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.22 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.608920+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.22 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.633409+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.23 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.657026+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.23 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.705373+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.24 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.747556+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.24 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.758250+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.25 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.773265+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.25 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.783962+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.26 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.800393+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.26 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.810633+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.27 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.829536+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.27 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.842304+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.28 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.859067+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.28 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.875831+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.29 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.896889+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.29 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.908381+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.3 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.931750+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.3 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.948297+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.31 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.966738+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.31 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:55.982577+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.32 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:56.010776+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.32 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:56.025411+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.33 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:56.042966+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.33 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:56.052830+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.34 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:56.067072+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.34 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:56.078268+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.35 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:56.092825+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.35 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:56.105422+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.36 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:56.132286+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.36 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:56.158889+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.37 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:56.181593+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.37 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:56.196349+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.38 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:56.218134+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.38 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:56.238252+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.39 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:56.260906+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.39 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:56.273893+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.4 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:56.293786+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.4 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:56.308179+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.41 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:56.325461+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.41 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:56.338790+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.42 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:56.357891+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.42 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:56.369617+00:00"
+    },
+    {
+      "stage": "方向估计 0.425 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.425,
+        "windows": 734,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 470.6,
+        "hop_s": 470.6,
+        "frequency_bins_hz": [
+          0.425
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.007437314067148321,
+        "frequency_hz": 0.425,
+        "actual_frequency_hz": 0.425,
+        "total_windows": 734,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 18,
+          "阵列相干度不足": 63,
+          "多波源窗不能唯一修正单一方向和速度": 71,
+          "MUSIC未识别出信号子空间": 582
+        }
+      },
+      "elapsed_s": 2.307255983352661
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.425 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:58.725337+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.425 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:58.737776+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.43 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:58.755154+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.43 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:02:58.767241+00:00"
+    },
+    {
+      "stage": "方向估计 0.435 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.435,
+        "windows": 751,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 459.8,
+        "hop_s": 459.8,
+        "frequency_bins_hz": [
+          0.435
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.007612005219660722,
+        "frequency_hz": 0.435,
+        "actual_frequency_hz": 0.435,
+        "total_windows": 751,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 83,
+          "多波源窗不能唯一修正单一方向和速度": 53,
+          "MUSIC未识别出信号子空间": 598
+        }
+      },
+      "elapsed_s": 1.9252490997314453
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.435 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:00.736391+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.435 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:00.748449+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.44 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:00.765457+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.44 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:00.776807+00:00"
+    },
+    {
+      "stage": "方向估计 0.445 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.445,
+        "windows": 768,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 449.4,
+        "hop_s": 449.4,
+        "frequency_bins_hz": [
+          0.445
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.00778816199376947,
+        "frequency_hz": 0.445,
+        "actual_frequency_hz": 0.445,
+        "total_windows": 768,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 79,
+          "多波源窗不能唯一修正单一方向和速度": 79,
+          "MUSIC未识别出信号子空间": 593
+        }
+      },
+      "elapsed_s": 2.1005659103393555
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.445 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:02.911097+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.445 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:02.927873+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.45 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:02.948879+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.45 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:02.959816+00:00"
+    },
+    {
+      "stage": "方向估计 0.455 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.455,
+        "windows": 785,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 439.6,
+        "hop_s": 439.6,
+        "frequency_bins_hz": [
+          0.455
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.007961783439490446,
+        "frequency_hz": 0.455,
+        "actual_frequency_hz": 0.455,
+        "total_windows": 785,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 68,
+          "多波源窗不能唯一修正单一方向和速度": 63,
+          "MUSIC未识别出信号子空间": 637
+        }
+      },
+      "elapsed_s": 1.8448352813720703
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.455 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:04.851176+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.455 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:04.867019+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.46 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:04.884881+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.46 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:04.898569+00:00"
+    },
+    {
+      "stage": "方向估计 0.465 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.465,
+        "windows": 803,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 430.1,
+        "hop_s": 430.1,
+        "frequency_bins_hz": [
+          0.465
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.008137642408742153,
+        "frequency_hz": 0.465,
+        "actual_frequency_hz": 0.465,
+        "total_windows": 803,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 18,
+          "阵列相干度不足": 73,
+          "多波源窗不能唯一修正单一方向和速度": 67,
+          "MUSIC未识别出信号子空间": 645
+        }
+      },
+      "elapsed_s": 2.1222236156463623
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.465 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:07.062854+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.465 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:07.077088+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.47 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:07.098928+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.47 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:07.116476+00:00"
+    },
+    {
+      "stage": "方向估计 0.475 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.475,
+        "windows": 820,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 421.1,
+        "hop_s": 421.1,
+        "frequency_bins_hz": [
+          0.475
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.008311564948943244,
+        "frequency_hz": 0.475,
+        "actual_frequency_hz": 0.475,
+        "total_windows": 820,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 58,
+          "多波源窗不能唯一修正单一方向和速度": 61,
+          "MUSIC未识别出信号子空间": 684
+        }
+      },
+      "elapsed_s": 3.018139362335205
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.475 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:10.179156+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.475 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:10.193807+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.48 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:10.218526+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.48 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:10.240740+00:00"
+    },
+    {
+      "stage": "方向估计 0.485 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.485,
+        "windows": 837,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 412.4,
+        "hop_s": 412.4,
+        "frequency_bins_hz": [
+          0.485
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.00848690591658584,
+        "frequency_hz": 0.485,
+        "actual_frequency_hz": 0.485,
+        "total_windows": 837,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 63,
+          "多波源窗不能唯一修正单一方向和速度": 51,
+          "MUSIC未识别出信号子空间": 706
+        }
+      },
+      "elapsed_s": 1.8911938667297363
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.485 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:12.175921+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.485 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:12.187323+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.49 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:12.203902+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.49 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:12.217562+00:00"
+    },
+    {
+      "stage": "方向估计 0.495 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.495,
+        "windows": 854,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 404.0,
+        "hop_s": 404.0,
+        "frequency_bins_hz": [
+          0.495
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.008663366336633664,
+        "frequency_hz": 0.495,
+        "actual_frequency_hz": 0.495,
+        "total_windows": 854,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 65,
+          "多波源窗不能唯一修正单一方向和速度": 62,
+          "MUSIC未识别出信号子空间": 710
+        }
+      },
+      "elapsed_s": 2.1941308975219727
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.495 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:14.454846+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.495 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:14.467348+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.5 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:14.483918+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.5 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:14.495601+00:00"
+    },
+    {
+      "stage": "方向估计 0.505 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.505,
+        "windows": 872,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 396.0,
+        "hop_s": 396.0,
+        "frequency_bins_hz": [
+          0.505
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.008838383838383838,
+        "frequency_hz": 0.505,
+        "actual_frequency_hz": 0.505,
+        "total_windows": 872,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 44,
+          "多波源窗不能唯一修正单一方向和速度": 64,
+          "MUSIC未识别出信号子空间": 747
+        }
+      },
+      "elapsed_s": 2.019550085067749
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.505 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:16.549796+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.505 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:16.566639+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.51 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:16.587311+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.51 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:16.599750+00:00"
+    },
+    {
+      "stage": "方向估计 0.515 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.515,
+        "windows": 889,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 388.3,
+        "hop_s": 388.3,
+        "frequency_bins_hz": [
+          0.515
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.009013649240278136,
+        "frequency_hz": 0.515,
+        "actual_frequency_hz": 0.515,
+        "total_windows": 889,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 54,
+          "多波源窗不能唯一修正单一方向和速度": 51,
+          "MUSIC未识别出信号子空间": 767
+        }
+      },
+      "elapsed_s": 1.8146007061004639
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.515 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:18.459470+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.515 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:18.474855+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.52 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:18.492382+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.52 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:18.506054+00:00"
+    },
+    {
+      "stage": "方向估计 0.525 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.525,
+        "windows": 906,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 381.0,
+        "hop_s": 381.0,
+        "frequency_bins_hz": [
+          0.525
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.009186351706036745,
+        "frequency_hz": 0.525,
+        "actual_frequency_hz": 0.525,
+        "total_windows": 906,
+        "quality_windows": 0,
+        "cache_reused": false,
+        "median_velocity_m_s": null,
+        "reasons": {
+          "有效台站不足": 17,
+          "阵列相干度不足": 56,
+          "多波源窗不能唯一修正单一方向和速度": 65,
+          "MUSIC未识别出信号子空间": 768
+        }
+      },
+      "elapsed_s": 2.0625593662261963
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.525 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:20.621854+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.525 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:20.641905+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.53 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:20.675577+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.53 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:20.699284+00:00"
+    },
+    {
+      "stage": "方向估计 0.535 Hz",
+      "status": "complete",
+      "parameters": {
+        "actual_frequency_hz": 0.535,
+        "windows": 923,
+        "stations": [
+          "BW_MGS01",
+          "BW_MGS02",
+          "BW_MGS03",
+          "BW_MGS04",
+          "BW_MGS05",
+          "BW_MGSBH"
+        ],
+        "window_s": 373.8,
+        "hop_s": 373.8,
+        "frequency_bins_hz": [
+          0.535
+        ],
+        "cache_reused": false
+      },
+      "results": {
+        "method": "music",
+        "music_snapshots": 6,
+        "snapshot_half_bandwidth_hz": 0.009363295880149813,
+        "frequency_hz": 0.535,
+        "actual_frequency_hz": 0.535,
+        "total_windows": 923,
+        "quality_windows": 1,
+        "cache_reused": false,
+        "median_velocity_m_s": 1044.906923260468,
+        "reasons": {
+          "通过": 1,
+          "有效台站不足": 17,
+          "阵列相干度不足": 65,
+          "多波源窗不能唯一修正单一方向和速度": 51,
+          "MUSIC未识别出信号子空间": 789
+        }
+      },
+      "elapsed_s": 2.2256219387054443
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.535 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:22.973174+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.535 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:22.988297+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.54 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:23.008064+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.54 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:23.022254+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.545 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:23.038456+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.545 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:23.052346+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.55 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:23.070723+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.55 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:23.087188+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.555 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:23.108597+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.555 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:23.120895+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.56 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:23.141857+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.56 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:23.160428+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N1 · 0.565 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:23.183531+00:00"
+    },
+    {
+      "stage": "低频实测与投影叠加",
+      "status": "info",
+      "message": "P00038_b1_S0_N2 · 0.565 Hz · 0窗 · 独立0 · null p=1 · 合格=False",
+      "details": {},
+      "utc": "2026-10-12T08:03:23.199801+00:00"
+    },
+    {
+      "stage": "方向汇总",
+      "status": "info",
+      "message": "78个频率；联合原始点 46；连续频带保留点 25",
+      "details": {
+        "output": "/workspace/scratch/f6601b903c79/MGS6_20231101_1105/project/output/phase_guided/direction/report.html"
+      },
+      "utc": "2026-10-12T08:03:25.450671+00:00"
+    },
+    {
+      "stage": "投影重建完成",
+      "status": "info",
+      "message": "0实测点；低频0点",
+      "details": {},
+      "utc": "2026-10-12T08:03:25.818343+00:00"
+    }
+  ],
+  "settings_file": "phase_settings_used.json",
+  "log_file": "phase_processing.log"
+}

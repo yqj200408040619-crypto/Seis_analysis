@@ -1,0 +1,22 @@
+sss.......................................sssss......................... [ 38%]
+............................................................s........... [ 77%]
+.........................sss...............                              [100%]
+=============================== warnings summary ===============================
+tests/test_direction.py::test_real_worker_chain_shared_windows_angle_masks_reports_and_band_handoff
+tests/test_direction.py::test_real_worker_chain_shared_windows_angle_masks_reports_and_band_handoff
+tests/test_direction.py::test_real_worker_chain_shared_windows_angle_masks_reports_and_band_handoff
+tests/test_direction.py::test_real_worker_chain_shared_windows_angle_masks_reports_and_band_handoff
+tests/test_phase_workflow.py::test_unavailable_windows_are_reported_without_inventing_a_phase
+tests/test_phase_workflow.py::test_unavailable_windows_are_reported_without_inventing_a_phase
+tests/test_phase_workflow.py::test_unavailable_windows_are_reported_without_inventing_a_phase
+tests/test_phase_workflow.py::test_unavailable_windows_are_reported_without_inventing_a_phase
+  /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py:1214: RuntimeWarning: Mean of empty slice
+    return np.nanmean(a, axis, out=out, keepdims=keepdims)
+
+tests/test_phase_stack.py::test_alignment_preserves_utc_gap_and_native_rate[20.0-0.0]
+tests/test_phase_stack.py::test_alignment_preserves_utc_gap_and_native_rate[100.0-0.013]
+  /workspace/scratch/fc99dc820d4e/.venv_v254/lib/python3.12/site-packages/obspy/core/utcdatetime.py:1091: ObsPyDeprecationWarning: Comparing UTCDateTime objects of different precision is not defined will raise an Exception in a future version of obspy
+    warnings.warn(msg, ObsPyDeprecationWarning)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+175 passed, 12 skipped, 10 warnings in 28.09s

@@ -1,0 +1,16 @@
+[
+  {
+    "array": "DARE",
+    "actual_tk_widgets": true,
+    "station_count": 6,
+    "spacing_text": "Mean station spacing: 1427.27 m (nearest neighbour)\nAll-pair mean: 2419.99 m; range: 931.19-3830.74 m; 6 unique stations",
+    "screenshot": "v22_dare_array.png"
+  },
+  {
+    "array": "Dublin",
+    "actual_tk_widgets": true,
+    "station_count": 6,
+    "spacing_text": "Mean station spacing: 1777.19 m (nearest neighbour)\nAll-pair mean: 2958.39 m; range: 1648.10-4691.58 m; 6 unique stations",
+    "screenshot": "v22_dublin_array.png"
+  }
+]

@@ -1,0 +1,6 @@
+frequency_low_hz,frequency_high_hz,centers_with_both_primary_peaks,primary_peak_links_15deg,primary_peak_links_30deg,median_primary_peak_azimuth_shift_deg
+0.08,0.09,96,56,86,10.0
+0.09,0.1,96,63,83,11.0
+0.1,0.11,96,72,85,8.0
+0.11,0.12,96,71,89,8.0
+0.12,0.13,96,63,85,10.0

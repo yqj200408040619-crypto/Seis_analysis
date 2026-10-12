@@ -1,0 +1,155 @@
+{
+  "stations_csv": "stations.csv",
+  "data_root": "canonical",
+  "output": "output",
+  "start_utc": null,
+  "end_utc": null,
+  "sample_rate_hz": 20.0,
+  "discard_first_s": 601.0,
+  "filter_guard_s": 30.0,
+  "bandpass_hz": [
+    0.1,
+    7.142857142857
+  ],
+  "window_s": 1200.0,
+  "max_lag_s": 60.0,
+  "min_clean_fraction": 0.7,
+  "min_clean_segment_s": 600.0,
+  "minimum_windows": 24,
+  "response": {
+    "required": true,
+    "output": "VEL",
+    "pre_filt_hz": [
+      0.03,
+      0.075,
+      7.5,
+      9.0
+    ],
+    "table_step_hz": 0.005,
+    "interpolation_phase_tolerance_rad": 0.001
+  },
+  "spikes": {
+    "enabled": true,
+    "threshold_mad": 18.0,
+    "scale_window_s": 60.0,
+    "max_repair_s": 0.04,
+    "mask_pad_s": 0.1,
+    "flatline_min_s": 1.0
+  },
+  "routes": [
+    {
+      "name": "ram5",
+      "ram_s": 5.0,
+      "whiten_hz": 0.05,
+      "required": true
+    },
+    {
+      "name": "ram20",
+      "ram_s": 20.0,
+      "whiten_hz": 0.05,
+      "required": true
+    },
+    {
+      "name": "white025",
+      "ram_s": 5.0,
+      "whiten_hz": 0.025,
+      "required": true
+    },
+    {
+      "name": "white100",
+      "ram_s": 5.0,
+      "whiten_hz": 0.1,
+      "required": true
+    },
+    {
+      "name": "onebit",
+      "normalization": "onebit",
+      "whiten_hz": 0.05,
+      "required": false
+    }
+  ],
+  "scan": {
+    "min_hz": 1.5,
+    "max_hz": 5.0,
+    "step_hz": 0.01,
+    "ftan_width": 0.15,
+    "narrow_width": 0.08,
+    "minimum_sigma_hz": 0.04,
+    "group_velocity_bounds_m_s": [
+      200.0,
+      5000.0
+    ],
+    "arrival_min_s": 0.2,
+    "arrival_max_s": 25.0,
+    "noise_lag_s": [
+      35.0,
+      55.0
+    ],
+    "min_band_hz": 0.25,
+    "min_points": 8,
+    "max_peaks": 8,
+    "max_tracks": 12,
+    "gate_margin_s": 0.9,
+    "gate_change_s": [
+      0.3,
+      0.2
+    ]
+  },
+  "cohorts": {
+    "clock_groups": true,
+    "night_hours_utc": [
+      18,
+      6
+    ],
+    "states": 0,
+    "pca_components": 6,
+    "feature_band_hz": [
+      2.65,
+      4.8
+    ],
+    "feature_max_lag_s": 10.0
+  },
+  "validation": {
+    "block_s": 21600.0,
+    "train_fraction": 0.5,
+    "split_utc": null,
+    "status": "internal_chronological",
+    "min_windows_each_split": 12,
+    "min_windows_per_block": 6,
+    "min_eligible_blocks": 4,
+    "snr_min": 10.0,
+    "phase_route_max_rad": 0.2,
+    "phase_split_max_rad": 0.35,
+    "arrival_fraction_max": 0.1,
+    "phase_delay_fraction_max": 0.2,
+    "gate_phase_max_rad": 0.35,
+    "block_snr_min": 5.0,
+    "block_phase_max_rad": 0.5,
+    "block_arrival_fraction_max": 0.15,
+    "block_fraction_min": 0.75,
+    "leaveout_phase_max_rad": 0.2,
+    "leaveout_arrival_fraction_max": 0.1,
+    "bootstrap_draws": 499
+  },
+  "controls": {
+    "trials": 40,
+    "seed": 9074
+  },
+  "phase": {
+    "source_phase_rad": [
+      0.7853981633974483
+    ],
+    "source_phase_verified": false,
+    "cycle_min": 0,
+    "cycle_max": 200,
+    "velocity_bounds_m_s": [
+      150.0,
+      3000.0
+    ],
+    "link_median_fraction": 0.03,
+    "link_max_fraction": 0.05,
+    "link_group_median_fraction": 0.15,
+    "max_direction_difference_deg": 45.0
+  },
+  "seed": 9072
+}

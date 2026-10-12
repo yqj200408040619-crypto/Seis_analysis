@@ -1,0 +1,3 @@
+此可重复生成的合成示例不附大体积H5；真实DARE小型示例已随程序提供。
+在程序目录运行：
+.venv\Scripts\python.exe run.py example --directory examples/hdf_plane
