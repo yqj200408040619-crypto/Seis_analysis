@@ -1,0 +1,12 @@
+# Heavy / regenerable artefacts — never commit these
+*.h5
+*.npz
+*.mseed
+*.float64
+*.complex128
+__pycache__/
+*.pyc
+# large caches / download trees if ever copied under here
+**/download/
+**/cache/
+**/aligned_waveforms.h5

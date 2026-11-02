@@ -1,0 +1,35 @@
+{
+  "measured_hf_band_hz": [
+    0.3,
+    1.16
+  ],
+  "measured_hf_v_km_s": [
+    0.45253820696473956,
+    0.5968369592073405
+  ],
+  "anchors": [
+    {
+      "period_s": 5.0,
+      "velocity_km_s": 2.9,
+      "source": "SCEC SoCal ANT / LA-basin lit (prior)"
+    },
+    {
+      "period_s": 10.0,
+      "velocity_km_s": 3.3,
+      "source": "SCEC SoCal ANT / LA-basin lit (prior)"
+    }
+  ],
+  "fit": "PCHIP shape-preserving in (period, velocity), cummax-monotone input",
+  "predicted_vph_km_s": {
+    "2s": 0.539,
+    "3s": 0.562,
+    "4s": 1.394,
+    "5s": 2.9,
+    "6s": 3.055,
+    "7s": 3.169,
+    "8s": 3.244,
+    "10s": 3.3
+  },
+  "output_csv": "C:\\Users\\游齐家\\Desktop\\服务器\\NDS_v2_7_1_MGS6_Handoff_20231101_1105\\01_program\\NoiseDispersionStudio_v2_7_1_MUSIC_DateGuard_H5_Verified\\NoiseDispersionStudio_v2_7_1\\runs\\hf_core\\fitted_prior_curve.csv",
+  "note": "HF part measured; 5-10 s part is anchored extrapolation (prior), NOT a measurement."
+}

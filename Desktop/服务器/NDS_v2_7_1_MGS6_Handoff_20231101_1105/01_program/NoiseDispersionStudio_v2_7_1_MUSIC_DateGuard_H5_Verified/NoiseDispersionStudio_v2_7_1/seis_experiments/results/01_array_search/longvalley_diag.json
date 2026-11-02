@@ -1,0 +1,285 @@
+{
+  "n": 8,
+  "subsets": [
+    {
+      "center": "MBM",
+      "size": 7,
+      "members": [
+        "MBM",
+        "MMLB",
+        "MCB",
+        "MDY",
+        "MCY",
+        "MLI",
+        "MINS"
+      ],
+      "min_nn": 1205,
+      "max_nn": 15402,
+      "aperture": 20113,
+      "coord_conflicts": []
+    },
+    {
+      "center": "MBM",
+      "size": 8,
+      "members": [
+        "MBM",
+        "MMLB",
+        "MCB",
+        "MDY",
+        "MCY",
+        "MLI",
+        "MINS",
+        "MDPB"
+      ],
+      "min_nn": 1205,
+      "max_nn": 15402,
+      "aperture": 22962,
+      "coord_conflicts": []
+    },
+    {
+      "center": "MCB",
+      "size": 7,
+      "members": [
+        "MCB",
+        "MMLB",
+        "MDY",
+        "MLI",
+        "MCY",
+        "MINS",
+        "MBM"
+      ],
+      "min_nn": 1205,
+      "max_nn": 15402,
+      "aperture": 20113,
+      "coord_conflicts": []
+    },
+    {
+      "center": "MCB",
+      "size": 8,
+      "members": [
+        "MCB",
+        "MMLB",
+        "MDY",
+        "MLI",
+        "MCY",
+        "MINS",
+        "MBM",
+        "MDPB"
+      ],
+      "min_nn": 1205,
+      "max_nn": 15402,
+      "aperture": 22962,
+      "coord_conflicts": []
+    },
+    {
+      "center": "MCY",
+      "size": 7,
+      "members": [
+        "MCY",
+        "MLI",
+        "MDY",
+        "MINS",
+        "MDPB",
+        "MMLB",
+        "MCB"
+      ],
+      "min_nn": 1205,
+      "max_nn": 7438,
+      "aperture": 16166,
+      "coord_conflicts": []
+    },
+    {
+      "center": "MCY",
+      "size": 8,
+      "members": [
+        "MCY",
+        "MLI",
+        "MDY",
+        "MINS",
+        "MDPB",
+        "MMLB",
+        "MCB",
+        "MBM"
+      ],
+      "min_nn": 1205,
+      "max_nn": 15402,
+      "aperture": 22962,
+      "coord_conflicts": []
+    },
+    {
+      "center": "MDPB",
+      "size": 7,
+      "members": [
+        "MDPB",
+        "MINS",
+        "MCY",
+        "MLI",
+        "MDY",
+        "MMLB",
+        "MCB"
+      ],
+      "min_nn": 1205,
+      "max_nn": 7438,
+      "aperture": 16166,
+      "coord_conflicts": []
+    },
+    {
+      "center": "MDPB",
+      "size": 8,
+      "members": [
+        "MDPB",
+        "MINS",
+        "MCY",
+        "MLI",
+        "MDY",
+        "MMLB",
+        "MCB",
+        "MBM"
+      ],
+      "min_nn": 1205,
+      "max_nn": 15402,
+      "aperture": 22962,
+      "coord_conflicts": []
+    },
+    {
+      "center": "MDY",
+      "size": 7,
+      "members": [
+        "MDY",
+        "MCY",
+        "MLI",
+        "MMLB",
+        "MINS",
+        "MDPB",
+        "MCB"
+      ],
+      "min_nn": 1205,
+      "max_nn": 7438,
+      "aperture": 16166,
+      "coord_conflicts": []
+    },
+    {
+      "center": "MDY",
+      "size": 8,
+      "members": [
+        "MDY",
+        "MCY",
+        "MLI",
+        "MMLB",
+        "MINS",
+        "MDPB",
+        "MCB",
+        "MBM"
+      ],
+      "min_nn": 1205,
+      "max_nn": 15402,
+      "aperture": 22962,
+      "coord_conflicts": []
+    },
+    {
+      "center": "MINS",
+      "size": 7,
+      "members": [
+        "MINS",
+        "MDPB",
+        "MCY",
+        "MLI",
+        "MDY",
+        "MMLB",
+        "MCB"
+      ],
+      "min_nn": 1205,
+      "max_nn": 7438,
+      "aperture": 16166,
+      "coord_conflicts": []
+    },
+    {
+      "center": "MINS",
+      "size": 8,
+      "members": [
+        "MINS",
+        "MDPB",
+        "MCY",
+        "MLI",
+        "MDY",
+        "MMLB",
+        "MCB",
+        "MBM"
+      ],
+      "min_nn": 1205,
+      "max_nn": 15402,
+      "aperture": 22962,
+      "coord_conflicts": []
+    },
+    {
+      "center": "MLI",
+      "size": 7,
+      "members": [
+        "MLI",
+        "MCY",
+        "MDY",
+        "MMLB",
+        "MINS",
+        "MDPB",
+        "MCB"
+      ],
+      "min_nn": 1205,
+      "max_nn": 7438,
+      "aperture": 16166,
+      "coord_conflicts": []
+    },
+    {
+      "center": "MLI",
+      "size": 8,
+      "members": [
+        "MLI",
+        "MCY",
+        "MDY",
+        "MMLB",
+        "MINS",
+        "MDPB",
+        "MCB",
+        "MBM"
+      ],
+      "min_nn": 1205,
+      "max_nn": 15402,
+      "aperture": 22962,
+      "coord_conflicts": []
+    },
+    {
+      "center": "MMLB",
+      "size": 7,
+      "members": [
+        "MMLB",
+        "MDY",
+        "MLI",
+        "MCY",
+        "MINS",
+        "MCB",
+        "MDPB"
+      ],
+      "min_nn": 1205,
+      "max_nn": 7438,
+      "aperture": 16166,
+      "coord_conflicts": []
+    },
+    {
+      "center": "MMLB",
+      "size": 8,
+      "members": [
+        "MMLB",
+        "MDY",
+        "MLI",
+        "MCY",
+        "MINS",
+        "MCB",
+        "MDPB",
+        "MBM"
+      ],
+      "min_nn": 1205,
+      "max_nn": 15402,
+      "aperture": 22962,
+      "coord_conflicts": []
+    }
+  ]
+}

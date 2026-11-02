@@ -1,0 +1,47 @@
+{
+  "geometry": {
+    "stations": [
+      "CI.BHP..HHZ",
+      "CI.GR2..HHZ",
+      "CI.HLL..HHZ",
+      "CI.LCG..HHZ",
+      "CI.LGB..HHZ",
+      "CI.PDR..HHZ",
+      "CI.SMF2..HHZ",
+      "CI.USC..HHZ"
+    ],
+    "n": 8,
+    "aperture_m": 29584.05599492597,
+    "min_pair_m": 1850.559685323178,
+    "mean_nn_m": 6896.559040302029
+  },
+  "scan": {
+    "candidate_gates": 110,
+    "robust_contiguous_runs": 24,
+    "accepted_continuous_runs": 10
+  },
+  "conditional_rows": 248,
+  "freq_rows": 60,
+  "accepted_rows": 3,
+  "accepted": {
+    "freqs": [
+      0.115,
+      0.12,
+      0.125
+    ],
+    "az_range": [
+      27.48156013130308,
+      30.74726063210408
+    ],
+    "az_median": 30.51075602472588,
+    "vel_range": [
+      2759.313676516113,
+      2950.7540979572423
+    ],
+    "vel_median": 2839.8674911678736,
+    "unc_median": 2.49953802006803,
+    "pairs": [
+      "CI_BHP--CI_PDR"
+    ]
+  }
+}

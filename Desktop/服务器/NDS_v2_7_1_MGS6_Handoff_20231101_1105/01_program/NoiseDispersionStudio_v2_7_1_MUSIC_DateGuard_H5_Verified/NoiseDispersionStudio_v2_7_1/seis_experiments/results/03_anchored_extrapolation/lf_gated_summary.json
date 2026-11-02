@@ -1,0 +1,204 @@
+{
+  "target_band_hz": [
+    0.1,
+    0.2
+  ],
+  "cycles": 12.0,
+  "vel_tol": 0.1,
+  "pairs": 28,
+  "frequencies": [
+    0.1,
+    0.11,
+    0.12,
+    0.13,
+    0.14,
+    0.15,
+    0.16,
+    0.17,
+    0.18,
+    0.19,
+    0.2
+  ],
+  "recovered_UNGATED": [
+    {
+      "frequency_hz": 0.1,
+      "v_ungated_median_m_s": 1962.4567,
+      "v_ungated_std_m_s": 2250.8652,
+      "ungated_unit_resultant_median": 0.1947,
+      "v_pred_m_s": 3300.0,
+      "n_pairs": 11,
+      "period_s": 10.0,
+      "rel_err_vs_prior": -0.4053
+    },
+    {
+      "frequency_hz": 0.11,
+      "v_ungated_median_m_s": 3155.3925,
+      "v_ungated_std_m_s": 1948.8466,
+      "ungated_unit_resultant_median": 0.2232,
+      "v_pred_m_s": 3289.1578,
+      "n_pairs": 14,
+      "period_s": 9.0909,
+      "rel_err_vs_prior": -0.0407
+    },
+    {
+      "frequency_hz": 0.12,
+      "v_ungated_median_m_s": 3415.5902,
+      "v_ungated_std_m_s": 1602.3713,
+      "ungated_unit_resultant_median": 0.2496,
+      "v_pred_m_s": 3262.0761,
+      "n_pairs": 17,
+      "period_s": 8.3333,
+      "rel_err_vs_prior": 0.0471
+    },
+    {
+      "frequency_hz": 0.13,
+      "v_ungated_median_m_s": 3232.5066,
+      "v_ungated_std_m_s": 1106.5667,
+      "ungated_unit_resultant_median": 0.247,
+      "v_pred_m_s": 3224.8898,
+      "n_pairs": 13,
+      "period_s": 7.6923,
+      "rel_err_vs_prior": 0.0024
+    },
+    {
+      "frequency_hz": 0.14,
+      "v_ungated_median_m_s": 3695.8054,
+      "v_ungated_std_m_s": 1272.2944,
+      "ungated_unit_resultant_median": 0.2457,
+      "v_pred_m_s": 3181.7064,
+      "n_pairs": 8,
+      "period_s": 7.1429,
+      "rel_err_vs_prior": 0.1616
+    },
+    {
+      "frequency_hz": 0.15,
+      "v_ungated_median_m_s": 4002.5775,
+      "v_ungated_std_m_s": 1667.5673,
+      "ungated_unit_resultant_median": 0.2147,
+      "v_pred_m_s": 3135.2633,
+      "n_pairs": 8,
+      "period_s": 6.6667,
+      "rel_err_vs_prior": 0.2766
+    },
+    {
+      "frequency_hz": 0.16,
+      "v_ungated_median_m_s": 3909.5799,
+      "v_ungated_std_m_s": 1406.5271,
+      "ungated_unit_resultant_median": 0.1894,
+      "v_pred_m_s": 3087.3788,
+      "n_pairs": 11,
+      "period_s": 6.25,
+      "rel_err_vs_prior": 0.2663
+    },
+    {
+      "frequency_hz": 0.17,
+      "v_ungated_median_m_s": 3460.6283,
+      "v_ungated_std_m_s": 1514.5567,
+      "ungated_unit_resultant_median": 0.2005,
+      "v_pred_m_s": 3039.255,
+      "n_pairs": 11,
+      "period_s": 5.8824,
+      "rel_err_vs_prior": 0.1386
+    },
+    {
+      "frequency_hz": 0.18,
+      "v_ungated_median_m_s": 2895.0286,
+      "v_ungated_std_m_s": 1538.3749,
+      "ungated_unit_resultant_median": 0.2106,
+      "v_pred_m_s": 2991.6787,
+      "n_pairs": 11,
+      "period_s": 5.5556,
+      "rel_err_vs_prior": -0.0323
+    },
+    {
+      "frequency_hz": 0.19,
+      "v_ungated_median_m_s": 2816.0991,
+      "v_ungated_std_m_s": 973.5208,
+      "ungated_unit_resultant_median": 0.3135,
+      "v_pred_m_s": 2945.1554,
+      "n_pairs": 9,
+      "period_s": 5.2632,
+      "rel_err_vs_prior": -0.0438
+    },
+    {
+      "frequency_hz": 0.2,
+      "v_ungated_median_m_s": 2957.3989,
+      "v_ungated_std_m_s": 1063.6726,
+      "ungated_unit_resultant_median": 0.3294,
+      "v_pred_m_s": 2900.0,
+      "n_pairs": 9,
+      "period_s": 5.0,
+      "rel_err_vs_prior": 0.0198
+    }
+  ],
+  "gated_prior_seeded_contrast": [
+    {
+      "frequency_hz": 0.1,
+      "v_gated_median_m_s": 3348.8716,
+      "gated_unit_resultant_median": 0.9868,
+      "retention_ratio_median": 1.157
+    },
+    {
+      "frequency_hz": 0.11,
+      "v_gated_median_m_s": 3306.7731,
+      "gated_unit_resultant_median": 0.9812,
+      "retention_ratio_median": 1.0998
+    },
+    {
+      "frequency_hz": 0.12,
+      "v_gated_median_m_s": 3269.3505,
+      "gated_unit_resultant_median": 0.9795,
+      "retention_ratio_median": 1.1006
+    },
+    {
+      "frequency_hz": 0.13,
+      "v_gated_median_m_s": 3232.4097,
+      "gated_unit_resultant_median": 0.9755,
+      "retention_ratio_median": 1.0483
+    },
+    {
+      "frequency_hz": 0.14,
+      "v_gated_median_m_s": 3196.8918,
+      "gated_unit_resultant_median": 0.9709,
+      "retention_ratio_median": 1.0296
+    },
+    {
+      "frequency_hz": 0.15,
+      "v_gated_median_m_s": 3148.1411,
+      "gated_unit_resultant_median": 0.9653,
+      "retention_ratio_median": 0.9368
+    },
+    {
+      "frequency_hz": 0.16,
+      "v_gated_median_m_s": 3098.8032,
+      "gated_unit_resultant_median": 0.9594,
+      "retention_ratio_median": 0.8877
+    },
+    {
+      "frequency_hz": 0.17,
+      "v_gated_median_m_s": 3049.615,
+      "gated_unit_resultant_median": 0.9528,
+      "retention_ratio_median": 0.895
+    },
+    {
+      "frequency_hz": 0.18,
+      "v_gated_median_m_s": 3002.4838,
+      "gated_unit_resultant_median": 0.9482,
+      "retention_ratio_median": 0.9702
+    },
+    {
+      "frequency_hz": 0.19,
+      "v_gated_median_m_s": 2955.665,
+      "gated_unit_resultant_median": 0.9296,
+      "retention_ratio_median": 0.9675
+    },
+    {
+      "frequency_hz": 0.2,
+      "v_gated_median_m_s": 2914.2364,
+      "gated_unit_resultant_median": 0.9284,
+      "retention_ratio_median": 0.9622
+    }
+  ],
+  "interpretation": "UNGATED is the honest recovery (not seeded by the prior). ungated_unit_resultant is the per-window cross-phase concentration (coherence); near 0 => no coherent LF signal (prior-gated v is then circular). retention_ratio_median ~1 => kept fraction only matches uniform-random => no signal.",
+  "note": "v_meas (gated) is prior-seeded and must NOT be read as independent recovery."
+}

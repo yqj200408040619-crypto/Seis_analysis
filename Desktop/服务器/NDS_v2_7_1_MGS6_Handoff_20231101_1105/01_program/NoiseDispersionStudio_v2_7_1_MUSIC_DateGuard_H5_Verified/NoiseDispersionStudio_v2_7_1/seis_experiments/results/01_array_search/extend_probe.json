@@ -1,0 +1,2015 @@
+{
+  "core_centroid": [
+    34.03307375,
+    -118.3397425
+  ],
+  "core_stations": {
+    "BHP": [
+      33.99053,
+      -118.36173
+    ],
+    "GR2": [
+      34.11816,
+      -118.30024
+    ],
+    "HLL": [
+      34.17643,
+      -118.35967
+    ],
+    "LCG": [
+      34.00033,
+      -118.37794
+    ],
+    "LGB": [
+      33.9753,
+      -118.14918
+    ],
+    "PDR": [
+      33.96264,
+      -118.4366
+    ],
+    "SMF2": [
+      34.02201,
+      -118.44627
+    ],
+    "USC": [
+      34.01919,
+      -118.28631
+    ]
+  },
+  "networks": {
+    "SCEDC:CI": {
+      "count": 93,
+      "stations": [
+        {
+          "seed": "CI.GOU..BHZ",
+          "sta": "GOU",
+          "chan": "BHZ",
+          "lat": 34.22119,
+          "lon": -118.18834,
+          "rate": 40.0,
+          "dist_km": 25.1,
+          "az_deg": 33.8
+        },
+        {
+          "seed": "CI.KIK..EHZ",
+          "sta": "KIK",
+          "chan": "EHZ",
+          "lat": 34.15037,
+          "lon": -118.10156,
+          "rate": 100.0,
+          "dist_km": 25.5,
+          "az_deg": 59.3
+        },
+        {
+          "seed": "CI.SPF..BHZ",
+          "sta": "SPF",
+          "chan": "BHZ",
+          "lat": 34.05933,
+          "lon": -118.64614,
+          "rate": 40.0,
+          "dist_km": 28.4,
+          "az_deg": -84.0
+        },
+        {
+          "seed": "CI.NOT..EHZ",
+          "sta": "NOT",
+          "chan": "EHZ",
+          "lat": 34.22869,
+          "lon": -118.55829,
+          "rate": 100.0,
+          "dist_km": 29.6,
+          "az_deg": -42.8
+        },
+        {
+          "seed": "CI.STS..BHZ",
+          "sta": "STS",
+          "chan": "BHZ",
+          "lat": 33.79033,
+          "lon": -118.19878,
+          "rate": 40.0,
+          "dist_km": 29.9,
+          "az_deg": 154.1
+        },
+        {
+          "seed": "CI.DLA..BHZ",
+          "sta": "DLA",
+          "chan": "BHZ",
+          "lat": 33.84822,
+          "lon": -118.09624,
+          "rate": 40.0,
+          "dist_km": 30.4,
+          "az_deg": 132.3
+        },
+        {
+          "seed": "CI.RHC2..BHZ",
+          "sta": "RHC2",
+          "chan": "BHZ",
+          "lat": 34.00095,
+          "lon": -118.01333,
+          "rate": 40.0,
+          "dist_km": 30.4,
+          "az_deg": 96.6
+        },
+        {
+          "seed": "CI.RIN..BHZ",
+          "sta": "RIN",
+          "chan": "BHZ",
+          "lat": 34.28196,
+          "lon": -118.47925,
+          "rate": 40.0,
+          "dist_km": 30.5,
+          "az_deg": -24.9
+        },
+        {
+          "seed": "CI.WSS..BHZ",
+          "sta": "WSS",
+          "chan": "BHZ",
+          "lat": 34.1717,
+          "lon": -118.64971,
+          "rate": 40.0,
+          "dist_km": 32.5,
+          "az_deg": -61.6
+        },
+        {
+          "seed": "CI.GCC..EHZ",
+          "sta": "GCC",
+          "chan": "EHZ",
+          "lat": 34.32758,
+          "lon": -118.31888,
+          "rate": 100.0,
+          "dist_km": 32.7,
+          "az_deg": 3.4
+        },
+        {
+          "seed": "CI.RPV..BHZ",
+          "sta": "RPV",
+          "chan": "BHZ",
+          "lat": 33.74346,
+          "lon": -118.40412,
+          "rate": 40.0,
+          "dist_km": 32.7,
+          "az_deg": -169.5
+        },
+        {
+          "seed": "CI.CRF..EHZ",
+          "sta": "CRF",
+          "chan": "EHZ",
+          "lat": 33.873521,
+          "lon": -118.039376,
+          "rate": 100.0,
+          "dist_km": 32.9,
+          "az_deg": 122.4
+        },
+        {
+          "seed": "CI.LFP..BHZ",
+          "sta": "LFP",
+          "chan": "BHZ",
+          "lat": 34.305103,
+          "lon": -118.487967,
+          "rate": 40.0,
+          "dist_km": 33.1,
+          "az_deg": -24.3
+        },
+        {
+          "seed": "CI.MWC..BHZ",
+          "sta": "MWC",
+          "chan": "BHZ",
+          "lat": 34.22362,
+          "lon": -118.05832,
+          "rate": 40.0,
+          "dist_km": 33.5,
+          "az_deg": 50.8
+        },
+        {
+          "seed": "CI.RIO..BHZ",
+          "sta": "RIO",
+          "chan": "BHZ",
+          "lat": 34.10473,
+          "lon": -117.97956,
+          "rate": 40.0,
+          "dist_km": 34.2,
+          "az_deg": 76.5
+        },
+        {
+          "seed": "CI.FMP..BHZ",
+          "sta": "FMP",
+          "chan": "BHZ",
+          "lat": 33.71264,
+          "lon": -118.29381,
+          "rate": 40.0,
+          "dist_km": 35.8,
+          "az_deg": 173.2
+        },
+        {
+          "seed": "CI.WLT..BHZ",
+          "sta": "WLT",
+          "chan": "BHZ",
+          "lat": 34.00948,
+          "lon": -117.95077,
+          "rate": 40.0,
+          "dist_km": 36.0,
+          "az_deg": 94.1
+        },
+        {
+          "seed": "CI.BLC..BHZ",
+          "sta": "BLC",
+          "chan": "BHZ",
+          "lat": 34.24356,
+          "lon": -118.67312,
+          "rate": 40.0,
+          "dist_km": 38.6,
+          "az_deg": -52.7
+        },
+        {
+          "seed": "CI.OLI..BHZ",
+          "sta": "OLI",
+          "chan": "BHZ",
+          "lat": 33.94539,
+          "lon": -117.92372,
+          "rate": 40.0,
+          "dist_km": 39.7,
+          "az_deg": 104.1
+        },
+        {
+          "seed": "CI.LAT..BHZ",
+          "sta": "LAT",
+          "chan": "BHZ",
+          "lat": 34.04449,
+          "lon": -118.77643,
+          "rate": 40.0,
+          "dist_km": 40.3,
+          "az_deg": -88.1
+        },
+        {
+          "seed": "CI.AGO..EHZ",
+          "sta": "AGO",
+          "chan": "EHZ",
+          "lat": 34.14647,
+          "lon": -118.76699,
+          "rate": 100.0,
+          "dist_km": 41.4,
+          "az_deg": -72.2
+        },
+        {
+          "seed": "CI.BRE..BHZ",
+          "sta": "BRE",
+          "chan": "BHZ",
+          "lat": 33.80776,
+          "lon": -117.98116,
+          "rate": 40.0,
+          "dist_km": 41.5,
+          "az_deg": 126.9
+        },
+        {
+          "seed": "CI.FUL..EHZ",
+          "sta": "FUL",
+          "chan": "EHZ",
+          "lat": 33.8717,
+          "lon": -117.92251,
+          "rate": 100.0,
+          "dist_km": 42.5,
+          "az_deg": 114.8
+        },
+        {
+          "seed": "CI.OAT..BHZ",
+          "sta": "OAT",
+          "chan": "BHZ",
+          "lat": 34.34361,
+          "lon": -118.61442,
+          "rate": 40.0,
+          "dist_km": 42.8,
+          "az_deg": -36.2
+        },
+        {
+          "seed": "CI.QUG..EHZ",
+          "sta": "QUG",
+          "chan": "EHZ",
+          "lat": 34.39558,
+          "lon": -118.49837,
+          "rate": 100.0,
+          "dist_km": 42.8,
+          "az_deg": -19.9
+        },
+        {
+          "seed": "CI.PTD..BHZ",
+          "sta": "PTD",
+          "chan": "BHZ",
+          "lat": 34.00443,
+          "lon": -118.80686,
+          "rate": 40.0,
+          "dist_km": 43.3,
+          "az_deg": -94.1
+        },
+        {
+          "seed": "CI.CHF..BHZ",
+          "sta": "CHF",
+          "chan": "BHZ",
+          "lat": 34.33341,
+          "lon": -118.02585,
+          "rate": 40.0,
+          "dist_km": 44.1,
+          "az_deg": 40.9
+        },
+        {
+          "seed": "CI.SOL2..BHZ",
+          "sta": "SOL2",
+          "chan": "BHZ",
+          "lat": 34.436,
+          "lon": -118.289,
+          "rate": 40.0,
+          "dist_km": 44.9,
+          "az_deg": 6.0
+        },
+        {
+          "seed": "CI.SMV..EHZ",
+          "sta": "SMV",
+          "chan": "EHZ",
+          "lat": 34.27091,
+          "lon": -118.74407,
+          "rate": 100.0,
+          "dist_km": 45.7,
+          "az_deg": -54.6
+        },
+        {
+          "seed": "CI.PEM..BHZ",
+          "sta": "PEM",
+          "chan": "BHZ",
+          "lat": 34.16689,
+          "lon": -117.87009,
+          "rate": 40.0,
+          "dist_km": 45.8,
+          "az_deg": 71.0
+        },
+        {
+          "seed": "CI.SLM..BHZ",
+          "sta": "SLM",
+          "chan": "BHZ",
+          "lat": 34.45227,
+          "lon": -118.42267,
+          "rate": 40.0,
+          "dist_km": 47.1,
+          "az_deg": -9.3
+        },
+        {
+          "seed": "CI.PSR..BHZ",
+          "sta": "PSR",
+          "chan": "BHZ",
+          "lat": 34.09181,
+          "lon": -117.80709,
+          "rate": 40.0,
+          "dist_km": 49.6,
+          "az_deg": 82.3
+        },
+        {
+          "seed": "CI.PDE..BHZ",
+          "sta": "PDE",
+          "chan": "BHZ",
+          "lat": 34.44199,
+          "lon": -118.58215,
+          "rate": 40.0,
+          "dist_km": 50.6,
+          "az_deg": -26.1
+        },
+        {
+          "seed": "CI.DTC..EHZ",
+          "sta": "DTC",
+          "chan": "EHZ",
+          "lat": 34.424157,
+          "lon": -118.661913,
+          "rate": 100.0,
+          "dist_km": 52.6,
+          "az_deg": -34.3
+        },
+        {
+          "seed": "CI.XTL2..BHZ",
+          "sta": "XTL2",
+          "chan": "BHZ",
+          "lat": 34.295958,
+          "lon": -117.862491,
+          "rate": 40.0,
+          "dist_km": 52.8,
+          "az_deg": 56.3
+        },
+        {
+          "seed": "CI.LLS..BHZ",
+          "sta": "LLS",
+          "chan": "BHZ",
+          "lat": 33.68447,
+          "lon": -117.94304,
+          "rate": 40.0,
+          "dist_km": 53.3,
+          "az_deg": 136.4
+        },
+        {
+          "seed": "CI.OGC..EHZ",
+          "sta": "OGC",
+          "chan": "EHZ",
+          "lat": 33.78816,
+          "lon": -117.844,
+          "rate": 100.0,
+          "dist_km": 53.3,
+          "az_deg": 120.5
+        },
+        {
+          "seed": "CI.VCS..BHZ",
+          "sta": "VCS",
+          "chan": "BHZ",
+          "lat": 34.48372,
+          "lon": -118.11781,
+          "rate": 40.0,
+          "dist_km": 54.0,
+          "az_deg": 22.2
+        },
+        {
+          "seed": "CI.SAN..EHZ",
+          "sta": "SAN",
+          "chan": "EHZ",
+          "lat": 33.70432,
+          "lon": -117.88578,
+          "rate": 100.0,
+          "dist_km": 55.6,
+          "az_deg": 130.8
+        },
+        {
+          "seed": "CI.SRN..BHZ",
+          "sta": "SRN",
+          "chan": "BHZ",
+          "lat": 33.828356,
+          "lon": -117.789408,
+          "rate": 40.0,
+          "dist_km": 55.7,
+          "az_deg": 113.9
+        },
+        {
+          "seed": "CI.CSL..EHZ",
+          "sta": "CSL",
+          "chan": "EHZ",
+          "lat": 34.496513,
+          "lon": -118.616208,
+          "rate": 100.0,
+          "dist_km": 57.4,
+          "az_deg": -26.3
+        },
+        {
+          "seed": "CI.CJV2..BHZ",
+          "sta": "CJV2",
+          "chan": "BHZ",
+          "lat": 34.52978,
+          "lon": -118.1445,
+          "rate": 40.0,
+          "dist_km": 58.0,
+          "az_deg": 18.0
+        },
+        {
+          "seed": "CI.JNH2..BHZ",
+          "sta": "JNH2",
+          "chan": "BHZ",
+          "lat": 34.448941,
+          "lon": -117.95541,
+          "rate": 40.0,
+          "dist_km": 58.2,
+          "az_deg": 37.4
+        },
+        {
+          "seed": "CI.CHK..BHZ",
+          "sta": "CHK",
+          "chan": "BHZ",
+          "lat": 34.067135,
+          "lon": -118.971181,
+          "rate": 40.0,
+          "dist_km": 58.4,
+          "az_deg": -86.1
+        },
+        {
+          "seed": "CI.MOP..BHZ",
+          "sta": "MOP",
+          "chan": "BHZ",
+          "lat": 34.28096,
+          "lon": -118.90469,
+          "rate": 40.0,
+          "dist_km": 58.9,
+          "az_deg": -62.0
+        },
+        {
+          "seed": "CI.CHN..BHZ",
+          "sta": "CHN",
+          "chan": "BHZ",
+          "lat": 33.99879,
+          "lon": -117.68044,
+          "rate": 40.0,
+          "dist_km": 61.0,
+          "az_deg": 93.4
+        },
+        {
+          "seed": "CI.LRR2..BHZ",
+          "sta": "LRR2",
+          "chan": "BHZ",
+          "lat": 34.52706,
+          "lon": -118.02998,
+          "rate": 40.0,
+          "dist_km": 61.8,
+          "az_deg": 27.4
+        },
+        {
+          "seed": "CI.CHL..BHZ",
+          "sta": "CHL",
+          "chan": "BHZ",
+          "lat": 33.910841,
+          "lon": -117.683682,
+          "rate": 40.0,
+          "dist_km": 62.1,
+          "az_deg": 102.4
+        },
+        {
+          "seed": "CI.SUN..BHZ",
+          "sta": "SUN",
+          "chan": "BHZ",
+          "lat": 34.21048,
+          "lon": -117.69394,
+          "rate": 40.0,
+          "dist_km": 62.7,
+          "az_deg": 71.5
+        },
+        {
+          "seed": "CI.NWH..EHZ",
+          "sta": "NWH",
+          "chan": "EHZ",
+          "lat": 33.733138,
+          "lon": -117.751087,
+          "rate": 100.0,
+          "dist_km": 63.8,
+          "az_deg": 121.3
+        },
+        {
+          "seed": "CI.KML..BHZ",
+          "sta": "KML",
+          "chan": "BHZ",
+          "lat": 33.59738,
+          "lon": -117.87909,
+          "rate": 40.0,
+          "dist_km": 64.5,
+          "az_deg": 138.4
+        },
+        {
+          "seed": "CI.CLO..BHZ",
+          "sta": "CLO",
+          "chan": "BHZ",
+          "lat": 34.22038,
+          "lon": -119.00891,
+          "rate": 40.0,
+          "dist_km": 65.1,
+          "az_deg": -71.2
+        },
+        {
+          "seed": "CI.PDU..BHZ",
+          "sta": "PDU",
+          "chan": "BHZ",
+          "lat": 34.1207,
+          "lon": -117.63808,
+          "rate": 40.0,
+          "dist_km": 65.5,
+          "az_deg": 81.3
+        },
+        {
+          "seed": "CI.HOL..BHZ",
+          "sta": "HOL",
+          "chan": "BHZ",
+          "lat": 34.45831,
+          "lon": -117.84539,
+          "rate": 40.0,
+          "dist_km": 65.6,
+          "az_deg": 43.9
+        },
+        {
+          "seed": "CI.LEO..BHZ",
+          "sta": "LEO",
+          "chan": "BHZ",
+          "lat": 34.63064,
+          "lon": -118.30505,
+          "rate": 40.0,
+          "dist_km": 66.4,
+          "az_deg": 2.7
+        },
+        {
+          "seed": "CI.BFS..BHZ",
+          "sta": "BFS",
+          "chan": "BHZ",
+          "lat": 34.23883,
+          "lon": -117.65853,
+          "rate": 40.0,
+          "dist_km": 66.8,
+          "az_deg": 69.8
+        },
+        {
+          "seed": "CI.STG..BHZ",
+          "sta": "STG",
+          "chan": "BHZ",
+          "lat": 33.664,
+          "lon": -117.76856,
+          "rate": 40.0,
+          "dist_km": 66.9,
+          "az_deg": 127.6
+        },
+        {
+          "seed": "CI.FMO..BHZ",
+          "sta": "FMO",
+          "chan": "BHZ",
+          "lat": 34.409286,
+          "lon": -118.920887,
+          "rate": 40.0,
+          "dist_km": 67.9,
+          "az_deg": -51.9
+        },
+        {
+          "seed": "CI.PDW..EHZ",
+          "sta": "PDW",
+          "chan": "EHZ",
+          "lat": 33.92397,
+          "lon": -117.61713,
+          "rate": 100.0,
+          "dist_km": 67.9,
+          "az_deg": 100.1
+        },
+        {
+          "seed": "CI.SHU..BHZ",
+          "sta": "SHU",
+          "chan": "BHZ",
+          "lat": 34.64279,
+          "lon": -118.16454,
+          "rate": 40.0,
+          "dist_km": 69.5,
+          "az_deg": 13.4
+        },
+        {
+          "seed": "CI.CIA..BHZ",
+          "sta": "CIA",
+          "chan": "BHZ",
+          "lat": 33.401898,
+          "lon": -118.415021,
+          "rate": 40.0,
+          "dist_km": 70.4,
+          "az_deg": -174.3
+        },
+        {
+          "seed": "CI.SMT..EHZ",
+          "sta": "SMT",
+          "chan": "EHZ",
+          "lat": 34.33364,
+          "lon": -119.01381,
+          "rate": 100.0,
+          "dist_km": 70.5,
+          "az_deg": -61.6
+        },
+        {
+          "seed": "CI.MLS..BHZ",
+          "sta": "MLS",
+          "chan": "BHZ",
+          "lat": 34.0046,
+          "lon": -117.56162,
+          "rate": 40.0,
+          "dist_km": 71.9,
+          "az_deg": 92.3
+        },
+        {
+          "seed": "CI.TA2..BHZ",
+          "sta": "TA2",
+          "chan": "BHZ",
+          "lat": 34.38203,
+          "lon": -117.67822,
+          "rate": 40.0,
+          "dist_km": 72.2,
+          "az_deg": 57.4
+        },
+        {
+          "seed": "CI.PLS..BHZ",
+          "sta": "PLS",
+          "chan": "BHZ",
+          "lat": 33.7953,
+          "lon": -117.60906,
+          "rate": 40.0,
+          "dist_km": 72.5,
+          "az_deg": 111.1
+        },
+        {
+          "seed": "CI.ALP..BHZ",
+          "sta": "ALP",
+          "chan": "BHZ",
+          "lat": 34.68708,
+          "lon": -118.29946,
+          "rate": 40.0,
+          "dist_km": 72.6,
+          "az_deg": 2.9
+        },
+        {
+          "seed": "CI.GDF..BHZ",
+          "sta": "GDF",
+          "chan": "BHZ",
+          "lat": 34.4793,
+          "lon": -118.91676,
+          "rate": 40.0,
+          "dist_km": 72.6,
+          "az_deg": -46.9
+        },
+        {
+          "seed": "CI.OSI..BHZ",
+          "sta": "OSI",
+          "chan": "BHZ",
+          "lat": 34.6145,
+          "lon": -118.7235,
+          "rate": 40.0,
+          "dist_km": 73.5,
+          "az_deg": -28.6
+        },
+        {
+          "seed": "CI.MMC..EHZ",
+          "sta": "MMC",
+          "chan": "EHZ",
+          "lat": 33.57304,
+          "lon": -117.76258,
+          "rate": 100.0,
+          "dist_km": 73.9,
+          "az_deg": 133.5
+        },
+        {
+          "seed": "CI.CRN..EHZ",
+          "sta": "CRN",
+          "chan": "EHZ",
+          "lat": 33.87574,
+          "lon": -117.56106,
+          "rate": 100.0,
+          "dist_km": 74.1,
+          "az_deg": 103.4
+        },
+        {
+          "seed": "CI.MES..EHZ",
+          "sta": "MES",
+          "chan": "EHZ",
+          "lat": 34.263111,
+          "lon": -119.095882,
+          "rate": 100.0,
+          "dist_km": 74.3,
+          "az_deg": -69.7
+        },
+        {
+          "seed": "CI.BTP..BHZ",
+          "sta": "BTP",
+          "chan": "BHZ",
+          "lat": 34.68224,
+          "lon": -118.57398,
+          "rate": 40.0,
+          "dist_km": 75.2,
+          "az_deg": -16.6
+        },
+        {
+          "seed": "CI.RCU..EHZ",
+          "sta": "RCU",
+          "chan": "EHZ",
+          "lat": 34.08309,
+          "lon": -117.52442,
+          "rate": 100.0,
+          "dist_km": 75.5,
+          "az_deg": 85.6
+        },
+        {
+          "seed": "CI.POP..BHZ",
+          "sta": "POP",
+          "chan": "BHZ",
+          "lat": 34.728498,
+          "lon": -118.394026,
+          "rate": 40.0,
+          "dist_km": 77.3,
+          "az_deg": -3.7
+        },
+        {
+          "seed": "CI.FOX2..BHZ",
+          "sta": "FOX2",
+          "chan": "BHZ",
+          "lat": 34.7339,
+          "lon": -118.24046,
+          "rate": 40.0,
+          "dist_km": 78.3,
+          "az_deg": 6.7
+        },
+        {
+          "seed": "CI.RKMO..BHZ",
+          "sta": "RKMO",
+          "chan": "BHZ",
+          "lat": 33.67421,
+          "lon": -117.60947,
+          "rate": 40.0,
+          "dist_km": 78.4,
+          "az_deg": 120.3
+        },
+        {
+          "seed": "CI.SS3..BHZ",
+          "sta": "SS3",
+          "chan": "BHZ",
+          "lat": 34.20772,
+          "lon": -117.499668,
+          "rate": 40.0,
+          "dist_km": 79.9,
+          "az_deg": 75.7
+        },
+        {
+          "seed": "CI.PUT..BHZ",
+          "sta": "PUT",
+          "chan": "BHZ",
+          "lat": 34.69115,
+          "lon": -117.96919,
+          "rate": 40.0,
+          "dist_km": 80.6,
+          "az_deg": 24.9
+        },
+        {
+          "seed": "CI.SSS..BHZ",
+          "sta": "SSS",
+          "chan": "BHZ",
+          "lat": 34.03103,
+          "lon": -117.45498,
+          "rate": 40.0,
+          "dist_km": 81.7,
+          "az_deg": 89.9
+        },
+        {
+          "seed": "CI.SDD..BHZ",
+          "sta": "SDD",
+          "chan": "BHZ",
+          "lat": 33.55259,
+          "lon": -117.66171,
+          "rate": 40.0,
+          "dist_km": 82.4,
+          "az_deg": 130.1
+        },
+        {
+          "seed": "CI.WLS2..BHZ",
+          "sta": "WLS2",
+          "chan": "BHZ",
+          "lat": 34.578987,
+          "lon": -117.719386,
+          "rate": 40.0,
+          "dist_km": 83.2,
+          "az_deg": 43.1
+        },
+        {
+          "seed": "CI.FON..EHZ",
+          "sta": "FON",
+          "chan": "EHZ",
+          "lat": 34.09957,
+          "lon": -117.43876,
+          "rate": 100.0,
+          "dist_km": 83.5,
+          "az_deg": 84.7
+        },
+        {
+          "seed": "CI.NEN..BHZ",
+          "sta": "NEN",
+          "chan": "BHZ",
+          "lat": 34.77539,
+          "lon": -118.50099,
+          "rate": 40.0,
+          "dist_km": 83.7,
+          "az_deg": -10.2
+        },
+        {
+          "seed": "CI.IVY..BHZ",
+          "sta": "IVY",
+          "chan": "BHZ",
+          "lat": 33.76025,
+          "lon": -117.47678,
+          "rate": 40.0,
+          "dist_km": 85.4,
+          "az_deg": 110.5
+        },
+        {
+          "seed": "CI.LMS..BHZ",
+          "sta": "LMS",
+          "chan": "BHZ",
+          "lat": 33.81744,
+          "lon": -117.445,
+          "rate": 40.0,
+          "dist_km": 86.1,
+          "az_deg": 105.9
+        },
+        {
+          "seed": "CI.CCT..BHZ",
+          "sta": "CCT",
+          "chan": "BHZ",
+          "lat": 33.896256,
+          "lon": -117.414694,
+          "rate": 40.0,
+          "dist_km": 86.8,
+          "az_deg": 99.8
+        },
+        {
+          "seed": "CI.HDH..BHZ",
+          "sta": "HDH",
+          "chan": "BHZ",
+          "lat": 34.77529,
+          "lon": -118.63999,
+          "rate": 40.0,
+          "dist_km": 86.8,
+          "az_deg": -18.5
+        },
+        {
+          "seed": "CI.SBB2..BHZ",
+          "sta": "SBB2",
+          "chan": "BHZ",
+          "lat": 34.68844,
+          "lon": -117.82424,
+          "rate": 40.0,
+          "dist_km": 86.8,
+          "az_deg": 33.0
+        },
+        {
+          "seed": "CI.HRV..BHZ",
+          "sta": "HRV",
+          "chan": "BHZ",
+          "lat": 34.72711,
+          "lon": -118.8044,
+          "rate": 40.0,
+          "dist_km": 88.1,
+          "az_deg": -28.9
+        },
+        {
+          "seed": "CI.CJM..BHZ",
+          "sta": "CJM",
+          "chan": "BHZ",
+          "lat": 34.27117,
+          "lon": -117.42448,
+          "rate": 40.0,
+          "dist_km": 88.4,
+          "az_deg": 72.4
+        },
+        {
+          "seed": "CI.SBI..BHZ",
+          "sta": "SBI",
+          "chan": "BHZ",
+          "lat": 33.48046,
+          "lon": -119.02986,
+          "rate": 40.0,
+          "dist_km": 88.6,
+          "az_deg": -133.6
+        },
+        {
+          "seed": "CI.RVR..BHZ",
+          "sta": "RVR",
+          "chan": "BHZ",
+          "lat": 33.99351,
+          "lon": -117.37545,
+          "rate": 40.0,
+          "dist_km": 89.2,
+          "az_deg": 92.6
+        },
+        {
+          "seed": "CI.CWP..BHZ",
+          "sta": "CWP",
+          "chan": "BHZ",
+          "lat": 33.5579755,
+          "lon": -117.5577503,
+          "rate": 40.0,
+          "dist_km": 89.6,
+          "az_deg": 125.8
+        }
+      ]
+    },
+    "IRIS:CI": {
+      "count": 93,
+      "stations": [
+        {
+          "seed": "CI.GOU..BHZ",
+          "sta": "GOU",
+          "chan": "BHZ",
+          "lat": 34.22119,
+          "lon": -118.18834,
+          "rate": 40.0,
+          "dist_km": 25.1,
+          "az_deg": 33.8
+        },
+        {
+          "seed": "CI.KIK..EHZ",
+          "sta": "KIK",
+          "chan": "EHZ",
+          "lat": 34.15037,
+          "lon": -118.10156,
+          "rate": 100.0,
+          "dist_km": 25.5,
+          "az_deg": 59.3
+        },
+        {
+          "seed": "CI.SPF..BHZ",
+          "sta": "SPF",
+          "chan": "BHZ",
+          "lat": 34.05933,
+          "lon": -118.64614,
+          "rate": 40.0,
+          "dist_km": 28.4,
+          "az_deg": -84.0
+        },
+        {
+          "seed": "CI.NOT..EHZ",
+          "sta": "NOT",
+          "chan": "EHZ",
+          "lat": 34.22869,
+          "lon": -118.55829,
+          "rate": 100.0,
+          "dist_km": 29.6,
+          "az_deg": -42.8
+        },
+        {
+          "seed": "CI.STS..BHZ",
+          "sta": "STS",
+          "chan": "BHZ",
+          "lat": 33.79033,
+          "lon": -118.19878,
+          "rate": 40.0,
+          "dist_km": 29.9,
+          "az_deg": 154.1
+        },
+        {
+          "seed": "CI.DLA..BHZ",
+          "sta": "DLA",
+          "chan": "BHZ",
+          "lat": 33.84822,
+          "lon": -118.09624,
+          "rate": 40.0,
+          "dist_km": 30.4,
+          "az_deg": 132.3
+        },
+        {
+          "seed": "CI.RHC2..BHZ",
+          "sta": "RHC2",
+          "chan": "BHZ",
+          "lat": 34.00095,
+          "lon": -118.01333,
+          "rate": 40.0,
+          "dist_km": 30.4,
+          "az_deg": 96.6
+        },
+        {
+          "seed": "CI.RIN..BHZ",
+          "sta": "RIN",
+          "chan": "BHZ",
+          "lat": 34.28196,
+          "lon": -118.47925,
+          "rate": 40.0,
+          "dist_km": 30.5,
+          "az_deg": -24.9
+        },
+        {
+          "seed": "CI.WSS..BHZ",
+          "sta": "WSS",
+          "chan": "BHZ",
+          "lat": 34.1717,
+          "lon": -118.64971,
+          "rate": 40.0,
+          "dist_km": 32.5,
+          "az_deg": -61.6
+        },
+        {
+          "seed": "CI.GCC..EHZ",
+          "sta": "GCC",
+          "chan": "EHZ",
+          "lat": 34.32758,
+          "lon": -118.31888,
+          "rate": 100.0,
+          "dist_km": 32.7,
+          "az_deg": 3.4
+        },
+        {
+          "seed": "CI.RPV..BHZ",
+          "sta": "RPV",
+          "chan": "BHZ",
+          "lat": 33.74346,
+          "lon": -118.40412,
+          "rate": 40.0,
+          "dist_km": 32.7,
+          "az_deg": -169.5
+        },
+        {
+          "seed": "CI.CRF..EHZ",
+          "sta": "CRF",
+          "chan": "EHZ",
+          "lat": 33.873521,
+          "lon": -118.039376,
+          "rate": 100.0,
+          "dist_km": 32.9,
+          "az_deg": 122.4
+        },
+        {
+          "seed": "CI.LFP..BHZ",
+          "sta": "LFP",
+          "chan": "BHZ",
+          "lat": 34.305103,
+          "lon": -118.487967,
+          "rate": 40.0,
+          "dist_km": 33.1,
+          "az_deg": -24.3
+        },
+        {
+          "seed": "CI.MWC..BHZ",
+          "sta": "MWC",
+          "chan": "BHZ",
+          "lat": 34.22362,
+          "lon": -118.05832,
+          "rate": 40.0,
+          "dist_km": 33.5,
+          "az_deg": 50.8
+        },
+        {
+          "seed": "CI.RIO..BHZ",
+          "sta": "RIO",
+          "chan": "BHZ",
+          "lat": 34.10473,
+          "lon": -117.97956,
+          "rate": 40.0,
+          "dist_km": 34.2,
+          "az_deg": 76.5
+        },
+        {
+          "seed": "CI.FMP..BHZ",
+          "sta": "FMP",
+          "chan": "BHZ",
+          "lat": 33.71264,
+          "lon": -118.29381,
+          "rate": 40.0,
+          "dist_km": 35.8,
+          "az_deg": 173.2
+        },
+        {
+          "seed": "CI.WLT..BHZ",
+          "sta": "WLT",
+          "chan": "BHZ",
+          "lat": 34.00948,
+          "lon": -117.95077,
+          "rate": 40.0,
+          "dist_km": 36.0,
+          "az_deg": 94.1
+        },
+        {
+          "seed": "CI.BLC..BHZ",
+          "sta": "BLC",
+          "chan": "BHZ",
+          "lat": 34.24356,
+          "lon": -118.67312,
+          "rate": 40.0,
+          "dist_km": 38.6,
+          "az_deg": -52.7
+        },
+        {
+          "seed": "CI.OLI..BHZ",
+          "sta": "OLI",
+          "chan": "BHZ",
+          "lat": 33.94539,
+          "lon": -117.92372,
+          "rate": 40.0,
+          "dist_km": 39.7,
+          "az_deg": 104.1
+        },
+        {
+          "seed": "CI.LAT..BHZ",
+          "sta": "LAT",
+          "chan": "BHZ",
+          "lat": 34.04449,
+          "lon": -118.77643,
+          "rate": 40.0,
+          "dist_km": 40.3,
+          "az_deg": -88.1
+        },
+        {
+          "seed": "CI.AGO..EHZ",
+          "sta": "AGO",
+          "chan": "EHZ",
+          "lat": 34.14647,
+          "lon": -118.76699,
+          "rate": 100.0,
+          "dist_km": 41.4,
+          "az_deg": -72.2
+        },
+        {
+          "seed": "CI.BRE..BHZ",
+          "sta": "BRE",
+          "chan": "BHZ",
+          "lat": 33.80776,
+          "lon": -117.98116,
+          "rate": 40.0,
+          "dist_km": 41.5,
+          "az_deg": 126.9
+        },
+        {
+          "seed": "CI.FUL..EHZ",
+          "sta": "FUL",
+          "chan": "EHZ",
+          "lat": 33.8717,
+          "lon": -117.92251,
+          "rate": 100.0,
+          "dist_km": 42.5,
+          "az_deg": 114.8
+        },
+        {
+          "seed": "CI.OAT..BHZ",
+          "sta": "OAT",
+          "chan": "BHZ",
+          "lat": 34.34361,
+          "lon": -118.61442,
+          "rate": 40.0,
+          "dist_km": 42.8,
+          "az_deg": -36.2
+        },
+        {
+          "seed": "CI.QUG..EHZ",
+          "sta": "QUG",
+          "chan": "EHZ",
+          "lat": 34.39558,
+          "lon": -118.49837,
+          "rate": 100.0,
+          "dist_km": 42.8,
+          "az_deg": -19.9
+        },
+        {
+          "seed": "CI.PTD..BHZ",
+          "sta": "PTD",
+          "chan": "BHZ",
+          "lat": 34.00443,
+          "lon": -118.80686,
+          "rate": 40.0,
+          "dist_km": 43.3,
+          "az_deg": -94.1
+        },
+        {
+          "seed": "CI.CHF..BHZ",
+          "sta": "CHF",
+          "chan": "BHZ",
+          "lat": 34.33341,
+          "lon": -118.02585,
+          "rate": 40.0,
+          "dist_km": 44.1,
+          "az_deg": 40.9
+        },
+        {
+          "seed": "CI.SOL2..BHZ",
+          "sta": "SOL2",
+          "chan": "BHZ",
+          "lat": 34.436,
+          "lon": -118.289,
+          "rate": 40.0,
+          "dist_km": 44.9,
+          "az_deg": 6.0
+        },
+        {
+          "seed": "CI.SMV..EHZ",
+          "sta": "SMV",
+          "chan": "EHZ",
+          "lat": 34.27091,
+          "lon": -118.74407,
+          "rate": 100.0,
+          "dist_km": 45.7,
+          "az_deg": -54.6
+        },
+        {
+          "seed": "CI.PEM..BHZ",
+          "sta": "PEM",
+          "chan": "BHZ",
+          "lat": 34.16689,
+          "lon": -117.87009,
+          "rate": 40.0,
+          "dist_km": 45.8,
+          "az_deg": 71.0
+        },
+        {
+          "seed": "CI.SLM..BHZ",
+          "sta": "SLM",
+          "chan": "BHZ",
+          "lat": 34.45227,
+          "lon": -118.42267,
+          "rate": 40.0,
+          "dist_km": 47.1,
+          "az_deg": -9.3
+        },
+        {
+          "seed": "CI.PSR..BHZ",
+          "sta": "PSR",
+          "chan": "BHZ",
+          "lat": 34.09181,
+          "lon": -117.80709,
+          "rate": 40.0,
+          "dist_km": 49.6,
+          "az_deg": 82.3
+        },
+        {
+          "seed": "CI.PDE..BHZ",
+          "sta": "PDE",
+          "chan": "BHZ",
+          "lat": 34.44199,
+          "lon": -118.58215,
+          "rate": 40.0,
+          "dist_km": 50.6,
+          "az_deg": -26.1
+        },
+        {
+          "seed": "CI.DTC..EHZ",
+          "sta": "DTC",
+          "chan": "EHZ",
+          "lat": 34.424157,
+          "lon": -118.661913,
+          "rate": 100.0,
+          "dist_km": 52.6,
+          "az_deg": -34.3
+        },
+        {
+          "seed": "CI.XTL2..BHZ",
+          "sta": "XTL2",
+          "chan": "BHZ",
+          "lat": 34.295958,
+          "lon": -117.862491,
+          "rate": 40.0,
+          "dist_km": 52.8,
+          "az_deg": 56.3
+        },
+        {
+          "seed": "CI.LLS..BHZ",
+          "sta": "LLS",
+          "chan": "BHZ",
+          "lat": 33.68447,
+          "lon": -117.94304,
+          "rate": 40.0,
+          "dist_km": 53.3,
+          "az_deg": 136.4
+        },
+        {
+          "seed": "CI.OGC..EHZ",
+          "sta": "OGC",
+          "chan": "EHZ",
+          "lat": 33.78816,
+          "lon": -117.844,
+          "rate": 100.0,
+          "dist_km": 53.3,
+          "az_deg": 120.5
+        },
+        {
+          "seed": "CI.VCS..BHZ",
+          "sta": "VCS",
+          "chan": "BHZ",
+          "lat": 34.48372,
+          "lon": -118.11781,
+          "rate": 40.0,
+          "dist_km": 54.0,
+          "az_deg": 22.2
+        },
+        {
+          "seed": "CI.SAN..EHZ",
+          "sta": "SAN",
+          "chan": "EHZ",
+          "lat": 33.70432,
+          "lon": -117.88578,
+          "rate": 100.0,
+          "dist_km": 55.6,
+          "az_deg": 130.8
+        },
+        {
+          "seed": "CI.SRN..BHZ",
+          "sta": "SRN",
+          "chan": "BHZ",
+          "lat": 33.828356,
+          "lon": -117.789408,
+          "rate": 40.0,
+          "dist_km": 55.7,
+          "az_deg": 113.9
+        },
+        {
+          "seed": "CI.CSL..EHZ",
+          "sta": "CSL",
+          "chan": "EHZ",
+          "lat": 34.496513,
+          "lon": -118.616208,
+          "rate": 100.0,
+          "dist_km": 57.4,
+          "az_deg": -26.3
+        },
+        {
+          "seed": "CI.CJV2..BHZ",
+          "sta": "CJV2",
+          "chan": "BHZ",
+          "lat": 34.52978,
+          "lon": -118.1445,
+          "rate": 40.0,
+          "dist_km": 58.0,
+          "az_deg": 18.0
+        },
+        {
+          "seed": "CI.JNH2..BHZ",
+          "sta": "JNH2",
+          "chan": "BHZ",
+          "lat": 34.448941,
+          "lon": -117.95541,
+          "rate": 40.0,
+          "dist_km": 58.2,
+          "az_deg": 37.4
+        },
+        {
+          "seed": "CI.CHK..BHZ",
+          "sta": "CHK",
+          "chan": "BHZ",
+          "lat": 34.067135,
+          "lon": -118.971181,
+          "rate": 40.0,
+          "dist_km": 58.4,
+          "az_deg": -86.1
+        },
+        {
+          "seed": "CI.MOP..BHZ",
+          "sta": "MOP",
+          "chan": "BHZ",
+          "lat": 34.28096,
+          "lon": -118.90469,
+          "rate": 40.0,
+          "dist_km": 58.9,
+          "az_deg": -62.0
+        },
+        {
+          "seed": "CI.CHN..BHZ",
+          "sta": "CHN",
+          "chan": "BHZ",
+          "lat": 33.99879,
+          "lon": -117.68044,
+          "rate": 40.0,
+          "dist_km": 61.0,
+          "az_deg": 93.4
+        },
+        {
+          "seed": "CI.LRR2..BHZ",
+          "sta": "LRR2",
+          "chan": "BHZ",
+          "lat": 34.52706,
+          "lon": -118.02998,
+          "rate": 40.0,
+          "dist_km": 61.8,
+          "az_deg": 27.4
+        },
+        {
+          "seed": "CI.CHL..BHZ",
+          "sta": "CHL",
+          "chan": "BHZ",
+          "lat": 33.910841,
+          "lon": -117.683682,
+          "rate": 40.0,
+          "dist_km": 62.1,
+          "az_deg": 102.4
+        },
+        {
+          "seed": "CI.SUN..BHZ",
+          "sta": "SUN",
+          "chan": "BHZ",
+          "lat": 34.21048,
+          "lon": -117.69394,
+          "rate": 40.0,
+          "dist_km": 62.7,
+          "az_deg": 71.5
+        },
+        {
+          "seed": "CI.NWH..EHZ",
+          "sta": "NWH",
+          "chan": "EHZ",
+          "lat": 33.733138,
+          "lon": -117.751087,
+          "rate": 100.0,
+          "dist_km": 63.8,
+          "az_deg": 121.3
+        },
+        {
+          "seed": "CI.KML..BHZ",
+          "sta": "KML",
+          "chan": "BHZ",
+          "lat": 33.59738,
+          "lon": -117.87909,
+          "rate": 40.0,
+          "dist_km": 64.5,
+          "az_deg": 138.4
+        },
+        {
+          "seed": "CI.CLO..BHZ",
+          "sta": "CLO",
+          "chan": "BHZ",
+          "lat": 34.22038,
+          "lon": -119.00891,
+          "rate": 40.0,
+          "dist_km": 65.1,
+          "az_deg": -71.2
+        },
+        {
+          "seed": "CI.PDU..BHZ",
+          "sta": "PDU",
+          "chan": "BHZ",
+          "lat": 34.1207,
+          "lon": -117.63808,
+          "rate": 40.0,
+          "dist_km": 65.5,
+          "az_deg": 81.3
+        },
+        {
+          "seed": "CI.HOL..BHZ",
+          "sta": "HOL",
+          "chan": "BHZ",
+          "lat": 34.45831,
+          "lon": -117.84539,
+          "rate": 40.0,
+          "dist_km": 65.6,
+          "az_deg": 43.9
+        },
+        {
+          "seed": "CI.LEO..BHZ",
+          "sta": "LEO",
+          "chan": "BHZ",
+          "lat": 34.63064,
+          "lon": -118.30505,
+          "rate": 40.0,
+          "dist_km": 66.4,
+          "az_deg": 2.7
+        },
+        {
+          "seed": "CI.BFS..BHZ",
+          "sta": "BFS",
+          "chan": "BHZ",
+          "lat": 34.23883,
+          "lon": -117.65853,
+          "rate": 40.0,
+          "dist_km": 66.8,
+          "az_deg": 69.8
+        },
+        {
+          "seed": "CI.STG..BHZ",
+          "sta": "STG",
+          "chan": "BHZ",
+          "lat": 33.664,
+          "lon": -117.76856,
+          "rate": 40.0,
+          "dist_km": 66.9,
+          "az_deg": 127.6
+        },
+        {
+          "seed": "CI.FMO..BHZ",
+          "sta": "FMO",
+          "chan": "BHZ",
+          "lat": 34.409286,
+          "lon": -118.920887,
+          "rate": 40.0,
+          "dist_km": 67.9,
+          "az_deg": -51.9
+        },
+        {
+          "seed": "CI.PDW..EHZ",
+          "sta": "PDW",
+          "chan": "EHZ",
+          "lat": 33.92397,
+          "lon": -117.61713,
+          "rate": 100.0,
+          "dist_km": 67.9,
+          "az_deg": 100.1
+        },
+        {
+          "seed": "CI.SHU..BHZ",
+          "sta": "SHU",
+          "chan": "BHZ",
+          "lat": 34.64279,
+          "lon": -118.16454,
+          "rate": 40.0,
+          "dist_km": 69.5,
+          "az_deg": 13.4
+        },
+        {
+          "seed": "CI.CIA..BHZ",
+          "sta": "CIA",
+          "chan": "BHZ",
+          "lat": 33.401898,
+          "lon": -118.415021,
+          "rate": 40.0,
+          "dist_km": 70.4,
+          "az_deg": -174.3
+        },
+        {
+          "seed": "CI.SMT..EHZ",
+          "sta": "SMT",
+          "chan": "EHZ",
+          "lat": 34.33364,
+          "lon": -119.01381,
+          "rate": 100.0,
+          "dist_km": 70.5,
+          "az_deg": -61.6
+        },
+        {
+          "seed": "CI.MLS..BHZ",
+          "sta": "MLS",
+          "chan": "BHZ",
+          "lat": 34.0046,
+          "lon": -117.56162,
+          "rate": 40.0,
+          "dist_km": 71.9,
+          "az_deg": 92.3
+        },
+        {
+          "seed": "CI.TA2..BHZ",
+          "sta": "TA2",
+          "chan": "BHZ",
+          "lat": 34.38203,
+          "lon": -117.67822,
+          "rate": 40.0,
+          "dist_km": 72.2,
+          "az_deg": 57.4
+        },
+        {
+          "seed": "CI.PLS..BHZ",
+          "sta": "PLS",
+          "chan": "BHZ",
+          "lat": 33.7953,
+          "lon": -117.60906,
+          "rate": 40.0,
+          "dist_km": 72.5,
+          "az_deg": 111.1
+        },
+        {
+          "seed": "CI.ALP..BHZ",
+          "sta": "ALP",
+          "chan": "BHZ",
+          "lat": 34.68708,
+          "lon": -118.29946,
+          "rate": 40.0,
+          "dist_km": 72.6,
+          "az_deg": 2.9
+        },
+        {
+          "seed": "CI.GDF..BHZ",
+          "sta": "GDF",
+          "chan": "BHZ",
+          "lat": 34.4793,
+          "lon": -118.91676,
+          "rate": 40.0,
+          "dist_km": 72.6,
+          "az_deg": -46.9
+        },
+        {
+          "seed": "CI.OSI..BHZ",
+          "sta": "OSI",
+          "chan": "BHZ",
+          "lat": 34.6145,
+          "lon": -118.7235,
+          "rate": 40.0,
+          "dist_km": 73.5,
+          "az_deg": -28.6
+        },
+        {
+          "seed": "CI.MMC..EHZ",
+          "sta": "MMC",
+          "chan": "EHZ",
+          "lat": 33.57304,
+          "lon": -117.76258,
+          "rate": 100.0,
+          "dist_km": 73.9,
+          "az_deg": 133.5
+        },
+        {
+          "seed": "CI.CRN..EHZ",
+          "sta": "CRN",
+          "chan": "EHZ",
+          "lat": 33.87574,
+          "lon": -117.56106,
+          "rate": 100.0,
+          "dist_km": 74.1,
+          "az_deg": 103.4
+        },
+        {
+          "seed": "CI.MES..EHZ",
+          "sta": "MES",
+          "chan": "EHZ",
+          "lat": 34.263111,
+          "lon": -119.095882,
+          "rate": 100.0,
+          "dist_km": 74.3,
+          "az_deg": -69.7
+        },
+        {
+          "seed": "CI.BTP..BHZ",
+          "sta": "BTP",
+          "chan": "BHZ",
+          "lat": 34.68224,
+          "lon": -118.57398,
+          "rate": 40.0,
+          "dist_km": 75.2,
+          "az_deg": -16.6
+        },
+        {
+          "seed": "CI.RCU..EHZ",
+          "sta": "RCU",
+          "chan": "EHZ",
+          "lat": 34.08309,
+          "lon": -117.52442,
+          "rate": 100.0,
+          "dist_km": 75.5,
+          "az_deg": 85.6
+        },
+        {
+          "seed": "CI.POP..BHZ",
+          "sta": "POP",
+          "chan": "BHZ",
+          "lat": 34.728498,
+          "lon": -118.394026,
+          "rate": 40.0,
+          "dist_km": 77.3,
+          "az_deg": -3.7
+        },
+        {
+          "seed": "CI.FOX2..BHZ",
+          "sta": "FOX2",
+          "chan": "BHZ",
+          "lat": 34.7339,
+          "lon": -118.24046,
+          "rate": 40.0,
+          "dist_km": 78.3,
+          "az_deg": 6.7
+        },
+        {
+          "seed": "CI.RKMO..BHZ",
+          "sta": "RKMO",
+          "chan": "BHZ",
+          "lat": 33.67421,
+          "lon": -117.60947,
+          "rate": 40.0,
+          "dist_km": 78.4,
+          "az_deg": 120.3
+        },
+        {
+          "seed": "CI.SS3..BHZ",
+          "sta": "SS3",
+          "chan": "BHZ",
+          "lat": 34.20772,
+          "lon": -117.499668,
+          "rate": 40.0,
+          "dist_km": 79.9,
+          "az_deg": 75.7
+        },
+        {
+          "seed": "CI.PUT..BHZ",
+          "sta": "PUT",
+          "chan": "BHZ",
+          "lat": 34.69115,
+          "lon": -117.96919,
+          "rate": 40.0,
+          "dist_km": 80.6,
+          "az_deg": 24.9
+        },
+        {
+          "seed": "CI.SSS..BHZ",
+          "sta": "SSS",
+          "chan": "BHZ",
+          "lat": 34.03103,
+          "lon": -117.45498,
+          "rate": 40.0,
+          "dist_km": 81.7,
+          "az_deg": 89.9
+        },
+        {
+          "seed": "CI.SDD..BHZ",
+          "sta": "SDD",
+          "chan": "BHZ",
+          "lat": 33.55259,
+          "lon": -117.66171,
+          "rate": 40.0,
+          "dist_km": 82.4,
+          "az_deg": 130.1
+        },
+        {
+          "seed": "CI.WLS2..BHZ",
+          "sta": "WLS2",
+          "chan": "BHZ",
+          "lat": 34.578987,
+          "lon": -117.719386,
+          "rate": 40.0,
+          "dist_km": 83.2,
+          "az_deg": 43.1
+        },
+        {
+          "seed": "CI.FON..EHZ",
+          "sta": "FON",
+          "chan": "EHZ",
+          "lat": 34.09957,
+          "lon": -117.43876,
+          "rate": 100.0,
+          "dist_km": 83.5,
+          "az_deg": 84.7
+        },
+        {
+          "seed": "CI.NEN..BHZ",
+          "sta": "NEN",
+          "chan": "BHZ",
+          "lat": 34.77539,
+          "lon": -118.50099,
+          "rate": 40.0,
+          "dist_km": 83.7,
+          "az_deg": -10.2
+        },
+        {
+          "seed": "CI.IVY..BHZ",
+          "sta": "IVY",
+          "chan": "BHZ",
+          "lat": 33.76025,
+          "lon": -117.47678,
+          "rate": 40.0,
+          "dist_km": 85.4,
+          "az_deg": 110.5
+        },
+        {
+          "seed": "CI.LMS..BHZ",
+          "sta": "LMS",
+          "chan": "BHZ",
+          "lat": 33.81744,
+          "lon": -117.445,
+          "rate": 40.0,
+          "dist_km": 86.1,
+          "az_deg": 105.9
+        },
+        {
+          "seed": "CI.CCT..BHZ",
+          "sta": "CCT",
+          "chan": "BHZ",
+          "lat": 33.896256,
+          "lon": -117.414694,
+          "rate": 40.0,
+          "dist_km": 86.8,
+          "az_deg": 99.8
+        },
+        {
+          "seed": "CI.HDH..BHZ",
+          "sta": "HDH",
+          "chan": "BHZ",
+          "lat": 34.77529,
+          "lon": -118.63999,
+          "rate": 40.0,
+          "dist_km": 86.8,
+          "az_deg": -18.5
+        },
+        {
+          "seed": "CI.SBB2..BHZ",
+          "sta": "SBB2",
+          "chan": "BHZ",
+          "lat": 34.68844,
+          "lon": -117.82424,
+          "rate": 40.0,
+          "dist_km": 86.8,
+          "az_deg": 33.0
+        },
+        {
+          "seed": "CI.HRV..BHZ",
+          "sta": "HRV",
+          "chan": "BHZ",
+          "lat": 34.72711,
+          "lon": -118.8044,
+          "rate": 40.0,
+          "dist_km": 88.1,
+          "az_deg": -28.9
+        },
+        {
+          "seed": "CI.CJM..BHZ",
+          "sta": "CJM",
+          "chan": "BHZ",
+          "lat": 34.27117,
+          "lon": -117.42448,
+          "rate": 40.0,
+          "dist_km": 88.4,
+          "az_deg": 72.4
+        },
+        {
+          "seed": "CI.SBI..BHZ",
+          "sta": "SBI",
+          "chan": "BHZ",
+          "lat": 33.48046,
+          "lon": -119.02986,
+          "rate": 40.0,
+          "dist_km": 88.6,
+          "az_deg": -133.6
+        },
+        {
+          "seed": "CI.RVR..BHZ",
+          "sta": "RVR",
+          "chan": "BHZ",
+          "lat": 33.99351,
+          "lon": -117.37545,
+          "rate": 40.0,
+          "dist_km": 89.2,
+          "az_deg": 92.6
+        },
+        {
+          "seed": "CI.CWP..BHZ",
+          "sta": "CWP",
+          "chan": "BHZ",
+          "lat": 33.557975,
+          "lon": -117.55775,
+          "rate": 40.0,
+          "dist_km": 89.6,
+          "az_deg": 125.8
+        }
+      ]
+    },
+    "IRIS:II": {
+      "count": 0,
+      "stations": []
+    },
+    "IRIS:IU": {
+      "count": 0,
+      "stations": []
+    },
+    "IRIS:US": {
+      "count": 0,
+      "stations": []
+    },
+    "IRIS:BK": {
+      "count": 0,
+      "stations": []
+    },
+    "IRIS:NP": {
+      "count": 7,
+      "stations": [
+        {
+          "seed": "NP.5080..EHZ",
+          "sta": "5080",
+          "chan": "EHZ",
+          "lat": 34.07834,
+          "lon": -118.69391,
+          "rate": 200.0,
+          "dist_km": 33.1,
+          "az_deg": -81.2
+        },
+        {
+          "seed": "NP.5425..EHZ",
+          "sta": "5425",
+          "chan": "EHZ",
+          "lat": 34.27718,
+          "lon": -118.55965,
+          "rate": 200.0,
+          "dist_km": 33.8,
+          "az_deg": -36.8
+        },
+        {
+          "seed": "NP.5288..EHZ",
+          "sta": "5288",
+          "chan": "EHZ",
+          "lat": 33.69729,
+          "lon": -118.02485,
+          "rate": 200.0,
+          "dist_km": 47.3,
+          "az_deg": 141.9
+        },
+        {
+          "seed": "NP.5431..EHZ",
+          "sta": "5431",
+          "chan": "EHZ",
+          "lat": 34.2186,
+          "lon": -118.86804,
+          "rate": 200.0,
+          "dist_km": 52.9,
+          "az_deg": -67.0
+        },
+        {
+          "seed": "NP.5481.10.EHZ",
+          "sta": "5481",
+          "chan": "EHZ",
+          "lat": 34.5993,
+          "lon": -118.45375,
+          "rate": 100.0,
+          "dist_km": 63.7,
+          "az_deg": -9.5
+        },
+        {
+          "seed": "NP.5409..EHZ",
+          "sta": "5409",
+          "chan": "EHZ",
+          "lat": 34.23396,
+          "lon": -117.48244,
+          "rate": 200.0,
+          "dist_km": 82.2,
+          "az_deg": 74.0
+        },
+        {
+          "seed": "NP.5036..EHZ",
+          "sta": "5036",
+          "chan": "EHZ",
+          "lat": 34.1926,
+          "lon": -117.42744,
+          "rate": 200.0,
+          "dist_km": 86.0,
+          "az_deg": 77.9
+        }
+      ]
+    },
+    "IRIS:CE": {
+      "count": 0,
+      "stations": []
+    },
+    "IRIS:AZ": {
+      "count": 0,
+      "stations": []
+    },
+    "IRIS:PB": {
+      "count": 0,
+      "stations": []
+    }
+  }
+}

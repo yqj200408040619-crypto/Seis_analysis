@@ -1,0 +1,50 @@
+{
+  "pairs_selected": [
+    "CI_BHP--CI_PDR",
+    "CI_BHP--CI_USC",
+    "CI_LCG--CI_PDR",
+    "CI_LCG--CI_USC"
+  ],
+  "n_pairs": 4,
+  "per_pair": [
+    {
+      "pair": "CI_BHP--CI_PDR",
+      "curve_id": "P00002_b1_S0_N4",
+      "score": 33.99855398202852,
+      "n": 34,
+      "dmed": 9.00211471427216,
+      "vmed": 530.4449009988871
+    },
+    {
+      "pair": "CI_BHP--CI_USC",
+      "curve_id": "P00004_b1_S0_N5",
+      "score": 26.999789603304304,
+      "n": 27,
+      "dmed": 8.896643671018882,
+      "vmed": 516.4823887218273
+    },
+    {
+      "pair": "CI_LCG--CI_PDR",
+      "curve_id": "P00005_b1_S0_N5",
+      "score": 38.9992382537139,
+      "n": 39,
+      "dmed": 10.797430530347645,
+      "vmed": 494.5066513978722
+    },
+    {
+      "pair": "CI_LCG--CI_USC",
+      "curve_id": "P00006_b1_S0_N7",
+      "score": 18.99951260203818,
+      "n": 19,
+      "dmed": 9.822544641390275,
+      "vmed": 532.5876720269408
+    }
+  ],
+  "agg_freq_range": [
+    0.3,
+    1.16
+  ],
+  "agg_vel_at_lowf": 596.8369592073404,
+  "agg_vel_at_highf": 452.5382069647396,
+  "agg_points": 44
+}

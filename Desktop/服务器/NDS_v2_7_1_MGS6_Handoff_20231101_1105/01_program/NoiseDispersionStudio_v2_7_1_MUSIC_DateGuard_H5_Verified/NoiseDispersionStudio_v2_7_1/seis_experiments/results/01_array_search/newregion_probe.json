@@ -1,0 +1,399 @@
+[
+  {
+    "name": "SanJacinto_CI",
+    "provider": "IRIS",
+    "network": "CI",
+    "box": [
+      33.3,
+      33.75,
+      -116.9,
+      -116.3
+    ],
+    "metadata_rows": 7,
+    "unambiguous_full_coverage": 7,
+    "stations": [
+      "CI.ANG",
+      "CI.CSH",
+      "CI.DNR",
+      "CI.IDY",
+      "CI.PLM",
+      "CI.PMD",
+      "CI.RCR"
+    ]
+  },
+  {
+    "name": "Anza_AZ",
+    "provider": "IRIS",
+    "network": "AZ",
+    "box": [
+      33.2,
+      33.75,
+      -116.9,
+      -116.3
+    ],
+    "metadata_rows": 11,
+    "unambiguous_full_coverage": 11,
+    "stations": [
+      "AZ.BZN",
+      "AZ.CRY",
+      "AZ.FRD",
+      "AZ.KNW",
+      "AZ.LVA2",
+      "AZ.PFO",
+      "AZ.RDM",
+      "AZ.RRSP",
+      "AZ.SND",
+      "AZ.TMSP",
+      "AZ.TRO"
+    ],
+    "best_selection": {
+      "size": 8,
+      "minnn": 500.0,
+      "maxnn": 12000.0,
+      "ap_cap": 30000.0,
+      "selected": [
+        "BZN",
+        "CRY",
+        "FRD",
+        "KNW",
+        "RDM",
+        "RRSP",
+        "SND",
+        "TMSP"
+      ],
+      "aperture_m": 27300,
+      "min_nn_m": 6032,
+      "max_nn_m": 10335,
+      "mean_nn_m": 7145,
+      "band": {
+        "d_min_m": 6032.308734384563,
+        "aperture_m": 27300.094143229286,
+        "f_min_hz": 0.0549,
+        "f_max_hz": 0.373,
+        "evaluable": true
+      }
+    }
+  },
+  {
+    "name": "Coso_CI",
+    "provider": "IRIS",
+    "network": "CI",
+    "box": [
+      35.9,
+      36.25,
+      -117.95,
+      -117.55
+    ],
+    "metadata_rows": 6,
+    "unambiguous_full_coverage": 6,
+    "stations": [
+      "CI.JRC2",
+      "CI.WCS2",
+      "CI.WMF",
+      "CI.WRC2",
+      "CI.WRV2",
+      "CI.WVP2"
+    ]
+  },
+  {
+    "name": "SaltonWide_CI",
+    "provider": "IRIS",
+    "network": "CI",
+    "box": [
+      32.9,
+      33.45,
+      -115.95,
+      -115.35
+    ],
+    "metadata_rows": 8,
+    "unambiguous_full_coverage": 8,
+    "stations": [
+      "CI.BOM",
+      "CI.ERR",
+      "CI.FRK",
+      "CI.IMP",
+      "CI.RXH",
+      "CI.SWS",
+      "CI.WMD",
+      "CI.WWF"
+    ],
+    "best_selection": null
+  },
+  {
+    "name": "LongValleyWide_NC",
+    "provider": "NCEDC",
+    "network": "NC",
+    "box": [
+      37.5,
+      37.9,
+      -119.15,
+      -118.7
+    ],
+    "metadata_rows": 9,
+    "unambiguous_full_coverage": 9,
+    "stations": [
+      "NC.MBM",
+      "NC.MCB",
+      "NC.MCY",
+      "NC.MDPB",
+      "NC.MDY",
+      "NC.MINS",
+      "NC.MLI",
+      "NC.MMLB",
+      "NC.MQ1P"
+    ],
+    "best_selection": {
+      "size": 9,
+      "minnn": 500.0,
+      "maxnn": 18000.0,
+      "ap_cap": 25000.0,
+      "selected": [
+        "MBM",
+        "MCB",
+        "MCY",
+        "MDPB",
+        "MDY",
+        "MINS",
+        "MLI",
+        "MMLB",
+        "MQ1P"
+      ],
+      "aperture_m": 22962,
+      "min_nn_m": 1205,
+      "max_nn_m": 15402,
+      "mean_nn_m": 4319,
+      "band": {
+        "d_min_m": 1204.6719129664032,
+        "aperture_m": 22962.487995629785,
+        "f_min_hz": 0.0653,
+        "f_max_hz": 1.8677,
+        "evaluable": true
+      }
+    }
+  },
+  {
+    "name": "YellowstoneWide_WY",
+    "provider": "IRIS",
+    "network": "WY",
+    "box": [
+      44.3,
+      44.85,
+      -111.1,
+      -110.3
+    ],
+    "metadata_rows": 9,
+    "unambiguous_full_coverage": 9,
+    "stations": [
+      "WY.YDD",
+      "WY.YFT",
+      "WY.YHH",
+      "WY.YJC",
+      "WY.YMR",
+      "WY.YNB",
+      "WY.YNM",
+      "WY.YNR",
+      "WY.YUF"
+    ],
+    "best_selection": null
+  },
+  {
+    "name": "WasatchWide_UU",
+    "provider": "IRIS",
+    "network": "UU",
+    "box": [
+      40.4,
+      40.95,
+      -112.1,
+      -111.45
+    ],
+    "metadata_rows": 1,
+    "unambiguous_full_coverage": 1,
+    "stations": [
+      "UU.CTU"
+    ]
+  },
+  {
+    "name": "SwissWide_CH",
+    "provider": "ETH",
+    "network": "CH",
+    "box": [
+      46.0,
+      46.55,
+      7.1,
+      7.95
+    ],
+    "metadata_rows": 8,
+    "unambiguous_full_coverage": 8,
+    "stations": [
+      "CH.DIX",
+      "CH.EMBD",
+      "CH.FULLY",
+      "CH.GRYON",
+      "CH.LAUCH",
+      "CH.LKBD2",
+      "CH.SENIN",
+      "CH.VANNI"
+    ],
+    "best_selection": null
+  },
+  {
+    "name": "ApenninesWide_IV",
+    "provider": "INGV",
+    "network": "IV",
+    "box": [
+      42.4,
+      42.95,
+      12.9,
+      13.6
+    ],
+    "metadata_rows": 4,
+    "unambiguous_full_coverage": 4,
+    "stations": [
+      "IV.CAMP",
+      "IV.GIGS",
+      "IV.LNSS",
+      "IV.NRCA"
+    ]
+  },
+  {
+    "name": "LAbasin_CI",
+    "provider": "IRIS",
+    "network": "CI",
+    "box": [
+      33.95,
+      34.3,
+      -118.45,
+      -117.95
+    ],
+    "metadata_rows": 18,
+    "unambiguous_full_coverage": 16,
+    "stations": [
+      "CI.BHP",
+      "CI.DEC",
+      "CI.GOU",
+      "CI.GR2",
+      "CI.HLL",
+      "CI.JPLS",
+      "CI.LCG",
+      "CI.LGB",
+      "CI.MWC",
+      "CI.PDR",
+      "CI.RHC2",
+      "CI.RIO",
+      "CI.RUS",
+      "CI.SMF2",
+      "CI.USC",
+      "CI.WLT"
+    ],
+    "best_selection": {
+      "size": 8,
+      "minnn": 500.0,
+      "maxnn": 18000.0,
+      "ap_cap": 30000.0,
+      "selected": [
+        "BHP",
+        "GR2",
+        "HLL",
+        "LCG",
+        "LGB",
+        "PDR",
+        "SMF2",
+        "USC"
+      ],
+      "aperture_m": 29584,
+      "min_nn_m": 1851,
+      "max_nn_m": 13572,
+      "mean_nn_m": 6897,
+      "band": {
+        "d_min_m": 1850.559685323178,
+        "aperture_m": 29584.05599492597,
+        "f_min_hz": 0.0507,
+        "f_max_hz": 1.2158,
+        "evaluable": true
+      }
+    }
+  },
+  {
+    "name": "Kilauea_HV",
+    "provider": "IRIS",
+    "network": "HV",
+    "box": [
+      19.25,
+      19.6,
+      -155.45,
+      -155.05
+    ],
+    "metadata_rows": 22,
+    "unambiguous_full_coverage": 20,
+    "stations": [
+      "HV.AHUD",
+      "HV.BYL",
+      "HV.DEVL",
+      "HV.HAT",
+      "HV.HLPD",
+      "HV.JCUZ",
+      "HV.KKO",
+      "HV.MLOD",
+      "HV.NAHU",
+      "HV.NPOC",
+      "HV.OTLD",
+      "HV.PAUD",
+      "HV.RIMD",
+      "HV.RSDD",
+      "HV.SBL",
+      "HV.SDH",
+      "HV.STCD",
+      "HV.UWB",
+      "HV.UWE",
+      "HV.WRM"
+    ],
+    "best_selection": {
+      "size": 10,
+      "minnn": 1000.0,
+      "maxnn": 12000.0,
+      "ap_cap": 25000.0,
+      "selected": [
+        "AHUD",
+        "BYL",
+        "DEVL",
+        "HAT",
+        "JCUZ",
+        "KKO",
+        "NAHU",
+        "NPOC",
+        "PAUD",
+        "STCD"
+      ],
+      "aperture_m": 17346,
+      "min_nn_m": 1217,
+      "max_nn_m": 2638,
+      "mean_nn_m": 1833,
+      "band": {
+        "d_min_m": 1217.2639090229945,
+        "aperture_m": 17346.169014932573,
+        "f_min_hz": 0.0865,
+        "f_max_hz": 1.8484,
+        "evaluable": true
+      }
+    }
+  },
+  {
+    "name": "Cascades_UW",
+    "provider": "IRIS",
+    "network": "UW",
+    "box": [
+      46.0,
+      46.4,
+      -122.4,
+      -121.9
+    ],
+    "metadata_rows": 4,
+    "unambiguous_full_coverage": 4,
+    "stations": [
+      "UW.CDF",
+      "UW.EDM",
+      "UW.HSR",
+      "UW.SHW"
+    ]
+  }
+]

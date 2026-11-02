@@ -1,0 +1,10 @@
+{
+  "candidate": "Parkfield_NC",
+  "provider": "NCEDC",
+  "network": "NC",
+  "start": "2023-11-01",
+  "end": "2023-11-04",
+  "ok": false,
+  "error": "ValueError: Only 1 unambiguous eligible stations; require 9",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\游齐家\\Desktop\\服务器\\NDS_v2_7_1_MGS6_Handoff_20231101_1105\\01_program\\NoiseDispersionStudio_v2_7_1_MUSIC_DateGuard_H5_Verified\\NoiseDispersionStudio_v2_7_1\\run_array_select_probe.py\", line 34, in main\n    res = select_array(\n        cand.provider, cand.network, a.start, a.end, selected,\n    ...<4 lines>...\n        minlatitude=cand.minlatitude, maxlatitude=cand.maxlatitude,\n        minlongitude=cand.minlongitude, maxlongitude=cand.maxlongitude)\n  File \"C:\\Users\\游齐家\\Desktop\\服务器\\NDS_v2_7_1_MGS6_Handoff_20231101_1105\\01_program\\NoiseDispersionStudio_v2_7_1_MUSIC_DateGuard_H5_Verified\\NoiseDispersionStudio_v2_7_1\\ndstudio\\acquisition.py\", line 68, in select_array\n    raise ValueError(f'Only {len(usable)} unambiguous eligible stations; require {size}')\nValueError: Only 1 unambiguous eligible stations; require 9\n"
+}

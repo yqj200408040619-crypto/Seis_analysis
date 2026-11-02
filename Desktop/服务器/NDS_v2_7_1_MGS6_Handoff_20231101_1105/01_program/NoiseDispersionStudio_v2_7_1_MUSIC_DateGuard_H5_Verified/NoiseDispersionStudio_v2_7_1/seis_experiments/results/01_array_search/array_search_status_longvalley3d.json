@@ -1,0 +1,65 @@
+{
+  "span_utc": [
+    "2023-11-01",
+    "2023-11-04"
+  ],
+  "results": [
+    {
+      "name": "LongValley_NC",
+      "passed": false,
+      "stages": [
+        {
+          "stage": "array-select",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "stage": "fetch",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "stage": "audit-acquisition",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "stage": "screen-array",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "stage": "preprocess-and-scan",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "stage": "front-MUSIC",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "stage": "review",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "stage": "verify",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "stage": "select-before",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "band_hz": [
+        0.1606,
+        1.8677
+      ],
+      "message": "ValueError: no directionally-consistent candidate curves survived selection"
+    }
+  ],
+  "passed": null
+}

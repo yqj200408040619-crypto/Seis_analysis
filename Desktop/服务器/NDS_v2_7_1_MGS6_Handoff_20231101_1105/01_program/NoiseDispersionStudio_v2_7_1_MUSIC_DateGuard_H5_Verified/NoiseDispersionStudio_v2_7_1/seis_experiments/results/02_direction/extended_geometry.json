@@ -1,0 +1,19 @@
+{
+  "stations": [
+    "CI.BHP..HHZ",
+    "CI.GR2..HHZ",
+    "CI.HLL..HHZ",
+    "CI.LCG..HHZ",
+    "CI.LGB..HHZ",
+    "CI.MWC..HHZ",
+    "CI.PDR..HHZ",
+    "CI.RIO..HHZ",
+    "CI.RPV..HHZ",
+    "CI.SMF2..HHZ",
+    "CI.USC..HHZ"
+  ],
+  "n": 11,
+  "aperture_m": 62109.84304812272,
+  "min_pair_m": 1850.559685323178,
+  "mean_nn_m": 9979.952111465425
+}

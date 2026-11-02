@@ -1,0 +1,400 @@
+{
+  "LongValley_NC": {
+    "count": 8,
+    "coords": [
+      {
+        "seed": "NC.MBM.01.HHZ",
+        "sta": "MBM",
+        "lat": 37.78348,
+        "lon": -118.90163
+      },
+      {
+        "seed": "NC.MCB..HHZ",
+        "sta": "MCB",
+        "lat": 37.644394,
+        "lon": -118.896835
+      },
+      {
+        "seed": "NC.MCY..HHZ",
+        "sta": "MCY",
+        "lat": 37.642929,
+        "lon": -119.029137
+      },
+      {
+        "seed": "NC.MDPB..HHZ",
+        "sta": "MDPB",
+        "lat": 37.632267,
+        "lon": -119.079353
+      },
+      {
+        "seed": "NC.MDY..HHZ",
+        "sta": "MDY",
+        "lat": 37.658039,
+        "lon": -119.012154
+      },
+      {
+        "seed": "NC.MINS..HHZ",
+        "sta": "MINS",
+        "lat": 37.65377,
+        "lon": -119.060928
+      },
+      {
+        "seed": "NC.MLI..HHZ",
+        "sta": "MLI",
+        "lat": 37.636761,
+        "lon": -119.017906
+      },
+      {
+        "seed": "NC.MMLB..HHZ",
+        "sta": "MMLB",
+        "lat": 37.659092,
+        "lon": -118.979065
+      }
+    ],
+    "full_aperture_m": 22962,
+    "nn_min_m": 1205,
+    "nn_max_m": 15402,
+    "pairwise_m": [
+      [
+        "MBM",
+        "MCB",
+        15443
+      ],
+      [
+        "MBM",
+        "MCY",
+        19229
+      ],
+      [
+        "MBM",
+        "MDPB",
+        22962
+      ],
+      [
+        "MBM",
+        "MDY",
+        16994
+      ],
+      [
+        "MBM",
+        "MINS",
+        20113
+      ],
+      [
+        "MBM",
+        "MLI",
+        19243
+      ],
+      [
+        "MBM",
+        "MMLB",
+        15402
+      ],
+      [
+        "MCB",
+        "MCY",
+        11678
+      ],
+      [
+        "MCB",
+        "MDPB",
+        16166
+      ],
+      [
+        "MCB",
+        "MDY",
+        10289
+      ],
+      [
+        "MCB",
+        "MINS",
+        14518
+      ],
+      [
+        "MCB",
+        "MLI",
+        10719
+      ],
+      [
+        "MCB",
+        "MMLB",
+        7438
+      ],
+      [
+        "MCY",
+        "MDPB",
+        4587
+      ],
+      [
+        "MCY",
+        "MDY",
+        2249
+      ],
+      [
+        "MCY",
+        "MINS",
+        3053
+      ],
+      [
+        "MCY",
+        "MLI",
+        1205
+      ],
+      [
+        "MCY",
+        "MMLB",
+        4769
+      ],
+      [
+        "MDPB",
+        "MDY",
+        6584
+      ],
+      [
+        "MDPB",
+        "MINS",
+        2888
+      ],
+      [
+        "MDPB",
+        "MLI",
+        5447
+      ],
+      [
+        "MDPB",
+        "MMLB",
+        9338
+      ],
+      [
+        "MDY",
+        "MINS",
+        4330
+      ],
+      [
+        "MDY",
+        "MLI",
+        2416
+      ],
+      [
+        "MDY",
+        "MMLB",
+        2922
+      ],
+      [
+        "MINS",
+        "MLI",
+        4240
+      ],
+      [
+        "MINS",
+        "MMLB",
+        7248
+      ],
+      [
+        "MLI",
+        "MMLB",
+        4230
+      ]
+    ],
+    "attempts_ok": []
+  },
+  "LA_CI": {
+    "count": 8,
+    "coords": [
+      {
+        "seed": "CI.GOU..HHZ",
+        "sta": "GOU",
+        "lat": 34.22119,
+        "lon": -118.18834
+      },
+      {
+        "seed": "CI.GR2..HHZ",
+        "sta": "GR2",
+        "lat": 34.11816,
+        "lon": -118.30024
+      },
+      {
+        "seed": "CI.HLL..HHZ",
+        "sta": "HLL",
+        "lat": 34.17643,
+        "lon": -118.35967
+      },
+      {
+        "seed": "CI.JPLS..HHZ",
+        "sta": "JPLS",
+        "lat": 34.2053,
+        "lon": -118.17368
+      },
+      {
+        "seed": "CI.LCG..HHZ",
+        "sta": "LCG",
+        "lat": 34.00033,
+        "lon": -118.37794
+      },
+      {
+        "seed": "CI.MWC..HHZ",
+        "sta": "MWC",
+        "lat": 34.22362,
+        "lon": -118.05832
+      },
+      {
+        "seed": "CI.RUS..HHZ",
+        "sta": "RUS",
+        "lat": 34.05075,
+        "lon": -118.08078
+      },
+      {
+        "seed": "CI.USC..HHZ",
+        "sta": "USC",
+        "lat": 34.01919,
+        "lon": -118.28631
+      }
+    ],
+    "full_aperture_m": 38511,
+    "nn_min_m": 2221,
+    "nn_max_m": 19166,
+    "pairwise_m": [
+      [
+        "GOU",
+        "GR2",
+        15397
+      ],
+      [
+        "GOU",
+        "HLL",
+        16553
+      ],
+      [
+        "GOU",
+        "JPLS",
+        2221
+      ],
+      [
+        "GOU",
+        "LCG",
+        30103
+      ],
+      [
+        "GOU",
+        "MWC",
+        11984
+      ],
+      [
+        "GOU",
+        "RUS",
+        21351
+      ],
+      [
+        "GOU",
+        "USC",
+        24161
+      ],
+      [
+        "GR2",
+        "HLL",
+        8475
+      ],
+      [
+        "GR2",
+        "JPLS",
+        15153
+      ],
+      [
+        "GR2",
+        "LCG",
+        14909
+      ],
+      [
+        "GR2",
+        "MWC",
+        25186
+      ],
+      [
+        "GR2",
+        "RUS",
+        21591
+      ],
+      [
+        "GR2",
+        "USC",
+        11053
+      ],
+      [
+        "HLL",
+        "JPLS",
+        17441
+      ],
+      [
+        "HLL",
+        "LCG",
+        19606
+      ],
+      [
+        "HLL",
+        "MWC",
+        28264
+      ],
+      [
+        "HLL",
+        "RUS",
+        29265
+      ],
+      [
+        "HLL",
+        "USC",
+        18709
+      ],
+      [
+        "JPLS",
+        "LCG",
+        29533
+      ],
+      [
+        "JPLS",
+        "MWC",
+        10823
+      ],
+      [
+        "JPLS",
+        "RUS",
+        19166
+      ],
+      [
+        "JPLS",
+        "USC",
+        23112
+      ],
+      [
+        "LCG",
+        "MWC",
+        38511
+      ],
+      [
+        "LCG",
+        "RUS",
+        28009
+      ],
+      [
+        "LCG",
+        "USC",
+        8719
+      ],
+      [
+        "MWC",
+        "RUS",
+        19287
+      ],
+      [
+        "MWC",
+        "USC",
+        30929
+      ],
+      [
+        "RUS",
+        "USC",
+        19300
+      ]
+    ],
+    "attempts_ok": []
+  }
+}

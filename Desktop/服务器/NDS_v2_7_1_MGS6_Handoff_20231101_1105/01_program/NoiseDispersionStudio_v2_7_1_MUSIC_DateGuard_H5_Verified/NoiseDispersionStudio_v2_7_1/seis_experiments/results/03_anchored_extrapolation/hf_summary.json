@@ -1,0 +1,129 @@
+{
+  "scan": {
+    "candidate_gates": 18,
+    "robust_contiguous_runs": 15,
+    "accepted_continuous_runs": 13,
+    "minimum_points": 8,
+    "minimum_bandwidth_hz": 0.2
+  },
+  "conditional_rows": 5711,
+  "freq_range_hz": [
+    0.3,
+    1.16
+  ],
+  "vel_range_m_s": [
+    150.7296803352719,
+    3023.359414921416
+  ],
+  "curves": 269,
+  "curve_spans": [
+    {
+      "curve_id": "P00005_b1_S0_N1",
+      "pts": 39,
+      "fmin": 0.4,
+      "fmax": 1.16,
+      "vmin": 586.1592762649343,
+      "vmax": 2901.442188646142,
+      "pair": "CI_LCG--CI_PDR"
+    },
+    {
+      "curve_id": "P00005_b1_S0_N10",
+      "pts": 39,
+      "fmin": 0.4,
+      "fmax": 1.16,
+      "vmin": 275.36515030612503,
+      "vmax": 352.18339720910257,
+      "pair": "CI_LCG--CI_PDR"
+    },
+    {
+      "curve_id": "P00005_b1_S0_N11",
+      "pts": 39,
+      "fmin": 0.4,
+      "fmax": 1.16,
+      "vmin": 250.20322154079344,
+      "vmax": 337.22672681394766,
+      "pair": "CI_LCG--CI_PDR"
+    },
+    {
+      "curve_id": "P00005_b1_S0_N12",
+      "pts": 39,
+      "fmin": 0.4,
+      "fmax": 1.16,
+      "vmin": 229.25470782709573,
+      "vmax": 323.48867573631406,
+      "pair": "CI_LCG--CI_PDR"
+    },
+    {
+      "curve_id": "P00005_b1_S0_N13",
+      "pts": 39,
+      "fmin": 0.4,
+      "fmax": 1.16,
+      "vmin": 211.54305502746223,
+      "vmax": 310.82614026195824,
+      "pair": "CI_LCG--CI_PDR"
+    },
+    {
+      "curve_id": "P00005_b1_S0_N14",
+      "pts": 39,
+      "fmin": 0.4,
+      "fmax": 1.16,
+      "vmin": 196.37185060386415,
+      "vmax": 299.1175790663912,
+      "pair": "CI_LCG--CI_PDR"
+    },
+    {
+      "curve_id": "P00005_b1_S0_N15",
+      "pts": 39,
+      "fmin": 0.4,
+      "fmax": 1.16,
+      "vmin": 183.2310914131323,
+      "vmax": 288.25909945677955,
+      "pair": "CI_LCG--CI_PDR"
+    },
+    {
+      "curve_id": "P00005_b1_S0_N16",
+      "pts": 39,
+      "fmin": 0.4,
+      "fmax": 1.16,
+      "vmin": 171.73872514994875,
+      "vmax": 278.16136620890927,
+      "pair": "CI_LCG--CI_PDR"
+    },
+    {
+      "curve_id": "P00005_b1_S0_N17",
+      "pts": 39,
+      "fmin": 0.4,
+      "fmax": 1.16,
+      "vmin": 161.60289275179858,
+      "vmax": 268.7471381170686,
+      "pair": "CI_LCG--CI_PDR"
+    },
+    {
+      "curve_id": "P00005_b1_S0_N18",
+      "pts": 39,
+      "fmin": 0.4,
+      "fmax": 1.16,
+      "vmin": 152.59679614284724,
+      "vmax": 259.9492884128356,
+      "pair": "CI_LCG--CI_PDR"
+    },
+    {
+      "curve_id": "P00005_b1_S0_N2",
+      "pts": 39,
+      "fmin": 0.4,
+      "fmax": 1.16,
+      "vmin": 545.8648627072572,
+      "vmax": 1408.7172147606343,
+      "pair": "CI_LCG--CI_PDR"
+    },
+    {
+      "curve_id": "P00005_b1_S0_N3",
+      "pts": 39,
+      "fmin": 0.4,
+      "fmax": 1.16,
+      "vmin": 510.7540398613432,
+      "vmax": 930.1675169826116,
+      "pair": "CI_LCG--CI_PDR"
+    }
+  ]
+}

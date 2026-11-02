@@ -1,0 +1,175 @@
+[
+  {
+    "name": "Anza_CI",
+    "provider": "IRIS",
+    "network": "CI",
+    "channel": "HHZ",
+    "box": [
+      33.3,
+      33.65,
+      -116.8,
+      -116.35
+    ],
+    "metadata_rows": 3,
+    "stations_with_vertical": 3,
+    "unambiguous_full_coverage": 3,
+    "station_names": [
+      "CI.CSH",
+      "CI.DNR",
+      "CI.PMD"
+    ]
+  },
+  {
+    "name": "LongValley_NC",
+    "provider": "IRIS",
+    "network": "NC",
+    "channel": "HHZ",
+    "box": [
+      37.55,
+      37.8,
+      -119.1,
+      -118.75
+    ],
+    "metadata_rows": 10,
+    "stations_with_vertical": 9,
+    "unambiguous_full_coverage": 8,
+    "station_names": [
+      "NC.MBM",
+      "NC.MCB",
+      "NC.MCY",
+      "NC.MDPB",
+      "NC.MDY",
+      "NC.MINS",
+      "NC.MLI",
+      "NC.MMLB"
+    ],
+    "selection": {
+      "ok": false,
+      "error": "ValueError: No compact subset satisfies every spacing/aperture constraint; change network or explicit bounds"
+    }
+  },
+  {
+    "name": "Yellowstone_WY",
+    "provider": "IRIS",
+    "network": "WY",
+    "channel": "HHZ",
+    "box": [
+      44.35,
+      44.7,
+      -110.95,
+      -110.4
+    ],
+    "metadata_rows": 2,
+    "stations_with_vertical": 2,
+    "unambiguous_full_coverage": 2,
+    "station_names": [
+      "WY.YDD",
+      "WY.YFT"
+    ]
+  },
+  {
+    "name": "Salton_CI",
+    "provider": "IRIS",
+    "network": "CI",
+    "channel": "HHZ",
+    "box": [
+      33.0,
+      33.35,
+      -115.8,
+      -115.45
+    ],
+    "metadata_rows": 3,
+    "stations_with_vertical": 3,
+    "unambiguous_full_coverage": 3,
+    "station_names": [
+      "CI.RXH",
+      "CI.WMD",
+      "CI.WWF"
+    ]
+  },
+  {
+    "name": "Valais_CH",
+    "provider": "ETH",
+    "network": "CH",
+    "channel": "HHZ",
+    "box": [
+      46.1,
+      46.45,
+      7.3,
+      7.75
+    ],
+    "metadata_rows": 2,
+    "stations_with_vertical": 2,
+    "unambiguous_full_coverage": 2,
+    "station_names": [
+      "CH.LKBD2",
+      "CH.VANNI"
+    ]
+  },
+  {
+    "name": "CentralItaly_IV",
+    "provider": "INGV",
+    "network": "IV",
+    "channel": "HHZ",
+    "box": [
+      42.55,
+      42.9,
+      13.0,
+      13.45
+    ],
+    "metadata_rows": 2,
+    "stations_with_vertical": 2,
+    "unambiguous_full_coverage": 2,
+    "station_names": [
+      "IV.LNSS",
+      "IV.NRCA"
+    ]
+  },
+  {
+    "name": "Wasatch_UU",
+    "provider": "IRIS",
+    "network": "UU",
+    "channel": "HHZ",
+    "box": [
+      40.55,
+      40.9,
+      -111.95,
+      -111.55
+    ],
+    "metadata_rows": 1,
+    "stations_with_vertical": 1,
+    "unambiguous_full_coverage": 1,
+    "station_names": [
+      "UU.CTU"
+    ]
+  },
+  {
+    "name": "LA_CI",
+    "provider": "IRIS",
+    "network": "CI",
+    "channel": "HHZ",
+    "box": [
+      34.0,
+      34.25,
+      -118.4,
+      -118.05
+    ],
+    "metadata_rows": 10,
+    "stations_with_vertical": 9,
+    "unambiguous_full_coverage": 8,
+    "station_names": [
+      "CI.GOU",
+      "CI.GR2",
+      "CI.HLL",
+      "CI.JPLS",
+      "CI.LCG",
+      "CI.MWC",
+      "CI.RUS",
+      "CI.USC"
+    ],
+    "selection": {
+      "ok": false,
+      "error": "ValueError: No compact subset satisfies every spacing/aperture constraint; change network or explicit bounds"
+    }
+  }
+]

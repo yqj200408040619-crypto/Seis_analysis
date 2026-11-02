@@ -1,0 +1,28 @@
+{
+  "accepted_rows": 8,
+  "frequencies_accepted": [
+    0.1,
+    0.105,
+    0.11,
+    0.115
+  ],
+  "azimuth_deg_range": [
+    31.98533339362483,
+    45.60589910998019
+  ],
+  "azimuth_deg_median": 37.19652382219769,
+  "music_velocity_m_s_range": [
+    2498.9655596536118,
+    2681.549781991349
+  ],
+  "music_velocity_m_s_median": 2553.8813262189387,
+  "dir_uncertainty_deg_median": 1.8133649311927513,
+  "independent_windows_range": [
+    3,
+    9
+  ],
+  "pairs": [
+    "CI_GR2--CI_RPV",
+    "CI_HLL--CI_RIO"
+  ]
+}
